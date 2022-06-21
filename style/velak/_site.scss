@@ -1,0 +1,144 @@
+@use "sass:math";
+@use 'breakpoint';
+
+body {
+
+    --content-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: var(--bg); 
+    color: var(--fg);
+
+    @media screen and (max-width: breakpoint.$tablet) {
+		//font-size: 2rem;
+	}
+    > * {
+        position: relative;
+        z-index: 100;
+    }
+
+    //background-repeat: repeat;
+    //background-image: url("assets/void.pattern.2.png");
+    > header {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 2rem 1rem 0 1rem;
+
+        //background: red;
+        //padding-top: 3rem;
+        //background: re;
+
+        //a:last-child:after{
+            //content:"/";
+        //}
+        > ol {
+            display: flex;
+            list-style: none;
+            > li {
+                margin: 0;
+                &::after {
+                }
+                
+                a {
+                    &::after {
+                        //content: '\\';
+                    }
+                    //line-height: var(--line-height);
+                    &.active {
+                        color: var(--acc);
+                        //border-bottom: 1px solid var(--acc);
+                        //text-decoration: underline;
+                        background: var(--acc);
+                        color: var(--bg);
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+    }
+    > nav {
+        //margin: 0 1rem;
+        font-size: 7rem;
+        font-weight: 700;
+        letter-spacing: -0.6rem;
+        line-height:  0.8;
+        padding: 0;
+            }
+    > main {
+        z-index: 1000;
+        width: 100vw;
+        height: 100%;
+        //padding: 0 0 4rem 0;
+        padding: 0 1rem 0 1rem;
+        //max-width: var(--content-width);
+        
+        > article {
+            max-width: var(--content-width);
+            //margin: 0 auto;
+            > .description, > .content, > .links  {
+                padding: 1rem;
+            }
+            > ol {
+                list-style: none;
+            }
+            > .content {
+                padding: 1rem;
+            }
+            img {
+                width: 100%;
+            }
+        } 
+    }
+    footer {
+        width: 100%;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 75%;
+        font-family: monospace;
+        text-transform: uppercase;
+        > a {
+            //all: unset;
+            text-transform: uppercase;
+        }
+    }
+}
+
+#background-media {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+}
+  
+*::selection {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+*::inactive-selection {
+    background: red;
+    color: blue;
+}
+
+*::spelling-error {
+    background: red;
+    color: blue;
+}
+

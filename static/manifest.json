@@ -1,0 +1,16 @@
+{
+    "name": "velak.klingt.org",
+    "short_name": "velak",
+	"description": "non-profit organisation and platform for artists who work in fields of experimental music and sound/art",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "icons": [
+        {
+			"src": "favicon.svg",
+			"sizes": "any",
+			"purpose": "maskable any"
+		}
+    ]
+}

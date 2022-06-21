@@ -1,0 +1,128 @@
+:root {
+    --line-height: 1.5;
+    --font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --font-size: 14px;
+  }
+}
+
+/*
+@font-face {
+	font-family: "Inter";
+	font-weight: normal;
+	font-display: block;
+	src:
+        url("font/Inter-Regular.woff2") format("woff2"),
+        url("font/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Inter";
+	font-weight: bold;
+	font-display: block;
+	src:
+        url("font/Inter-Bold.woff2") format("woff2"),
+        url("font/Inter-Bold.ttf") format("truetype");
+}
+*/
+@font-face {
+	font-family: Inter;
+	font-display: block;
+	src:
+		url('font/Inter-VF.woff2') format('woff2'),
+		url('font/Inter-VF.ttf') format('truetype');
+}
+
+html {
+	font-size: var(--font-size);
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    line-height: var(--line-height);
+}
+h1, h2, h3, h4 {
+    font-variation-settings: 'wght' 600, 'GRAD' 88;
+    text-transform: uppercase;
+    /*line-height: 0.75;*/
+}
+h1 {
+    font-size: 6rem;
+    padding-bottom: 1rem;
+    line-height: 0.8;
+}
+h2 {
+    //font-size: 4rem;
+    //text-transform: uppercase;
+    //line-height: 0.8;
+    //letter-spacing: -5px;
+    //padding-bottom: 0.5em;
+    font-size: 5rem;
+    letter-spacing: -0.05em;
+    line-height:  0.8;
+    padding: 0; 
+}
+h3 {
+    font-size: 2rem;
+    letter-spacing: -2px;
+    //line-height: 0.5;
+}
+h4 {
+    line-height: 1.25;
+}
+
+hr {
+    border-top: 1px solid var(--fg);
+    margin: 1.5rem 0;
+}
+
+a {
+    background: transparent;
+    color: var(--fg);
+    text-decoration: none;
+    //font-family: "Inter";
+    //border-bottom: 1px dotted var(--fg);
+    border: none;
+    &:hover {
+        text-decoration: none;
+        color: var(--acc);
+        //background: var(--acc2);
+        //background-repeat: repeat;
+        //background-image: url("assets/void.pattern.2.png");
+        //border-bottom: 1px solid var(--acc);
+    }
+}
+img {
+    display: block;
+}
+li {
+    //list-style: none;
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+p,
+ol,
+ul {
+    margin-bottom: 1rem;
+    /*margin-bottom: var(--line-height);*/
+}
+
+.ui {
+    font-size: 7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.6rem;
+    line-height:  0.8;
+    padding: 0; 
+    //word-break: break-word;
+  //white-space: nowrap; 
+  //overflow: hidden;
+  //text-overflow: ellipsis; 
+  //border: 1px solid #ff0000;
+}
+
+table {
+    border: none;
+
+}

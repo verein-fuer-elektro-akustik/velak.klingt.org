@@ -1,0 +1,9 @@
+data/
+node_modules/
+public/
+resources/
+_old/
+nginx.conf
+.hugo_build.lock
+static/style.css*
+*.zip

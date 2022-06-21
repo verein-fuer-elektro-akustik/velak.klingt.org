@@ -1,0 +1,22 @@
+:root {
+    --bg: #eeefee;
+    --fg: #999999;
+    --acc: #000000; //ed2c3e
+    --acc2: #545454;
+}
+
+*::selection {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+*::inactive-selection {
+    background: red;
+    color: blue;
+}
+
+*::spelling-error {
+    background: red;
+    color: blue;
+}
+

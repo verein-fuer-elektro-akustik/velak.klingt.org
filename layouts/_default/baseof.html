@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{$.Site.LanguageCode}}">
+    <head>
+
+        {{ $root := .Site.BaseURL }}
+        {{ $url := urls.Parse $root }}
+
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+        <meta name="publisher" content="{{ .Site.Params.publisher }}">
+        <meta name="title" content="{{ .Site.Title }}">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.Keywords }}{{ end }}">
+        <meta name="description" content='{{ .Param "description" }}'>
+
+        <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}}/{{.}}{{end}}</title>
+
+        <link rel="stylesheet" href="{{ $root }}/style.css">
+        {{ partial "site/favicons" . }}
+        <link rel="alternate" href="feed" type="application/atom+xml" title="stritter.audio"/>
+        <link rel="manifest" href="{{ $root }}/manifest.json">
+
+        {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
+        <script>console.log('PageType: {{ .Page.Type }}');</script>
+        {{ end }}
+	</head>
+	<body>
+        <header>{{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}</header>
+		<nav>{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
+		<main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
+		<footer>{{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}</footer>
+    </body>
+</html>
+
