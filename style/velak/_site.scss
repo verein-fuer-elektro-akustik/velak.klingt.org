@@ -3,142 +3,133 @@
 
 body {
 
-    --content-width: 800px;
-
+    --content-width: 1024px;
+    --grid-gap: 1rem;
+   
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
-    width: 100vw;
+    column-gap: var(--grid-gap);
+    row-gap: var(--grid-gap);
+    //overflow-x: hidden;
+    //padding: 0.5rem;
+    width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background: var(--bg); 
-    color: var(--fg);
-
-    @media screen and (max-width: breakpoint.$tablet) {
-		//font-size: 2rem;
-	}
     > * {
-        position: relative;
-        z-index: 100;
+        //position: relative
+        //width: 100%;
+        height: 100%;
+        //background: var(--bg);
+        //max-width: var(--content-width);
     }
-
-    //background-repeat: repeat;
-    //background-image: url("assets/void.pattern.2.png");
     > header {
         display: flex;
         flex-wrap: wrap;
+        //justify-content: center;
+        margin: 0 2rem;
+        padding: 2rem 0 0rem 0;
+        //text-align: center;
+        //border-bottom: 1px solid var(--fg);
+        > h1 {
+            width: 100%;
+            //margin-left: -1rem;
+            margin-bottom: 0.5rem;
+        } 
+        > h2 {
+            font-size: var(--text-md);
+        }
+    }
+    > nav {
+        display: flex;
+        //justify-content: center ;
         width: 100%;
-        padding: 2rem 1rem 0 1rem;
-
-        //background: red;
-        //padding-top: 3rem;
-        //background: re;
-
-        //a:last-child:after{
-            //content:"/";
-        //}
-        > ol {
-            display: flex;
+        //align-content: center;
+        margin: 0 2rem;
+        padding: 1rem 0;
+        //background: var(--bg);
+        > ul {
+            all: unset;
             list-style: none;
+            //width: 100%;
+            display: flex;
+            //justify-content: center;
+            text-transform: uppercase;
             > li {
                 margin: 0;
-                &::after {
+                padding: 0;
+                &:not(:first-child) {
+                    margin-left: 4px; // 0.5rem;
                 }
-                
-                a {
-                    &::after {
-                        //content: '\\';
-                    }
-                    //line-height: var(--line-height);
-                    &.active {
-                        color: var(--acc);
-                        //border-bottom: 1px solid var(--acc);
-                        //text-decoration: underline;
-                        background: var(--acc);
+                &:not(:last-child) {
+                    margin-right: 4px; // 0.5rem;
+                }
+                > a {
+                    width: 100%;   //padding: 0.66rem 1rem;
+                    height: 100%;   //padding: 0.66rem 1rem;
+                    padding: 1ch;
+                    border: 1px solid var(--fg);
+                    text-decoration: none;
+                    &:hover {
+                        background: var(--fg);
                         color: var(--bg);
-                        font-style: italic;
                     }
                 }
             }
         }
-
     }
-    > nav {
-        //margin: 0 1rem;
-        font-size: 7rem;
-        font-weight: 700;
-        letter-spacing: -0.6rem;
-        line-height:  0.8;
-        padding: 0;
-            }
     > main {
-        z-index: 1000;
-        width: 100vw;
-        height: 100%;
-        //padding: 0 0 4rem 0;
-        padding: 0 1rem 0 1rem;
-        //max-width: var(--content-width);
-        
-        > article {
-            max-width: var(--content-width);
-            //margin: 0 auto;
-            > .description, > .content, > .links  {
-                padding: 1rem;
-            }
-            > ol {
-                list-style: none;
-            }
-            > .content {
-                padding: 1rem;
-            }
-            img {
-                width: 100%;
-            }
-        } 
+        margin: 0 2rem;
     }
-    footer {
-        width: 100%;
-        padding: 0.5rem 1rem 0.5rem 0.5rem;
-        margin: 0 auto;
+    > footer {
         display: flex;
-        justify-content: flex-end;
+        //justify-content: center;
+        margin: 0 1rem;
+        padding: 0 0 1rem 0;
         font-size: 75%;
+        a {
+            text-decoration: none;
+        }
+        //border-top: 1px dotted var(--fg);
+
+        //font-family: 'RobotoMono';
+        //font-size: 9px;
+
+        /*
+        width: 100%;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin: 0 auto;
+        justify-content: space-between;
         font-family: monospace;
         text-transform: uppercase;
+        background: var(--bg);
         > a {
             //all: unset;
             text-transform: uppercase;
         }
+        */
     }
-}
 
-#background-media {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
+    /*@media screen and (max-width: breakpoint.$tablet) {
+        grid-template-columns: 4fr;
+        > header {
+            //background: green;
+        }
+        > footer {
+            margin: 0 1rem;
+            border-top: 1px solid var(--fg);
+        }
+	}*/
+    @media screen and (min-width: breakpoint.$tablet) {
+        > nav {
+            > ul {
+                justify-content: center;
+                > li {
+                    //padding: 0 1rem;
+                }
+            }
+        }
     }
-}
-  
-*::selection {
-    background: var(--fg);
-    color: var(--bg);
-}
-
-*::inactive-selection {
-    background: red;
-    color: blue;
-}
-
-*::spelling-error {
-    background: red;
-    color: blue;
+    @media screen and (min-width: breakpoint.$desktop) {
+    }
 }
 

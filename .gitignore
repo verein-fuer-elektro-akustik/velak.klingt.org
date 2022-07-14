@@ -1,9 +1,17 @@
 data/
+misc/
 node_modules/
 public/
 resources/
+uploads/
+_income/
 _old/
 nginx.conf
 .hugo_build.lock
 static/style.css*
+*.flac
+*.mp3
+*.mp4
+*.ogg
+*.wav
 *.zip

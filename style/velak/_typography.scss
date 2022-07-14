@@ -1,15 +1,65 @@
+@use 'breakpoint';
+
+$font-family: "Inter";
+
+$font-weight-values: (
+    thin: 100,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+    black: 900,
+) !default;
+
 :root {
-    --line-height: 1.5;
-    --font-size: 14px;
+    --font-primary: "Inter";
+    --font-mono: "RobotoMono", monospace;
+	--text-base-size: 13px;
+    --text-scale-ratio: 1.375;
+	--heading-line-height: 2;
+	--heading-font-weight: 700;
+	--text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
+    --text-space-y-multiplier: 1;
+
+	// @include breakpoint.breakpoint(md) {
+	// 	--text-base-size: 14px;
+	//}
+    @media screen and (min-width: breakpoint.$phone) {
+        --text-base-size: 14px;
+		//--text-scale-ratio: 1.5;
+    }
+    @media screen and (min-width: breakpoint.$tablet) {
+        --text-base-size: 16px;
+		//--text-scale-ratio: 2;
+    }
+    @media screen and (min-width: breakpoint.$desktop) {
+        --text-base-size: 18px;
+		//--text-scale-ratio: 2;
+    }
+
+	--text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+	
+    --space-unit:  1rem;
+	--space-xxxxs: calc(0.125 * var(--space-unit));
+	--space-xxxs:  calc(0.25 * var(--space-unit));
+	--space-xxs:   calc(0.375 * var(--space-unit));
+	--space-xs:    calc(0.5 * var(--space-unit));
+	--space-sm:    calc(0.75 * var(--space-unit));
+	--space-md:    calc(1.25 * var(--space-unit));
+	--space-lg:    calc(2 * var(--space-unit));
+	--space-xl:    calc(3.25 * var(--space-unit));
+	--space-xxl:   calc(5.25 * var(--space-unit));
+	--space-xxxl:  calc(8.5 * var(--space-unit));
+	--space-xxxxl: calc(13.75 * var(--space-unit));
 }
 
-@media (max-width: 600px) {
-  :root {
-    --font-size: 14px;
-  }
-}
-
-/*
 @font-face {
 	font-family: "Inter";
 	font-weight: normal;
@@ -26,31 +76,175 @@
         url("font/Inter-Bold.woff2") format("woff2"),
         url("font/Inter-Bold.ttf") format("truetype");
 }
-*/
 @font-face {
-	font-family: Inter;
+	font-family: "RobotoMono";
 	font-display: block;
 	src:
-		url('font/Inter-VF.woff2') format('woff2'),
-		url('font/Inter-VF.ttf') format('truetype');
+        url("font/RobotoMono-Regular.woff2") format("woff2"),
+        url("font/RobotoMono-Regular.ttf") format("truetype");
 }
 
 html {
-	font-size: var(--font-size);
-    font-family: "Inter";
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--font-primary, sans-serif);
+    font-size: var(--text-base-size, 1rem);
+    font-weight: var(--body-font-weight, normal);
+    font-optical-sizing: auto;
     line-height: var(--line-height);
+	letter-spacing: normal;
+	text-rendering: optimizeLegibility;
 }
+
+a {
+    //text-decoration: none;
+    //text-underline-offset: 1px;
+    text-underline-position: from-font;
+    //padding-bottom: 2px;
+    //border-bottom: 1px dotted var(--fg);
+    background: transparent;
+    color: var(--fg);
+	//color: var(--color-primary, hsl(250, 84%, 54%));
+    &:hover {
+        color: var(--acc);
+    }
+}
+
+blockquote {
+    padding-left: 1em;
+    font-style: italic;
+    border-left: 4px solid var(--fg);
+}
+
+dl {
+    > dt {
+        font-weight: 200;
+        font-style: italic;
+    }
+    > dd {
+        margin-left: 1.5rem;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: var(--heading-line-height, 1.2);
+    font-weight: var(--heading-font-weight, 700);
+    text-transform: uppercase;
+    line-height: 1em;
+    a {
+        text-decoration: none;
+    }
+}
+h1 {
+    font-size: var(--text-xxxxl, 2rem);
+    letter-spacing: -0.06em;
+}
+h2 {
+    font-size: var(--text-xxl, 1.75rem);
+    letter-spacing: -0.05em;
+}
+h3 {
+    font-size: var(--text-lg, 1.375rem);
+    letter-spacing: -0.05em;
+}
+h4 {
+    font-size: var(--text-md, 1.125rem);
+    letter-spacing: -0.04em;
+}
+h5 {
+    font-size: var(--text-sm, 1rem);
+}
+h6 {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs, 1.125rem);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+hr {
+    height: 1px;
+    margin: 1rem 0;
+    background: var(--fg);
+}
+
+li {
+    //list-style: none;
+    //margin: 0 0 0 1rem;
+    padding: 0;
+}
+
+p {
+	margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier,1));
+}
+
+small {
+	font-size: var(--text-sm, 0.75rem);
+}
+
+strong {
+	font-weight: bold;
+}
+
+sub, sup {
+    font-size: 50%;
+}
+
+sup {
+    font-size: 50%;
+    //a {
+        //text-un;
+    //}
+}
+
+ul, ol {
+    list-style-position: inside;
+    ul, ol {
+        padding-left: 1em;
+        margin-bottom: 0;
+    }
+}
+ul {
+    list-style-type: disc;
+}
+ol {
+    list-style-type: decimal;
+}
+
+ul, ol, p, blockquote {
+    margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier, 1));
+}
+
+div.footnotes {
+    font-size: 75%;
+    ol {
+        > li {
+            p {
+                display: inline;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*
 h1, h2, h3, h4 {
     font-variation-settings: 'wght' 600, 'GRAD' 88;
     text-transform: uppercase;
-    /*line-height: 0.75;*/
+    //line-height: 0.75;
+
 }
 h1 {
     font-size: 6rem;
     padding-bottom: 1rem;
     line-height: 0.8;
+    letter-spacing: -0.075em;
 }
 h2 {
     //font-size: 4rem;
@@ -71,12 +265,10 @@ h3 {
 h4 {
     line-height: 1.25;
 }
-
 hr {
     border-top: 1px solid var(--fg);
     margin: 1.5rem 0;
 }
-
 a {
     background: transparent;
     color: var(--fg);
@@ -93,21 +285,6 @@ a {
         //border-bottom: 1px solid var(--acc);
     }
 }
-img {
-    display: block;
-}
-li {
-    //list-style: none;
-    margin: 0 0 0 1rem;
-    padding: 0;
-}
-p,
-ol,
-ul {
-    margin-bottom: 1rem;
-    /*margin-bottom: var(--line-height);*/
-}
-
 .ui {
     font-size: 7rem;
     font-weight: 700;
@@ -126,3 +303,4 @@ table {
     border: none;
 
 }
+*/

@@ -1,15 +1,7 @@
+{{ define "header" }}
+<h1><a href="{{ .Site.BaseURL }}">{{- .Site.Title -}}</a></h1>
+{{ end }}
 {{ define "main" }}
-<ol class="projects">
-    {{ range $project := where .Site.Pages "Type" "project" }}
-        {{ if $project.IsPage }}
-        <li class="project">
-            <h2>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
-        </li>
-        {{ end }}
-    {{ end }}
-</ol>
-<article>{{ .Content }}</article>
+<article>{{- .Content -}}</article>
 {{ end }}
 

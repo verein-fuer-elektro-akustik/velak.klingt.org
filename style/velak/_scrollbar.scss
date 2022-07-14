@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+$thick: math.div(1rem, 3) !default;
+// $scrollbar-min-thick: 4px;
+// $scrollbar-max-thick: 8px;
+
+*::-webkit-scrollbar {
+  border: none;
+  &:horizontal {
+    display: none;
+  }
+  &:vertical {
+    width: $thick;
+  }
+}
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  display: none !important;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  //border-radius: math.div($thick, 2);
+  background: var(--fg);
+  //border: 2px solid var(--bg);
+
+  &:hover {
+    background: var(--acc);
+  }
+  &:active {
+    background: var(--acc);
+  }
+}

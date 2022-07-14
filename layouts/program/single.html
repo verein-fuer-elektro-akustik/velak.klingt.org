@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $id := .File.ContentBaseName }}
+<article>
+    
+    <header>
+        <nav>
+            <time>{{ .Date.Format "2006/01/02" }}</time>
+            {{ partial "prev_next.html" . }}
+            {{ partial "tags" . }}
+        </nav>
+        <h2>{{- .Title -}}</h2>
+    </header>
+     
+    <div class="location">
+        {{ with .Params.location }}
+            {{ with .link }}
+            <a href="{{.}}">{{ $.Params.location.name }}</a>
+            {{ else }}
+            <div>{{- .Params.location.name -}}</div>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    <div class="content">{{- .Content -}}</div>
+
+    <ul>
+        {{ range .Params.artists }}<li>{{- . -}}</li>{{ end }}
+    </ul>
+
+    <div>
+    <!--
+    {{ range os.ReadDir "assets/program/velak120" }}
+        {{.Name}}
+    {{ end }}-->
+        <ol>
+        {{ range .Resources.ByType "audio" }}
+            <li>
+                <a href="{{.}}">{{.}}</a>
+            </li>
+        {{ end }}
+        </ol>
+    </div>
+
+    <!--{{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <div>
+        <span>Related:</span>
+        <ul>
+            {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{- .Title -}}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}-->
+
+    <footer>
+        {{ with .Params.author }}<div class="author">(C) {{- . -}}</div>{{ end }}
+    </footer>
+
+
+
+</article>
+{{ end }}
+

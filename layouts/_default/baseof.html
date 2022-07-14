@@ -15,22 +15,25 @@
         <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.Keywords }}{{ end }}">
         <meta name="description" content='{{ .Param "description" }}'>
 
-        <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}}/{{.}}{{end}}</title>
+        <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
 
         <link rel="stylesheet" href="{{ $root }}/style.css">
         {{ partial "site/favicons" . }}
-        <link rel="alternate" href="feed" type="application/atom+xml" title="stritter.audio"/>
+        <link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>
         <link rel="manifest" href="{{ $root }}/manifest.json">
 
-        {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
-        <script>console.log('PageType: {{ .Page.Type }}');</script>
-        {{ end }}
+        {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+
 	</head>
 	<body>
-        <header>{{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}</header>
-		<nav>{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
-		<main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
-		<footer>{{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}</footer>
+        <header class="ui">{{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}</header>
+		<nav class="ui">{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
+		<main>
+            {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
+        </main>
+		<footer class="ui">{{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}</footer>
     </body>
 </html>
 

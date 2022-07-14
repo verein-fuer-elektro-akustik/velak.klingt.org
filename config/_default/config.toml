@@ -1,0 +1,32 @@
+baseURL = ""
+#title = "VELAK ↯⚡"
+title = "VELAK"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+description = "Verein für Elektro Akustik"
+keywords =  []
+theme_color = "#000000"
+
+disableHugoGeneratorInject = true
+rssLimit = 23
+enableRobotsTXT = true
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    #artist = "artists"
+
+#[permalinks]
+    #program = '/:year/:month/:day/'
+
+[sitemap]
+    changefreq = 'monthly'
+    filename = 'sitemap.xml'
+    priority = 0.5
+
+[outputs]
+    home = ["HTML", "RSS"]
+    page = ["HTML"]
+    section = ["HTML","RSS"]
+    taxonomyTerm = ["HTML", "RSS"]
+    taxonomy = ["HTML", "RSS"]
