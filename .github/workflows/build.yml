@@ -1,0 +1,35 @@
+name: build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup hugo
+        uses: peaceiris/actions-hugo@v2.5.0
+        with:
+          hugo-version: "0.101.0"
+      - name: Setup npm
+        run: npm install
+      #- name: Test
+        #run: npm test
+      - name: Build style
+        run: npm run prod:style
+      - name: Build site
+        run: npm run prod:hugo
+        #run: npm run prod:hugo -- --baseURL https://disktree.github.io/velak
+      #- name: Store
+        #uses: actions/upload-artifact@v3
+        #with:
+          #name: stritter.audio
+          #path: public
+      #- name: Deploy
+        #uses: JamesIves/github-pages-deploy-action@v4.3.4
+        #with:
+          #branch: gh-pages
+          #folder: public
+          #clean: true
+          #single-commit: true
