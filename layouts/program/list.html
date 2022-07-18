@@ -1,31 +1,39 @@
-{{ define "header" }}
-
-<a href="{{ .Site.BaseURL }}">VELAK</a>
-<span>-</span>
-<span>{{ .Site.Params.description }}</span>
-<h1>
-    <a href="{{ .Site.BaseURL }}">Program</a>
-</h1>
-{{ end }}
 {{ define "main" }}
 <article>
+    <!--<ul>-->
+    <!--{{ range .Site.Taxonomies.tags }}-->
+            <!--<li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>-->
+    <!--{{ end }}    -->
+    <!--</ul>-->
+
     {{ $paginator := .Paginate .Pages }}
     <ol reversed class="nolist">
-		{{ range $paginator.Pages.ByDate.Reverse }}
+        {{ range $paginator.Pages.ByDate.Reverse }}
         <li>
-                <a href="{{ .RelPermalink }}">
-                    <span>{{ .Date.Format "2006/01/02" }}</span>
-                    <span>{{- .Title -}}</span>
-                </a>
+            <time>{{ .Date.Format "2006/01/02" }}</time>
+            <a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a>
             <div>
-                <!--<time>{{ .Date.Format "2006-01-02" }}</time>-->
-                <!--{{ partial "tags" . }}-->
+                <!--<time>{{ .Date.Format "006-01-02" }}</time>-->
                 <!--<div>{{ .Params.location.name }}</div>-->
                 <!--<div>{{ .Params.location.adress }}</div>-->
                 <!--<div>{{ .Params.location.link }}</div>-->
             </div>
         </li>
-		{{ end }}
-	</ol>
+        {{ end }}
+    </ol>
+
+    <!--<table>
+        <tbody>
+            {{ range $paginator.Pages.ByDate.Reverse }}
+            <tr>
+                <td>{{ .Title }}</td>
+                <td>{{ .Title }}</td>
+                <th>{{ .Date.Format "2006/01/02" }}</th>
+                
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>-->
+
 </article>
 {{ end }}

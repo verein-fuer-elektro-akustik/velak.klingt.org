@@ -8,23 +8,27 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width,minimum-scale=1">
-        <meta name="publisher" content="{{ .Site.Params.publisher }}">
+        <meta name="description" content='{{ .Param "description" }}'>
+        <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.Keywords }}{{ end }}">
+        {{ with .Site.Params.publisher }}<meta name="publisher" content="{{- . -}}">{{ end }}
         <meta name="title" content="{{ .Site.Title }}">
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.Keywords }}{{ end }}">
-        <meta name="description" content='{{ .Param "description" }}'>
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
 
         <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
 
         <link rel="stylesheet" href="{{ $root }}/style.css">
-        {{ partial "site/favicons" . }}
         <link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>
         <link rel="manifest" href="{{ $root }}/manifest.json">
+        {{ partial "site/favicons" . }}
 
         {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
         {{ end -}}
+
+        {{ block "schema" . }}{{ end }}
+
+        {{ template "_internal/opengraph.html" . }}
 
 	</head>
 	<body>

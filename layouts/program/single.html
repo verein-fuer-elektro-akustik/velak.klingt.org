@@ -3,62 +3,112 @@
 <article>
     
     <header>
+        <h2>{{- .Title -}}</h2>
         <nav>
             <time>{{ .Date.Format "2006/01/02" }}</time>
             {{ partial "prev_next.html" . }}
             {{ partial "tags" . }}
         </nav>
-        <h2>{{- .Title -}}</h2>
     </header>
      
-    <div class="location">
+    <!--<div class="location">
         {{ with .Params.location }}
             {{ with .link }}
-            <a href="{{.}}">{{ $.Params.location.name }}</a>
+            <a href="{{- . -}}">{{- $.Params.location.name | safeHTML }}</a>
             {{ else }}
-            <div>{{- .Params.location.name -}}</div>
+            <span>{{- $.Params.location.name | safeHTML -}}</span>
             {{ end }}
+            {{ with .address }}<span>, </span><address>{{- . | safeHTML -}}</adresss>{{ end }}
+        {{ else }}
+        <div class="warning">MISSING LOCATION</div>
         {{ end }}
+    </div>-->
+
+    <div class="location">
+        <h2>location</h2>
+        {{ with .Params.location }}
+            <div>{{ .name }}</div>
+        {{ end }} 
+            <div>{{ .Site.Data.locations }}</div>
+            {{ range where .Site.Data "locations" $.Params.location.name }}
+            <div>:::::::::::::::::::::::::::{{ . }}</div>
+            {{ end }}
     </div>
 
-    <div class="content">{{- .Content -}}</div>
+    <div class="content">{{- .Content | safeHTML -}}</div>
 
-    <ul>
-        {{ range .Params.artists }}<li>{{- . -}}</li>{{ end }}
+    <ul class="artists">
+        {{ range .Params.artists }}
+        <li>
+            {{ $data := index $.Site.Data.artists . }}
+            {{ with $data }}
+                {{ with .url }}
+                <a href="{{ . }}">{{ $data.name }}</a>
+                {{ else }}
+                <span>{{ $data.name }}</span>
+                {{ end }}
+            {{ else }}
+            <span>{{ . | markdownify | safeHTML }}</span>
+            {{ end }}
+        </li>
+        {{ end }}
     </ul>
 
     <div>
-    <!--
-    {{ range os.ReadDir "assets/program/velak120" }}
-        {{.Name}}
-    {{ end }}-->
-        <ol>
-        {{ range .Resources.ByType "audio" }}
+        <ol class="nolist">
+            {{ range .Resources.ByType "audio" }}
             <li>
-                <a href="{{.}}">{{.}}</a>
+                <i class="ic-audiotrack"></i>
+                <a href="{{.RelPermalink}}">{{- .Name | safeHTML -}}</a>
             </li>
-        {{ end }}
+            {{ end }}
+        </ol>
+        <ol class="nolist">
+            {{ range .Params.recordings }}
+            <li>
+                <i class="ic-audiotrack"></i>
+                <a href="{{.}}">{{- . | safeHTML -}}</a>
+            </li>
+            {{ end }}
         </ol>
     </div>
-
-    <!--{{ $related := .Site.RegularPages.Related . | first 5 }}
-    {{ with $related }}
-    <div>
-        <span>Related:</span>
-        <ul>
-            {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{- .Title -}}</a></li>
-            {{ end }}
-        </ul>
-    </div>
-    {{ end }}-->
+    
+    {{ partial "gallery" . }}
 
     <footer>
-        {{ with .Params.author }}<div class="author">(C) {{- . -}}</div>{{ end }}
+        {{ with .Params.photographer }}
+        <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
+        {{ end }}
+        {{ with .GitInfo }}
+        <div>
+            <span>LASTMOD</span>
+                <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
+                <span>{{ .AuthorDate.Format "2006-01-02"  }}</span>
+            </a>
+        </div>
+        {{ end }}
     </footer>
-
-
 
 </article>
 {{ end }}
 
+{{ define "schema" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "location": {
+    "@type": "Place",
+    {{ with .Params.location.name }}"name": "{{- . -}}",{{ end }}
+    {{ with .Params.location.address }}
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{- . -}}"
+    },
+    {{ end }}
+  },
+  "name": "{{- .Title -}}",
+  "startDate": "{{ .Date.Format "2006-01-02" }}"
+}
+</script>
+{{ end }}

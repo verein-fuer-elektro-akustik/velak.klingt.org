@@ -1,0 +1,23 @@
+{{ $page := . }}
+<ul class="gallery">
+    {{ range $res := .Resources.ByType "image" }}
+    {{ $img_1000 := $res.Resize "1000x" }}
+    {{ $img_400 := $res.Resize "400x" }}
+    {{ $title := "!!!!!!!!!!!!!!!!!!" }}
+    {{ if $res.Exif }}
+        {{ $time := time $res.Exif.Tags.DateTimeDigitized }}
+        {{ $title := "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }}
+    {{ else }}
+        {{ $title := "wwww2222222222222222222222222222222222222"}}
+    {{ end }}
+
+    <li>
+        <img
+            alt="{{ $page.File.ContentBaseName | safeHTML }}.jpg"
+            title="{{ $title | safeHTML }}"
+            src="{{ $img_1000.RelPermalink }}"
+            srcset="{{ $img_1000.RelPermalink }} 1000w, {{ $img_400.RelPermalink }} 600w"
+        >
+    </li>
+    {{ end }}
+</ul>

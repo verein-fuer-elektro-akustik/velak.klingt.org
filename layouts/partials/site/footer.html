@@ -1,8 +1,15 @@
 <div>
     <a href="{{ .Site.BaseURL }}/imprint">©&nbsp;{{ now.Format "2006" }}&nbsp;VELAK Vienna/AT</a>
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" tabindex="-1">CC</a>
+    {{ with .GitInfo }}
+        <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}/">
+            <small>MOD</small>
+            <span>{{ .AbbreviatedHash }}</span>
+            <!--<span>{{ .AuthorName }}</span>-->
+            <!--<span>{{ .AuthorDate.Format "2006-01-02"  }}</span>-->
+        </a>
+    {{ end }}
+    <!--<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" tabindex="-1">CC</a>-->
     <a href="{{ .Site.BaseURL }}/index.xml">RSS</a>
     <!--<a href="{{ .Site.BaseURL }}/newsletter">NEWSLETTER</a>-->
 </div>
-
 

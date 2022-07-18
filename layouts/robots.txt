@@ -1,1 +1,7 @@
 User-agent: *
+Allow: /
+Disallow: /font/
+Disallow: /syleguide/
+
+Sitemap: {{ .Site.BaseURL }}/sitemap.xml
+
