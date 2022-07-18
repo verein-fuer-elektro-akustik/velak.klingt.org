@@ -29,6 +29,7 @@ body {
     background: #202020;
     background: var(--bg);
     color: var(--fg);
+    -webkit-tap-highlight-color: var(--fg);
 }
 
 *::selection {

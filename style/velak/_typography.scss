@@ -14,9 +14,9 @@ $font-weight-values: (
 :root {
     --font-primary: "Inter";
     --font-mono: "RobotoMono", monospace;
-	--text-base-size: 13px;
-    --text-scale-ratio: 1.375;
-	--heading-line-height: 2;
+	--text-base-size: 14px;
+    --text-scale-ratio: 1.35;
+	--heading-line-height: 1.5;
 	--heading-font-weight: 700;
 	--text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
     --text-space-y-multiplier: 1;
@@ -24,6 +24,7 @@ $font-weight-values: (
 	// @include breakpoint.breakpoint(md) {
 	// 	--text-base-size: 14px;
 	//}
+    /*
     @media screen and (min-width: breakpoint.$phone) {
         --text-base-size: 14px;
 		//--text-scale-ratio: 1.5;
@@ -36,6 +37,7 @@ $font-weight-values: (
         --text-base-size: 18px;
 		//--text-scale-ratio: 2;
     }
+    */
 
 	--text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
     --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
@@ -137,7 +139,7 @@ h6 {
     line-height: var(--heading-line-height, 1.2);
     font-weight: var(--heading-font-weight, 700);
     text-transform: uppercase;
-    line-height: 1em;
+    //line-height: 1em;
     a {
         text-decoration: none;
     }
@@ -202,6 +204,23 @@ sup {
         //text-un;
     //}
 }
+
+table {
+    font-family: var(--font-mono);
+    &, td, th { 
+        border: 1px solid var(--fg);
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 2px 4px;
+        white-space: nowrap;
+    }
+    th {
+        text-align: left;
+    }
+
+}
+
 
 ul, ol {
     list-style-position: inside;

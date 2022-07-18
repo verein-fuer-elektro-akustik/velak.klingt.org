@@ -1,6 +1,12 @@
 @use "sass:math";
 @use 'breakpoint';
 
+
+html {
+	scroll-behavior: smooth;
+    word-break: keep-all;
+}
+
 body {
 
     --content-width: 1024px;
@@ -12,6 +18,7 @@ body {
     column-gap: var(--grid-gap);
     row-gap: var(--grid-gap);
     //overflow-x: hidden;
+    overflow-y: scroll;
     //padding: 0.5rem;
     width: 100%;
     height: 100%;
@@ -34,55 +41,98 @@ body {
             width: 100%;
             //margin-left: -1rem;
             margin-bottom: 0.5rem;
+            font-size: 2rem;
         } 
         > h2 {
             font-size: var(--text-md);
         }
     }
     > nav {
-        display: flex;
-        //justify-content: center ;
-        width: 100%;
-        //align-content: center;
-        margin: 0 2rem;
-        padding: 1rem 0;
-        //background: var(--bg);
         > ul {
-            all: unset;
-            list-style: none;
-            //width: 100%;
             display: flex;
-            //justify-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+            list-style: none;
+            margin: 0 2rem;
+            padding: 0;
             text-transform: uppercase;
             > li {
-                margin: 0;
-                padding: 0;
-                &:not(:first-child) {
-                    margin-left: 4px; // 0.5rem;
-                }
+                margin-bottom: 0.25rem;
+                line-height: 3rem;
+                border: 1px solid var(--fg);
                 &:not(:last-child) {
-                    margin-right: 4px; // 0.5rem;
+                    margin-right: 0.25rem; // 0.5rem;
+                }
+                &:hover {
+                    background: var(--fg);
+                    > a {
+                        color: var(--bg);
+                    }
                 }
                 > a {
-                    width: 100%;   //padding: 0.66rem 1rem;
-                    height: 100%;   //padding: 0.66rem 1rem;
-                    padding: 1ch;
-                    border: 1px solid var(--fg);
                     text-decoration: none;
+                    color: var(--fg);
+                    height: 100%;
+                    padding: 0.25rem 1rem;
                     &:hover {
                         background: var(--fg);
-                        color: var(--bg);
                     }
                 }
             }
         }
+    } 
+    /*
+    > nav {
+        position: relative;
+        > ul  {
+            all: unset;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 0 2rem;
+            text-transform: uppercase;
+            //position: relative;
+            height: 100%;
+            > li {
+                //position: relative;
+                height: 100%;
+                padding: 0.5rem 1rem;
+                border: 1px solid var(--fg);
+                &:not(:first-child) {
+                    //margin-left: 4px; // 0.5rem;
+                }
+                &:not(:last-child) {
+                    //margin-right: 4px; // 0.5rem;
+                    margin-right: 0.25rem; // 0.5rem;
+                }
+                &:hover {
+                    background: var(--fg);
+                    color: var(--bg);
+                }
+                &.active {
+                    background: var(--fg);
+                    color: var(--bg);
+                    > a {
+                        color: var(--bg);
+                    }
+                }
+                > a {
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                }
+            }
+        }
     }
+    */
     > main {
         margin: 0 2rem;
     }
     > footer {
         display: flex;
         //justify-content: center;
+        justify-content: flex-end;
         margin: 0 1rem;
         padding: 0 0 1rem 0;
         font-size: 75%;
@@ -122,7 +172,7 @@ body {
     @media screen and (min-width: breakpoint.$tablet) {
         > nav {
             > ul {
-                justify-content: center;
+                //justify-content: center;
                 > li {
                     //padding: 0 1rem;
                 }
