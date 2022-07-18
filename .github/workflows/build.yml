@@ -19,17 +19,16 @@ jobs:
       - name: Build style
         run: npm run prod:style
       - name: Build site
-        run: npm run prod:hugo
-        #run: npm run prod:hugo -- --baseURL https://disktree.github.io/velak
+        run: npm run prod:hugo -- --baseURL https://disktree.github.io/velak
       #- name: Store
         #uses: actions/upload-artifact@v3
         #with:
-          #name: stritter.audio
+          #name: velak.klingt.org
           #path: public
-      #- name: Deploy
-        #uses: JamesIves/github-pages-deploy-action@v4.3.4
-        #with:
-          #branch: gh-pages
-          #folder: public
-          #clean: true
-          #single-commit: true
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.4
+        with:
+          branch: gh-pages
+          folder: public
+          clean: true
+          single-commit: true
