@@ -23,8 +23,16 @@ artists: [
     gudinni cortina,
     özcan ertek,
 ]
+location: {
+    name: "virtual",
+    link: "https://velakradar.klingt.org/radar.php"
+}
+recordings: [
+   https://disktree.net/music/VELAKRADAR/velakradar2-vvv1.ogg,
+   https://disktree.net/music/VELAKRADAR/velakradar2-vvv2.ogg,
+]
 ---
-launch of 2nd. wave of livestreams via velakradar.
+launch of 2nd. wave of livestreams.
 
 via the [velakradar-soundmap](https://velakradar.klingt.org/radar.php) you can listen to live-streams of spaces and environments all over the world. the live-streams get recorded and will stay accessible to listen to.
 

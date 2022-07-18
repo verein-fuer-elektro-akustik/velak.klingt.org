@@ -9,8 +9,6 @@ artists: [
     lucia kagramanyan - rush and peace in yerevan,
 ]
 tags: [radar]
-sitemap:
-    changefreq: never 
 ---
 
 

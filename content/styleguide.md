@@ -22,12 +22,15 @@ rss_ignore: true
 ###### VELAK H6
 ###### VELAK H6
 
+### An ihren daten sollt ihr sie erkennen.
+
 ---
 
 Many non-authoritarian organizations have foundered on the dubious principle of open membership, which frequently leads to a preponderance of assholes, yahoos, spoilers, whining neurotics, & police agents. Some will call this an elitist attitude, but it is not—at least not in the C. Wright Mills sense of the word: that is, a small group which exercises power over non-insiders for its own aggrandizement.
 
-This [link](https://disktree.net) is an link.
+This [link](https://disktree.net) is a link.
 
+https://velak.klingt.org/  
 https://velak.disktree.net  
 https://disktree.net
 
@@ -70,47 +73,51 @@ And another footnote. [^2]
 
 ### The Great Heading {#custom-id}
 
-
 Term
 : another
 : definition
 
 ---
+
 ###### Colors
 TODO
 
 ---
+
 ###### Icons
+
+{{< icon "access_time" >}}
+{{< icon "arrow_back" >}}
+{{< icon "arrow_back_ios" >}}
+{{< icon "arrow_downward" >}}
+{{< icon "arrow_drop_down" >}}
+{{< icon "arrow_drop_up" >}}
+{{< icon "arrow_forward" >}}
+{{< icon "arrow_forward_ios" >}}
+{{< icon "arrow_left" >}}
+{{< icon "arrow_right" >}}
+{{< icon "arrow_right_alt" >}}
+{{< icon "arrow_upward" >}}
+{{< icon "bedtime" >}}
+{{< icon "brightness_1" >}}
+{{< icon "color_lens" >}}
+{{< icon "colorize" >}}
+{{< icon "compare_arrows" >}}
+{{< icon "double_arrow" >}}
 {{< icon "flag" >}}
+{{< icon "grain" >}}
+{{< icon "grid_on" >}}
 {{< icon "keyboard_arrow_down" >}}
 {{< icon "keyboard_arrow_left" >}}
 {{< icon "keyboard_arrow_right" >}}
 {{< icon "keyboard_arrow_up" >}}
-{{< icon "brightness_1" >}}
-{{< icon "color_lens" >}}
-{{< icon "colorize" >}}
-{{< icon "grain" >}}
-{{< icon "grid_on" >}}
-{{< icon "remove_red_eye" >}}
 {{< icon "local_cafe" >}}
-{{< icon "arrow_back" >}}
-{{< icon "arrow_drop_down" >}}
-{{< icon "arrow_drop_up" >}}
-{{< icon "arrow_forward" >}}
-{{< icon "arrow_upward" >}}
+{{< icon "remove_red_eye" >}}
 {{< icon "subdirectory_arrow_left" >}}
 {{< icon "subdirectory_arrow_right" >}}
-{{< icon "arrow_downward" >}}
-{{< icon "arrow_left" >}}
-{{< icon "arrow_right" >}}
-{{< icon "arrow_back_ios" >}}
-{{< icon "arrow_forward_ios" >}}
-{{< icon "compare_arrows" >}}
-{{< icon "arrow_right_alt" >}}
-{{< icon "double_arrow" >}}
-{{< icon "bedtime" >}}
 
 ---
+
 ###### Images
 <!-- ![alt text](image.jpg) -->
 

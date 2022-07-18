@@ -1,9 +1,19 @@
 ---
-id: "cauliflower_sound_festival"
 title: "Cauliflower Sound Festival"
 date: 2022-04-13
-publishdate: 2022-07-06
 artists: [
+    Cosma Grosser,
+    Eduardo TriviÃ±o Cely,
+    Jan Brocza,
+    Jennifer Posny und Jonas Hammerer,
+    Angela Lau interpretiert Philippe Mion Hope,
+    Kisling,
+    Mad Lane,
+    Vinzenz Schwab,
+    Frederic Stritter & Nina Bauer,
+    Thomas Gorbach interpretiert Alla,
+    Zahaikevych MISTO,
+    Gischt,
 ]
 ---
 ### Installations

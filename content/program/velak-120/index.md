@@ -9,8 +9,8 @@ location: {
 }
 description: ""
 artists: [
-    "Anna Lerchbaumer",
-    "Fabian Lanzmaier"
+    "anna_lerchbaumer",
+    "fabian_lanzmaier"
 ]
 ---
 Kindly supported by ma7 wien kultur & bmkoes.  

@@ -1,5 +1,5 @@
 ---
-title: "Gala#100"
+title: "GALA#100"
 date: 2017-12-02
 publishdate: 2017-12-02
 artists: [
