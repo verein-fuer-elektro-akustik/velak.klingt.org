@@ -15,10 +15,16 @@ artists: [
     Zahaikevych MISTO,
     Gischt,
 ]
+location: {
+    name: "Prospekthof Akademie der Bildenden Künste Wien",
+    address: "Lehargasse 8, 1060 Wien"
+}
 ---
+Velak, The Acousmatic Project and ÖH AkBild warmly invites to a three day long festival at the Prospekthof.
+
 ### Installations
 - Cosma Grosser
-- Eduardo TriviÃ±o Cely
+- Eduardo Triviño Cely
 - Jan Brocza
 - Jennifer Posny und [Jonas Hammerer](https://soundcloud.com/jonashammerer)
 
@@ -27,7 +33,7 @@ artists: [
 - Angela Lau interpretiert Philippe Mion Hope
 - Kisling
 - Mad Lane
-- Andreas ZiÃŸler & Fabian Lanzmaier  
+- Andreas Zißler & Fabian Lanzmaier  
 
 #### 14.04.2022
 - Vinzenz Schwab
@@ -37,7 +43,7 @@ artists: [
 - Gischt
 
 #### 15.04.2022
-- PRdeÄa Raketa & atrick K.-H.
-- Paul GrÃ¼ndorfer
+- Rdeča Raketa & Patrick K.-H.
+- Paul Gründorfer
 - Milena Georgieva
-- Eduardo TriviÃ±o Cely
+- Eduardo Triviño Cely

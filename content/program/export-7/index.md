@@ -15,7 +15,6 @@ artists: [
 ]
 location: {
     name: fuga,
-    address: nÃ¡mestie snp 24, 81101 bratislava, slovakia
 }
 tags: [export]
 ---

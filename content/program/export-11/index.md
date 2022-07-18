@@ -10,9 +10,7 @@ artists: [
     matthias erian
 ]
 location: {
-    name: "mo.Ä",
-    link: "https://www.moe-vienna.org/",
-    address: "thelemangasse 4, 1170 wien"
+    name: "moe"
 }
 tags: [export]
 ---

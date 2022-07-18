@@ -7,7 +7,7 @@ artists: [
     richard bruzek, reinhard dundler & felipe wagner dos santos,
     martin gasser,
     oliver grimm - beppu project - continued,
-    gÃ¼nther rabl - roller,
+    günther rabl - roller,
 ]
 location: {
     name: "steiner8",
@@ -15,4 +15,5 @@ location: {
 }
 tags: [export]
 ---
-doors: 18h / begin: 20hentry: 3eur
+doors: 18h / begin: 20h  
+entry: 3eur

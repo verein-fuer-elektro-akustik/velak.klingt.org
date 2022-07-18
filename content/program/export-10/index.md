@@ -10,7 +10,7 @@ artists: [
     krk
 ]
 location: {
-    name: "mo.Ä",
+    name: "moe",
     link: "https://www.moe-vienna.org/",
     address: "thelemangasse 4, 1170 wien"
 }

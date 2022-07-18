@@ -13,5 +13,6 @@ artists: [
 ]
 tags: [export]
 ---
-doors:19.30h begin: 20.30h (sharp) entry: 3€
+doors:19.30h begin: 20.30h (sharp)  
+entry: 3€
 

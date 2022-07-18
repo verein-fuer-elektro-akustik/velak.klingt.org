@@ -1,0 +1,15 @@
+---
+title: "cap8 & velak"
+date: 2018-03-30
+artists: [
+    gabriela areal,
+    tamara wilhelm y philip leitner,
+    düsseldorf,
+    norman bates,
+]
+location: {
+    name: "una casa / buenos aires"
+}
+tags: []
+---
+
