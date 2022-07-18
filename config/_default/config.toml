@@ -4,16 +4,18 @@ title = "VELAK"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 description = "Verein für Elektro Akustik"
-keywords =  []
+keywords =  ["velak","verein","akustik","musik","events"]
 theme_color = "#000000"
 
-disableHugoGeneratorInject = true
-rssLimit = 23
+paginate = 1000
+rssLimit = 100
 enableRobotsTXT = true
+enableGitInfo = true
+disableHugoGeneratorInject = true
 
 [taxonomies]
-    category = "categories"
     tag = "tags"
+    #category = "categories"
     #artist = "artists"
 
 #[permalinks]
@@ -30,3 +32,4 @@ enableRobotsTXT = true
     section = ["HTML","RSS"]
     taxonomyTerm = ["HTML", "RSS"]
     taxonomy = ["HTML", "RSS"]
+
