@@ -3,17 +3,19 @@
     "version": "0.0.0",
     "description": "https://velak.klingt.org",
     "private": true,
+    "type": "module",
     "scripts": {
         "clean": "rm -rf public/ && rm -f static/style.css*",
         "dev:style": "sass style/main.scss static/style.css --watch",
         "dev:hugo": "hugo server -D",
         "start": "npm run dev:hugo",
+        "csv2json": "node_modules/csvtojson/bin/csvtojson artists.csv > data/artists.json",
         "build:style": "sass style/main.scss static/style.css",
         "build:hugo": "hugo",
         "build": "npm run build:style && npm run build:hugo",
-        "prod:sass": "sass style/main.scss static/style.css --no-source-map --style compressed",
+        "prod:style": "sass style/main.scss static/style.css --no-source-map --style compressed",
         "prod:hugo": "hugo --environment production --verbose",
-        "prod": "npm run clean && npm run prod:sass && npm run prod:hugo"
+        "prod": "npm run clean && npm run prod:style && npm run prod:hugo"
     },
     "repository": {
         "type": "git",
@@ -23,6 +25,8 @@
     "license": "ISC",
     "homepage": "https://github.com/disktree/velak/blob/master/README.md",
     "devDependencies": {
+        "csv": "^6.2.0",
+        "csvtojson": "^2.0.10",
         "sass": "^1.53.0"
     }
 }
