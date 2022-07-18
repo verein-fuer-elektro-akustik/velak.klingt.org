@@ -1,10 +1,12 @@
 {
     "frederic_stritter": {
         "name": "Frederic Stritter",
-        "url": "https://stritter.audio"
+        "url": "https://stritter.audio",
+        "country": "at"
     },
     "fabian_lanzmaier": {
         "name": "Fabian Lanzmaier",
-        "url": "https://fabianlanzmaier.com"
+        "url": "https://fabianlanzmaier.com",
+        "country": "at"
     }
 }
