@@ -14,10 +14,10 @@ artists: [
     velharmonisches orchester
 ]
 location: {
-    name: steiner8
+    name: steinergasse8
 } 
 tags: [gala]
-photographer: Doris Pollhammer
+photos: Doris Pollhammer
 ---
 doors: 18:30 / start : 20:00
 
