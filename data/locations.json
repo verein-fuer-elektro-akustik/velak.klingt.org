@@ -2,6 +2,10 @@
     "b5": {
         "address": "herklotzgasse 21, 1150 vienna"
     },
+    "brut": {
+        "name": "brut konzerthaus",
+        "address": "lothringerstrasse 20, 1030 vienna"
+    },
     "centralgarden": {
         "url": "https://www.centralgarden.at/",
         "address": "Untere Donaustraße 41, 1020 Wien"
@@ -15,7 +19,7 @@
     },
     "fluc": {
         "url": "https://www.fluc.at/",
-        "address": "Praterstern , 1020 Vienna/AT"
+        "address": "Praterstern, 1020 Vienna/AT"
     },
     "fuga": {
         "address": "námestie snp 24, 81101 bratislava, slovakia",
@@ -25,8 +29,8 @@
         "url": "https://www.moe-vienna.org/",
         "address": "thelemangasse 4, 1170 wien"
     },
-    "steiner8": {
-        "address": "steinergasse 8 , 1170 vienna"
+    "steinergasse8": {
+        "address": "steinergasse 8, 1170 vienna"
     },
     "symposion_lindabrunn": {
         "address": "Steinbruchstraße 25, 2551 Enzesfeld-Lindabrunn",

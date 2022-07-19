@@ -10,5 +10,9 @@ sitemap:
   changefreq: yearly
   priority: 0.5
 ---
-Subscribe/Unsubscribe velak announcements via: https://klingt.org/cgi-bin/mailman/listinfo/velak-announce
+Subscribe/Unsubscribe:  
+https://klingt.org/cgi-bin/mailman/listinfo/velak-announce  
+
+Post message:  
+velak-announce@klingt.org
 

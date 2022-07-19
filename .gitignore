@@ -7,6 +7,7 @@ _income/
 _old/
 nginx.conf
 .hugo_build.lock
+ISSUES.md
 static/style.css*
 *.flac
 *.mp3
