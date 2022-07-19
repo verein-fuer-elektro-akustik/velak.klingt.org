@@ -8,11 +8,11 @@ artists: [
     maia koenig,
     kisling,
     manuel knapp,
-    paul grÃ¼ndorfer,
+    paul gründorfer,
     dj karl salzmann,
 ]
 tags: [export]
-photographer: "Doris Pollhammer"
+photos: "Doris Pollhammer"
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3eur

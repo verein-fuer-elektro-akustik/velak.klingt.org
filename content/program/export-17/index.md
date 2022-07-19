@@ -10,7 +10,6 @@ artists: [
     velharmonisches orchester
 ]
 tags: [export]
-photographer:
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3eur

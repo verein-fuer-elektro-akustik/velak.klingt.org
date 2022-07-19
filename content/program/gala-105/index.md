@@ -11,6 +11,6 @@ artists: [
     christian schröder
 ]
 tags: [gala]
-photographer: "Sarah Jackel"
+photographer: "Sophie Dvořák"
 ---
 doors: 19:00 / begin: 8pm (sharp!)  

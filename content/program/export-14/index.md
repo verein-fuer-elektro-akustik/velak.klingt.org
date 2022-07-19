@@ -4,14 +4,13 @@ date: 2016-04-01
 location: {
     name: "venster99"
 }
-description: ""
 artists: [
     Mikko Savela,
-    MartÃ­ Guillem,
+    Martí Guillem,
     Department Pop,
 ]
 tags: [export]
-photographer: "Sophie DvoÅ™Ã¡k"
+photos: "Sophie Dvořák"
 ---
 start: 21.00
 

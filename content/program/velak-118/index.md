@@ -2,9 +2,7 @@
 title: "VELAK#118"
 date: 2021-09-11
 location: {
-    name: "",
-    link: "",
-    adress: ""
+    name: "symposion_lindabrunn"
 }
 description: "Velak goes Lindabrunn II"
 artists: [

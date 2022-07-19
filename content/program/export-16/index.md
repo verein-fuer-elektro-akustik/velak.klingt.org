@@ -11,6 +11,6 @@ artists: [
     limpe fuchs & vinzenz schwab & caroline profanter
 ]
 tags: [export]
-photographer: "Edward Chapon"
+photos: "Edward Chapon"
 ---
 doors: 7pm / begin: 8pm (sharp!) entry: 3eur

@@ -10,9 +10,7 @@ artists: [
     krk
 ]
 location: {
-    name: "moe",
-    link: "https://www.moe-vienna.org/",
-    address: "thelemangasse 4, 1170 wien"
+    name: "moe"
 }
 tags: [export]
 photographer: Edward Chapon

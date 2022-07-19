@@ -11,7 +11,6 @@ artists: [
     julius biswurm & xavier weydert
 ]
 tags: []
-photographer: 
 ---
 open doors 20:00
 

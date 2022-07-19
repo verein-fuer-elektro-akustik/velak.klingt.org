@@ -10,7 +10,6 @@ artists: [
     krach
 ]
 tags: []
-photographer: 
 ---
 open doors 20:00
 

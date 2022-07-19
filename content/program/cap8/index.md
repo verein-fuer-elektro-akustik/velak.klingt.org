@@ -8,7 +8,8 @@ artists: [
     norman bates,
 ]
 location: {
-    name: "una casa / buenos aires"
+    name: "una casa / buenos aires",
+    url: "https://cap8.webnode.page/"
 }
 tags: []
 ---
