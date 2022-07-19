@@ -1,11 +1,32 @@
 {
+    "b5": {
+        "address": "herklotzgasse 21, 1150 vienna"
+    },
+    "centralgarden": {
+        "url": "https://www.centralgarden.at/",
+        "address": "Untere Donaustraße 41, 1020 Wien"
+    },
     "das_werk": {
         "address": "Spittelauer Lände 12, Stadtbahnbogen 331, 1090 Wien",
         "url": "https://www.daswerk.org/"
     },
+    "erbsenfabrik": {
+        "address": "herklotzgasse 21, 1150 vienna"
+    },
     "fluc": {
         "url": "https://www.fluc.at/",
         "address": "Praterstern , 1020 Vienna/AT"
+    },
+    "fuga": {
+        "address": "námestie snp 24, 81101 bratislava, slovakia",
+        "country": "sk"
+    },
+    "moe": {
+        "url": "https://www.moe-vienna.org/",
+        "address": "thelemangasse 4, 1170 wien"
+    },
+    "steiner8": {
+        "address": "steinergasse 8 , 1170 vienna"
     },
     "symposion_lindabrunn": {
         "address": "Steinbruchstraße 25, 2551 Enzesfeld-Lindabrunn",

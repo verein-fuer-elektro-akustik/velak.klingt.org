@@ -1,0 +1,16 @@
+---
+title: "GALA#103"
+date: 2018-09-21
+location: {
+    name: "steiner8",
+}
+artists: [
+    finn loxbo & anders vestergaard,
+    noid - raumsonden,
+    semino_tica (isabella forciniti & patrick k.h.),
+    andreas 'krach' stoiber
+]
+tags: [gala]
+photographer: "Klemens Kohlweis"
+---
+doors: 19:00 / begin: 8pm (sharp!)  

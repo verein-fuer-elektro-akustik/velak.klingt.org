@@ -1,0 +1,16 @@
+---
+title: "GALA#102"
+date: 2018-07-28
+location: {
+    "name": "centralgarden"
+}
+artists: [
+    jörg zemmler,
+    RUSE trio,
+    luiza schulz,
+    jakob schauer
+]
+tags: [gala]
+photographer: "Doris Pollhammer"
+---
+doors: 19:00 / begin: 8pm (sharp!)  

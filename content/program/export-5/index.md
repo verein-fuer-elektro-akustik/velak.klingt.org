@@ -12,4 +12,5 @@ location: {
 }
 tags: [export]
 ---
-
+doors: 20h / begin: 21h (sharp!)  
+entry: 3€

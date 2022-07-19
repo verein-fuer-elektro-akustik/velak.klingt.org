@@ -46,4 +46,4 @@ Velak, The Acousmatic Project and ÖH AkBild warmly invites to a three day long 
 - Rdeča Raketa & Patrick K.-H.
 - Paul Gründorfer
 - Milena Georgieva
-- Eduardo Triviño Cely
+- Eduardo Triviño Cel[y](y)
