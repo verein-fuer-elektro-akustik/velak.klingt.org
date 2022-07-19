@@ -25,6 +25,10 @@
         "address": "námestie snp 24, 81101 bratislava, slovakia",
         "country": "sk"
     },
+    "garnison": {
+        "address": "garnisonsgasse 7, 1090 vienna",
+        "url": "https://www.discogs.com/label/334280-Garnison7"
+    },
     "moe": {
         "url": "https://www.moe-vienna.org/",
         "address": "thelemangasse 4, 1170 wien"

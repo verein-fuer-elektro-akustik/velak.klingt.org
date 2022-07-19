@@ -10,8 +10,7 @@ artists: [
 location: {
     name: "brut"
 }
-tags: []
-image: ""
+tags: [gala]
 photos: "edward chapon"
 ---
 doors: 7pm / begin: 8pm (sharp!)  

@@ -2,9 +2,9 @@
 title: "EXPORT#2"
 date: 2014-05-13
 artists: [
-    maierhofer/allgaier/tomasi "super ultra plus vakuum",
+    maierhofer & allgaier & tomasi, 
     paranoiz,
-    stefan fraunberger - "die rauschgiftradikale und der feind",
+    stefan fraunberger,
     stefan nussbaumer
 ]
 location: {}

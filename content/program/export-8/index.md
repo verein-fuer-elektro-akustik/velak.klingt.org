@@ -10,8 +10,7 @@ artists: [
     günther rabl - roller,
 ]
 location: {
-    name: "steiner8",
-    address: "steinergasse 8, 1170 wien"
+    name: "steinergasse8"
 }
 tags: [export]
 ---
