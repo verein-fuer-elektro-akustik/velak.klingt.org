@@ -19,7 +19,7 @@ jobs:
       - name: Build style
         run: npm run prod:style
       - name: Build site
-        run: npm run prod:hugo -- --baseURL https://disktree.github.io/velak
+        run: npm run prod:hugo -- --baseURL https://verein-fuer-elektro-akustik.github.io/velak.klingt.org
       #- name: Store
         #uses: actions/upload-artifact@v3
         #with:
