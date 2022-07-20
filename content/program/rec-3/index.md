@@ -2,7 +2,7 @@
 title: "REC#3"
 date: 2009-05-08
 location: {
-    name: "garnison7"
+    name: "garnison"
 }
 artists: [
     Florian Kindlinger,

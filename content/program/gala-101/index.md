@@ -1,5 +1,5 @@
 ---
-title: "GALA#101"
+title: "gala#101"
 date: 2018-06-15
 location: {
     name: "lndmr im celeste",

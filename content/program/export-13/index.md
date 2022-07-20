@@ -2,7 +2,7 @@
 title: "EXPORT#13"
 date: 2016-02-16
 location: {
-    name: "g7"
+    name: "garnison"
 }
 description: ""
 artists: [

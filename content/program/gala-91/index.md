@@ -8,7 +8,7 @@ artists: [
     RUSE
 ]
 location: {
-    name: "g7"
+    name: "garnison"
 }
 tags: [gala]
 photos: "lisbeth kovacic"

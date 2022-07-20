@@ -2,7 +2,7 @@
 title: "EXPORT#17"
 date: 2016-12-13
 location: {
-    name: "moÄ"
+    name: "moe"
 }
 description: ""
 artists: [

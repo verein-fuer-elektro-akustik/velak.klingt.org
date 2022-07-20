@@ -8,7 +8,7 @@ artists: [
     brennstein
 ]
 location: {
-    name: "g7"
+    name: "garnison"
 }
 tags: [gala]
 photos: ""

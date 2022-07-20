@@ -25,7 +25,7 @@ artists: [
 ]
 location: {
     name: "virtual",
-    link: "https://velakradar.klingt.org/radar.php"
+    url: "https://velakradar.klingt.org/radar.php"
 }
 recordings: [
    https://disktree.net/music/VELAKRADAR/velakradar2-vvv1.ogg,

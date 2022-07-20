@@ -2,7 +2,7 @@
 title: "REC#0"
 date: 2009-01-10
 location: {
-    name: "garnison7"
+    name: "garnison"
 }
 artists: [
     Philip Leitner,

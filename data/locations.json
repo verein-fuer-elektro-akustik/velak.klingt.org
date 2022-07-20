@@ -1,16 +1,24 @@
 {
+    "akbild": {
+        "name": "Akademie der bildenden Künste Wien",
+        "address": "1010 Wien, Schillerplatz 3",
+        "url": "https://www.akbild.ac.at"
+    },
     "b5": {
         "address": "herklotzgasse 21, 1150 vienna"
     },
     "brut": {
-        "name": "brut konzerthaus",
-        "address": "lothringerstrasse 20, 1030 vienna"
+        "name": "Brut Konzerthaus",
+        "address": "lothringerstrasse 20, 1030 vienna",
+        "url": "https://brut-wien.at/"
     },
     "centralgarden": {
-        "url": "https://www.centralgarden.at/",
-        "address": "Untere Donaustraße 41, 1020 Wien"
+        "name": "Central Garden",
+        "address": "Untere Donaustraße 41, 1020 Wien",
+        "url": "https://www.centralgarden.at/"
     },
     "das_werk": {
+        "name": "Das Werk",
         "address": "Spittelauer Lände 12, Stadtbahnbogen 331, 1090 Wien",
         "url": "https://www.daswerk.org/"
     },
@@ -18,30 +26,57 @@
         "address": "herklotzgasse 21, 1150 vienna"
     },
     "fluc": {
-        "url": "https://www.fluc.at/",
-        "address": "Praterstern, 1020 Vienna/AT"
+        "name": "Fluc",
+        "address": "Praterstern, 1020 Vienna/AT",
+        "url": "https://www.fluc.at/"
+    },
+    "forum_stadtpark": {
+        "name": "Forum Stadtpark",
+        "address": "Forum Stadtpark 1, 8010 Graz",
+        "url": "https://forumstadtpark.at/"
     },
     "fuga": {
+        "name": "Fuga",
         "address": "námestie snp 24, 81101 bratislava, slovakia",
         "country": "sk"
     },
     "garnison": {
+        "name": "Garnison",
         "address": "garnisonsgasse 7, 1090 vienna",
         "url": "https://www.discogs.com/label/334280-Garnison7"
     },
+    "kunsthause_graz": {
+        "name": "Kunsthause Graz",
+        "address": "Lendkai 1, 8020 Graz,  Austria",
+        "url": "https://www.museum-joanneum.at/kunsthaus-graz"
+    },
+    "mdw": {
+        "name": "mdw – Universität für Musik und darstellende Kunst Wien",
+         "address": "Anton-von-Webern-Platz 1, 1030 Wien",
+        "url": "https://www.mdw.ac.at/"
+    },
     "moe": {
-        "url": "https://www.moe-vienna.org/",
-        "address": "thelemangasse 4, 1170 wien"
+        "name": "Moe",
+        "address": "thelemangasse 4, 1170 wien",
+        "url": "https://www.moe-vienna.org/"
+    },
+    "mq": {
+        "name": "MuseumsQuartier",
+         "address": "Museumsplatz 1, 1070 Vienna",
+        "url": "https://www.mqw.at/"
     },
     "steinergasse8": {
+        "name": "Steiner8",
         "address": "steinergasse 8, 1170 vienna"
     },
     "symposion_lindabrunn": {
+        "name": "Symposion Lindabrunn",
         "address": "Steinbruchstraße 25, 2551 Enzesfeld-Lindabrunn",
         "url": "https://www.symposion-lindabrunn.at/"
     },
     "venter99": {
-        "address": "Stadbahnbögen 99",
+        "name": "Venster99",
+        "address": "Stadbahnbögen 99, Wien",
         "url": "http://www.venster99.at/"
     }
 }

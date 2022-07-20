@@ -1,5 +1,4 @@
 ---
-title: Program
 rss_ignore: true
 menu:
   nav:
@@ -9,4 +8,3 @@ sitemap:
   changefreq: monthly
   priority: 0.9
 ---
-program...

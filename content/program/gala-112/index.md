@@ -1,5 +1,5 @@
 ---
-title: "GALA#112"
+title: "gala#112"
 date: 2020-03-07
 location: { name: rhiz }
 artists: [

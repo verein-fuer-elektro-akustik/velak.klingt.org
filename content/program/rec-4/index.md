@@ -2,7 +2,7 @@
 title: "REC#4"
 date: 2009-06-05
 location: {
-    name: "garnison7"
+    name: "garnison"
 }
 artists: [
     Maja Osojnik,

@@ -1,5 +1,5 @@
 ---
-title: "GALA#1"
+title: "gala#1"
 date: 2009-09-01
 artists: [
     le mat,

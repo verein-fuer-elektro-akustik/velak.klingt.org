@@ -1,5 +1,5 @@
 ---
-title: "GALA#117"
+title: "gala#117"
 date: 2021-06-22
 location: {
     name: "steinergasse8"

@@ -15,7 +15,10 @@ artists: [
     florian vanhoof,
     dj tommy de nys
 ]
-location: {}
+location: {
+    name: "Arteliers Claus",
+    address: "15 rue crickx, 1060 bruxelles"
+}
 tags: [export]
 ---
 doors: 20.00h / begin: 21.00h (sharp!)  

@@ -8,7 +8,10 @@ artists: [
     mauro diciocia - torre lapillo,
     lucia kagramanyan - rush and peace in yerevan,
 ]
+location: {
+    name: "virtual",
+    url: "https://velakradar.klingt.org/radar.php"
+}
 tags: [radar]
 ---
-
 

@@ -2,7 +2,7 @@
 title: "REC#1"
 date: 2009-03-06
 location: {
-    name: "garnison7"
+    name: "garnison"
 }
 artists: [
     Gloria Damijan (piano),

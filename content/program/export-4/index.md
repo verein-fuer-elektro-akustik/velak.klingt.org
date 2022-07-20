@@ -8,7 +8,7 @@ artists: [
     rheuma 3000,
 ]
 location: {
-    name: mq hof 8
+    name: "mq"
 }
 tags: [export]
 ---

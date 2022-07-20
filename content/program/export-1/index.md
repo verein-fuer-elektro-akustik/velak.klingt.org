@@ -8,8 +8,10 @@ artists: [
     gobi drab & tamara friebel
 ]
 location: {
+    name: "hut"
 }
 tags: [export]
+photos: "edward chapon"
 ---
 doors: 20.00h / begin: 21.00h (sharp!)  
 entry: 3€

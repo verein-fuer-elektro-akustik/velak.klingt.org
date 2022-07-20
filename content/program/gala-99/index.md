@@ -7,7 +7,7 @@ artists: [
     peter trabitzsch
 ]
 location: {
-    name: "g7"
+    name: "garnison"
 }
 tags: [gala]
 photos: "Doris Pollhammer"

@@ -9,7 +9,7 @@ artists: [
     karolina jawad
 ]
 location: {
-    name: "g7"
+    name: garnison
 }
 tags: [gala]
 photos: "Felipe Wagner dos Santos"

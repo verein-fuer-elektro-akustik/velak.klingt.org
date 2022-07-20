@@ -1,5 +1,5 @@
 ---
-title: "GALA#108"
+title: "gala#108"
 date: 2021-00-00
 location: {
     name: "",

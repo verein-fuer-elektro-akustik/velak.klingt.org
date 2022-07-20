@@ -7,7 +7,7 @@ artists: [
     stefan fraunberger,
     stefan nussbaumer
 ]
-location: {}
+location: { name: moe }
 tags: [export]
 ---
 doors: 20.00h / begin: 21.00h (sharp!)  

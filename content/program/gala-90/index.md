@@ -8,7 +8,7 @@ artists: [
     torùn. grisi weikinger, joki oberhuber, roy rulbertson III
 ]
 location: {
-    name: "garnisongasse"
+    name: "garnison"
 }
 tags: [gala]
 photos: "lisbeth kovacic"

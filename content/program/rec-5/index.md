@@ -2,7 +2,7 @@
 title: "REC#5"
 date: 2009-10-07
 location: {
-    name: "garnison7"
+    name: "garnison"
 }
 artists: [
     Philip Leitner (piano, electronics),

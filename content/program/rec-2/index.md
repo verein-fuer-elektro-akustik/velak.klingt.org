@@ -2,7 +2,7 @@
 title: "REC#2"
 date: 2009-04-03
 location: {
-    name: "garnison7"
+    name: "garnison"
 }
 artists: [
     Billy Roisz,

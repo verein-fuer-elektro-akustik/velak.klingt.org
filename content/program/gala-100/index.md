@@ -1,5 +1,5 @@
 ---
-title: "GALA#100"
+title: "gala#100"
 date: 2017-12-02
 artists: [
     niklas adam & daniel lercher,
