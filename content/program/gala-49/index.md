@@ -1,21 +1,19 @@
 ---
-title: "gala#30"
-date: 2008-02-19
-publishDate: 2008-02-19
+title: "gala#49"
+date: 2010-02-23
+publishDate: 2010-02-23
 artists: [
-    richard bruzek,
-    vinzent schwab,
-    simina badea,
-    I8U,
-    heribert friedl,
-    bernhard gál,
-    stefan fraunberger,
-    greg haines,
+    z.b. & elffriede,
+    robert piotrowicz,
+    philip leitner,
+    klaus filip & seijiro murayama
 ]
 location: {
     name: "brut"
 }
-photos:
+photos: 
 tags: [gala]
 recordings: []
+image:
 ---
+

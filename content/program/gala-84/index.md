@@ -1,6 +1,7 @@
 ---
 title: "gala#84"
 date: 2014-10-28
+publishDate: 2014-10-28
 artists: [
     JD Zazie,
     Karl Salzmann,

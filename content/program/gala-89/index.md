@@ -1,6 +1,7 @@
 ---
 title: "gala#88"
 date: 2016-03-16 
+publishDate: 2016-03-16 
 artists: [
     lale rodgarkia-dara,
     robert gruber,

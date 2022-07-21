@@ -1,6 +1,7 @@
 ---
 title: "gala#87"
 date: 2015-04-21
+publishDate: 2015-04-21
 artists: [
     Igor Lintz-Maues,
     Dario Sanfilippo & SEC,

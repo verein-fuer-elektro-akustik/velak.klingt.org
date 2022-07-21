@@ -14,7 +14,7 @@ artists: [
 location: {
     name: "brut"
 }
-tags: [gala]
+tags: [gala,special]
 image: ""
 photos: "edward chapon"
 ---

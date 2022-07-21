@@ -1,17 +1,8 @@
 ---
-title: "gala#34"
-date: 2008-06-03
-publishDate: 2008-06-03
+title: "gala#35"
+date: 2008-07-08
+publishDate: 2008-07-08
 artists: [
-    dieb13 & tim blechmann,
-    dieb13,
-    tim blechmann,
-    klaus filip,
-    lars stigler & peter kutin,
-    lars stigler,
-    peter kutin,
-    yellowknives,
-    paula matthusen
 ]
 location: {
     name: "brut"
