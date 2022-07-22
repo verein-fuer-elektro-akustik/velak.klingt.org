@@ -1,5 +1,5 @@
 ---
-title: "AYUMU01.1"
+title: "ayumu01.1"
 date: 2019-08-31
 location: {
     name: "bar ishee, tokyo, japan"

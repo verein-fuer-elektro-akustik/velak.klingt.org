@@ -3,7 +3,7 @@ title: "VELAK & das Wiener Akusmonium"
 date: 2021-09-30
 artists: [
 ]
-draft: true
+location: { name: "akbild" }
 ---
 #### Donnerstag, 30.09.2021
 - Studierende der KunstuniversitÃ¤t Graz/IEM

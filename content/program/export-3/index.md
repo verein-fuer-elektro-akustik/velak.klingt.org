@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#3"
+title: "export#3"
 date: 2014-06-27
 artists: [
     reinhard dundler & paul gruendorfer,

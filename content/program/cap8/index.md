@@ -1,5 +1,5 @@
 ---
-title: "cap8 & velak"
+title: "cap8"
 date: 2018-03-30
 artists: [
     gabriela areal,

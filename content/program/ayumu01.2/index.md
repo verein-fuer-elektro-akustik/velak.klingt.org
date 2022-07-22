@@ -1,5 +1,5 @@
 ---
-title: "AYUMU01.2"
+title: "ayumu01.2"
 date: 2019-08-31
 location: {
     name: "otooto, tokyo, japan"

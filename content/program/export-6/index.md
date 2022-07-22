@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#6"
+title: "export#6"
 date: 2015-03-17
 artists: [
     poisonous frequencies (petr vrba - federsel - dd kern),

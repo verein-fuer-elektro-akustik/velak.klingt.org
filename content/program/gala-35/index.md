@@ -11,3 +11,5 @@ photos:
 tags: [gala]
 recordings: []
 ---
+{{< video "gala-35.mp4" >}}
+

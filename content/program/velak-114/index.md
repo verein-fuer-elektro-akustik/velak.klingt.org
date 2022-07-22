@@ -14,6 +14,4 @@ artists: [
 tags: [echoraeume]
 ---
 velak is broadcasting a fine selection of its previous open call contributions.  
-thank you all for participating!
-
 

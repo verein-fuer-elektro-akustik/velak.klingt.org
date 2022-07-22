@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#2"
+title: "export#2"
 date: 2014-05-13
 artists: [
     maierhofer & allgaier & tomasi, 

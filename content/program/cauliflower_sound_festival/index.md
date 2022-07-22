@@ -1,6 +1,7 @@
 ---
 title: "Cauliflower Sound Festival"
 date: 2022-04-13
+publishDate: 2022-04-13
 artists: [
     Cosma Grosser,
     Eduardo TriviÃ±o Cely,
@@ -11,16 +12,16 @@ artists: [
     Mad Lane,
     Vinzenz Schwab,
     Frederic Stritter & Nina Bauer,
-    Thomas Gorbach interpretiert Alla,
+    Thomas Gorbach,
     Zahaikevych MISTO,
     Gischt,
 ]
 location: {
-    name: "Prospekthof Akademie der Bildenden Künste Wien",
-    address: "Lehargasse 8, 1060 Wien"
+    name: "prospekthof",
 }
+link: "https://theacousmaticproject.at/1912/"
 ---
-Velak, The Acousmatic Project and ÖH AkBild warmly invites to a three day long festival at the Prospekthof.
+Velak, [The Acousmatic Project](https://theacousmaticproject.at/1912/) and [öH Akbild](https://www.oehakbild.info/) warmly invites to a three day long festival at the Prospekthof.
 
 ### Installations
 - Cosma Grosser

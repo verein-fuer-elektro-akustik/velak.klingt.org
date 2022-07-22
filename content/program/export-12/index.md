@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#12"
+title: "export#12"
 date: 2016-01-07
 location: {
     name: "venster99"
@@ -9,7 +9,7 @@ artists: [
     alan courtis,
     manuel knapp,
     pablo sanz,
-    paul grÃ¼ndorfer,
+    paul gründorfer,
 ]
 tags: [export]
 ---

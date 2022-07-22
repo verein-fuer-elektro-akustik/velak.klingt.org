@@ -1,13 +1,14 @@
 ---
-title: "EXPORT#18"
+title: "export#18"
 date: 2016-12-23
 location: {
     name: "Instants ChavirÃ©s / Brasserie Bouchoule/ montreuil/paris"
 }
 description: ""
 artists: [
-    plenum,
-    velharmonisches orchester
+    clément vercelleto,
+    léa drouet,
+    stefan tiefengraber & thomas tilly & möström & raymonde iv
 ]
 tags: [export]
 photos: "Edward Chapon"

@@ -1,31 +1,31 @@
 ---
-title: "RADAR#2"
+title: "radar#2"
 date: 2021-04-24
 tags: [radar]
 artists: [
-    brigitte hart - uk,
-    ZS ZS zeynep sarikartal - turkey,
-    özcan ertek - germany,
-    felix blume - france,
-    conrad burnham - us,
-    yannick dauby - taiwan,
-    gudinni cortina - mexico,
-    falon cañon - colombia,
-    victor mazon - bolivia,
-    juan carlos pellegrino - colombia,
-    juan betancurth + daniel neumann - colombia + us,
-    martina moro + fabian lanzmaier - france,
     brigitte hart,
-    fabian lanzmaier + martina moro,
+    ZS ZS zeynep sarikartal,
+    özcan ertek,
+    felix blume,
+    conrad burnham,
+    yannick dauby,
+    gudinni cortina,
+    falon cañon,
+    victor mazon,
+    juan carlos pellegrino,
+    juan betancurth & daniel neumann,
+    martina moro & fabian lanzmaier,
+    brigitte hart,
+    fabian lanzmaier & martina moro,
     conrad burnham,
     felix blume,
-    betancurth/neumann,
+    betancurth & neumann,
     gudinni cortina,
     özcan ertek,
 ]
 location: {
     name: "virtual",
-    url: "https://velakradar.klingt.org/radar.php"
+    url: "https://velakradar.klingt.org"
 }
 recordings: [
    https://disktree.net/music/VELAKRADAR/velakradar2-vvv1.ogg,

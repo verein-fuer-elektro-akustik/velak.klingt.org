@@ -8,11 +8,8 @@ artists: [
     Michael Renkel & Mat Pogo
 ]
 location: {
-    name: "quietcue",
+    name: "quietcue"
 }
-image:
-photos:
 tags: [donauwellen]
-recordings: []
 ---
 {{< vimeo "20679284" >}}

@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#4"
+title: "export#4"
 date: 2014-09-09
 artists: [
     margaret unknown,

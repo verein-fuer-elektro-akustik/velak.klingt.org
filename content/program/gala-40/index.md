@@ -1,12 +1,16 @@
 ---
-title: "gala#41"
-date: 2009-03-31
-publishDate: 2009-03-31
+title: "gala#40"
+date: 2009-02-24
+publishDate: 2009-02-24
 artists: [
-    olaf hochherz,
-    alexandr vatagin,
-    lee gregory,
-    blechmann & fraunberger & knapp,
+    stefan fraunberger,
+    vehlharkophonisches pfingstoratorium,
+    bruzek & kleinfercher & dos santos & zlanabitnig,
+    bezirkshäuptling,
+    b. schoeberl & b. hammer,
+    liondialer & daniel lercher,
+    matthias erian,
+    instant reality
 ]
 location: {
     name: "brut"
@@ -14,5 +18,4 @@ location: {
 photos: "tina vareško"
 tags: [gala]
 recordings: []
-image: "velak-gala-41.jpg"
 ---

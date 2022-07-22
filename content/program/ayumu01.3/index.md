@@ -1,5 +1,5 @@
 ---
-title: "AYUMU01.3"
+title: "ayumu01.3"
 date: 2019-09-08
 location: {
     name: "ftarri, tokyo, japan"

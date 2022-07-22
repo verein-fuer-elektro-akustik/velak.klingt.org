@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#1"
+title: "export#1"
 date: 2014-03-25
 artists: [
     lia mazzari & jonas gustafsson,

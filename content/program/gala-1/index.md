@@ -1,6 +1,6 @@
 ---
 title: "gala#1"
-date: 2009-09-01
+date: 2004-09-01
 artists: [
     le mat,
     stefan fraunberger,

@@ -1,16 +1,16 @@
 ---
-title: "RADAR#1"
+title: "radar#1"
 date: 2021-02-21
 artists: [
     conny zenk,
-    dilian, brookly n.y,
-    eda er - happy flames and loud noises,
-    mauro diciocia - torre lapillo,
-    lucia kagramanyan - rush and peace in yerevan,
+    dilian,
+    eda er,
+    mauro diciocia,
+    lucia kagramanyan
 ]
 location: {
     name: "virtual",
-    url: "https://velakradar.klingt.org/radar.php"
+    url: "https://velakradar.klingt.org"
 }
 tags: [radar]
 ---

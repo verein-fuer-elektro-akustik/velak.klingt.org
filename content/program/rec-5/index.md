@@ -1,5 +1,5 @@
 ---
-title: "REC#5"
+title: "rec#5"
 date: 2009-10-07
 location: {
     name: "garnison"

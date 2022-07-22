@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#10"
+title: "export#10"
 date: 2015-11-03
 artists: [
     thomas lehn,

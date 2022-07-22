@@ -1,5 +1,5 @@
 ---
-title: "FS#48"
+title: "fs#48"
 date: 2008-11-16
 publishDate: 2008-11-16
 artists: [

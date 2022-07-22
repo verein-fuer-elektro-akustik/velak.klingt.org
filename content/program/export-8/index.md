@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#8"
+title: "export#8"
 date: 2015-07-14
 artists: [
     chieko mori

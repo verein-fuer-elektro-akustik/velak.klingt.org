@@ -1,6 +1,7 @@
 ---
-title: "VELAK#118"
+title: "velak#118"
 date: 2021-09-11
+publishDate: 2021-09-11
 location: {
     name: "symposion_lindabrunn"
 }
@@ -8,8 +9,8 @@ description: "Velak goes Lindabrunn II"
 artists: [
     Aki Traar,
     Hui Ye,
-    Libramar - Roy Culbertson III and Lucas Henao,
-    Random Stimulation - Julia Zastava,
+    Roy Culbertson III & Lucas Henao,
+    Julia Zastava,
     Veronika Mayer,
 ]
 ---

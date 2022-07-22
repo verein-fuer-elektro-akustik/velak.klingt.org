@@ -1,7 +1,11 @@
-description = "Verein für Elektro Akustische Musik"
-email = "velak@klingt.org"
+description = "Verein für Elektro Akustik"
+keywords =  ["velak","verein","akustik","musik","events"]
+theme_color = "#000000"
+
 publisher = "velak"
+email = "velak@klingt.org"
 repository = "https://github.com/disktree/velak"
-[author]
+
+[developer]
     email="tong@disktree.net"
     web = "https://disktree.net"

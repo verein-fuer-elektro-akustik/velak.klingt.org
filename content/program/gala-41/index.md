@@ -1,16 +1,12 @@
 ---
-title: "gala#30"
-date: 2008-02-19
-publishDate: 2008-02-19
+title: "gala#41"
+date: 2009-03-31
+publishDate: 2009-03-31
 artists: [
-    richard bruzek,
-    vinzent schwab,
-    simina badea,
-    I8U,
-    heribert friedl,
-    bernhard gál,
-    stefan fraunberger,
-    greg haines,
+    olaf hochherz,
+    alexandr vatagin,
+    lee gregory,
+    blechmann & fraunberger & knapp,
 ]
 location: {
     name: "brut"

@@ -7,8 +7,8 @@ location: {
 artists: [
     angélica castelló,
     seijiro murayama & axel dörner,
-    antiduoto (teonas borsetto & georg wissa),
-    libramar (roy culbertson III & lucas henao serna)
+    teonas borsetto & georg wissa,
+    roy culbertson III & lucas henao serna
 ]
 tags: [gala]
 photographer: "Doris Pollhammer"

@@ -1,7 +1,7 @@
 ---
-title: "gala#35"
-date: 2008-07-08
-publishDate: 2008-07-08
+title: "gala#34"
+date: 2008-06-03
+publishDate: 2008-06-03
 artists: [
 ]
 location: {

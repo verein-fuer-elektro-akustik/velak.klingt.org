@@ -1,5 +1,5 @@
 ---
-title: "AYUMU01.4"
+title: "ayumu01.4"
 date: 2019-09-21
 location: {
     name: "arcade and atami coast stage, japan"

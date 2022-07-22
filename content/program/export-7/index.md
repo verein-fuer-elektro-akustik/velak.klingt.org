@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#7"
+title: "export#7"
 date: 2015-06-26
 artists: [
     michael fischer & michael zacherl (at),

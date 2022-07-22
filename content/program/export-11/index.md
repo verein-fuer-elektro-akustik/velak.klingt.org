@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#11"
+title: "export#11"
 date: 2015-12-01
 artists: [
     andrea pensado,

@@ -6,8 +6,8 @@ location: {
 }
 artists: [
     finn loxbo & anders vestergaard,
-    noid - raumsonden,
-    semino_tica (isabella forciniti & patrick k.h.),
+    noid,
+    isabella forciniti & patrick k.h.,
     andreas 'krach' stoiber
 ]
 tags: [gala]

@@ -1,5 +1,5 @@
 ---
-title: "EXPORT#17"
+title: "export#17"
 date: 2016-12-13
 location: {
     name: "moe"
