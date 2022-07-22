@@ -25,34 +25,43 @@
     </div>-->
 
     <div class="location">
-        <h2>location</h2>
         {{ with .Params.location }}
-            <div>{{ .name }}</div>
-        {{ end }} 
-            <div>{{ .Site.Data.locations }}</div>
-            {{ range where .Site.Data "locations" $.Params.location.name }}
-            <div>:::::::::::::::::::::::::::{{ . }}</div>
-            {{ end }}
-    </div>
+            {{ with .name }}
+                {{ with index $.Site.Data.locations . }}
+                    {{ with .url }}
+                        <a href="{{ . }}" rel="external">{{- $.Params.location.name -}}</a>
+                    {{ else }}
+                        <span>{{- $.Params.location.name -}}</span>
+                    {{ end }}
+                    {{ with .address }}
+                        <span>,&nbsp;</span>
 
-    <div class="content">{{- .Content | safeHTML -}}</div>
-
-    <ul class="artists">
-        {{ range .Params.artists }}
-        <li>
-            {{ $data := index $.Site.Data.artists . }}
-            {{ with $data }}
-                {{ with .url }}
-                <a href="{{ . }}">{{ $data.name }}</a>
+                        <address>{{- . | safeHTML -}}</address>
+                    {{ end }}
                 {{ else }}
-                <span>{{ $data.name }}</span>
+                    {{ with $.Params.location.name }}<div>{{- . | safeHTML -}}</div>{{ end }}
+                    {{ with $.Params.location.address }}
+                        <span>,&nbsp;</span>
+                        <address>{{- . | safeHTML -}}</address>
+                    {{ end }}
                 {{ end }}
             {{ else }}
-            <span>{{ . | markdownify | safeHTML }}</span>
+                <div class="warning">MISSING LOCATION NAME</div>
             {{ end }}
-        </li>
+        {{ else }}
+            <div class="warning">MISSING LOCATION</div>
+        {{ end }} 
+    </div>
+
+      <ul class="artists">
+        {{ with .Params.artists }}
+            {{ range . }}
+            <li>{{- . | safeHTML -}}</li>
+            {{ end }}
         {{ end }}
     </ul>
+
+    <div class="content">{{- .Content | safeHTML -}}</div>
 
     <div>
         <ol class="nolist">
@@ -63,29 +72,37 @@
             </li>
             {{ end }}
         </ol>
+        {{ with .Params.recordings }}
         <ol class="nolist">
-            {{ range .Params.recordings }}
+            {{ range . }}
             <li>
                 <i class="ic-audiotrack"></i>
                 <a href="{{.}}">{{- . | safeHTML -}}</a>
             </li>
             {{ end }}
         </ol>
+        {{ end }}
     </div>
     
     {{ partial "gallery" . }}
 
+    {{ with .Params.youtube }}
+        {{ range . }}
+            {{ partial "youtube" . }}
+        {{ end }}
+    {{ end }}
+
     <footer>
-        {{ with .Params.photographer }}
-        <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
+        {{ with .Params.photos }}
+            <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
         {{ end }}
         {{ with .GitInfo }}
-        <div>
-            <span>LASTMOD</span>
-                <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
-                <span>{{ .AuthorDate.Format "2006-01-02"  }}</span>
-            </a>
-        </div>
+            <div>
+                <span>LASTMOD</span>
+                    <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
+                    <time>{{ .AuthorDate.Format "2006/01/02"  }}</time>
+                </a>
+            </div>
         {{ end }}
     </footer>
 
