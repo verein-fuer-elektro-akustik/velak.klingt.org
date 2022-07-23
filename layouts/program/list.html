@@ -1,39 +1,53 @@
 {{ define "main" }}
 <article>
+    
+    {{ with .Title }}<h2>{{- . -}}</h2>{{ end }}
+    <div class="content">{{- .Content | safeHTML -}}</div>
+
+    <table class="raw">
+        <tr>
+            <th>date</th>
+            <th>title</th>
+            <th>location</th>
+            <th>tags</th>
+            <th>image</th>
+            <th>n photos</th>
+            <th>photos by</th>
+            <th>n recordings</th>
+            <th>n</th>
+            <th>artists</th>
+        </tr>
+        {{ range .RegularPagesRecursive.ByDate.Reverse }}
+        <tr>
+            <td>{{ .Date.Format "2006/01/02" }}</td>
+            <td><a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a></td>
+            <td>{{ with .Params.location }}{{ delimit . "," }}{{end}}</td>
+            <td>{{ partial "tags" . }}</td>
+            <td>{{ .Params.image }}</td>
+            <td>{{ with .Resources.ByType "image" }}{{ len . }}{{ end }}</td>
+            <td>{{ .Params.photos }}</td>
+            <td>{{ with .Params.recordings }}{{len .}}{{ end }}</td>
+            <td>{{ with .Params.artists }}{{ len . }}{{ end }}</td>
+            <td>{{ with .Params.artists }}{{ delimit . ", " }}{{end}}</td>
+        </tr>
+        {{ end }}
+    </table>
+
     <!--<ul>-->
     <!--{{ range .Site.Taxonomies.tags }}-->
             <!--<li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>-->
     <!--{{ end }}    -->
     <!--</ul>-->
 
-    {{ $paginator := .Paginate .Pages }}
-    <ol reversed class="nolist">
-        {{ range $paginator.Pages.ByDate.Reverse }}
+    <!--{{ $paginator := .Paginate .RegularPages }}-->
+    <!--<ol reversed class="nolist">
+        {{ range .RegularPages.ByDate.Reverse }}
         <li>
             <time>{{ .Date.Format "2006/01/02" }}</time>
             <a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a>
-            <div>
-                <!--<time>{{ .Date.Format "006-01-02" }}</time>-->
-                <!--<div>{{ .Params.location.name }}</div>-->
-                <!--<div>{{ .Params.location.adress }}</div>-->
-                <!--<div>{{ .Params.location.link }}</div>-->
-            </div>
         </li>
         {{ end }}
-    </ol>
+    </ol>-->
 
-    <!--<table>
-        <tbody>
-            {{ range $paginator.Pages.ByDate.Reverse }}
-            <tr>
-                <td>{{ .Title }}</td>
-                <td>{{ .Title }}</td>
-                <th>{{ .Date.Format "2006/01/02" }}</th>
-                
-            </tr>
-            {{ end }}
-        </tbody>
-    </table>-->
-
-</article>
+    </article>
 {{ end }}

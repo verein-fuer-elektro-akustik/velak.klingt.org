@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<h2>{{ .Title }}</h2>
+
+{{.}}
+    <!--<pre>
+        {{ range .Site.Data.artists }}
+        <pre>{{ . | jsonify (dict "indent" "\t") }}</pre>
+        {{ end }}
+    </pre>
+
+    {{ range $event := where .Site.Pages "Section" "program" }}
+        {{ if .IsPage }}
+            <div>
+                <h4>{{.Title}}</h4>
+                {{ range $event.Params.artists }}
+                <div>{{.}}</div>
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}-->
+
+{{ end }}
+

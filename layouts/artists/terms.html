@@ -1,0 +1,55 @@
+{{ define "main" }}
+<h1>TEEERMS</h1>
+
+
+    <section id="menu">
+    <ul>
+        {{ range $key, $taxonomy := .Site.Taxonomies.artists }}
+        <li>{{ $key }}</li>
+        <ul>
+            {{ range $taxonomy.Pages }}
+            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </ul>
+</section>
+
+
+    <!--<ul>
+    {{ range $term, $taxonomy := .Site.Taxonomies.artists }}
+    <li style="border-bottom: 1px dotted #555; margin-bottom: 2rem">
+
+            <div>{{ $term }}</div>
+            <ul>
+                {{ range $taxonomy }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+            </ul>
+            <div>{{ .Count }}</div>
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        </li>
+    {{ end }}
+    </ul>-->
+
+    <!--<pre>
+        {{ range .Site.Data.artists }}
+        <pre>{{ . | jsonify (dict "indent" "\t") }}</pre>
+        {{ end }}
+    </pre>
+
+    {{ range $event := where .Site.Pages "Section" "program" }}
+        {{ if .IsPage }}
+            <div>
+                <h4>{{.Title}}</h4>
+                {{ range $event.Params.artists }}
+                <div>{{.}}</div>
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}-->
+
+{{ end }}
+

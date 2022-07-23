@@ -1,0 +1,119 @@
+{{ define "header" }}
+<h1>this is a test page</h1>
+{{ end }}
+
+
+{{ define "main" }}
+<!--<article>{{- .Content -}}</article>-->
+
+
+
+    <hr>
+    <aside>
+        <h2>Taxonomy tags</h2>
+        <ul>
+            {{ range .Site.Taxonomies.tags }}
+                    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+            {{ end }}
+        </ul>
+    </aside>
+    <hr>
+
+
+        <h2>Raw data</h2>
+<table>
+    <tbody>
+        <tr>
+            <th>Title</th>
+            <th>Aliases</th>
+            <th>BundleType</th>
+            <th>Data</th>
+            <th>Description</th>
+            <th>Draft</th>
+            <th>ExpiryDate</th>
+            <th>File</th>
+            <th>FuzzyWordCount</th>
+            <th>IsHome</th>
+            <th>IsPage</th>
+            <th>IsSection</th>
+            <th>IsTranslated</th>
+            <th>Keywords</th>
+            <th>Kind</th>
+            <th>Language</th>
+            <th>Lastmod</th>
+            <th>LinkTitle</th>
+            <th>Next</th>
+            <th>NextInSection</th>
+            <th>OutputFormats</th>
+            <th>Pages</th>
+            <th>Permalink</th>
+            <th>Plain</th>
+            <th>PlainWords</th>
+            <th>PrevInSection</th>
+            <th>PublishDate</th>
+            <th>RawContent</th>
+            <th>ReadingTime</th>
+            <th>Resources</th>
+            <th>TableOfContents</th>
+            <th>Title</th>
+            <th>Translations</th>
+            <th>TranslationKey</th>
+            <th>Truncated</th>
+            <th>Type</th>
+            <th>Weight</th>
+            <th>WordCount</th>
+        </tr>
+        </tr>
+        {{ range .Site.RegularPages }}
+        <tr>
+            <td>{{.Title}}</td>
+            <td>{{.Aliases}}</td>
+            <td>{{.BundleType}}</td>
+            <td>{{.Data}}</td>
+            <td>{{.Description}}</td>
+            <td>{{.Draft}}</td>
+            <td>{{.ExpiryDate}}</td>
+            <td>{{.File}}</td>
+            <td>{{.FuzzyWordCount}}</td>
+            <td>{{.IsHome}}</td>
+            <td>{{.IsPage}}</td>
+            <td>{{.IsSection}}</td>
+            <td>{{.IsTranslated}}</td>
+            <td>{{.Keywords}}</td>
+            <td>{{.Kind}}</td>
+            <td>{{.Language}}</td>
+            <td>{{.Lastmod}}</td>
+            <td>{{.LinkTitle}}</td>
+            <td>{{.Next}}</td>
+            <td>{{.NextInSection}}</td>
+            <td>{{.OutputFormats}}</td>
+            <td>{{.Pages}}</td>
+            <td>{{.Permalink}}</td>
+            <td>{{.Plain}}</td>
+            <td>{{.PlainWords}}</td>
+            <td>{{.PrevInSection}}</td>
+            <td>{{.PublishDate}}</td>
+            <td>{{.RawContent}}</td>
+            <td>{{.ReadingTime}}</td>
+            <td>{{.Resources}}</td>
+            <td>{{.TableOfContents}}</td>
+            <td>{{.Title}}</td>
+            <td>{{.Translations}}</td>
+            <td>{{.TranslationKey}}</td>
+            <td>{{.Truncated}}</td>
+            <td>{{.Type}}</td>
+            <td>{{.Weight}}</td>
+            <td>{{.WordCount}}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
+<style>
+table td {
+    max-width:  100px;
+    overflow: hidden;
+}
+</style>
+
+{{ end }}
+
