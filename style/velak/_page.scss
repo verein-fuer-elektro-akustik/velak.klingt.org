@@ -20,9 +20,15 @@ body > main {
             }
         }
         > div.location {
-            diplay: flex;
+            display: flex;
             flex-wrap: wrap;
             margin-bottom: 1rem;
+            text-transform: lowercase;
+            > * {
+                //&:not(:last-child) {
+                    //margin-right: 1ch;
+                //}
+            }
             > address {
                 display: inline-block;
                 font-style: normal;
@@ -33,6 +39,7 @@ body > main {
             max-width: 800px;
             //height: 100%;
             //padding: 1rem 0 1rem 0;
+            //text-transform: lowercase;
             iframe{
                 margin: 0;
                 padding: 0;
@@ -47,7 +54,7 @@ body > main {
             display: flex;
             //justify-content: flex-end;
             font-family: var(--font-mono);
-            font-size: 50%;
+            font-size: 65%;
             text-transform: uppercase;
             a {
                 text-decoration: none;
@@ -59,17 +66,38 @@ body > main {
 ul.gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-    //grid-template-rows:  repeat(auto-fill,200px);
-    gap: 0.25rem;
-    //grid-gap: 0.5rem;
-    //margin-bottom: 10rem;
-
+    gap: 0.5rem;
     list-style: none;
     > li {
-        > img {
+        width: 100%;
+        height: 100%;
+        > figure {
+            position: relative;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            > figcaption {
+                position: absolute;
+                bottom: 1em;
+                right: 1em;
+                font-family: var(--font-mono);
+                font-size: 65%;
+                text-transform: uppercase;
+                background: var(--bg);
+                user-select: none;
+                opacity: 0;
+            }
+        }
+        &:hover {
+            > figure {
+                > figcaption {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -77,8 +105,15 @@ ul.gallery {
 dl.tags {
     //font-family: var(--font-mono);
     //font-size: 13px;
+    display: flex;
     text-transform: uppercase;
     > dt.tag {
+        &:not(:last-child) {
+            &::after {
+                content: ", ";
+            }
+            margin-right: 0.5ch;
+        }
         font-style: normal;
         > a {
             text-decoration: none;

@@ -1,9 +1,18 @@
 @use 'sass:color';
 
 :root {
+
+    --rgb-light: 153,153,153;
+    --rgb-dark: 17,17,19;
     
-    --color-dark: #111113;
-    --color-light: #999999;
+    --rgb-f: var(--rgb-light); 
+    --rgb-b: var(--rgb-dark); 
+
+    //--color-dark: #111113; // hsl(240deg 6% 7%)
+    //--color-dark: hsl(240deg 6% 7%);
+    //--color-light: #999999;
+    --color-dark: rgb(var(--rgb-dark));
+    --color-light: rgb(var(--rgb-light));
     --color-accent: #ed2c3e;
 
     --body: #e0e0e5;
@@ -12,7 +21,11 @@
     --acc: var(--color-accent);
     //--acc: color.adjust(#999999, $lightness: +20%, $alpha: -0.4);
 
-    @media (prefers-color-scheme: light) {
+    --f50: rgba(var(--rgb-f), 0.5);
+    --f70: rgba(var(--rgb-f), 0.7);
+    --b50: rgba(var(--rgb-b), 0.5);
+
+    /*@media (prefers-color-scheme: light) {
         --bg: var(--color-light);
         --fg: var(--color-dark);
         --color-accent: #000;
@@ -21,7 +34,7 @@
         --bg: var(--color-dark);
         --fg: var(--color-light);
         --color-accent: #fff;
-    }
+    }*/
 }
 
 body {

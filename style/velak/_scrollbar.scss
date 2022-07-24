@@ -21,11 +21,11 @@ $min-thick: 4px !default;
     display: none !important;
 }
 ::-webkit-scrollbar-track {
-    background: var(--fg);
+    background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--bg);
-    border-left: 1px solid var(--fg);
+    background: var(--fg);
+    border-left: 1px solid var(--bg);
     &:hover {
         background: var(--acc);
     }

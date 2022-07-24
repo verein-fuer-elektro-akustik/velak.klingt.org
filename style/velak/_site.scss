@@ -1,7 +1,6 @@
 @use "sass:math";
 @use 'breakpoint';
 
-
 html {
 	scroll-behavior: smooth;
     word-break: keep-all;
@@ -26,7 +25,6 @@ body {
         //position: relative
         //width: 100%;
         height: 100%;
-        //background: var(--bg);
         //max-width: var(--content-width);
     }
     > header {
@@ -35,22 +33,24 @@ body {
         //justify-content: center;
         margin: 0 2rem;
         padding: 2rem 0 0rem 0;
-        //text-align: center;
-        //border-bottom: 1px solid var(--fg);
         > h1 {
             width: 100%;
-            //margin-left: -1rem;
             margin-bottom: 0.5rem;
             font-size: 2rem;
         } 
         > h2 {
+            all: unset;
+            text-transform: none; 
             font-size: var(--text-md);
         }
     }
     > nav {
+        position: relative;
+        width: 100%;
         > ul {
             display: flex;
             flex-wrap: wrap;
+            width: 100%;
             height: 100%;
             list-style: none;
             margin: 0 2rem;
@@ -65,6 +65,13 @@ body {
                 }
                 &:hover {
                     background: var(--fg);
+                    > a {
+                        color: var(--bg);
+                    }
+                }
+                &.active {
+                    background: var(--fg);
+                    color: var(--bg);
                     > a {
                         color: var(--bg);
                     }
