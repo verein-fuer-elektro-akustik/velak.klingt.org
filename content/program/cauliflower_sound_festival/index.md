@@ -6,7 +6,7 @@ artists: [
     Cosma Grosser,
     Eduardo TriviÃ±o Cely,
     Jan Brocza,
-    Jennifer Posny und Jonas Hammerer,
+    Jennifer Posny & Jonas Hammerer,
     Angela Lau interpretiert Philippe Mion Hope,
     Kisling,
     Mad Lane,

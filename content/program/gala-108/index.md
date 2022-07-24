@@ -7,6 +7,5 @@ location: {
 artists: [
 ]
 tags: [gala]
-photographer: ""
 ---
 MISSING DATA

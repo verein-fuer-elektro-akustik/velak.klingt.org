@@ -13,6 +13,6 @@ location: {
     name: "moe"
 }
 tags: [export]
-photographer: Edward Chapon
+photos: Edward Chapon
 ---
 

@@ -11,6 +11,6 @@ artists: [
     jakob schauer
 ]
 tags: [gala]
-photographer: "Doris Pollhammer"
+photos: "Doris Pollhammer"
 ---
 doors: 19:00 / begin: 8pm (sharp!)  

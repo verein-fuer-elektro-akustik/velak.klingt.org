@@ -1,5 +1,5 @@
 ---
-title: "VELAK#115"
+title: "velak#115"
 date: 2020-08-15
 location: {
     name: "symposion_lindabrunn"

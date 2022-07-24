@@ -9,7 +9,7 @@ artists: [
     alan courtis
 ]
 tags: [gala]
-photographer: "Klemens Kohlweis"
+photos: "Klemens Kohlweis"
 ---
 doors: 7.30pm / start: 8.00pm (sharp!)
 

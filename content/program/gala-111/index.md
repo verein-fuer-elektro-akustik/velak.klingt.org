@@ -12,6 +12,6 @@ artists: [
     velharmonisches orchester
 ]
 tags: [gala]
-photographer: "MAMORO"
+photos: "MAMORO"
 ---
 doors: 19:00 / begin: 8pm (sharp!)  

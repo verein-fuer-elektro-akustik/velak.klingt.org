@@ -11,6 +11,6 @@ artists: [
     andreas 'krach' stoiber
 ]
 tags: [gala]
-photographer: "Klemens Kohlweis"
+photos: "Klemens Kohlweis"
 ---
 doors: 19:00 / begin: 8pm (sharp!)  

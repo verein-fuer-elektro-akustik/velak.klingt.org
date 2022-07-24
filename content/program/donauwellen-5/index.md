@@ -6,7 +6,7 @@ artists: [
     
 ]
 location: {
-    name: "quietcue",
+    name: "quietcue"
 }
 image:
 photos:

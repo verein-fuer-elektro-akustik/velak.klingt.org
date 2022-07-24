@@ -2,8 +2,7 @@
 title: "gala#101"
 date: 2018-06-15
 location: {
-    name: "lndmr im celeste",
-    address: "hamburgerstr. 18, 1050 wien"
+    name: "celeste"
 }
 artists: [
     jejuno,
@@ -11,5 +10,5 @@ artists: [
     sarros
 ]
 tags: [gala]
-photographer: "Felipe Wagner Dos Santos"
+photos: "Felipe Wagner Dos Santos"
 ---

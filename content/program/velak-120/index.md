@@ -1,7 +1,7 @@
 ---
 title: "velak#120"
 date: 2022-06-11
-publishdate: 2022-07-06
+publishDate: 2022-07-06
 location: { name: "mdw" }
 artists: [
     anna lerchbaumer,

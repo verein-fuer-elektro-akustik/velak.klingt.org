@@ -1,0 +1,35 @@
+name: deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup hugo
+        uses: peaceiris/actions-hugo@v2.5.0
+        with:
+          hugo-version: "0.101.0"
+      - name: Setup npm
+        run: npm install
+      - name: Build style
+        run: npm run prod:style
+      - name: Build site
+        run: npm run prod:hugo -- --baseURL https://vvv.disktree.net -v
+      #- name: Store
+        #uses: actions/upload-artifact@v3
+        #with:
+          #name: velak.klingt.org
+          #path: public
+      - name: Install ssh key
+        uses: shimataro/ssh-key-action@v2.3.1
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy with rsync
+        run: rsync -avz ./public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WWW_ROOT }}
+

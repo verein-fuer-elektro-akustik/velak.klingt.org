@@ -11,6 +11,6 @@ artists: [
     roy culbertson III & lucas henao serna
 ]
 tags: [gala]
-photographer: "Doris Pollhammer"
+photos: "Doris Pollhammer"
 ---
 doors 7:30 concert 8:30 pm

@@ -1,5 +1,5 @@
 ---
-title: "VELAK#112"
+title: "velak#112"
 date: 2020-00-00
 location: {
     name: ""
@@ -7,6 +7,5 @@ location: {
 artists: [
 ]
 tags: []
-photographer: 
 ---
 MISSING DATA

@@ -7,6 +7,6 @@ location: {
 artists: [
 ]
 tags: [gala]
-photographer: "Nina Bauer"
+photos: "Nina Bauer"
 ---
 doors: 19:00 / begin: 8pm (sharp!)  

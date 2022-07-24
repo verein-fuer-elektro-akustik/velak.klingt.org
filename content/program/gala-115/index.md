@@ -6,5 +6,4 @@ location: {
 artists: [
 ]
 tags: [gala]
-photographer: ""
 ---
