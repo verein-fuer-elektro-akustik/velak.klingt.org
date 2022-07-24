@@ -17,7 +17,7 @@ jobs:
       - name: Build style
         run: npm run prod:style
       - name: Build site
-        run: npm run prod:hugo -- --baseURL https://vvv.disktree.net -v
+        run: npm run prod:hugo -- --baseURL {{ secrets.WWW_URL }} -v
       #- name: Store
         #uses: actions/upload-artifact@v3
         #with:
