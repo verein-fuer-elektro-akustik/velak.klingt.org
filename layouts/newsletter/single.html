@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article>
+    <header>
+        {{ with .Title }}<h1>{{- . -}}</h1>{{ end }}
+    </header>
+    <div class="content">{{- .Content -}}</div>
+    <form method="POST" action="https://klingt.org/cgi-bin/mailman/subscribe/velak-announce">
+        <fieldset>
+            <!--<legend>From</legend>-->
+            <input type="text" name="email" placeholder="Email" autofocus required>
+            <input type="email" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="Your name">
+        </fieldset>
+        <fieldset>
+            <!--<legend>Pick a password</legend>-->
+            <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="Password" required>
+            <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="Reeenter Password" required>
+        </fieldset>
+        <fieldset>
+            <select name="language">
+                <option value="en" selected=""> English (USA) </option>
+                <option value="de"> German </option>
+                <option value="uk"> Ukrainian </option>
+            </select>
+        </fieldset>
+        <input type="submit" name="email-button" value="Subscribe">
+    </form>
+</article>
+{{ end }}

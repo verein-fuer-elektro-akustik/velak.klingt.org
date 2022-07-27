@@ -1,15 +1,41 @@
 {{ define "main" }}
 {{ $id := .File.ContentBaseName }}
-<article>
+<article data-page="program">
     
     <header>
         <h2>{{- .Title -}}</h2>
-        <nav>
-            <time>{{ .Date.Format "2006/01/02" }}</time>
-            {{ partial "prev_next.html" . }}
-            {{ partial "tags" . }}
-        </nav>
+        <time>{{ .Date.Format "2006/01/02" }}</time>
+        <div class="location">
+            {{ with .Params.location }}
+                {{ with .name }}
+                    {{ with index $.Site.Data.locations . }}
+                        {{ with .url }}
+                            <a href="{{ . }}" rel="external">{{- $.Params.location.name -}}</a>
+                        {{ else }}
+                            <span>{{- $.Params.location.name -}}</span>
+                        {{ end }}
+                        {{ with .address }}
+                            <span>,&nbsp;</span>
+                            <address>{{- . | safeHTML -}}</address>
+                        {{ end }}
+                    {{ else }}
+                        {{ with $.Params.location.name }}<div>{{- . | safeHTML -}}</div>{{ end }}
+                        {{ with $.Params.location.address }}
+                            <span>,&nbsp;</span>
+                            <address>{{- . | safeHTML -}}</address>
+                        {{ end }}
+                    {{ end }}
+                {{ else }}
+                <div class="warning">MISSING LOCATION NAME</div>
+                {{ end }}
+            {{ else }}
+            <div class="warning">MISSING LOCATION</div>
+            {{ end }} 
+        </div>
+        {{ partial "prev_next.html" . }}
+        {{ partial "tags" . }}
     </header>
+
      
     <!--<div class="location">
         {{ with .Params.location }}
@@ -23,36 +49,7 @@
         <div class="warning">MISSING LOCATION</div>
         {{ end }}
     </div>-->
-
-    <div class="location">
-        {{ with .Params.location }}
-            {{ with .name }}
-                {{ with index $.Site.Data.locations . }}
-                    {{ with .url }}
-                        <a href="{{ . }}" rel="external">{{- $.Params.location.name -}}</a>
-                    {{ else }}
-                        <span>{{- $.Params.location.name -}}</span>
-                    {{ end }}
-                    {{ with .address }}
-                        <span>,&nbsp;</span>
-
-                        <address>{{- . | safeHTML -}}</address>
-                    {{ end }}
-                {{ else }}
-                    {{ with $.Params.location.name }}<div>{{- . | safeHTML -}}</div>{{ end }}
-                    {{ with $.Params.location.address }}
-                        <span>,&nbsp;</span>
-                        <address>{{- . | safeHTML -}}</address>
-                    {{ end }}
-                {{ end }}
-            {{ else }}
-                <div class="warning">MISSING LOCATION NAME</div>
-            {{ end }}
-        {{ else }}
-            <div class="warning">MISSING LOCATION</div>
-        {{ end }} 
-    </div>
-
+    
       <ul class="artists">
         {{ with .Params.artists }}
             {{ range . }}
@@ -83,7 +80,7 @@
         </ol>
         {{ end }}
     </div>
-    
+
     {{ partial "gallery" . }}
 
     {{ with .Params.youtube }}
@@ -97,14 +94,15 @@
             <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
         {{ end }}
         {{ with .GitInfo }}
-            <div>
-                <span>LASTMOD</span>
-                    <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
-                    <time>{{ .AuthorDate.Format "2006/01/02"  }}</time>
-                </a>
-            </div>
+        <div>
+            <span>MOD</span>
+            <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
+                <time>{{ .AuthorDate.Format "2006/01/02"  }}</time>
+            </a>
+        </div>
         {{ end }}
     </footer>
+
 
 </article>
 {{ end }}

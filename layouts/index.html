@@ -1,6 +1,15 @@
 {{ define "main" }}
 <article>
     <div>{{- .Content -}}</div>
+    <ol class="nolist">
+    {{ range where .Site.RegularPages "Section" "program" }}
+        {{ if (time .Date).After now }}
+        <li>
+            <h2><a href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
+        </li>
+        {{ end }}
+    {{ end }}
+    </ol>
 </article>
 {{ end }}
 
