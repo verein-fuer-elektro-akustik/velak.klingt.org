@@ -1,0 +1,30 @@
+body > main {
+    > article {
+        > header {
+            margin-bottom: 1rem;
+             > div.location {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 1rem;
+                text-transform: lowercase;
+                > * {
+                    //&:not(:last-child) {
+                        //margin-right: 1ch;
+                    //}
+                }
+                > address {
+                    display: inline-block;
+                    font-style: normal;
+                }
+            }
+        }
+        > div.content {
+            max-width: 600px;
+        }
+        > footer {
+            font-family: var(--font-mono);
+            font-size: 75%;
+        }
+    }
+}
+

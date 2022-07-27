@@ -1,45 +1,20 @@
 @use 'breakpoint';
 
-$font-family: "Inter";
-
-$font-weight-values: (
-    thin: 100,
-    light: 300,
-    regular: 400,
-    medium: 500,
-    bold: 700,
-    black: 900,
-) !default;
-
 :root {
+    
     --font-primary: "Inter";
-    --font-mono: "RobotoMono", monospace;
-	--text-base-size: 14px;
-    --text-scale-ratio: 1.35;
-	--heading-line-height: 1.5;
+    --font-mono: "RobotoMono";
+
+
+    --text-base-size: 13px;
+    --text-scale-ratio: 1.25;
+    --body-font-weight: 500;
+	--heading-line-height: 1;
 	--heading-font-weight: 700;
 	--text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
     --text-space-y-multiplier: 1;
 
-	// @include breakpoint.breakpoint(md) {
-	// 	--text-base-size: 14px;
-	//}
-    /*
-    @media screen and (min-width: breakpoint.$phone) {
-        --text-base-size: 14px;
-		//--text-scale-ratio: 1.5;
-    }
-    @media screen and (min-width: breakpoint.$tablet) {
-        --text-base-size: 16px;
-		//--text-scale-ratio: 2;
-    }
-    @media screen and (min-width: breakpoint.$desktop) {
-        --text-base-size: 18px;
-		//--text-scale-ratio: 2;
-    }
-    */
-
-	--text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
     --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
     --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
     --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
@@ -47,7 +22,7 @@ $font-weight-values: (
     --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
     --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
     --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
-	
+
     --space-unit:  1rem;
 	--space-xxxxs: calc(0.125 * var(--space-unit));
 	--space-xxxs:  calc(0.25 * var(--space-unit));
@@ -60,11 +35,18 @@ $font-weight-values: (
 	--space-xxl:   calc(5.25 * var(--space-unit));
 	--space-xxxl:  calc(8.5 * var(--space-unit));
 	--space-xxxxl: calc(13.75 * var(--space-unit));
+
+    @media screen and (min-width: breakpoint.$tablet) {
+       --text-base-size: 14px; 
+    }
+    @media screen and (min-width: breakpoint.$desktop) {
+       --text-base-size: 16px; 
+    }
 }
 
 @font-face {
 	font-family: "Inter";
-	font-weight: normal;
+    font-weight: 500;
 	font-display: block;
 	src:
         url("font/Inter-Regular.woff2") format("woff2"),
@@ -87,8 +69,8 @@ $font-weight-values: (
 }
 
 html {
-    font-family: var(--font-primary, sans-serif);
-    font-size: var(--text-base-size, 1rem);
+    font-size: var(--text-base-size);
+    font-family: var(--font-primary);
     font-weight: var(--body-font-weight, normal);
     font-optical-sizing: auto;
     line-height: var(--line-height);
@@ -97,15 +79,10 @@ html {
 }
 
 a {
-    //text-decoration: none;
-    //text-underline-offset: 1px;
-    text-underline-position: from-font;
-    //padding-bottom: 2px;
-    //border-bottom: 1px dotted var(--fg);
-    background: transparent;
     color: var(--fg);
-	//color: var(--color-primary, hsl(250, 84%, 54%));
-    &:hover {
+    outline: none;
+    &:hover, &:focus {
+        //background: var(--acc);
         color: var(--acc);
     }
 }
@@ -113,7 +90,11 @@ a {
 blockquote {
     padding-left: 1em;
     font-style: italic;
-    border-left: 4px solid var(--fg);
+    border-left: 0.25rem solid var(--fg);
+}
+
+code {
+    font-family: var(--font-mono);
 }
 
 dl {
@@ -127,49 +108,35 @@ dl {
 }
 
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    line-height: var(--heading-line-height, 1.2);
-    font-weight: var(--heading-font-weight, 700);
-    //line-height: 1em;
-    a {
-        text-decoration: none;
-    }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-line-height);
+    text-transform: uppercase;
+    word-break: break-all;
 }
 h1 {
-    font-size: var(--text-xxxxl, 2rem);
+    font-size: var(--text-xxxxl);
     letter-spacing: -0.06em;
-    text-transform: uppercase;
 }
 h2 {
-    font-size: var(--text-xxl, 1.75rem);
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
+    font-size: var(--text-xxxl);
+    letter-spacing: -0.06em;
 }
 h3 {
-    font-size: var(--text-lg, 1.375rem);
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
+    font-size: var(--text-xxl);
 }
 h4 {
-    font-size: var(--text-md, 1.125rem);
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
+    font-size: var(--text-xl);
 }
 h5 {
-    font-size: var(--text-sm, 1rem);
+    font-size: var(--text-lg);
+    text-transform: uppercase;
 }
 h6 {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs, 1.125rem);
-    font-weight: normal;
+    font-size: var(--text-md);
     text-transform: uppercase;
 }
 
@@ -179,18 +146,47 @@ hr {
     background: var(--fg);
 }
 
-li {
-    //list-style: none;
-    //margin: 0 0 0 1rem;
-    padding: 0;
-}
-
-p {
+p, ol, ul {
 	margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier,1));
 }
 
-small {
-	font-size: var(--text-sm, 0.75rem);
+input, select {
+    padding: 1rem;
+    margin: 0 0 0.5rem 0;
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 0.4s;
+    &:focus {
+        background: var(--fg);
+    }
+    &:invalid {
+        border: 1px dashed red;
+    }
+    &:valid {
+        border: 1px solid var(--fg);
+    }
+    &[type="submit"] {
+        cursor: pointer;
+    }
+}
+
+label {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+ol, ul {
+    list-style-position: inside;
+    ol, ul {
+        padding-left: 1em;
+        margin-bottom: 0;
+    }
+}
+ol {
+    list-style-type: decimal;
+}
+ul {
+    list-style-type: disc;
 }
 
 strong {
@@ -201,56 +197,20 @@ sub, sup {
     font-size: 50%;
 }
 
-sup {
-    font-size: 50%;
-    //a {
-        //text-un;
-    //}
-}
 
 table {
-
-    //background-color: rgba(var(--color-highlight), 0.5);
-
-    font-family: var(--font-mono);
     &, td, th {
-        border: 1px dotted var(--f70);
+        border: 1px solid var(--fg);
         border-collapse: collapse;
     }
     th, td {
-        padding: 2px 4px;
+        //padding: 2px 4px;
         white-space: nowrap;
     }
     th {
-        text-transform: uppercase;
+        //text-transform: uppercase;
         text-align: left;
     }
-    &.raw {
-        th, td {
-        }
-        a {
-            text-decoration: none;
-        }
-    }
-
-}
-
-ul, ol {
-    list-style-position: inside;
-    ul, ol {
-        padding-left: 1em;
-        margin-bottom: 0;
-    }
-}
-ul {
-    list-style-type: disc;
-}
-ol {
-    list-style-type: decimal;
-}
-
-ul, ol, p, blockquote {
-    margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier, 1));
 }
 
 div.footnotes {
@@ -264,79 +224,3 @@ div.footnotes {
         }
     }
 }
-
-tui {
-    display: none; // Text only browsers
-}
-
-/*
-h1, h2, h3, h4 {
-    font-variation-settings: 'wght' 600, 'GRAD' 88;
-    text-transform: uppercase;
-    //line-height: 0.75;
-
-}
-h1 {
-    font-size: 6rem;
-    padding-bottom: 1rem;
-    line-height: 0.8;
-    letter-spacing: -0.075em;
-}
-h2 {
-    //font-size: 4rem;
-    //text-transform: uppercase;
-    //line-height: 0.8;
-    //letter-spacing: -5px;
-    //padding-bottom: 0.5em;
-    font-size: 5rem;
-    letter-spacing: -0.05em;
-    line-height:  0.8;
-    padding: 0; 
-}
-h3 {
-    font-size: 2rem;
-    letter-spacing: -2px;
-    //line-height: 0.5;
-}
-h4 {
-    line-height: 1.25;
-}
-hr {
-    border-top: 1px solid var(--fg);
-    margin: 1.5rem 0;
-}
-a {
-    background: transparent;
-    color: var(--fg);
-    text-decoration: none;
-    //font-family: "Inter";
-    //border-bottom: 1px dotted var(--fg);
-    border: none;
-    &:hover {
-        text-decoration: none;
-        color: var(--acc);
-        //background: var(--acc2);
-        //background-repeat: repeat;
-        //background-image: url("assets/void.pattern.2.png");
-        //border-bottom: 1px solid var(--acc);
-    }
-}
-.ui {
-    font-size: 7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: -0.6rem;
-    line-height:  0.8;
-    padding: 0; 
-    //word-break: break-word;
-  //white-space: nowrap; 
-  //overflow: hidden;
-  //text-overflow: ellipsis; 
-  //border: 1px solid #ff0000;
-}
-
-table {
-    border: none;
-
-}
-*/
