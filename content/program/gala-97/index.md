@@ -8,7 +8,7 @@ artists: [
     salih dursun
 ]
 location: {
-    name: "steiner8"
+    name: "steinergasse8"
 }
 tags: [gala]
 photos: "Doris Pollhammer"
