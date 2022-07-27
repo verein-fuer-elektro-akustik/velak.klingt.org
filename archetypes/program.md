@@ -1,17 +1,17 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name "-" "#" | title }}"
 date: {{ .Date }}
+publishDate: {{ .Date }}
 artists: [
     
 ]
 location: {
     name: "",
     url: "",
-    address: "
+    address: ""
 }
+image:
+photos:
 tags: []
-image: ""
-photos: ""
+recordings: []
 ---
-doors: 7pm / begin: 8pm (sharp!)  
-entry: 3€
