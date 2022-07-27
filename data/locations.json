@@ -4,6 +4,11 @@
         "address": "1010 Wien, Schillerplatz 3",
         "url": "https://www.akbild.ac.at"
     },
+    "ateliertheater": {
+        "name": "Ateliertheater",
+        "address": "Burggasse 71 1070 Wien",
+        "url": "https://www.ateliertheater.wien/"
+    },
     "b5": {
         "address": "herklotzgasse 21, 1150 vienna"
     },
@@ -11,6 +16,11 @@
         "name": "Brut Konzerthaus",
         "address": "lothringerstrasse 20, 1030 vienna",
         "url": "https://brut-wien.at/"
+    },
+    "celeste": {
+        "name": "Celeste",
+        "address": "Hamburgerstraße 18, 1050 Wien",
+        "url": "http://www.celeste.co.at/"
     },
     "centralgarden": {
         "name": "Central Garden",
@@ -21,6 +31,10 @@
         "name": "Das Werk",
         "address": "Spittelauer Lände 12, Stadtbahnbogen 331, 1090 Wien",
         "url": "https://www.daswerk.org/"
+    },
+    "echoraeume": {
+        "name": "echoraeume",
+        "url": "https://echoraeume.klingt.org/"
     },
     "erbsenfabrik": {
         "address": "herklotzgasse 21, 1150 vienna"
@@ -52,7 +66,7 @@
     },
     "mdw": {
         "name": "mdw – Universität für Musik und darstellende Kunst Wien",
-         "address": "Anton-von-Webern-Platz 1, 1030 Wien",
+        "address": "Anton-von-Webern-Platz 1, 1030 Wien",
         "url": "https://www.mdw.ac.at/"
     },
     "moe": {
@@ -64,6 +78,19 @@
         "name": "MuseumsQuartier",
          "address": "Museumsplatz 1, 1070 Vienna",
         "url": "https://www.mqw.at/"
+    },
+    "prospekthof": {
+        "name": "Prospekthof",
+        "address": "Lehargasse 8, 1060 Wien"
+    },
+    "radar": {
+        "name": "Velakradar",
+        "url": "https://velakradar.klingt.org"
+    },
+    "rhiz": {
+        "name": "Rhiz",
+        "address": "u-bahnbogen 37, A-1080 vienna",
+        "url": "https://rhiz.wien/"
     },
     "steinergasse8": {
         "name": "Steiner8",
