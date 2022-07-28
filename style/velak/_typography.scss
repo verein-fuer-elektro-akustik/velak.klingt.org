@@ -5,8 +5,7 @@
     --font-primary: "Inter";
     --font-mono: "RobotoMono";
 
-
-    --text-base-size: 13px;
+    --text-base-size: 14px;
     --text-scale-ratio: 1.25;
     --body-font-weight: 500;
 	--heading-line-height: 1;
@@ -87,13 +86,29 @@ a {
     }
 }
 
+address {
+    display: inline-block;
+}
+
 blockquote {
     padding-left: 1em;
     font-style: italic;
     border-left: 0.25rem solid var(--fg);
 }
 
-code {
+button {
+    //display: flex;
+    //width:  ;
+    padding: 0.5rem;
+    background: var(--fg);
+    color: var(--bg);
+    cursor: pointer;
+    &.disabled {
+		cursor: default;
+	}
+}
+
+code, pre {
     font-family: var(--font-mono);
 }
 
@@ -104,6 +119,10 @@ dl {
     }
     > dd {
         margin-left: 1.5rem;
+    }
+    &.tags {
+        //font-family: var(--font-mono);
+        //font-size: 75%;
     }
 }
 
@@ -151,22 +170,73 @@ p, ol, ul {
 }
 
 input, select {
+    outline: none;
     padding: 1rem;
     margin: 0 0 0.5rem 0;
     background: var(--bg);
     color: var(--fg);
-    transition: background 0.4s;
+    border: 1px solid var(--fg);
+    transition: background 0.2s;
     &:focus {
         background: var(--fg);
+        color: var(--bg);
     }
     &:invalid {
-        border: 1px dashed red;
+        //border: 1px dashed red;
+        //border: 1px dashed var(--fg);
+    }
+    &:invalid:required {
+        //background-image: linear-gradient(to right, pink, lightgreen);
     }
     &:valid {
         border: 1px solid var(--fg);
     }
     &[type="submit"] {
         cursor: pointer;
+        &:hover {
+            background: var(--fg);
+            color: var(--bg);
+        }
+    }
+    &[type="checkbox"] {
+        appearance: none;
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1rem 0 0;
+        background-clip: content-box;
+        padding: 1px;
+        /*
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: middle;
+        display: grid;
+        place-content: center;
+        appearance: none;
+               //float: left;
+        width:4px;
+        height: 10px;
+        margin: 0;
+        //padding: 1em;
+        background-clip: content-box;
+        //border: none;
+        background: var(--bg);
+        &::before {
+            content: "";
+            width: 0.65em;
+			height: 0.65em;
+			transform: scale(0);
+			//transition: 120ms transform ease-in-out;
+			// box-shadow: inset 1em 1em var(--form-control-color);
+		    background: var(--fg);
+        }
+        &:checked::before {
+			transform: scale(1);
+		}
+        */
     }
 }
 

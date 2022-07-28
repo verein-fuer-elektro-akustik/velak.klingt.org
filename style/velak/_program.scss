@@ -1,5 +1,11 @@
 body > main {
-    > article {
+    > article[data-page="program"] {
+        //display: grid;
+        //display: flex;
+        //flex-wrap: wrap;
+        //grid-template-columns: 1fr;
+        //grid-template-rows: auto auto 1fr auto;
+        //grid-gap: 1rem ;
         > header {
             margin-bottom: 1rem;
              > div.location {
