@@ -2,7 +2,7 @@
 title: "gala#106"
 date: 2018-12-18
 location: {
-    name: "steinergasse"
+    name: "steinergasse8"
 }
 artists: [
     paul ebhart,

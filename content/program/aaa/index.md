@@ -1,5 +1,5 @@
 ---
-title: "aaa"
+title: "Audio Fuckery"
 date: 2023-01-01
 artists: [
     stefan wunder,
@@ -8,7 +8,7 @@ artists: [
 location: {
     name: "heaven"
 }
-tags: [aaa]
+tags: [test]
 ---
-This is just a future test event.
-
+This is just a future test event.  
+Somefuckbody, from Fuckinsomewhere ´s fuckin around with fuckin sound

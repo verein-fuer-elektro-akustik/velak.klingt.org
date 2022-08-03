@@ -6,7 +6,7 @@ artists: [
     paul ebhart,
     lentsi biografie (nina bauer & johanna schlömichler),
     idklang (markus steinkellner),
-    a certain trio (frederic stritter & marcin morga & eugene ignashev),
+    a certain trio - frederic stritter & marcin morga & eugene ignashev,
     rojin sharafi
 ]
 location: { name: "fluc" }

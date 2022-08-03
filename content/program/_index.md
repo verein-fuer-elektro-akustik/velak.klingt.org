@@ -3,7 +3,7 @@ rss_ignore: true
 menu:
   nav:
     name: Program
-    weight: 2
+    weight: 1
 sitemap:
   changefreq: monthly
   priority: 0.9

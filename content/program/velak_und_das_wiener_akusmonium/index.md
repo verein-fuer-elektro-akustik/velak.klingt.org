@@ -6,7 +6,7 @@ artists: [
 location: { name: "akbild" }
 ---
 #### Donnerstag, 30.09.2021
-- Studierende der KunstuniversitÃ¤t Graz/IEM
+- Studierende der Kunstuniversität Graz/IEM
 - Ã…ke Parmerud
 - Ensemble Hybrid Voices: Katharina Arnold, Elisabeth Hillinger, Martina Claussen
 - Armando Balice
@@ -17,18 +17,18 @@ location: { name: "akbild" }
 - Engelsharfen+Teufelsgeigen (E+T)
 - Thomas Gorbach
 - Angela Lau
-- Bruno Liberda + GÃ¼nther Auer 
+- Bruno Liberda + Günther Auer 
 - Frederic Stritter
 
 
 #### Sonntag, 03.10.2021
-- Studierende der Bruckner UniversitÃ¤t Linz
+- Studierende der Bruckner Universität Linz
 - Dieter Kaufmann
 - Research and Waves
 
 #### Montag, 04.10.2021
 - Patrick K.- H.
-- Sweet Spot: Live-Improvisation â€“ 4 Spielende + Licht
+- Sweet Spot: Live-Improvisation € 4 Spielende + Licht
 - Dilian
 - Kisling
 - Daniel Lercher

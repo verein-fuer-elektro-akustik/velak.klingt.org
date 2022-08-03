@@ -7,8 +7,10 @@ menu:
     weight: 1000
 sitemap:
   changefreq: yearly
-  priority: 0.5
+  priority: 0.8
 ---
+a non-profit organisation and platform for artists who work in fields of experimental music and sound/art.
+
 verein für elektroakustische musik (gemeinnützig)  
 organisation for electroacoustic music (non-profit)
 

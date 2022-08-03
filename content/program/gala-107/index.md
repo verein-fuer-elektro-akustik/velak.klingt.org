@@ -2,7 +2,7 @@
 title: "gala#107"
 date: 2019-05-14
 location: {
-    name: "steinergasse"
+    name: "steinergasse8"
 }
 artists: [
     angélica castelló,

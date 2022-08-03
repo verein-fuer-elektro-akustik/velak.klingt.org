@@ -13,7 +13,7 @@ artists: [
 location: {
     name: "dietheater"
 }
-photos:
+photos: "Julia Tazreiter"
 tags: [gala]
 recordings: []
 ---

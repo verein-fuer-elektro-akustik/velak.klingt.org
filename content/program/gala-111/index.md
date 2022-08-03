@@ -2,8 +2,7 @@
 title: "gala#111"
 date: 2019-12-15
 location: {
-    name: "steinergasse",
-    adress: "steinergasse 8 , 1170 vienna"
+    name: "steinergasse8"
 }
 artists: [
     matthias erian,
