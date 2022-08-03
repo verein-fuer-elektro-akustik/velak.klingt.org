@@ -1,7 +1,7 @@
 @use 'breakpoint';
 
 :root {
-    
+
     --font-primary: "Inter";
     --font-mono: "RobotoMono";
 
@@ -41,30 +41,6 @@
     @media screen and (min-width: breakpoint.$desktop) {
        --text-base-size: 16px; 
     }
-}
-
-@font-face {
-	font-family: "Inter";
-    font-weight: 500;
-	font-display: block;
-	src:
-        url("font/Inter-Regular.woff2") format("woff2"),
-        url("font/Inter-Regular.ttf") format("truetype");
-}
-@font-face {
-	font-family: "Inter";
-	font-weight: bold;
-	font-display: block;
-	src:
-        url("font/Inter-Bold.woff2") format("woff2"),
-        url("font/Inter-Bold.ttf") format("truetype");
-}
-@font-face {
-	font-family: "RobotoMono";
-	font-display: block;
-	src:
-        url("font/RobotoMono-Regular.woff2") format("woff2"),
-        url("font/RobotoMono-Regular.ttf") format("truetype");
 }
 
 html {
@@ -120,10 +96,6 @@ dl {
     > dd {
         margin-left: 1.5rem;
     }
-    &.tags {
-        //font-family: var(--font-mono);
-        //font-size: 75%;
-    }
 }
 
 em {
@@ -133,16 +105,15 @@ em {
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
+    letter-spacing: -0.05em;
     text-transform: uppercase;
-    word-break: break-all;
+    word-break: break-word;
 }
 h1 {
     font-size: var(--text-xxxxl);
-    letter-spacing: -0.06em;
 }
 h2 {
     font-size: var(--text-xxxl);
-    letter-spacing: -0.06em;
 }
 h3 {
     font-size: var(--text-xxl);
@@ -275,11 +246,23 @@ table {
     }
     th, td {
         //padding: 2px 4px;
+        padding: 0.25rem;
         white-space: nowrap;
     }
     th {
         //text-transform: uppercase;
         text-align: left;
+    }
+    &.raw {
+        th {
+            font-weight: bold;
+            text-transform: uppercase;
+            background: var(--fg);
+            color: var(--bg);
+            border: 1px solid var(--bg);
+        }
+        font-family: var(--font-mono);
+        
     }
 }
 

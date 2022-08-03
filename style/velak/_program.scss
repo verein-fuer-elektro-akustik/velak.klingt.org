@@ -1,5 +1,5 @@
 body > main {
-    > article[data-page="program"] {
+    > article.program {
         //display: grid;
         //display: flex;
         //flex-wrap: wrap;
@@ -8,6 +8,9 @@ body > main {
         //grid-gap: 1rem ;
         > header {
             margin-bottom: 1rem;
+            > .title {
+                margin-bottom: 1rem;
+            }  
              > div.location {
                 display: flex;
                 flex-wrap: wrap;
@@ -26,10 +29,33 @@ body > main {
         }
         > div.content {
             max-width: 600px;
+            margin-bottom: 2rem;
         }
         > footer {
             font-family: var(--font-mono);
             font-size: 75%;
+        }
+        > div.page-nav {
+            display: flex;
+            > nav.top_prev_next {
+                display: flex;
+                > * {
+                    margin-right: 0.5rem;
+                }
+                > i {
+                    //position: relative;
+                    //top: 1px; // HACK 
+                    cursor: pointer;
+                    &:hover {
+                        color: var(--acc);
+                    }
+                }
+                > nav.prev_next {
+                    position: relative;
+                    top: -1px; // HACK 
+                    //margin-right: 0.5rem;
+                }
+            }
         }
     }
 }

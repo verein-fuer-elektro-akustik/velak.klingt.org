@@ -6,22 +6,24 @@ html {
 
 body {
 
-    --site-margin: 1rem;
+    --site-margin: var(--space-md);
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
-    grid-gap: var(--site-margin);
+    //grid-gap: var(--site-margin);
     width: 100%;
     height: 100%;
+
     > * {
         height: 100%;
     } 
     > header {
         display: flex;
         margin: 0 var(--site-margin);
-        padding: 1rem 0 0 0;
-        white-space: nowrap;
+        padding: var(--space-md) 0;
+        //white-space: nowrap;
+        //background: red;
         > h1 {
             all: unset;
             display: inline-block;
@@ -34,7 +36,6 @@ body {
     }
     > nav {
         margin: 0 var(--site-margin);
-        display: block;
         > ul {
             display: flex;
             flex-wrap: wrap;
@@ -73,7 +74,7 @@ body {
             img, iframe {
                 width: 100%;
                 height: 100%;
-                padding-bottom: 1rem;
+                //padding-bottom: 1rem;
             }
             > section {
                 padding: 2rem 0;
@@ -88,11 +89,9 @@ body {
         display: flex;
         margin: 0 var(--site-margin);
         padding: 0 0 var(--site-margin) 0;
-        font-family: "RobotoMono";
-        font-size: 75%;
     }
     @media screen and (min-width: breakpoint.$tablet) {
-       --site-margin: 2rem; 
+       --site-margin: var(--space-lg);
     }
 }
 
@@ -100,50 +99,15 @@ body {
     list-style: none;
 }
 
-ul.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-    gap: 0.5rem;
-    list-style: none;
-    > li {
-        width: 100%;
-        height: 100%;
-        > figure {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            > img {
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                object-fit: cover;
-            }
-            > figcaption {
-                position: absolute;
-                bottom: 1em;
-                right: 1em;
-                font-family: var(--font-mono);
-                font-size: 65%;
-                text-transform: uppercase;
-                background: var(--bg);
-                user-select: none;
-                opacity: 0;
-            }
-        }
-        &:hover {
-            > figure {
-                > figcaption {
-                    opacity: 1;
-                }
-            }
-        }
-    }
+.meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
 }
 
 dl.tags {
-    //font-family: var(--font-mono);
-    //font-size: 13px;
-    display: flex;
+    font-family: var(--font-mono);
+    font-size: 75%;
+    display: inline-block;
     text-transform: uppercase;
     > dt.tag {
         &:not(:last-child) {
