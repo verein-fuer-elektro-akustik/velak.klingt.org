@@ -6,10 +6,10 @@ defaultContentLanguage = "en"
 
 paginate = 1000
 rssLimit = 100
-enableRobotsTXT = true
-enableGitInfo = true
-disableHugoGeneratorInject = true
 
+disableHugoGeneratorInject = true
+enableGitInfo = true
+enableRobotsTXT = true
 
 #[permalinks]
     #program = '/:year/:month/:day/'
@@ -21,20 +21,19 @@ disableHugoGeneratorInject = true
         #excludeFields = ''
         #includeFields = ''
 
+#[outputs]
+    #home = ["HTML", "RSS"]
+    #page = ["HTML"]
+    #section = ["HTML","RSS"]
+    #taxonomyTerm = ["HTML", "RSS"]
+    #taxonomy = ["HTML", "RSS"]
+
 [sitemap]
     changefreq = 'monthly'
     filename = 'sitemap.xml'
     priority = 0.5
 
 [taxonomies]
-    tag = "tags"
     artist = "artists"
+    tag = "tags"
     #category = "categories"
-
-[outputs]
-    home = ["HTML", "RSS"]
-    page = ["HTML"]
-    section = ["HTML","RSS"]
-    taxonomyTerm = ["HTML", "RSS"]
-    taxonomy = ["HTML", "RSS"]
-
