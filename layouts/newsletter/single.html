@@ -1,28 +1,61 @@
 {{ define "main" }}
+{{ $mailman := "https://klingt.org/cgi-bin/mailman" }}
 <article>
     <header>
         {{ with .Title }}<h1>{{- . -}}</h1>{{ end }}
     </header>
     <div class="content">{{- .Content -}}</div>
-    <form method="POST" action="https://klingt.org/cgi-bin/mailman/subscribe/velak-announce">
-        <fieldset>
-            <!--<legend>From</legend>-->
-            <input type="text" name="email" placeholder="Email" autofocus required>
-            <input type="email" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="Your name">
-        </fieldset>
-        <fieldset>
-            <!--<legend>Pick a password</legend>-->
-            <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="Password" required>
-            <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="Reeenter Password" required>
-        </fieldset>
-        <fieldset>
-            <select name="language">
-                <option value="en" selected=""> English (USA) </option>
-                <option value="de"> German </option>
-                <option value="uk"> Ukrainian </option>
-            </select>
-        </fieldset>
-        <input type="submit" name="email-button" value="Subscribe">
-    </form>
+    <section>
+        <h4>Subscribe</h4>
+        <p>
+            <div>Subscribe to the newsletter by filling out the following form.</div>
+            <div>You will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.</div>
+        </p>
+        <form method="POST" action="{{ $mailman }}/subscribe/velak-announce">
+            <fieldset>
+                <!--<legend>From</legend>-->
+                <input type="email" name="email" placeholder="Email ..." autofocus required>
+                <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="Your name ...">
+            </fieldset>
+            <fieldset>
+                <!--<legend>Pick a password</legend>-->
+                <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="Password ..." required>
+                <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="Reeenter Password ..." required>
+            </fieldset>
+            <fieldset>
+                <input name="language" type="hidden" value="en">
+                <!--<select name="language">
+                    <option value="en" selected=""> English (USA) </option>
+                    <option value="de"> German </option>
+                    <option value="uk"> Ukrainian </option>
+                </select>-->
+            </fieldset>
+            <input type="submit" name="email-button" value="Subscribe">
+        </form>
+    </section>
+    <section>
+        <h4>Unsubscribe</h4>
+        <p>
+            <div>To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:</div>
+        </p>
+        <form method="POST" action="{{ $mailman }}/options/velak-announce">
+            <fieldset>
+                <input name="email" type="email" placeholder="Email ..." required>
+                <input name="password" type="password" placeholder="Password ..." required>
+            </fieldset>
+            <input name="language" type="hidden" value="en">
+            <fieldset>
+                <input type="submit" name="login-unsub" value="Unsubscribe">
+                <input type="submit" name="login-remind" value="Remind">
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h4>Post</h4>
+        <p>
+            <div>To see the collection of prior postings to the list, visit the <a href="http://klingt.org/pipermail/velak-announce/" rel="external">archives</a>.</div>
+            <div>To post a message to all the list members, send email to <a href="mailto:velak-announce@klingt.org">velak-announce@klingt.org</a>.</div>
+        </p>
+    </section>
 </article>
 {{ end }}

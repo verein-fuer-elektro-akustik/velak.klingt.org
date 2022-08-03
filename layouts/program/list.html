@@ -1,11 +1,10 @@
 {{ define "main" }}
 <article>
-    
     {{ with .Title }}<h2>{{- . -}}</h2>{{ end }}
     <div class="content">{{- .Content | safeHTML -}}</div>
-
     <table class="raw">
         <tr>
+            <th>gh</th>
             <th>date</th>
             <th>title</th>
             <th>location</th>
@@ -19,6 +18,7 @@
         </tr>
         {{ range .RegularPagesRecursive.ByDate.Reverse }}
         <tr>
+            <td><a href="https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/tree/master/content/program/{{ .File.ContentBaseName }}/index.md" class="ic-link"></a></td>
             <td>{{ .Date.Format "2006/01/02" }}</td>
             <td><a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a></td>
             <td>{{ with .Params.location }}{{ delimit . "," }}{{end}}</td>
@@ -32,22 +32,5 @@
         </tr>
         {{ end }}
     </table>
-
-    <!--<ul>-->
-    <!--{{ range .Site.Taxonomies.tags }}-->
-            <!--<li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>-->
-    <!--{{ end }}    -->
-    <!--</ul>-->
-
-    <!--{{ $paginator := .Paginate .RegularPages }}-->
-    <!--<ol reversed class="nolist">
-        {{ range .RegularPages.ByDate.Reverse }}
-        <li>
-            <time>{{ .Date.Format "2006/01/02" }}</time>
-            <a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a>
-        </li>
-        {{ end }}
-    </ol>-->
-
-    </article>
+</article>
 {{ end }}

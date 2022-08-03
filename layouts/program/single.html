@@ -1,28 +1,27 @@
 {{ define "main" }}
 {{ $id := .File.ContentBaseName }}
-<article data-page="program">
+<article class="program">
     
     <header>
-        <h2>{{- .Title -}}</h2>
+        <h2 class="title">{{- .Title -}}</h2>
         <time>{{ .Date.Format "2006/01/02" }}</time>
-        <div class="location">
+        <span class="location">
             {{ with .Params.location }}
                 {{ with .name }}
                     {{ with index $.Site.Data.locations . }}
                         {{ with .url }}
-                            <a href="{{ . }}" rel="external">{{- $.Params.location.name -}}</a>
+                        <a href="{{ . }}" rel="external"><i class="ic-location_on"></i><span>{{- $.Params.location.name -}}</span></a>
                         {{ else }}
-                            <span>{{- $.Params.location.name -}}</span>
+                        <span>{{- $.Params.location.name -}}</span>
                         {{ end }}
                         {{ with .address }}
-                            <span>,&nbsp;</span>
-                            <address>{{- . | safeHTML -}}</address>
+                        <address>{{- . | safeHTML -}}</address>
                         {{ end }}
                     {{ else }}
-                        {{ with $.Params.location.name }}<div>{{- . | safeHTML -}}</div>{{ end }}
+                        {{ with $.Params.location.name }}<i class="ic-location_on"></i><span>{{- . | safeHTML -}}</span>{{ end }}
                         {{ with $.Params.location.address }}
-                            <span>,&nbsp;</span>
-                            <address>{{- . | safeHTML -}}</address>
+                        <span>,&nbsp;</span>
+                        <address>{{- . | safeHTML -}}</address>
                         {{ end }}
                     {{ end }}
                 {{ else }}
@@ -31,25 +30,9 @@
             {{ else }}
             <div class="warning">MISSING LOCATION</div>
             {{ end }} 
-        </div>
-        {{ partial "prev_next.html" . }}
-        {{ partial "tags" . }}
+        </span>
     </header>
 
-     
-    <!--<div class="location">
-        {{ with .Params.location }}
-            {{ with .link }}
-            <a href="{{- . -}}">{{- $.Params.location.name | safeHTML }}</a>
-            {{ else }}
-            <span>{{- $.Params.location.name | safeHTML -}}</span>
-            {{ end }}
-            {{ with .address }}<span>, </span><address>{{- . | safeHTML -}}</adresss>{{ end }}
-        {{ else }}
-        <div class="warning">MISSING LOCATION</div>
-        {{ end }}
-    </div>-->
-    
       <ul class="artists">
         {{ with .Params.artists }}
             {{ range . }}
@@ -57,10 +40,12 @@
             {{ end }}
         {{ end }}
     </ul>
+    
+    {{ with .Content }}
+    <div class="content">{{- . | safeHTML -}}</div>
+    {{ end }}
 
-    <div class="content">{{- .Content | safeHTML -}}</div>
-
-    <div>
+    <div class="audiofiles">
         <ol class="nolist">
             {{ range .Resources.ByType "audio" }}
             <li>
@@ -81,28 +66,34 @@
         {{ end }}
     </div>
 
+    <!--{{ partial "gallery2" . }}-->
     {{ partial "gallery" . }}
-
+    
+    {{ with .Params.photos }}
+    <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
+    {{ end }}
+    
+    <!--
     {{ with .Params.youtube }}
         {{ range . }}
             {{ partial "youtube" . }}
         {{ end }}
     {{ end }}
-
-    <footer>
-        {{ with .Params.photos }}
-            <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
-        {{ end }}
-        {{ with .GitInfo }}
+    -->
+    
+        <!--{{ with .GitInfo }}
         <div>
             <span>MOD</span>
             <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
                 <time>{{ .AuthorDate.Format "2006/01/02"  }}</time>
             </a>
         </div>
-        {{ end }}
-    </footer>
-
+        {{ end }}-->
+    
+    <div class="page-nav">
+        {{ partial "nav_top_prev_next.html" . }}
+        {{ partial "tags" . }}
+    </div>
 
 </article>
 {{ end }}

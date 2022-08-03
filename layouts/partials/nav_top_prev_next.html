@@ -1,0 +1,11 @@
+<nav class="top_prev_next"> 
+    <i class="ic-arrow_upward" onclick="window.scrollTo(0,0)"></i>
+    <nav class="prev_next">
+        {{with .PrevInSection}}
+        <a rel="prev" href="{{.Permalink}}" title="{{- .Title | safeHTML -}}"><i class="ic-arrow_back"></i><span>&#60;</span></a>
+        {{end}}
+        {{with .NextInSection}}
+        <a rel="next" href="{{.Permalink}}" title="{{- .Title | safeHTML -}}"><span>&#62;</span><i class="ic-arrow_forward"></i></a>
+        {{end}}
+    </nav>
+</nav>

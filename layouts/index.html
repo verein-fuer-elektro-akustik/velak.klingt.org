@@ -2,14 +2,22 @@
 <article>
     <div>{{- .Content -}}</div>
     <ol class="nolist">
-    {{ range where .Site.RegularPages "Section" "program" }}
+    {{ range (where .Site.RegularPages "Section" "program").ByDate }}
         {{ if (time .Date).After now }}
         <li>
-            <h2><a href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
+            <div><a href="{{ .RelPermalink }}">{{- .Title -}}</a></div>
+            <div>{{ .Date.Format "Mon 2006/01/02" }}</div>
         </li>
         {{ end }}
     {{ end }}
     </ol>
+    <!--<ol>
+        {{ range first 23 (where .Site.RegularPages "Section" "program").ByDate }}
+        <li>
+            <div><a href="{{ .RelPermalink }}">{{- .Title -}}</a></div>
+        </li>
+        {{ end }}
+    </ol>-->
 </article>
 {{ end }}
 

@@ -1,4 +1,15 @@
 {{ define "main" }}
+<article>
+    <ul>
+        {{ range $key, $taxonomy := .Site.Taxonomies.artists }}
+        <li>
+            <a href="/artists/{{ $key }}">{{ $key }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</article>
+
+<!--
 <h1>TEEERMS</h1>
 
 
@@ -14,7 +25,7 @@
         {{ end }}
     </ul>
 </section>
-
+-->
 
     <!--<ul>
     {{ range $term, $taxonomy := .Site.Taxonomies.artists }}

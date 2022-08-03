@@ -1,30 +1,35 @@
 {{ $page := . }}
 <ul class="gallery">
-    {{ range $res := .Resources.ByType "image" }}
-        {{ if hasPrefix $res.Name (replace $page.Name "#" "-") }}
-        {{ else }}
-            {{ $img_1000 := $res.Resize "1000x" }}
-            {{ $img_400 := $res.Resize "400x" }}
-            <li>
-                <figure>
-                    <img 
-                        src="{{ $res.RelPermalink }}"
-                        srcset="{{ $img_1000.RelPermalink }} 1000w, {{ $img_400.RelPermalink }} 600w"
-                    >
-                    <figcaption>
-                        {{ with $res.Exif }}
-                            {{ with .Tags }}
-                                {{ with .DateTimeOriginal }}
-                                    {{ if hasPrefix . "0000:00:00" }}
-                                    {{ else }}
-                                        {{ (time .).Format "15:04" }}
-                                    {{ end }}
-                                {{ end }}
+{{ range $res := .Resources.ByType "image" }}
+    {{ if hasPrefix $res.Name (replace $page.Name "#" "-") }}<!-- don't show flyer images -->{{ else }}
+    <li>
+        <figure>
+            {{ if lt $res.Width 400 }}
+            <img src="{{ $res.RelPermalink }}">
+            {{ else }}
+                {{ $img_400 := $res.Resize "400x" }}
+                {{ if lt $res.Width 1000 }}
+                    <img src="{{ $res.RelPermalink }}" srcset="{{ $img_400.RelPermalink }} 600w">
+                {{ else }}
+                    {{ $img_1000 := $res.Resize "1000x" }}
+                    <img src="{{ $res.RelPermalink }}" srcset="{{ $img_1000.RelPermalink }} 1000w, {{ $img_400.RelPermalink }} 600w">
+                {{ end }}
+            {{ end }}
+            <figcaption>
+                {{ with $res.Exif }}
+                    {{ with .Tags }}
+                        {{ with .DateTimeOriginal }}
+                            {{ if hasPrefix . "0000:00:00" }}
+                            {{ else }}
+                                {{ (time .).Format "15:04" }}
                             {{ end }}
                         {{ end }}
-                    </figcaption>
-                </figure>
-            </li>
-        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </figcaption>
+        </figure>
+    </li>
     {{ end }}
+{{ end }}
 </ul>
+
