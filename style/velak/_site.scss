@@ -1,4 +1,5 @@
 @use 'breakpoint';
+@use 'print';
 
 html {
     scroll-behavior: smooth;
@@ -21,7 +22,7 @@ body {
     > header {
         display: flex;
         margin: 0 var(--site-margin);
-        padding: var(--space-md) 0;
+        padding: var(--site-margin) 0;
         //white-space: nowrap;
         //background: red;
         > h1 {
@@ -36,6 +37,7 @@ body {
     }
     > nav {
         margin: 0 var(--site-margin);
+        padding-bottom: 1rem;
         > ul {
             display: flex;
             flex-wrap: wrap;
@@ -53,6 +55,7 @@ body {
                 &.active {
                     background: var(--fg);
                     color: var(--bg);
+                    font-weight: bold;
                     > a {
                         color: var(--bg);
                     }
@@ -63,14 +66,20 @@ body {
             color: inherit;
         }
     }
-
     > main {
         position: relative;
         > article {
+            max-width: 600px;
             height: 100%;
-            margin: 0 var(--site-margin);
-            padding: 1rem 0;
-            //word-break: break-all;
+            margin: 0 var( --site-margin);
+            //padding: 1rem 0;
+            //word-break: break-all ;
+            a {
+                //@include print.print-url-after-link;
+            }
+            //a[href^="http"]::after {
+                //content: " ("attr(href)")";
+            //}
             img, iframe {
                 width: 100%;
                 height: 100%;
@@ -78,7 +87,7 @@ body {
             }
             > section {
                 padding: 2rem 0;
-                border-top: 1px solid var(--fg);
+                //border-top: 1px solid var(--fg);
             }
             > div.content {
                 max-width: 600px;
@@ -88,10 +97,14 @@ body {
     > footer {
         display: flex;
         margin: 0 var(--site-margin);
-        padding: 0 0 var(--site-margin) 0;
+        //padding: 0 0 var(--site-margin) 0;
+        padding: 1rem 0;
     }
     @media screen and (min-width: breakpoint.$tablet) {
        --site-margin: var(--space-lg);
+    }
+    @media screen and (min-width: breakpoint.$desktop) {
+       --site-margin: var(--space-xxl);
     }
 }
 
@@ -105,14 +118,14 @@ body {
 }
 
 dl.tags {
+    display: flex;
     font-family: var(--font-mono);
     font-size: 75%;
-    display: inline-block;
     text-transform: uppercase;
     > dt.tag {
         &:not(:last-child) {
             &::after {
-                content: ", ";
+                //content: ", ";
             }
             margin-right: 0.5ch;
         }

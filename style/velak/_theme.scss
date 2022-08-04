@@ -14,7 +14,11 @@
 
 body {
     background: var(--bg);
+    //background: linear-gradient(to bottom, var(--bg), var(--background));
+    //background: linear-gradient(to bottom, var(--bg), var(--fg));
+    background-attachment: fixed;
     color: var(--fg);
+    -webkit-tap-highlight-color: var(--fg);
 }
 *::selection {
     background: var(--fg);

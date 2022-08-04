@@ -1,3 +1,5 @@
+@use 'print';
+
 body > main {
     > article.program {
         //display: grid;
@@ -6,20 +8,26 @@ body > main {
         //grid-template-columns: 1fr;
         //grid-template-rows: auto auto 1fr auto;
         //grid-gap: 1rem ;
+
+        @include print.url-after-link;
         > header {
             margin-bottom: 1rem;
             > .title {
                 margin-bottom: 1rem;
             }  
-             > div.location {
-                display: flex;
-                flex-wrap: wrap;
+             > .location {
+                //display: flex;
+                //flex-wrap: wrap;
                 margin-bottom: 1rem;
                 text-transform: lowercase;
                 > * {
                     //&:not(:last-child) {
                         //margin-right: 1ch;
                     //}
+                }
+                > i {
+                    //position: relative;
+                    //top: 1px; // HACK
                 }
                 > address {
                     display: inline-block;
@@ -37,6 +45,8 @@ body > main {
         }
         > div.page-nav {
             display: flex;
+            //font-size: 2rem;
+            @include print.not;
             > nav.top_prev_next {
                 display: flex;
                 > * {

@@ -142,8 +142,8 @@ p, ol, ul {
 
 input, select {
     outline: none;
-    padding: 1rem;
     margin: 0 0 0.5rem 0;
+    padding: 0.75rem 1rem;
     background: var(--bg);
     color: var(--fg);
     border: 1px solid var(--fg);
@@ -163,6 +163,7 @@ input, select {
         border: 1px solid var(--fg);
     }
     &[type="submit"] {
+        text-transform: lowercase;
         cursor: pointer;
         &:hover {
             background: var(--fg);

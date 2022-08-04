@@ -1,6 +1,7 @@
 {{ define "main" }}
-<article>
+<!--<article>
     <div>{{- .Content -}}</div>
+
     <ol class="nolist">
     {{ range (where .Site.RegularPages "Section" "program").ByDate }}
         {{ if (time .Date).After now }}
@@ -11,13 +12,19 @@
         {{ end }}
     {{ end }}
     </ol>
-    <!--<ol>
+    <ol>
         {{ range first 23 (where .Site.RegularPages "Section" "program").ByDate }}
         <li>
             <div><a href="{{ .RelPermalink }}">{{- .Title -}}</a></div>
         </li>
         {{ end }}
-    </ol>-->
+    </ol>
 </article>
+-->
+
+<div style="height: 100%; margin:0 var(--site-margin);">
+{{ partial "fq" . }} 
+</div>
+
 {{ end }}
 

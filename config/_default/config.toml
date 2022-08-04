@@ -1,6 +1,7 @@
 baseURL = ""
 #title = "VELAK ↯⚡"
-title = "V´EL:AK"
+#title = "V´EL:AK"
+title = "VELAK"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 

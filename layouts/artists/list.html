@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article>
+    {{ $artist := .Title }}
+    <h2>{{- $artist -}}</h2>
+    {{ range $event := (where .Site.Pages "Section" "program") }}
+        <ol>
+        {{ range .Params.artists }}
+            {{ if  eq . $artist }}
+            <li><a href="{{ $event.RelPermalink }}">{{ $event.Title }}</a></li>
+            {{ end }}
+        {{ end }}
+        </ol>
+    {{ end }}
+</article>
+{{ end }}

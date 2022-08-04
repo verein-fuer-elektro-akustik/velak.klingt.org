@@ -32,8 +32,8 @@
             {{ end }} 
         </span>
     </header>
-
-      <ul class="artists">
+    
+    <ul class="artists">
         {{ with .Params.artists }}
             {{ range . }}
             <li>{{- . | safeHTML -}}</li>
@@ -66,20 +66,7 @@
         {{ end }}
     </div>
 
-    <!--{{ partial "gallery2" . }}-->
     {{ partial "gallery" . }}
-    
-    {{ with .Params.photos }}
-    <div class="photographer"><span>© Photos by </span><span>{{- . | safeHTML -}}</span></div>
-    {{ end }}
-    
-    <!--
-    {{ with .Params.youtube }}
-        {{ range . }}
-            {{ partial "youtube" . }}
-        {{ end }}
-    {{ end }}
-    -->
     
         <!--{{ with .GitInfo }}
         <div>

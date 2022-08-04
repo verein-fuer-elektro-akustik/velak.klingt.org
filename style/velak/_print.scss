@@ -1,0 +1,24 @@
+@mixin not {
+    @media print {
+        display: none;
+    }
+}
+
+@mixin url-after-link() {
+    @media print {
+        a[href^="http"]::after {
+            content: " ("attr(href)")";
+        }
+    }
+}
+/*
+@mixin remove-shadows() {
+    @media print {
+        *,
+        *::after,
+        *::before {
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+    }
+}*/

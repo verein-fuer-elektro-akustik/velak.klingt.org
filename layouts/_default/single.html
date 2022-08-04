@@ -1,7 +1,12 @@
 {{ define "main" }}
 <article>
     <header>
-        {{ with .Title }}<h1>{{- . -}}</h1>{{ end }}
+        {{ if not .Params.hide_title }}
+        {{ with .Title }}
+        <h1>{{- . -}}</h1>
+        {{ end }}
+        {{ end }}
+
     </header>
     <div class="content">{{- .Content -}}</div>
 </article>

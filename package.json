@@ -27,6 +27,6 @@
     "devDependencies": {
         "csv": "^6.2.0",
         "csvtojson": "^2.0.10",
-        "sass": "^1.53.0"
+        "sass": "^1.54.0"
     }
 }
