@@ -239,22 +239,20 @@ sub, sup {
     font-size: 50%;
 }
 
-
 table {
     &, td, th {
-        border: 1px solid var(--fg);
+        //border: 1px solid var(--fg);
         border-collapse: collapse;
     }
     th, td {
-        //padding: 2px 4px;
-        padding: 0.25rem;
+        //padding: 0.25rem;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     th {
-        //text-transform: uppercase;
         text-align: left;
-    }
-    &.raw {
+    }    &.raw {
         th {
             font-weight: bold;
             text-transform: uppercase;
@@ -263,7 +261,15 @@ table {
             border: 1px solid var(--bg);
         }
         font-family: var(--font-mono);
-        
+    }
+    &.raw {
+        &, tr, td {
+            border: 1px solid var(--fg);
+            padding: 2px;
+        }
+        td {
+            max-width: 300px;
+        }
     }
 }
 

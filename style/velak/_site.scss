@@ -7,11 +7,11 @@ html {
 
 body {
 
-    --site-margin: var(--space-md);
+    --site-margin: 1rem; //var(--space-md);
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
     //grid-gap: var(--site-margin);
     width: 100%;
     height: 100%;
@@ -21,20 +21,56 @@ body {
     } 
     > header {
         display: flex;
-        margin: 0 var(--site-margin);
-        padding: var(--site-margin) 0;
+        flex-wrap: wrap;
+
+        margin: 0 1rem; //var(--site-margin);
+        padding: 1.5rem 0 0 0;
+        //padding: var(--site-margin) 0;
         //white-space: nowrap;
         //background: red;
         > h1 {
             all: unset;
             display: inline-block;
+            margin-right: 0.5ch;
+            font-size: 1rem;
             font-weight: bold;
-            font-size: 2rem;
         }
         > h2 {
             all: unset;
         }
+        > nav {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                list-style: none;
+                > li {
+                    //margin-right: 0.5ch;
+
+                    &:first-child {
+                        font-weight: bold;
+                    }
+                    &:not(:last-child)::after {
+                        content: "";
+                        margin: 0 2px;
+                        font-weight: normal;
+                        color: var(--f_med);
+                    }
+                    > a {
+                        padding: 4px;
+                        &.active {
+                            padding: 3px 8px 4px 8px;
+                            border-radius: 1px;
+                            //letter-spacing: 2px;
+                            background: var(--f_med);
+                            color: var(--b_med);
+                        }
+                    }
+                }
+            }
+        }
     }
+    /*
     > nav {
         margin: 0 var(--site-margin);
         padding-bottom: 1rem;
@@ -48,7 +84,6 @@ body {
                 margin-bottom: 0.5rem;
                 padding: 0.5rem;
                 border: 1px solid var(--fg);
-                text-transform: uppercase;
                 &:not(:last-child) {
                     margin-right: 0.5rem;
                 }
@@ -66,12 +101,13 @@ body {
             color: inherit;
         }
     }
+    */
     > main {
         position: relative;
         > article {
-            max-width: 600px;
+            //max-width: 600px;
             height: 100%;
-            margin: 0 var( --site-margin);
+            margin: 0 1rem; //var( --site-margin);
             //padding: 1rem 0;
             //word-break: break-all ;
             a {
@@ -90,22 +126,26 @@ body {
                 //border-top: 1px solid var(--fg);
             }
             > div.content {
-                max-width: 600px;
+                //max-width: 600px;
             }
         }
     }
     > footer {
         display: flex;
-        margin: 0 var(--site-margin);
+        margin: 0 1rem; //var(--site-margin);
         //padding: 0 0 var(--site-margin) 0;
         padding: 1rem 0;
     }
     @media screen and (min-width: breakpoint.$tablet) {
-       --site-margin: var(--space-lg);
+       //--site-margin: var(--space-lg);
     }
     @media screen and (min-width: breakpoint.$desktop) {
-       --site-margin: var(--space-xxl);
+       //--site-margin: var(--space-xxl);
     }
+}
+
+.nodisplay {
+    display: none;
 }
 
 .nolist {
@@ -114,13 +154,25 @@ body {
 
 .meta {
     font-family: var(--font-mono);
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
+    @media screen and (min-width: breakpoint.$tablet) {
+        font-size: var(--text-sm);
+    }
+}
+
+.warning {
+    color: magenta;
+}
+.error {
+    background: red;
+    color: black;
 }
 
 dl.tags {
     display: flex;
     font-family: var(--font-mono);
-    font-size: 75%;
+    //font-size: 75%;
+    font-size: var(--text-sm);
     text-transform: uppercase;
     > dt.tag {
         &:not(:last-child) {

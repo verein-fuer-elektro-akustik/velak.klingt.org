@@ -2,19 +2,51 @@
 
 body > main {
     > article.program {
+        > ol {
+            list-style: none;
+        } 
+        > table {
+            &, td, th {
+            //border: 1px solid var(--fg);
+            border-collapse: collapse;
+            }
+            td {
+
+                padding-right: 1ch;
+            } 
+            td.date {
+                text-align: right;
+                color: var(--f_low);
+                font-family: var(--font-mono);
+                font-size: 97%;
+            }
+            td {
+                text-transform: lowercase;
+               //text-align: right;
+               > .location {
+                   color: var(--f_low);
+                   font-weight: 400;
+               }
+            }
+            //border-collapse: separate;
+        }
+    }
+    > article.event {
         //display: grid;
         //display: flex;
         //flex-wrap: wrap;
         //grid-template-columns: 1fr;
         //grid-template-rows: auto auto 1fr auto;
         //grid-gap: 1rem ;
-
         @include print.url-after-link;
+        text-transform: lowercase;
         > header {
+            margin-top: 1rem;
+
             margin-bottom: 1rem;
             > .title {
                 margin-bottom: 1rem;
-            }  
+            }
              > .location {
                 //display: flex;
                 //flex-wrap: wrap;
@@ -35,6 +67,39 @@ body > main {
                 }
             }
         }
+        /*> ul.artists {
+            &, li {
+                list-style: none;
+                text-transform: lowercase;
+            }
+            > li {
+                > ul {
+                    display: flex;
+                }
+            }
+        }*/
+        > ul.artists {
+            margin-bottom: 1rem;
+            &, li {
+                list-style: none;
+                text-transform: lowercase;
+                padding: 0;
+            }
+            ul.artist-group {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                > li {
+                    margin: 0;
+                    padding: 0;
+                    &:not(:last-child)::after {
+                        content: "&";
+                        margin: 0 1ch;
+                    }
+                }
+            }
+        }
+
         > div.content {
             max-width: 600px;
             margin-bottom: 2rem;
