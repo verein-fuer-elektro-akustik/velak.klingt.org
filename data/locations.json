@@ -10,6 +10,7 @@
         "url": "https://www.ateliertheater.wien/"
     },
     "b5": {
+        "name": "B5",
         "address": "herklotzgasse 21, 1150 vienna"
     },
     "brut": {
@@ -63,7 +64,7 @@
         "name": "gudrunkino"
     },
     "kuenstlerhauspassage": {
-        "name": "kuenstlerhauspassage"
+        "name": "Künstlerhauspassage"
     },
     "kunsthause_graz": {
         "name": "Kunsthause Graz",

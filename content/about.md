@@ -1,12 +1,12 @@
 ---
-title: "About"
+title: "about"
 menu:
   nav:
-    name: About
+    name: about
     weight: 1000
 sitemap:
   changefreq: yearly
-  priority: 0.8
+  priority: 0.5
 rss_ignore: true
 hide_title: true
 ---
@@ -18,6 +18,6 @@ a non-profit organisation and platform for artists who work in fields of experim
 the term _velak_ is a derivative of the course for computermusic and electronic media in vienna,
 where the pool of people who are/were involved in the realization of the v/elak concerts & activities over the past years got together.
 
-ZVR: 229137709  
 supported by: BKA, [MA7](https://www.wien.gv.at/kultur/abteilung/), SKE  
+ZVR: 229137709  
 

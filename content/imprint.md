@@ -1,7 +1,8 @@
 ---
 title: Imprint
+hide_title: true
 rss_ignore: true
 ---
 Contact: [{{< param "email" >}}]({{< param "email" >}})  
-Source: https://github.com/disktree/velak
+Source: https://github.com/verein-fuer-elektro-akustik/velak.klingt.org
 

@@ -8,6 +8,6 @@ artists: [
     mauro diciocia,
     lucia kagramanyan
 ]
-location: "velakradar"
+location: "radar"
 tags: [radar]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "kellerstiege#10"
 date: 2010-01-28
-location: { name: "garnison" }
+location: "garnison"
 artists: [
     ye hui,
     antonino secchia,

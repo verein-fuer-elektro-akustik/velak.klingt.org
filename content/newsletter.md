@@ -1,11 +1,11 @@
 ---
-title: "Newsletter"
+title: "newsletter"
 description: "Subscribe/Unsubscribe velak announcements"
 type: newsletter
 rss_ignore: true
 menu:
   nav:
-    name: Newsletter
+    name: newsletter
     weight: 10
 sitemap:
   changefreq: yearly

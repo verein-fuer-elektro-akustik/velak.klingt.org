@@ -23,7 +23,7 @@ artists: [
     gudinni cortina,
     özcan ertek,
 ]
-location: "velakradar"
+location: "radar"
 recordings: [
    https://disktree.net/music/VELAKRADAR/velakradar2-vvv1.ogg,
    https://disktree.net/music/VELAKRADAR/velakradar2-vvv2.ogg,

@@ -1,7 +1,7 @@
 ---
 title: "gala#102"
 date: 2018-07-28
-location: centralgarden"
+location: "centralgarden"
 artists: [
     jörg zemmler,
     RUSE trio,

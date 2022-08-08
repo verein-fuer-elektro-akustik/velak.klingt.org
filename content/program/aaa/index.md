@@ -1,5 +1,5 @@
 ---
-title: "fuckery"
+title: "AAA"
 date: 2023-01-01
 artists: [
     stefan wunder,

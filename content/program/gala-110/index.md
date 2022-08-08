@@ -1,7 +1,7 @@
 ---
 title: "gala#110"
 date: 2019-10-16
-location: "erbsenfabrick"
+location: "erbsenfabrik"
 artists: [
     nava hemyari,
     dilian,

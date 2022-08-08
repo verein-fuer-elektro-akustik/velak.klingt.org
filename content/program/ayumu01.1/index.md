@@ -2,7 +2,6 @@
 title: "ayumu01.1"
 date: 2019-08-31
 location: "bar ishee, tokyo, japan"
-description: ""
 artists: [
     frederic stritter & yuji ishihara,
     fabian lanzmaier,

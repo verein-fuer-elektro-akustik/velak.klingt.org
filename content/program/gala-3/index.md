@@ -6,8 +6,5 @@ artists: [
     
 ]
 location: "fluc"
-image: "velak-gala-3.jpg"
-photos:
 tags: [gala]
-recordings: []
 ---

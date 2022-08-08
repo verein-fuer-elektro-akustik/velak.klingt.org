@@ -1,7 +1,7 @@
 ---
 title: "kellerstiege#7"
 date: 2009-10-03
-location: { name: "garnison" }
+location: "garnison"
 artists: [
 ]
 tags: [kellerstiege]

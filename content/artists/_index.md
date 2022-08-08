@@ -3,7 +3,7 @@ title: Artists
 rss_ignore: true
 menu:
   nav:
-    name: Artists
-    weight: 2
+    name: artists
+    weight: 3
 draft: true
 ---
