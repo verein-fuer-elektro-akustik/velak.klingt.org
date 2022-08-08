@@ -8,10 +8,6 @@ artists: [
     mauro diciocia,
     lucia kagramanyan
 ]
-location: {
-    name: "virtual",
-    url: "https://velakradar.klingt.org"
-}
+location: "velakradar"
 tags: [radar]
 ---
-

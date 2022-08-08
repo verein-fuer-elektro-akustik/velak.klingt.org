@@ -12,9 +12,7 @@ artists: [
     stefan fraunberger,
     greg haines,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

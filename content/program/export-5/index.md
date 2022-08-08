@@ -7,9 +7,7 @@ artists: [
     Christof Kurzmann & Isabelle Duthoit,
     Jonáš Gruska
 ]
-location: {
-    name: garnison
-}
+location: garnison
 tags: [export]
 ---
 doors: 20h / begin: 21h (sharp!)  

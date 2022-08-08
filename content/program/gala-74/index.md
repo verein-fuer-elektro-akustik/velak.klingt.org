@@ -7,9 +7,7 @@ artists: [
     noid & matija schellander,
     chris janka
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 image: ""
 photos: "Sophie Thun"

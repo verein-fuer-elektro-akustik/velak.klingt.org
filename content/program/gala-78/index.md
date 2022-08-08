@@ -7,9 +7,7 @@ artists: [
     sergio sanchez,
     chrs galarreta,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "edward chapon"
 ---

@@ -9,9 +9,7 @@ artists: [
     ruinu,
     fraunberger
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

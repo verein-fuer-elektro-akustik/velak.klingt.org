@@ -1,9 +1,7 @@
 ---
 title: "gala#111"
 date: 2019-12-15
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 artists: [
     matthias erian,
     mo nahold,

@@ -1,9 +1,7 @@
 ---
 title: "gala#107"
 date: 2019-05-14
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 artists: [
     angélica castelló,
     seijiro murayama & axel dörner,

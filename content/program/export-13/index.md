@@ -1,9 +1,7 @@
 ---
 title: "export#13"
 date: 2016-02-16
-location: {
-    name: "garnison"
-}
+location: "garnison"
 description: ""
 artists: [
     ingrid schmoliner,

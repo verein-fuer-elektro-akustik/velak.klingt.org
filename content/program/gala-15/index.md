@@ -12,9 +12,7 @@ artists: [
     matthias erian,
     helmut kleinfercher,
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

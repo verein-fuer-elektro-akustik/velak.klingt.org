@@ -9,9 +9,7 @@ artists: [
     irene pacini & caroline profanter,
     jerobeam fenderson
 ]
-location: {
-    address: "rue d’arenbergstraat, 31000 brussels"
-}
+location: "rue d’arenbergstraat, 31000 brussels"
 tags: [export]
 ---
 doors: 19.30h / films: 20h / live performancees: 22h  

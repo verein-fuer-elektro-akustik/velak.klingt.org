@@ -9,9 +9,7 @@ artists: [
     erian & schmoliner & schoenlieb,
     a.d martinz, rhsjb,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "alexander martinz"
 tags: [gala]
 recordings: []

@@ -9,9 +9,7 @@ artists: [
     rosa rauschn,
     krk
 ]
-location: {
-    name: "moe"
-}
+location: "moe"
 tags: [export]
 photos: Edward Chapon
 ---

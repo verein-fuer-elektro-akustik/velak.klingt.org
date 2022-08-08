@@ -6,12 +6,9 @@ artists: [
     hui ye,
     stefan voglsinger & tobias leibetseder
 ]
-location: {
-    name: "centralgarden"
-}
+location: "centralgarden"
 tags: [gala]
 photos: "Richard Bruzek"
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
-

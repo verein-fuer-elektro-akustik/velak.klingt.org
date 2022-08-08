@@ -11,9 +11,7 @@ artists: [
     glim & michaela grill,
     david grove,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "tina vareško & daniel lercher"
 tags: [gala]
 recordings: []

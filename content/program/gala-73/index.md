@@ -7,9 +7,7 @@ artists: [
     Wagner Felipe Dos Santos,
     Johannes Deutschmann
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 image: ""
 photos: "edward chapon"

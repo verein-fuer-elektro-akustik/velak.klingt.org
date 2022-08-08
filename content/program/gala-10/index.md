@@ -7,12 +7,8 @@ artists: [
     richard bruzek,
     stefan brunner,
 ]
-location: {
-    name: kuenstlerhauspassage
-}
-photos:
+location: kuenstlerhauspassage
 tags: [gala]
-recordings: []
 ---
 live video processing by benoit martin.
 

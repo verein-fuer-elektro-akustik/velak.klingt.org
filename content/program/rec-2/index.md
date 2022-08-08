@@ -1,9 +1,7 @@
 ---
 title: "rec#2"
 date: 2009-04-03
-location: {
-    name: "garnison"
-}
+location: "garnison"
 artists: [
     Billy Roisz,
     Bernd Klug,

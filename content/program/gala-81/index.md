@@ -7,9 +7,7 @@ artists: [
     thomas havlik,
     be-muvi
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "edward chapon"
 ---

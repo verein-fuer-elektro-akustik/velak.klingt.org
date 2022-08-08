@@ -8,9 +8,7 @@ artists: [
     matthias erian,
     ayonkoko,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

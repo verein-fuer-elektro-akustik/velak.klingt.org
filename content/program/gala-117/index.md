@@ -1,13 +1,11 @@
 ---
 title: "gala#117"
 date: 2021-06-22
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 artists: [
-    susanna gartmayer &amp; christof kurzmann,
-    symplast (martina claussen &amp; tobias leibetseder),
-    fluctuations (franciszek araszkiewicz &amp; michael fischer),
+    susanna gartmayer & christof kurzmann,
+    symplast - martina claussen & tobias leibetseder,
+    fluctuations - franciszek araszkiewicz & michael fischer,
 ]
 tags: [gala]
 photos: "Sarah Jackel"

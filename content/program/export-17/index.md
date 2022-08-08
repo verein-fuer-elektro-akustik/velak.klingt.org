@@ -1,9 +1,7 @@
 ---
 title: "export#17"
 date: 2016-12-13
-location: {
-    name: "moe"
-}
+location: "moe"
 description: ""
 artists: [
     plenum,

@@ -6,9 +6,7 @@ artists: [
     velharmonisches orchester,
     veronika mayer
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "Benedikt Kofler"
 tags: [gala]
 recordings: []

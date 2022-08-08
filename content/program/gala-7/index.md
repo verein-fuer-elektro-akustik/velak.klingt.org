@@ -8,9 +8,7 @@ artists: [
     krach aka andreas stoiber,
     stefan loewenstein & robert gruendler,
 ]
-location: {
-    name: kuenstlerhauspassage
-}
+location: "kuenstlerhauspassage"
 photos:
 tags: [gala]
 recordings: []

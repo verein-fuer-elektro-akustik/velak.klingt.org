@@ -9,9 +9,7 @@ artists: [
     peter seher,
     daniel lercher,
 ]
-location: {
-    name: fluc
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

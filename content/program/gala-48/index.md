@@ -8,12 +8,9 @@ nörz & alexandr vatagin,
 hong chulki & klaus filip & tim blechmann,
 eric cordier
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: 
 tags: [gala]
 recordings: []
 image:
 ---
-

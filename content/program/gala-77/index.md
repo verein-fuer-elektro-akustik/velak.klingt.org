@@ -8,9 +8,7 @@ artists: [
     her mit der frucht,
     martin siewert & dieb13
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "sophie thun"
 ---

@@ -7,9 +7,7 @@ artists: [
     peter seher,
     tim blechmann
 ]
-location: {
-    name: "dietheater"
-}
+location: "dietheater"
 photos:
 tags: [gala]
 recordings: []

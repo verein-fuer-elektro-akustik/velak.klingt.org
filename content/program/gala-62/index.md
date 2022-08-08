@@ -8,9 +8,7 @@ artists: [
     Matija Schellander,
     Izumi Ose & Tetsuya Hori,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "Edward Chapon"
 tags: [gala]
 recordings: []

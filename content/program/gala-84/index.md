@@ -8,9 +8,7 @@ artists: [
     Blood Feud,
     LFO
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "edward chapon"
 ---

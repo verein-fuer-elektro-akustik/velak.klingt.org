@@ -11,9 +11,7 @@ artists: [
     dirac & stefan fraunberger,
     knapp
 ]
-location: {
-    name: "dietheater"
-}
+location: "dietheater"
 photos:
 tags: [gala]
 recordings: []

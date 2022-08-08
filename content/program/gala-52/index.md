@@ -8,9 +8,7 @@ artists: [
     diaf,
     Mountain Electroacoustic Laptop Ensemble
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

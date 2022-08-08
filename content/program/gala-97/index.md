@@ -7,12 +7,9 @@ artists: [
     zicla (cao thanh lan & gregor siedl),
     salih dursun
 ]
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 tags: [gala]
 photos: "Doris Pollhammer"
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
-

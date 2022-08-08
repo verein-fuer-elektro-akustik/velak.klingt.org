@@ -1,9 +1,7 @@
 ---
 title: "rec#3"
 date: 2009-05-08
-location: {
-    name: "garnison"
-}
+location: "garnison"
 artists: [
     Florian Kindlinger,
     Manon Bancich,

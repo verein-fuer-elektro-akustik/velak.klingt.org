@@ -7,9 +7,7 @@ artists: [
     ahoo maher & thomas grimm,
     michael zacherl
 ]
-location: {
-    name: "moe"
-}
+location: "moe"
 tags: [gala]
 photos: "Felipe Wagner dos Santos"
 ---

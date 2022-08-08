@@ -8,9 +8,7 @@ artists: [
     thomas grill & enrico malatesta,
     ddkern & michael strohmann
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

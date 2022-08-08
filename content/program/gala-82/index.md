@@ -7,9 +7,7 @@ artists: [
     rosi rehformen,
     derek shirley & klaus filip
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "Sophie Thun"
 ---

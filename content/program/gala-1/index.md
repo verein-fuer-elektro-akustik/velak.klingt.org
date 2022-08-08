@@ -9,9 +9,8 @@ artists: [
     peter seher
 ]
 print_no_artists: false
-location: {} 
+location:
 tags: [gala]
-photos:
 ---
 * le mat, aut
 tapemachines, noise, vocals, git 

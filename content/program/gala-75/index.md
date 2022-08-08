@@ -7,9 +7,7 @@ artists: [
     lukatoyboy aka luka ivanovic,
     veronika mayer
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 image: ""
 photos: "winnie küchl"

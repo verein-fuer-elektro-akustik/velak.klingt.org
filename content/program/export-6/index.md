@@ -7,9 +7,7 @@ artists: [
     gueule populaire (bogner/kutas),
     christine schoerkhuber
 ]
-location: {
-    name: "das werk"
-}
+location: "das_werk"
 tags: [export]
 ---
 doors: 8:00pm, begin: 9:00pm _ sharp!  

@@ -9,9 +9,7 @@ artists: [
     Fernando Perales & Simon Blu Wasem,
     Chrs Galarreta
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "Edward Chapon"
 tags: [gala]
 recordings: []

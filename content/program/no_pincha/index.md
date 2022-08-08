@@ -8,8 +8,6 @@ artists: [
     knapp,
     kutin
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 tags: []
 ---

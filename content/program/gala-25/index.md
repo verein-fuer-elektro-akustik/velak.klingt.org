@@ -10,9 +10,7 @@ artists: [
     kutin peter,
     dieter mattersdorfer,
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

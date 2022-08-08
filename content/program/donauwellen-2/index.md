@@ -7,11 +7,6 @@ artists: [
     Tamara Wilhelm & Vinzenz Schwab & Hannes Lingens,
     Lercher & Schöberl & Damijan,
 ]
-location: {
-    name: "quietcue",
-}
-image:
-photos:
+location: "quietcue"
 tags: [donauwellen]
-recordings: []
 ---

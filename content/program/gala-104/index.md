@@ -1,9 +1,7 @@
 ---
 title: "gala#104"
 date: 2018-10-16
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 artists: [
     janneke van der putten,
     evamuss aka chrs galarreta,

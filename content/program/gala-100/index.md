@@ -13,9 +13,7 @@ artists: [
     jhidden shards,
     velharmonisches orchester
 ]
-location: {
-    name: steinergasse8
-} 
+location: steinergasse8
 tags: [gala]
 photos: Doris Pollhammer
 ---

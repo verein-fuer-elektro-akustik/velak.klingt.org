@@ -7,9 +7,7 @@ artists: [
     Stefan Fraunberger,
     Thomas Lehn & Tiziana Bertoncini,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 image: ""
 photos: "Edward Chapon"

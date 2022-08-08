@@ -9,10 +9,7 @@ artists: [
     alexandr vatagin & george bagdasarov,
     billy roisz
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
-recordings: []
 ---

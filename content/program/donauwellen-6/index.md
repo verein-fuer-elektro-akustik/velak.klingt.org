@@ -7,11 +7,6 @@ artists: [
     Pia Palme,
     Tamara Wilhelm & Susanna Gartmayer
 ]
-location: {
-    name: "quietcue"
-}
-image:
-photos:
+location: "quietcue"
 tags: [donauwellen]
-recordings: []
 ---

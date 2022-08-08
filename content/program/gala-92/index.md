@@ -8,9 +8,7 @@ artists: [
     doris pollhammer,
     karolina jawad
 ]
-location: {
-    name: garnison
-}
+location: "garnison"
 tags: [gala]
 photos: "Felipe Wagner dos Santos"
 ---

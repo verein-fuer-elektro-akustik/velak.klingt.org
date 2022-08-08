@@ -8,9 +8,7 @@ artists: [
     lee gregory,
     blechmann & fraunberger & knapp,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

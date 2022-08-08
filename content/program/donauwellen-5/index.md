@@ -5,13 +5,8 @@ publishDate: 2012-03-16
 artists: [
     
 ]
-location: {
-    name: "quietcue"
-}
-image:
-photos:
+location: "quietcue"
 tags: [donauwellen]
-recordings: []
 ---
 - Rdeca Raketa - Maja Osojnik & Matija Schellander
 - Wolfgang Musil - electronics & Stefan Fraunberger - zither

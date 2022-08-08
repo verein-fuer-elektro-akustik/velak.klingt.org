@@ -1,9 +1,7 @@
 ---
 title: "gala#103"
 date: 2018-09-21
-location: {
-    name: "steinergasse8",
-}
+location: "steinergasse8"
 artists: [
     finn loxbo & anders vestergaard,
     noid,

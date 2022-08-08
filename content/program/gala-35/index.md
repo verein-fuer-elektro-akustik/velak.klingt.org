@@ -4,12 +4,9 @@ date: 2008-07-13
 publishDate: 2008-07-13
 artists: [
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []
 ---
 {{< video "gala-35.mp4" >}}
-

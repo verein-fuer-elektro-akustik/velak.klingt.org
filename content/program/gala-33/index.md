@@ -18,9 +18,7 @@ artists: [
     florian fennes,
     christine schroeckhuber,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

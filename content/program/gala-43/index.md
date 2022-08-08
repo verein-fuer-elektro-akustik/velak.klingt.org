@@ -8,9 +8,7 @@ artists: [
     mamoru & blechmann & kutin,
     luciano maggiore
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "tina vareško"
 tags: [gala]
 recordings: []

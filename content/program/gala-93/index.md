@@ -8,9 +8,7 @@ artists: [
     veronika mayer & conny zenk,
     peter kutin & flo kindlinger
 ]
-location: {
-    name: "gudrunkino"
-}
+location: "gudrunkino"
 tags: [gala]
 photos: "Tamara Wilhelm"
 ---

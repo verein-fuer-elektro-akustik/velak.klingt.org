@@ -1,9 +1,7 @@
 ---
 title: "rec_compilation 2010"
 date: 2011-05-13
-location: {
-    name: "moe"
-}
+location: "moe"
 artists: [
     angélica castelló,
     rosi rehformen,
@@ -21,4 +19,3 @@ artists: [
 tags: [rec]
 photos: "winnie küchl"
 ---
-

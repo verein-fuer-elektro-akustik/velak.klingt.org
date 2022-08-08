@@ -8,9 +8,7 @@ artists: [
     agnes hvizdalek & seijiro murayama & klaus filip,
     dj balli & ina jahreis
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "eva hausberger"
 tags: [gala]
 recordings: []

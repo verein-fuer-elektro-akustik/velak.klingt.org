@@ -7,9 +7,7 @@ artists: [
     matthias kranebitter & florian fennes,
     tim blechmann
 ]
-location: {
-    name: "brut",
-}
+location: "brut"
 tags: [gala]
 image: ""
 photos: "edward chapon"

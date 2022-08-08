@@ -1,9 +1,7 @@
 ---
 title: "gala#109"
 date: 2019-06-16
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 artists: [
 ]
 tags: [gala]

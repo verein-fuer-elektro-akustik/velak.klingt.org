@@ -8,9 +8,7 @@ artists: [
     skylla,
     hui ye & andreas stoiber,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

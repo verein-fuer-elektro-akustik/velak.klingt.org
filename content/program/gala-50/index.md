@@ -25,14 +25,8 @@ artists: [
     a.o.
 ]
 description: "oratorium aus strom holz metal"
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "tabitha"
 tags: [gala,special]
-recordings: []
-image:
 ---
-oratorium aus strom holz metal	 
- 	 
-
+oratorium aus strom holz metal

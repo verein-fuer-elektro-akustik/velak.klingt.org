@@ -9,11 +9,7 @@ artists: [
     bernhard schoeberl,
     le mat
 ]
-location: {
-    name: "dietheater"
-}
-photos:
+location: "dietheater"
 tags: [gala]
-recordings: []
 ---
 performance: johann neumeister

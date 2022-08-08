@@ -7,9 +7,7 @@ artists: [
     robert gruber,
     musci,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "Sophie Dvořák"
 ---

@@ -9,9 +9,7 @@ artists: [
     oliver grimm - beppu project - continued,
     günther rabl - roller,
 ]
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 tags: [export]
 ---
 doors: 18h / begin: 20h  

@@ -7,9 +7,7 @@ artists: [
     Trans/Human,
     Ulrich Rois
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: ""
 ---

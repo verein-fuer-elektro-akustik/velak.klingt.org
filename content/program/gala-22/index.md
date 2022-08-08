@@ -9,9 +9,7 @@ artists: [
     kutin peter,
     stefan fraunberger,
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

@@ -9,11 +9,8 @@ artists: [
     reinhard dundler,
     taku hanoda & noid & billy roisz
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []
 ---
-

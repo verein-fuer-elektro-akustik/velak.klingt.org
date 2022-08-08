@@ -4,9 +4,7 @@ date: 2008-04-01
 publishDate: 2008-04-01
 artists: [
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

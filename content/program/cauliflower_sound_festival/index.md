@@ -16,9 +16,7 @@ artists: [
     Zahaikevych MISTO,
     Gischt,
 ]
-location: {
-    name: "prospekthof",
-}
+location: "prospekthof"
 link: "https://theacousmaticproject.at/1912/"
 ---
 Velak, [The Acousmatic Project](https://theacousmaticproject.at/1912/) and [öH Akbild](https://www.oehakbild.info/) warmly invites to a three day long festival at the Prospekthof.

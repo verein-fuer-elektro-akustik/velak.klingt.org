@@ -8,9 +8,7 @@ artists: [
     andreas stoiber,
     me + laminadyz
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

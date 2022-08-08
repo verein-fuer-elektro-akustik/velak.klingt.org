@@ -7,9 +7,7 @@ artists: [
     Matthias Erian,
     Michael Renkel & Mat Pogo
 ]
-location: {
-    name: "quietcue"
-}
+location: "quietcue"
 tags: [donauwellen]
 ---
 {{< vimeo "20679284" >}}

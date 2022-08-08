@@ -10,9 +10,7 @@ artists: [
     wagner felipe dossantos,
     peter seher
 ]
-location: {
-    name: "dietheater"
-}
+location: "dietheater"
 photos: "Julia Tazreiter"
 tags: [gala]
 recordings: []

@@ -9,9 +9,7 @@ artists: [
     stefan fraunberger,
     byron westbrook,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "tina vareško"
 tags: [gala]
 recordings: []

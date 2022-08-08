@@ -7,9 +7,7 @@ artists: [
     petra dubach & mario van horrik,
     torùn. grisi weikinger & joki oberhuber & roy rulbertson III
 ]
-location: {
-    name: "garnison"
-}
+location: "garnison"
 tags: [gala]
 photos: "lisbeth kovacic"
 ---

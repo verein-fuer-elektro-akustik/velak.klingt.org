@@ -5,9 +5,7 @@ publishDate: 2004-11-15
 artists: [
     
 ]
-location: {
-    name: fluc
-}
+location: "fluc"
 image: "velak-gala-3.jpg"
 photos:
 tags: [gala]

@@ -8,9 +8,7 @@ artists: [
     Stefan Fraunberger, Schayhan Kashemi, David Schweighart,
     Paul Gründorfer
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "Sophie Dvořák"
 ---

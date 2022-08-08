@@ -1,9 +1,7 @@
 ---
 title: "gala#105"
 date: 2019-08-11
-location: {
-    name: "b5"
-}
+location: "b5"
 artists: [
     laura mello,
     dario sanfilippo,

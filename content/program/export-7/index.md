@@ -13,9 +13,7 @@ artists: [
     jonÃ¡Å¡ gruska (sk),
     oscillation
 ]
-location: {
-    name: fuga,
-}
+location: fuga
 tags: [export]
 ---
 begin: 20h

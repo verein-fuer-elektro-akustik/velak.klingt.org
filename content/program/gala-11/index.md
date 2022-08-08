@@ -11,12 +11,7 @@ artists: [
     kutin peter,
     stefan brunner
 ]
-location: {
-    name: "picknick am wegesrand"
-
-}
-photos:
+location: "picknick am wegesrand"
 tags: [gala]
-recordings: []
 ---
 

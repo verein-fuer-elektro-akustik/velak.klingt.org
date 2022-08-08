@@ -37,7 +37,7 @@
         "url": "https://echoraeume.klingt.org/"
     },
     "erbsenfabrik": {
-        "address": "herklotzgasse 21, 1150 vienna"
+        "address": "Herklotzgasse 21, 1150 vienna"
     },
     "fluc": {
         "name": "Fluc",
@@ -58,6 +58,12 @@
         "name": "Garnison",
         "address": "garnisonsgasse 7, 1090 vienna",
         "url": "https://www.discogs.com/label/334280-Garnison7"
+    },
+    "gudrunkino": {
+        "name": "gudrunkino"
+    },
+    "kuenstlerhauspassage": {
+        "name": "kuenstlerhauspassage"
     },
     "kunsthause_graz": {
         "name": "Kunsthause Graz",

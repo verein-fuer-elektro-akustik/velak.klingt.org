@@ -2,9 +2,7 @@
 title: "gala#70"
 date: 2012-10-24
 description: "70 Bagatellen über den Abgrund"
-location: {
-    name: brut
-}
+location: brut
 artists: [Tim Blechmann, Richard Bruzek, Stefan Fraunberger, Susanna Gartmayer, Klaus Gstettner, Robert Kellner, Florian Kindlinger, Reka Kutas, Manuel Knapp, Peter Kutin, Daniel Lercher, Alexander Martinz, Laura Mello, Wolfgang Musil, Caroline Profanter, Günther Rabl, Vinzenz Schwab, Peter Seher, Tamara Wilhelm]
 tags: [gala,special]
 photos: "winnie küchl"

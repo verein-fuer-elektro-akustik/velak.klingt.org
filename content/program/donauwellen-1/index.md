@@ -8,11 +8,6 @@ artists: [
     Caroline Profanter & Reinhard Dundler,
     Klaus Janek & Robert Schwarz
 ]
-location: {
-    name: "quietcue",
-}
-image:
-photos:
+location: "quietcue"
 tags: [donauwellen]
-recordings: []
 ---

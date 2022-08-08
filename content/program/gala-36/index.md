@@ -13,9 +13,7 @@ artists: [
     rrrr,
     daurer & eigner & gerold
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "tina vareško"
 tags: [gala]
 recordings: []

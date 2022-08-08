@@ -7,9 +7,7 @@ artists: [
     alexander chernyshkov & marina poleukhina,
     gobi drab & tamara friebel
 ]
-location: {
-    name: "hut"
-}
+location: "hut"
 tags: [export]
 photos: "edward chapon"
 ---

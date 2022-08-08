@@ -1,9 +1,7 @@
 ---
 title: "export#19"
 date: 2019-02-26
-location: {
-    name: "venter99"
-}
+location: "venter99"
 artists: [
     maia koenig,
     kisling,

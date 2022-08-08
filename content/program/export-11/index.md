@@ -9,9 +9,7 @@ artists: [
     patrik redl & wolfgang musil,
     matthias erian
 ]
-location: {
-    name: "moe"
-}
+location: "moe"
 tags: [export]
 ---
 doors: 19.00h / begin: 20.00h (sharp!)  

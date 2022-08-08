@@ -3,9 +3,7 @@ title: "gala#88"
 date: 
 artists: [
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "Sophie Dvořák"
 ---

@@ -8,9 +8,7 @@ artists: [
     wolfgang musil & stefan fraunberger,
     ayankoko & jan faix & margaret unknown & daniel lercher
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "eva hausberger"
 tags: [gala]
 recordings: []

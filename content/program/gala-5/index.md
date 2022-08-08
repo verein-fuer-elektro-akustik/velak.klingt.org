@@ -5,9 +5,7 @@ publishDate: 2005-01-01
 artists: [
     peter seher
 ]
-location: {
-    name: fluc
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

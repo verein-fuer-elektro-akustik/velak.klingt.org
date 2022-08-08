@@ -11,9 +11,7 @@ artists: [
     tr,
     bb
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

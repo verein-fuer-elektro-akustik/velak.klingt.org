@@ -6,12 +6,9 @@ artists: [
     lambs gamble,
     peter trabitzsch
 ]
-location: {
-    name: "garnison"
-}
+location: "garnison"
 tags: [gala]
 photos: "Doris Pollhammer"
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
-

@@ -7,9 +7,7 @@ artists: [
     tamara wilhelm der warst eric arn andreas stoiber
     
 ]
-location: {
-    name: "brut",
-}
+location: "brut"
 tags: [gala]
 image: ""
 photos: "edward chapon"

@@ -7,9 +7,7 @@ artists: [
     glioksizom,
     dirac
 ]
-location: {
-    name: "dietheater"
-}
+location: "dietheater"
 photos:
 tags: [gala]
 recordings: []

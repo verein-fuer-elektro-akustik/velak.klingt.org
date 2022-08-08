@@ -8,12 +8,9 @@ artists: [
     philip leitner,
     klaus filip & seijiro murayama
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: 
 tags: [gala]
 recordings: []
 image:
 ---
-

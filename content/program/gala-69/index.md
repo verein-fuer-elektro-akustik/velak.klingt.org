@@ -8,9 +8,7 @@ artists: [
     Peter Marsh & Conor Curran & Paul May & Wei-ya Lin,
     Leo Bettinelli
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "edward chapon"
 tags: [gala]
 recordings: []

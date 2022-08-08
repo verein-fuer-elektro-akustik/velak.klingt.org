@@ -1,9 +1,7 @@
 ---
 title: "ayumu01.1"
 date: 2019-08-31
-location: {
-    name: "bar ishee, tokyo, japan"
-}
+location: "bar ishee, tokyo, japan"
 description: ""
 artists: [
     frederic stritter & yuji ishihara,

@@ -1,9 +1,7 @@
 ---
 title: "rec#0"
 date: 2009-01-10
-location: {
-    name: "garnison"
-}
+location: "garnison"
 artists: [
     Philip Leitner,
     Christian Rainer,
@@ -27,4 +25,3 @@ recordings: [
 - bernhard schoeberl (git)
 - gloria damijan (piano)
 - daniel lercher (laptop)
-

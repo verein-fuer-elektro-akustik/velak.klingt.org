@@ -11,9 +11,7 @@ artists: [
     Bernd Klug,
     David Schweighart
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

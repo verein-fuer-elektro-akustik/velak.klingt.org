@@ -8,9 +8,7 @@ artists: [
     narco-terrorism-terrestrial analogy,
     andreas stoiber,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

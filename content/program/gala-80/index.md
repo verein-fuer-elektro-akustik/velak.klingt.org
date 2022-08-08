@@ -11,9 +11,7 @@ artists: [
     patrick lechner,
     velharmonisches orchester
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala,special]
 image: ""
 photos: "edward chapon"

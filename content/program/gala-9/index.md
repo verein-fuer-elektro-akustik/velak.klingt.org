@@ -8,12 +8,9 @@ artists: [
     andreas stoiber,
     alain leonard
 ]
-location: {
-    name: kuenstlerhauspassage
-}
+location: "kuenstlerhauspassage"
 photos:
 tags: [gala]
 recordings: []
 ---
 live video processing by benoit martin.
-

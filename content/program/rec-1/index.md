@@ -1,9 +1,7 @@
 ---
 title: "rec#1"
 date: 2009-03-06
-location: {
-    name: "garnison"
-}
+location: "garnison"
 artists: [
     Gloria Damijan (piano),
     Katrin Hauk (recorder),

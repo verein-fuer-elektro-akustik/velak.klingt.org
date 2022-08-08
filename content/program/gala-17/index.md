@@ -9,9 +9,7 @@ artists: [
     peter seher,
     florian kindlinger
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

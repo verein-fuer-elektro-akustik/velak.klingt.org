@@ -8,9 +8,7 @@ artists: [
     pierre borel & derek shirley & hannes lingens,
     maja osojnik & matija schellander
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

@@ -8,9 +8,7 @@ artists: [
     stefan fraunberger,
     schoeberl & kutin & schellander,
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "vinzenz schwab"
 tags: [gala]
 recordings: []

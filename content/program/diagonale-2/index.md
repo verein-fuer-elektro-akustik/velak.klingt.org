@@ -5,9 +5,7 @@ publishDate: 2008-04-03
 artists: [
     
 ]
-location: {
-    name: "kunsthause_graz",
-}
+location: "kunsthause_graz"
 image:
 photos:
 tags: [diagonale]

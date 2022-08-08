@@ -7,12 +7,9 @@ artists: [
     brigitta bödenauer & susanna gartmayer,
     maria chavez
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 tags: [gala]
 photos: "edward chapon"
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
-

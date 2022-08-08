@@ -15,9 +15,7 @@ artists: [
     stefan brunner,
     dino spiluttini
 ]
-location: {
-    name: kuenstlerhauspassage
-}
+location: "kuenstlerhauspassage"
 photos:
 tags: [gala]
 recordings: []

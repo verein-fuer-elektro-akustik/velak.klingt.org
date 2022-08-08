@@ -18,11 +18,8 @@ artists: [
     alexander martinz,
     florian kindlinger
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []
 ---
-

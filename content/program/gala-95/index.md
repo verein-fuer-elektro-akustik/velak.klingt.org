@@ -6,12 +6,9 @@ artists: [
     hren,
     tim blechmann - yanjiu er
 ]
-location: {
-    name: "garnisongasse"
-}
+location: "garnisongasse"
 tags: [gala]
 photos: "Richard Bruzek"
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
-

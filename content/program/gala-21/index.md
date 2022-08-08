@@ -8,9 +8,7 @@ artists: [
     wagner felipe,
     gerhard daurer
 ]
-location: {
-    name: "fluc"
-}
+location: "fluc"
 photos:
 tags: [gala]
 recordings: []

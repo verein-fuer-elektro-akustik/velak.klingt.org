@@ -1,9 +1,7 @@
 ---
 title: "rec#5"
 date: 2009-10-07
-location: {
-    name: "garnison"
-}
+location: "garnison"
 artists: [
     Philip Leitner (piano, electronics),
     Christian Rainer (vocals),

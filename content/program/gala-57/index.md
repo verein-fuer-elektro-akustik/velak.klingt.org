@@ -9,9 +9,7 @@ artists: [
     Julian Bonequi,
     dieb13 & schellander
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "richard bruzek"
 tags: [gala]
 recordings: []

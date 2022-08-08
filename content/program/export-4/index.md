@@ -7,9 +7,7 @@ artists: [
     guy fleming,
     rheuma 3000,
 ]
-location: {
-    name: "mq"
-}
+location: "mq"
 tags: [export]
 ---
 doors: 20.00h / begin: 21.00h (sharp!)  

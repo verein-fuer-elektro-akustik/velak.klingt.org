@@ -12,9 +12,7 @@ artists: [
     Per Salkowitsch,
     Reinhard Dundler & Caroline Profanter	 
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "michael zacherl"
 tags: [gala]
 recordings: []

@@ -10,13 +10,8 @@ artists: [
     alexander martins
     sahra bogner
 ]
-location: {
-    name: "dietheater"
-
-}
-photos:
+location: "dietheater"
 tags: [gala]
-recordings: []
 ---
 screening: "das europäische elektron"  
 ton: stefan loewenstein  

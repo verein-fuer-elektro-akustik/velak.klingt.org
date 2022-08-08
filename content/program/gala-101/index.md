@@ -1,9 +1,7 @@
 ---
 title: "gala#101"
 date: 2018-06-15
-location: {
-    name: "celeste"
-}
+location: "celeste"
 artists: [
     jejuno,
     fabian lanzmaier,

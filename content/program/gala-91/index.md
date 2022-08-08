@@ -7,9 +7,7 @@ artists: [
     Peter Plos,
     RUSE
 ]
-location: {
-    name: "garnison"
-}
+location: "garnison"
 tags: [gala]
 photos: "lisbeth kovacic"
 ---

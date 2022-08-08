@@ -1,9 +1,7 @@
 ---
 title: "gala#106"
 date: 2018-12-18
-location: {
-    name: "steinergasse8"
-}
+location: "steinergasse8"
 artists: [
     paul ebhart,
     rosa anschütz,

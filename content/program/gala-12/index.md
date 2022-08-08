@@ -10,12 +10,7 @@ artists: [
     andreas stoiber,
     peter seher
 ]
-location: {
-    name: "dietheater"
-
-}
-photos:
+location: "dietheater"
 tags: [gala]
-recordings: []
 ---
 live video processing by benoit martin

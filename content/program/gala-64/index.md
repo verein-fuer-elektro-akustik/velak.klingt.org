@@ -8,9 +8,7 @@ artists: [
     heidrun schramm & nicolas wiese,
     angelica castello & burkhard stangl
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala]
 recordings: []

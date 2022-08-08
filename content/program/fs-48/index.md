@@ -10,13 +10,9 @@ artists: [
     vinzenz schwab,
     daniel lercher
 ]
-location: {
-    name: "forum_stadtpark"
-}
-image:
+location: "forum_stadtpark"
 photos: "kubiza"
 tags: [fs]
-recordings: []
 ---
 ### velak-orchestra	 
 * laura mello

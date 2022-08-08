@@ -8,9 +8,7 @@ artists: [
     michael fischer,
     knapp
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []

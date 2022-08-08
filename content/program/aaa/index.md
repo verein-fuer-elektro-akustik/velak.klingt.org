@@ -1,13 +1,11 @@
 ---
-title: "Audio Fuckery"
+title: "fuckery"
 date: 2023-01-01
 artists: [
     stefan wunder,
     martin uzi
 ]
-location: {
-    name: "heaven"
-}
+location: "test"
 tags: [test]
 ---
 This is just a future test event.  

@@ -24,9 +24,7 @@ artists: [
     susanna gartmayer,
     a.o.
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos: "winnie küchl"
 tags: [gala,special]
 recordings: []

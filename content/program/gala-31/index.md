@@ -9,9 +9,7 @@ artists: [
     guenther rabl,
     myr bandschleifenstueck
 ]
-location: {
-    name: "brut"
-}
+location: "brut"
 photos:
 tags: [gala]
 recordings: []
