@@ -1,45 +1,80 @@
 {{ define "main" }}
 {{ $id := .File.ContentBaseName }}
-<article class="program">
+<article class="event">
     
     <header>
         <h2 class="title">{{- .Title -}}</h2>
         <time>{{ .Date.Format "2006/01/02" }}</time>
-        <span class="location">
-            {{ with .Params.location }}
-                {{ with .name }}
-                    {{ with index $.Site.Data.locations . }}
-                        {{ with .url }}
-                        <a href="{{ . }}" rel="external"><i class="ic-location_on"></i><span>{{- $.Params.location.name -}}</span></a>
-                        {{ else }}
-                        <span>{{- $.Params.location.name -}}</span>
-                        {{ end }}
-                        {{ with .address }}
-                        <address>{{- . | safeHTML -}}</address>
-                        {{ end }}
-                    {{ else }}
-                        {{ with $.Params.location.name }}<i class="ic-location_on"></i><span>{{- . | safeHTML -}}</span>{{ end }}
-                        {{ with $.Params.location.address }}
-                        <span>,&nbsp;</span>
-                        <address>{{- . | safeHTML -}}</address>
-                        {{ end }}
-                    {{ end }}
-                {{ else }}
-                <div class="warning">MISSING LOCATION NAME</div>
-                {{ end }}
-            {{ else }}
-            <div class="warning">MISSING LOCATION</div>
-            {{ end }} 
-        </span>
+        {{ partial "location" . }}
     </header>
     
-    <ul class="artists">
-        {{ with .Params.artists }}
-            {{ range . }}
-            <li>{{- . | safeHTML -}}</li>
+    {{ partial "artists" . }}
+
+    <!--<ul class="artists">
+    {{ range .Params.artists }}
+        <li>
+            {{ $artist := replace (.) " " "-" }}
+            <a href="/artists/{{ $artist }}">{{ $artist }}</a>
+        </li>
+    {{ end }}
+    </ul>-->
+
+<!--<ul>
+    {{ range .Site.Taxonomies.artists }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+</ul>
+<hr>-->
+
+
+<!--<section>
+    <ul id="all-taxonomies">
+        {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+            {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+                <li><a href="{{ .Permalink }}">{{ $taxonomy_term }}</a>
+                    <ul>
+                        {{ range $key, $value := $taxonomy }}
+                            <li>{{ $key }}</li>
+                            <ul>
+                                {{ range $value.Pages }}
+                                    <li hugo-nav="{{ .RelPermalink}}">
+                                        <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
+                    </ul>
+                </li>
             {{ end }}
         {{ end }}
     </ul>
+</section>
+<hr>-->
+
+
+<!--
+{{ $taxo := "artists" }}
+<ul class="{{ $taxo }}">
+    {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>
+<hr>-->
+
+
+<!--<ul>
+
+        {{ range $key, $taxonomy := .Site.Taxonomies.artists }}
+        <li>{{ $key }}</li>
+        <ul>
+            {{ range $taxonomy.Pages }}
+            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </ul>-->
     
     {{ with .Content }}
     <div class="content">{{- . | safeHTML -}}</div>
@@ -86,22 +121,5 @@
 {{ end }}
 
 {{ define "schema" }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "location": {
-    "@type": "Place",
-    {{ with .Params.location.name }}"name": "{{- . -}}",{{ end }}
-    {{ with .Params.location.address }}
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "{{- . -}}"
-    },
-    {{ end }}
-  },
-  "name": "{{- .Title -}}",
-  "startDate": "{{ .Date.Format "2006-01-02" }}"
-}
-</script>
+    <!--{ partial "schema/event" . }}-->
 {{ end }}

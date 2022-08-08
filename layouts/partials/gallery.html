@@ -2,7 +2,7 @@
 <div class="gallery">
     <ul>
     {{ range $res := .Resources.ByType "image" }}
-        {{ if hasPrefix $res.Name (replace $page.Name "#" "-") }}<!-- don't show flyer images -->{{ else }}
+        {{ if hasPrefix $res.Name "cover" }}<!-- don't show flyer images -->{{ else }}
         <li>
             <figure>
                 {{ if lt $res.Width 400 }}

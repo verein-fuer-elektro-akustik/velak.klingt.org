@@ -1,0 +1,23 @@
+<ul class="artists">
+    {{ with .Params.artists }}
+    {{ range . }}
+    <li>
+        {{ $parts := split . "-" }}
+        {{ if eq (len $parts) 1 }}
+            {{ $artists := split . "&" }}
+            {{ if eq (len $artists) 1 }}
+                {{ partial "artist" .}}
+            {{ else }}
+                {{ partial "artist_group" $artists }}
+            {{ end }}
+        {{ else }}
+            {{ $group := index $parts 0 }}
+            {{ $artists := index $parts 1 }}
+            <span>{{ $group }}:</span>
+            {{ partial "artist_group" (split $artists "&") }}
+            TODO
+        {{ end }}
+           </li>
+    {{ end }}
+    {{ end }}
+</ul>

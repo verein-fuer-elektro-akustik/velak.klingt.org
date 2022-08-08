@@ -1,0 +1,7 @@
+<ul class="artist-group">
+    {{ range . }}
+    <li>
+        {{ partial "artist" (trim . " ") }}
+    </li>
+    {{ end }}
+</ul>

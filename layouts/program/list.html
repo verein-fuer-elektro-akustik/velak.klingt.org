@@ -1,8 +1,32 @@
 {{ define "main" }}
-<article>
-    {{ with .Title }}<h2>{{- . -}}</h2>{{ end }}
-    <div class="content">{{- .Content | safeHTML -}}</div>
-    <table class="raw">
+<article class="program">
+    <!--{{ with .Title }}<h2>{{- . -}}</h2>{{ end }}-->
+
+    <!--<div class="content">{{- .Content | safeHTML -}}</div>-->
+
+    <!--<ol class="program">
+    {{ range .RegularPagesRecursive.ByDate.Reverse }}
+        <li>
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+    {{ end }}
+    </ol>-->
+
+    <table>
+        <tbody>
+            {{ range .RegularPagesRecursive.ByDate.Reverse }}
+            <tr>
+                <td class="date">{{ .Date.Format "2006/01/02" }}</td>
+                <td>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <span class="location">{{ .Params.location }}</span>
+                </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    <!--<table class="raw">
         <tr>
             <th>gh</th>
             <th>date</th>
@@ -31,6 +55,6 @@
             <td>{{ with .Params.artists }}{{ delimit . ", " }}{{end}}</td>
         </tr>
         {{ end }}
-    </table>
+    </table>-->
 </article>
 {{ end }}

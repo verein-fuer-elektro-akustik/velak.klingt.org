@@ -1,0 +1,5 @@
+<!-- a single artist link -->
+<!--{{ $artist := replace . " " "-" }}-->
+{{ $artist := trim . " " }}
+<a href="/artists/{{ $artist }}">{{ $artist }}</a>
+

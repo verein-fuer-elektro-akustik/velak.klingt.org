@@ -34,12 +34,18 @@
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
         {{ end -}}
 
+        {{ range .AlternativeOutputFormats -}}
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+        {{ end -}}
+
         {{ block "schema" . }}{{ end }}
 
 	</head>
 	<body>
-        <header>{{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}</header>
-        <nav>{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
+        <header>
+            {{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}
+            <nav>{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
+        </header>
 		<main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
 		<footer>{{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}</footer>
     </body>

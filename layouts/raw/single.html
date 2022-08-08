@@ -1,0 +1,67 @@
+{{ define "main" }}
+{{ $id := .File.ContentBaseName }}
+<article>
+     <table class="raw">
+        <tr>
+            <th>gh</th>
+            <th>date</th>
+            <th>title</th>
+            <th>location</th>
+            <th>tags</th>
+            <th>image</th>
+            <th>n photos</th>
+            <th>photos</th>
+            <th>n recordings</th>
+            <th>n</th>
+            <th>artists</th>
+        </tr>
+        {{ range where .Site.RegularPages "Section" "program" }}
+        <tr>
+            <td><a href="https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/tree/master/content/program/{{ .File.ContentBaseName }}/index.md" class="ic-link"></a></td>
+            <td>{{ .Date.Format "2006/01/02" }}</td>
+            <td><a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a></td>
+            <!--<td>{{ with .Params.location }}{{ delimit . "," }}{{end}}</td>-->
+            <td>
+            {{ with .Params.location }}
+                {{ with index $.Site.Data.locations . }}
+                    {{ .name }}
+                {{ else }}
+                    <span>{{. | markdownify }}</span><pre class="warning">missing location data</pre>
+                {{ end }}
+            {{ else }}
+                <pre class="error">missing frontmatter field</pre>
+            {{end}}
+            </td>
+            <td>{{ partial "tags" . }}</td>
+            <td>{{ .Params.image }}</td>
+            <td>{{ with .Resources.ByType "image" }}{{ len . }}{{ end }}</td>
+            <td>{{ .Params.photos }}</td>
+            <td>{{ with .Params.recordings }}{{len .}}{{ end }}</td>
+            <td>{{ with .Params.artists }}{{ len . }}{{ end }}</td>
+                <td>{{ with .Params.artists }}{{ delimit . ", " }}{{else}}<pre class="error">missing frontmatter field</pre>{{end}}</td>
+        </tr>
+        {{ end }}
+    </table>
+
+    <!--{{ range $event := where .Site.Pages "Section" "program" }}-->
+    <!--<div>{{ $event.Params.recordings }}</div>-->
+    <!--{{ end }}-->
+
+    <!--{{ range $event := where .Site.Pages "Type" "program" }}-->
+    <!--<table class="raw">-->
+        <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th>{{ $event.Title }}</th>-->
+                <!--<td>{{ $event.Params.date}}</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>{{ $event.Params.tags}}</td>-->
+            <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+    <!--{{ end }}-->
+
+    <!--<div>{{ .Content }}</div>-->
+
+</article>
+{{ end }}
