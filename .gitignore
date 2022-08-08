@@ -17,6 +17,7 @@ static/style.css*
 *.ogg
 *.wav
 *.zip
+hugo_stats.json
 
 #content/program/*/*.JPG
 #content/program/*/*.jpg

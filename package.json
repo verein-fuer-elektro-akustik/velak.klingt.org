@@ -7,7 +7,7 @@
     "scripts": {
         "clean": "rm -rf public/ && rm -f static/style.css*",
         "dev:style": "sass style/main.scss static/style.css --watch",
-        "dev:hugo": "hugo server -D --buildFuture",
+        "dev:hugo": "hugo server --verbose --buildDrafts --buildFuture --panicOnWarning",
         "start": "npm run dev:hugo",
         "csv2json": "node_modules/csvtojson/bin/csvtojson artists.csv > data/artists.json",
         "build:style": "sass style/main.scss static/style.css",
