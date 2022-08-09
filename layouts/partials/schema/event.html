@@ -1,0 +1,21 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": "{{- .Title -}}",
+    "startDate": "{{ .Date.Format "2006-01-02" }}",
+    "organizer": "velak",
+    "url": "{{ .Site.BaseURL }}/program/{{ .File.ContentBaseName  }}",
+    {{ with .Params.location }}
+    {{ with index $.Site.Data.locations . }}
+    {{ $loc := . }}
+    {{ with $loc.address }}
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{- . -}}"
+    }
+    {{ end }}
+    {{ end }}
+    {{ end }}
+}
+</script>

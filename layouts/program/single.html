@@ -1,7 +1,10 @@
+{{ define "schema" }}
+{{ partial "schema/event" . }}
+{{ end }}
+
 {{ define "main" }}
 {{ $id := .File.ContentBaseName }}
 <article class="event">
-    
     <header>
         <h2 class="title">{{- .Title -}}</h2>
         <time>{{ .Date.Format "2006/01/02" }}</time>
@@ -118,8 +121,18 @@
     </div>
 
 </article>
+<script>
+let btn;
+function checkScrollHeight() {
+    btn.style.display = (document.body.scrollHeight > window.innerHeight) ? "block":"none";
+}
+window.onload = e => {
+    btn = document.body.querySelector('i.ic-arrow_upward');
+    checkScrollHeight();
+    window.addEventListener("resize", e => {
+        checkScrollHeight();
+    }, false);
+}
+</script>
 {{ end }}
 
-{{ define "schema" }}
-    <!--{ partial "schema/event" . }}-->
-{{ end }}
