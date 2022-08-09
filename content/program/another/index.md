@@ -1,6 +1,6 @@
 ---
-title: "gala#666"
-date: 2023-01-01
+title: "some#23"
+date: 2023-01-02
 artists: [
     stefan wunder,
     martin uzi

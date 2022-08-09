@@ -1,11 +1,11 @@
 ---
 title: "gala#105"
-date: 2019-08-11
+date: 2018-11-08
 location: "b5"
 artists: [
     laura mello,
     dario sanfilippo,
-    susanna gartmayer / misha marks & stefan voglsinger & thomas berghammer,
+    susanna gartmayer & misha marks & stefan voglsinger & thomas berghammer,
     christian schröder
 ]
 tags: [gala]

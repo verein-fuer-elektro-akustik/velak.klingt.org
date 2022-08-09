@@ -5,7 +5,7 @@ publishDate: 2015-04-21
 artists: [
     Igor Lintz-Maues,
     Dario Sanfilippo & SEC,
-    Stefan Fraunberger, Schayhan Kashemi, David Schweighart,
+    Stefan Fraunberger & Schayhan Kashemi & David Schweighart,
     Paul Gründorfer
 ]
 location: "brut"

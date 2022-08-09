@@ -1,7 +1,6 @@
 ---
 title: "gala#8"
-date: 2005-00-00
-publishDate: 2005-00-00
+date: 2005-06-28
 artists: [
     kutin peter,
     daniel lercher,
@@ -16,7 +15,5 @@ artists: [
     dino spiluttini
 ]
 location: "kuenstlerhauspassage"
-photos:
 tags: [gala]
-recordings: []
 ---

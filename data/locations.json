@@ -11,11 +11,11 @@
     },
     "b5": {
         "name": "B5",
-        "address": "herklotzgasse 21, 1150 vienna"
+        "address": "Herklotzgasse 21, 1150 vienna"
     },
     "brut": {
         "name": "Brut Konzerthaus",
-        "address": "lothringerstrasse 20, 1030 vienna",
+        "address": "Lothringerstrasse 20, 1030 vienna",
         "url": "https://brut-wien.at/"
     },
     "celeste": {
@@ -52,16 +52,17 @@
     },
     "fuga": {
         "name": "Fuga",
-        "address": "námestie snp 24, 81101 bratislava, slovakia",
+        "address": "Námestie snp 24, 81101 bratislava, slovakia",
         "country": "sk"
     },
     "garnison": {
         "name": "Garnison",
-        "address": "garnisonsgasse 7, 1090 vienna",
+        "address": "Garnisonsgasse 7, 1090 vienna",
         "url": "https://www.discogs.com/label/334280-Garnison7"
     },
     "gudrunkino": {
-        "name": "gudrunkino"
+        "name": "Gudrunkino",
+        "address": "Gudrunstraße 151, 1010 Vienna"
     },
     "kuenstlerhauspassage": {
         "name": "Künstlerhauspassage"
@@ -96,12 +97,12 @@
     },
     "rhiz": {
         "name": "Rhiz",
-        "address": "u-bahnbogen 37, A-1080 vienna",
+        "address": "U-bahnbogen 37, A-1080 vienna",
         "url": "https://rhiz.wien/"
     },
     "steinergasse8": {
         "name": "Steiner8",
-        "address": "steinergasse 8, 1170 vienna"
+        "address": "Steinergasse 8, 1170 vienna"
     },
     "symposion_lindabrunn": {
         "name": "Symposion Lindabrunn",

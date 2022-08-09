@@ -1,7 +1,6 @@
 ---
 title: "gala#31"
-date: 2008-08-03
-publishDate: 2008-08-03
+date: 2008-03-08
 artists: [
     tim blechmann & manuel knapp,
     dirac & howool baek,
