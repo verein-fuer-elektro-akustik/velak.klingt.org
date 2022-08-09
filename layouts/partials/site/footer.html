@@ -1,14 +1,14 @@
 <div class="meta">
-    <a href="{{ .Site.BaseURL }}/imprint"><i class="ic-copyright"></i>&nbsp;{{ now.Format "2006" }}&nbsp;VELAK Vienna/AT</a>
-    <a href="{{ .Site.BaseURL }}/index.xml"><i class="ic-rss_feed"></i><span class="nodisplay">RSS</span></a>
-    <!--{{ with .GitInfo }}
-        <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}/">
-            <small>MOD</small>
+        <a href="{{ .Site.BaseURL }}/imprint"><i class="ic-copyright"></i>&nbsp;{{ now.Format "2006" }}&nbsp;VELAK Vienna/AT</a>
+        {{ with .GitInfo }}
+        <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}/"
+            rel="external">
+            <!--<small>MOD</small>-->
             <span>{{ .AbbreviatedHash }}</span>
-            <span>{{ .AuthorName }}</span>
-            <span>{{ .AuthorDate.Format "2006-01-02"  }}</span>
+            <!--<span>{{ .AuthorName }}</span>-->
+            <!--<span>{{ .AuthorDate.Format "2006-01-02"  }}</span>-->
         </a>
-    {{ end }}-->
-    <!--<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" tabindex="-1">CC</a>-->
+        {{ end }}
+        <a href="{{ .Site.BaseURL }}/index.xml"><i class="ic-rss_feed"></i><span class="nodisplay" aria-hidden="true">RSS</span></a>
 </div>
 

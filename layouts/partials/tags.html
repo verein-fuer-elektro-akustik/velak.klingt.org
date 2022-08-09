@@ -1,7 +1,8 @@
 <dl class="tags">
+    <dt class="visuallyhidden">Tags</dt>
 	{{ range .Params.tags }}
-	<dt class="tag">
+	<dd class="tag">
 		<a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1">#{{ . | safeHTML }}</a>
-	</dt>
+	</dd>
 	{{ end }}
 </dl>

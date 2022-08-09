@@ -1,21 +1,23 @@
 {{ define "main" }}
 <article class="program">
-    <!--{{ with .Title }}<h2>{{- . -}}</h2>{{ end }}-->
-
     <!--<div class="content">{{- .Content | safeHTML -}}</div>-->
-
-    <!--<ol class="program">
-    {{ range .RegularPagesRecursive.ByDate.Reverse }}
+    <ol class="upcoming">
+        {{ range .RegularPagesRecursive.ByDate }}
+        {{ if (time .Params.date).After now }}
         <li>
-            <span>{{ .Date.Format "2006-01-02" }}</span>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <h2 class="title"><a href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
+            <h4 class="date">{{ .Date.Format "Monday January 2, 2006" }}</h4>
+            {{ partial "location" . }}
+            {{ partial "artists" . }}
         </li>
-    {{ end }}
-    </ol>-->
-
+        {{ end }}
+        {{ end }}
+    </ol>
+    <!--<hr>-->
     <table>
         <tbody>
             {{ range .RegularPagesRecursive.ByDate.Reverse }}
+            {{ if not ((time .Params.date).After now) }}
             <tr>
                 <td class="date">{{ .Date.Format "2006/01/02" }}</td>
                 <td>
@@ -24,8 +26,10 @@
                 </td>
             </tr>
             {{ end }}
+            {{ end }}
         </tbody>
     </table>
+
     <!--<table class="raw">
         <tr>
             <th>gh</th>

@@ -1,20 +1,54 @@
+<!--<style>
+    ul.gallery2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 400px 200px;
+        gap: 4px;
+        /*
+        row-gap: 1vh;
+        column-gap: 1vw;
+        */
+        padding: 0 0 1rem 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    /*
+    ul.gallery2 li:nth-child(1) {
+
+        grid-row: span 2;
+    }
+    ul.gallery2 li:nth-child(4) {
+        /*grid-row: span 3
+    }
+    */
+    ul.gallery2 li {
+        min-width: 0;
+    }
+    ul.gallery2 img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+-->
+
 {{ $page := . }}
-<div class="gallery">
+<div class="gallery2">
     <ul>
-    {{ range $res := .Resources.ByType "image" }}
-        {{ if hasPrefix $res.Name "cover" }}<!-- don't show flyer images -->{{ else }}
+        {{ range $res := .Resources.ByType "image" }}
+        {{ if hasPrefix $res.Name "cover" }}<!-- hide cover images -->{{ else }}
         <li>
             <figure>
-                {{ if lt $res.Width 400 }}
-                <img src="{{ $res.RelPermalink }}">
+                {{ if lt $res.Width 420 }}
+                <img src="{{ $res.RelPermalink }}" width="{{ $res.Width }}"
+                height="{{ $res.Height }}" alt="{{ .Title }}">
                 {{ else }}
-                    {{ $img_400 := $res.Resize "400x" }}
-                    {{ if lt $res.Width 1000 }}
-                        <img src="{{ $res.RelPermalink }}" srcset="{{ $img_400.RelPermalink }} 600w">
-                    {{ else }}
-                        {{ $img_1000 := $res.Resize "1000x" }}
-                        <img src="{{ $res.RelPermalink }}" srcset="{{ $img_1000.RelPermalink }} 1000w, {{ $img_400.RelPermalink }} 600w">
-                    {{ end }}
+                {{ $url_orig := $res.RelPermalink }}
+                {{ $img := $res.Resize "420x" }}
+                <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}"
+                height="{{ $img.Height }}" alt="{{ .Title }}">
                 {{ end }}
                 <figcaption>
                     {{ with $res.Exif }}
@@ -30,14 +64,14 @@
                 </figcaption>
             </figure>
         </li>
+        {{ end  }}
         {{ end }}
-    {{ end }}
     </ul>
     {{ with .Params.photos }}
     <div class="photographer">
-        <span>© Photos by</span>
+        <i class="ic-copyright"></i>
+        <span>Photos by</span>
         <span>{{- . | safeHTML -}}</span>
     </div>
     {{ end }}
 </div>
-

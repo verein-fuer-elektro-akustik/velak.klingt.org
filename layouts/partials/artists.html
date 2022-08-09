@@ -2,7 +2,7 @@
     {{ with .Params.artists }}
     {{ range . }}
     <li>
-        {{ $parts := split . "-" }}
+        {{ $parts := split . " - " }}
         {{ if eq (len $parts) 1 }}
             {{ $artists := split . "&" }}
             {{ if eq (len $artists) 1 }}

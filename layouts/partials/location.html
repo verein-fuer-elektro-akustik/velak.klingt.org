@@ -5,10 +5,10 @@
     {{ $loc := . }}
     {{ with .url }}
     <a href="{{ . }}" rel="external">
-        <span>{{- $loc.name -}}</span>
+        <span>{{- $loc.name -}},</span>
     </a>
     {{ else }}
-    <span>{{- $loc.name -}}</span>
+    <span>{{- $loc.name -}},</span>
     {{ end }}
     {{ with .address }}
     <address>{{- . | safeHTML -}}</address>
