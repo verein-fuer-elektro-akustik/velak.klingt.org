@@ -1,7 +1,8 @@
 @use 'sass:math';
 
-$thick: math.div(1rem, 3) !default;
-$min-thick: 4px !default;
+$thick: 1px;
+//$thick: math.div(1rem, 3) !default;
+//$min-thick: 4px !default;
 // $scrollbar-min-thick: 4px;
 // $scrollbar-max-thick: 8px;
 
@@ -12,8 +13,9 @@ $min-thick: 4px !default;
         height: $thick;
     }
     &:vertical {
-        width: $thick;
-        min-width: $min-thick;
+        //width: $thick;
+        width: 4px;
+        //min-width: $min-thick;
     }
     }
 ::-webkit-scrollbar-button,
@@ -21,11 +23,17 @@ $min-thick: 4px !default;
     display: none !important;
 }
 ::-webkit-scrollbar-track {
-    background: var(--bg);
+    //background: var(--bg);
+
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--fg);
-    border-left: 1px solid var(--bg);
+    border-top: 4px solid var(--fg);
+
+    border-bottom: 4px solid var(--fg);
+
+    //background: var(--fg);
+    //height: 20px;
+    //border-left: 1px solid var(--bg);
     &:hover {
         background: var(--acc);
     }
