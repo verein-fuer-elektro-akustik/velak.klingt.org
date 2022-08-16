@@ -1,12 +1,15 @@
 @use 'velak/reset';
+@use 'velak/theme';
 @use 'velak/fonts';
 @use 'velak/typography';
-@use 'velak/theme';
+//@use 'velak/form';
+@use 'velak/spacing';
 @use 'velak/icons';
 @use 'velak/site';
 @use 'velak/scrollbar';
 
-@use 'velak/program';
-@use 'velak/gallery';
-//@use 'velak/stream';
+@use 'velak/page/gallery';
+@use 'velak/page/program';
+@use 'velak/page/records';
+//@use 'velak/component/stream';
 

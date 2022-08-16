@@ -1,6 +1,7 @@
 ---
-title: "gala#108 - velak & ventil"
+title: "gala#108"
 date: 2019-06-27
+description: "velak und ventil"
 artists: [
     yuzu (milena castagna georgi),
     paul ebhart,
@@ -12,6 +13,7 @@ artists: [
 location: "fluc"
 photos: "Doris Pollhammer & Nina Bauer" 
 ---
+## velak & ventil
 doors: 18.00pm / start: 18.30pm (sharp!)  
 oben velak + unten ventil
 

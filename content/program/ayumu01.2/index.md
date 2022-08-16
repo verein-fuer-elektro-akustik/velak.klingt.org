@@ -1,7 +1,8 @@
 ---
 title: "ayumu01.2"
 date: 2019-08-31
-location: "otooto, tokyo, japan"
+location: ", tokyo, japan"
+location: "otooto, tokyo"
 description: ""
 artists: [
     anne-f jacques & makoto oshiro,

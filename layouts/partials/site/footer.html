@@ -1,14 +1,22 @@
 <div class="meta">
-        <a href="{{ .Site.BaseURL }}/imprint"><i class="ic-copyright"></i>&nbsp;{{ now.Format "2006" }}&nbsp;VELAK Vienna/AT</a>
+    <div>
+        <a href="{{ .Site.BaseURL }}/imprint/">
+            <i class="ic-copyright" aria-hidden="true"></i>
+            <span class="nodisplay">©</span>
+            <span>{{ now.Format "2006" }}&nbsp;VELAK Vienna/AT</span>
+        </a>
+        <a href="{{ .Site.Params.developer.url }}" class="nodisplay" aria-hidden="true">{{ .Site.Params.developer.name }}</a>
         {{ with .GitInfo }}
-        <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}/"
-            rel="external">
-            <!--<small>MOD</small>-->
-            <span>{{ .AbbreviatedHash }}</span>
+        <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}/" rel="external" aria-label="repository">
+            <span>{{- .AbbreviatedHash -}}</span>
             <!--<span>{{ .AuthorName }}</span>-->
             <!--<span>{{ .AuthorDate.Format "2006-01-02"  }}</span>-->
         </a>
         {{ end }}
-        <a href="{{ .Site.BaseURL }}/index.xml"><i class="ic-rss_feed"></i><span class="nodisplay" aria-hidden="true">RSS</span></a>
+    </div>
+    <a href="{{ .Site.BaseURL }}/index.xml" rel="alernate" aria-label="RSS"
+        title="RSS">
+        <i class="ic-rss_feed" aria-hidden="true"></i>
+        <span class="nodisplay">RSS</span>
+    </a>
 </div>
-

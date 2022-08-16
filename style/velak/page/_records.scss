@@ -1,0 +1,15 @@
+article {
+    ol.records {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        column-gap: 2rem;
+        list-style: none;
+        > li {
+
+            img {
+                max-width: 140px;
+            }
+        }
+    }
+}

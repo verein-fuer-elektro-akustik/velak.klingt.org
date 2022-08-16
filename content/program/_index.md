@@ -1,10 +1,14 @@
 ---
-rss_ignore: true
+title: "Program"
+description:
+highlight_upcoming_events: true
 menu:
-  nav:
-    name: program
-    weight: 2
+    nav:
+        name: program
+        weight: 2
 sitemap:
-  changefreq: monthly
-  priority: 0.9
+    changefreq: monthly
+    priority: 0.9
+rss_ignore: true
 ---
+

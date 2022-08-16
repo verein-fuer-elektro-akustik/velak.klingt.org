@@ -7,49 +7,101 @@
 
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <!--<meta http-equiv="Content-Security-Policy" content="script-src 'none'">-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="viewport" content="width=device-width,minimum-scale=1">
         <meta name="title" content="{{- .Site.Title -}}">
+        <meta name="url" content="{{ .Site.Params.url }}">
+        <meta name="designer" content="{{ .Site.Params.developer.name }}">
         <meta name="description" content="{{ with .Params.description }}{{- . -}}{{ else }}{{- .Site.Params.description -}}{{ end }}">
         {{ with .Site.Params.publisher }}<meta name="publisher" content="{{- . -}}">{{ end }}
         {{ with .Site.Params.theme_color }}<meta name="theme-color" content="{{- . -}}">{{ end }}
-
-        {{ $keywords := .Site.Params.keywords }}
-        {{ with .Params.keywords }}{{ $keywords = union $keywords . }}{{ end }}
+        {{ $keywords := .Site.Params.keywords }}{{ with .Params.keywords }}{{ $keywords = union $keywords . }}{{ end }}
         <meta name="keywords" content="{{ delimit $keywords "," }}">
 
         {{ template "_internal/opengraph.html" . }}
         {{ template "_internal/twitter_cards.html" . }}
         {{ template "_internal/schema.html" . }}
-        
-        <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
 
-        <link rel="stylesheet" href="{{ $root }}/style.css">
+        <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
+        
+        <style>
+            :root {
+                --background: #101010;
+                --f_high: #f0f0f0;
+                --f_med: #aaa;
+                --f_low: #777;
+                --f_inv: #000;
+                --b_high: #030303;
+                --b_med: #111;
+                --b_low: #222;
+                --b_inv: #aaa;
+
+                /* muzienca */
+                --background: #090909;
+                --f_high: #818181;
+                --f_med: #707070;
+                --f_low: #595959;
+                --f_inv: #272727;
+                --b_high: #272727;
+                --b_med: #181818;
+                --b_low: #111111;
+                --b_inv: #818181;
+            }
+            body {
+                background: var(--background);
+                color: var(--f_med);
+            }
+            #overlay {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 50vw;
+                z-index: 1000000;
+                pointer-events: none;
+                background: var(--background);
+                background: linear-gradient(-90deg, rgba(9,9,9,1) 0%, rgba(0,0,0,0) 100%);
+            }
+        </style>
+
+        <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2">
+        <link rel="stylesheet" href="{{ $root }}/style.css" media="screen">
         <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         <link rel="manifest" href="{{ $root }}/manifest.json">
         {{ partial "site/favicons" . }}
 
+        {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
+        {{ with .NextInSection }}<link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
+        
         {{ with .OutputFormats.Get "rss" -}}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-        {{ end -}}
-
-        {{ range .AlternativeOutputFormats -}}
-        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
         {{ end -}}
 
         {{ block "schema" . }}{{ end }}
 
-        <script>console.log('Page.Type: {{.Page.Type}}, Page.BundlType: {{.Page.BundleType}}');</script>
+        <script src="{{ (resources.Get "script/app.js").Permalink }}" async></script>
 
 	</head>
-	<body>
+    <body>
         <header>
             {{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}
-            <nav>{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
+            <nav class="site">{{ block "nav-site" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
+            <nav class="page">{{ block "nav-page" . }}{{ end }}</nav>
         </header>
-		<main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
-		<footer>{{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}</footer>
+        <main data-section="{{ .Section }}">
+            {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
+        </main>
+		<footer>
+            {{ block "footer-left" . }}{{ end }}
+            {{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}
+            {{ block "footer-right" . }}{{ end }}
+        </footer>
+        <aside>{{ block "aside" . }}{{ end }}</aside>
+        <!--<div id="overlay"></div>-->
     </body>
 </html>
 

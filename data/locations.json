@@ -14,7 +14,7 @@
         "address": "Herklotzgasse 21, 1150 vienna"
     },
     "brut": {
-        "name": "Brut Konzerthaus",
+        "name": "Brut",
         "address": "Lothringerstrasse 20, 1030 vienna",
         "url": "https://brut-wien.at/"
     },
@@ -34,10 +34,11 @@
         "url": "https://www.daswerk.org/"
     },
     "echoraeume": {
-        "name": "echoraeume",
+        "name": "Echoraeume",
         "url": "https://echoraeume.klingt.org/"
     },
     "erbsenfabrik": {
+        "name": "Erbsenfabrik",
         "address": "Herklotzgasse 21, 1150 vienna"
     },
     "fluc": {
@@ -73,7 +74,7 @@
         "url": "https://www.museum-joanneum.at/kunsthaus-graz"
     },
     "mdw": {
-        "name": "mdw – Universität für Musik und darstellende Kunst Wien",
+        "name": "Universität für Musik und darstellende Kunst Wien",
         "address": "Anton-von-Webern-Platz 1, 1030 Wien",
         "url": "https://www.mdw.ac.at/"
     },

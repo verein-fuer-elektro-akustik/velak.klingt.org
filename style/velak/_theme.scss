@@ -11,31 +11,45 @@
     //--fg: var(--color-light);
     //--acc: var(--color-accent);
 
-    --bg: #000;
-    --fg: #aaa;
-    --acc: #fff;
+    // --bg: #000;
+    // --fg: #aaa;
+    // --acc: #fff;
 
-    --background: #101010;
-    --f_high: #fff;
-    --f_med: #aaa;
-    --f_low: #777;
-    --f_inv: #000;
-    --b_high: #000;
-    --b_med: #111;
-    --b_low: #222;
-    --b_inv: #fff;
-    
+    // --background: #101010;
+    // --f_high: #f0f0f0;
+    // --f_med: #aaa;
+    // --f_low: #777;
+    // --f_inv: #050505;
+    // --b_high: #030303;
+    // --b_med: #111;
+    // --b_low: #222;
+    // --b_inv: #fff;
 }
-
+//
+// body {
+//     background: var(--back ground);
+//     //background: linear-gradient(to bottom, var(--bg), var(--background));
+//     //background: linear-gradient(to bottom, var(--bg), var(--fg));
+//     background-attachment: fixed;
+//     color: var(--fg);
+//     -webkit-tap-highlight-color: var(--fg);
+// }
+// *::selection {
+//     background: var(--fg);
+//     color: var(--bg);
+// }
 body {
-    background: var(--background);
-    //background: linear-gradient(to bottom, var(--bg), var(--background));
-    //background: linear-gradient(to bottom, var(--bg), var(--fg));
-    background-attachment: fixed;
-    color: var(--fg);
-    -webkit-tap-highlight-color: var(--fg);
+    color: var(--f_med);
 }
+
 *::selection {
-    background: var(--fg);
-    color: var(--bg);
+    background: var(--b_inv);
+    color: var(--f_inv);
+}
+
+a {
+    color: var(--f_med);
+    &:hover {
+        color: var(--f_high);
+    }
 }

@@ -1,7 +1,6 @@
 ---
 title: "gala#120"
 date: 2022-06-11
-publishDate: 2022-07-06
 location: "mdw"
 artists: [
     anna lerchbaumer,

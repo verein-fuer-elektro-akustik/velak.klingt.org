@@ -1,57 +1,38 @@
-<!--<style>
-    ul.gallery2 {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-auto-rows: 400px 200px;
-        gap: 4px;
-        /*
-        row-gap: 1vh;
-        column-gap: 1vw;
-        */
-        padding: 0 0 1rem 0;
-        margin: 0;
-        list-style-type: none;
-    }
-    /*
-    ul.gallery2 li:nth-child(1) {
+<!-- https://www.cgfootman.com/2020/06/06/add-responsive-images-to-a-hugo-site/ -->
 
-        grid-row: span 2;
-    }
-    ul.gallery2 li:nth-child(4) {
-        /*grid-row: span 3
-    }
-    */
-    ul.gallery2 li {
-        min-width: 0;
-    }
-    ul.gallery2 img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-</style>
-
--->
-
-{{ $page := . }}
-<div class="gallery2">
+<div class="gallery">
+    {{ $images := where (.Resources.ByType "image") "Name" "!=" "cover.jpg" }}
+    <!-- {{ mod (len $images) 2 }} -->
     <ul>
-        {{ range $res := .Resources.ByType "image" }}
-        {{ if hasPrefix $res.Name "cover" }}<!-- hide cover images -->{{ else }}
+        {{ range $img := $images }}
+        <!-- { { if gt $img.Width $img.Height }} -->
+        <!-- { { if lt $img.Width $img.Height }} -->
+        {{ $tinyw := default "400x" }}
+        {{ $smallw := default "800x" }}
+        {{ $mediumw := default "1200x" }}
+        {{ $largew := default "1600x" }}
+        {{ $.Scratch.Set "tiny" ($img.Resize $tinyw) }}
+        {{ $.Scratch.Set "small" ($img.Resize $smallw) }}
+        {{ $.Scratch.Set "medium" ($img.Resize $mediumw) }}
+        {{ $.Scratch.Set "large" ($img.Resize $largew) }}
+        {{ $tiny := $.Scratch.Get "tiny" }}
+        {{ $small := $.Scratch.Get "small" }}
+        {{ $medium := $.Scratch.Get "medium" }}
+        {{ $large := $.Scratch.Get "large" }}
         <li>
             <figure>
-                {{ if lt $res.Width 420 }}
-                <img src="{{ $res.RelPermalink }}" width="{{ $res.Width }}"
-                height="{{ $res.Height }}" alt="{{ .Title }}">
-                {{ else }}
-                {{ $url_orig := $res.RelPermalink }}
-                {{ $img := $res.Resize "420x" }}
-                <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}"
-                height="{{ $img.Height }}" alt="{{ .Title }}">
-                {{ end }}
-                <figcaption>
-                    {{ with $res.Exif }}
+                <img 
+                    alt="{{ .Title }}"
+                    sizes="(min-width: 400px) 1200px, 100vw"
+                    srcset='
+                        {{ if ge $img.Width "400" }}{{ with $tiny.RelPermalink }}{{.}} 400w{{ end }}{{ end }}
+                        {{ if ge $img.Width "800" }}{{ with $small.RelPermalink }}, {{.}} 800w{{ end }}{{ end }}
+                        {{ if ge $img.Width "1200" }}{{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}{{ end }}
+                        {{ if ge $img.Width "1600" }}{{ with $large.RelPermalink }}, {{.}} 1600w {{ end }}{{ end }}'
+                    src="{{ $img.RelPermalink }}">
+                <figcaption class="meta">
+                    <div class="exif">
+                    {{ with $img.Exif }}
                         {{ with .Tags }}
                             {{ with .DateTimeOriginal }}
                                 {{ if hasPrefix . "0000:00:00" }}
@@ -61,10 +42,11 @@
                             {{ end }}
                         {{ end }}
                     {{ end }}
+                    </div>
+                    <!--<a href="{{ $img.RelPermalink }}">SRC</a>-->
                 </figcaption>
             </figure>
         </li>
-        {{ end  }}
         {{ end }}
     </ul>
     {{ with .Params.photos }}
@@ -75,3 +57,5 @@
     </div>
     {{ end }}
 </div>
+
+

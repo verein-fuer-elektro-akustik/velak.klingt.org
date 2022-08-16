@@ -1,64 +1,80 @@
 {{ define "main" }}
-<article class="program">
+
+<!--<script src="{{ (resources.Get "script/program-list.js").Permalink }}" async></script>-->
+
+<article data-page="{{ .File.ContentBaseName }}" class="program">
+
     <!--<div class="content">{{- .Content | safeHTML -}}</div>-->
+    
+    <!--
     <ol class="upcoming">
         {{ range .RegularPagesRecursive.ByDate }}
         {{ if (time .Params.date).After now }}
         <li>
             <h2 class="title"><a href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
-            <h4 class="date">{{ .Date.Format "Monday January 2, 2006" }}</h4>
-            {{ partial "location" . }}
-            {{ partial "artists" . }}
+            <time class="date">{{ .Date.Format "2006/01/02" }}</time>
+            {{ partial "location" . }} 
+            <!-- {{ partial "artists" . }} -- >
         </li>
         {{ end }}
         {{ end }}
     </ol>
-    <!--<hr>-->
-    <table>
+    -->
+    <!--<hr>    -->
+    <ol class="events">
+        {{ range .RegularPagesRecursive.ByDate.Reverse }}
+        <li>
+            <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+            <!--<div class="location">-->
+                <!--<i class="ic-location_on"></i>-->
+                <!--{{ with .Params.location }}-->
+                <!--{{ $loc := (index $.Site.Data.locations .) }}-->
+                <!--{{ with $loc }}-->
+                <!--<span>{{- $loc.name -}}</span>-->
+                <!--{{ else }}-->
+                <!--<span>{{- . | markdownify -}}</span>-->
+                <!--{{ end }}-->
+                <!--{{ end }}-->
+            <!--</div>-->
+
+            <time class="date">{{ .Date.Format "2006/01/02" }}</time>
+            
+            {{ .Scratch.Set "address" false }}
+            {{ partial "location" . }}
+            
+            
+            <div class="artists">
+                {{ partial "artists" . }}
+                <!--<ul>-->
+                    <!--{{ range .Params.artists }}-->
+                    <!--<li>{{ . | markdownify }}</li>-->
+                    <!--{{ end }}-->
+                <!--</ul>-->
+
+            </div>
+        </li>
+        {{ end }}
+    </ol>
+
+    <!--<table>
         <tbody>
             {{ range .RegularPagesRecursive.ByDate.Reverse }}
             {{ if not ((time .Params.date).After now) }}
             <tr>
-                <td class="date">{{ .Date.Format "2006/01/02" }}</td>
                 <td>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    <span class="location">{{ .Params.location }}</span>
+                    <time class="date">{{ .Date.Format "2006/01/02" }}</time>
+                </td>
+                <td>
+                    <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+                    [>{{ partial "artists" . }}<]
+                    [><span class="location">{{ partial "location" . }}</span><]
+                    [><span class="location">{{ .Params.location }}</span><]
                 </td>
             </tr>
             {{ end }}
             {{ end }}
         </tbody>
-    </table>
-
-    <!--<table class="raw">
-        <tr>
-            <th>gh</th>
-            <th>date</th>
-            <th>title</th>
-            <th>location</th>
-            <th>tags</th>
-            <th>image</th>
-            <th>n photos</th>
-            <th>photos by</th>
-            <th>n recordings</th>
-            <th>n</th>
-            <th>artists</th>
-        </tr>
-        {{ range .RegularPagesRecursive.ByDate.Reverse }}
-        <tr>
-            <td><a href="https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/tree/master/content/program/{{ .File.ContentBaseName }}/index.md" class="ic-link"></a></td>
-            <td>{{ .Date.Format "2006/01/02" }}</td>
-            <td><a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a></td>
-            <td>{{ with .Params.location }}{{ delimit . "," }}{{end}}</td>
-            <td>{{ partial "tags" . }}</td>
-            <td>{{ .Params.image }}</td>
-            <td>{{ with .Resources.ByType "image" }}{{ len . }}{{ end }}</td>
-            <td>{{ .Params.photos }}</td>
-            <td>{{ with .Params.recordings }}{{len .}}{{ end }}</td>
-            <td>{{ with .Params.artists }}{{ len . }}{{ end }}</td>
-            <td>{{ with .Params.artists }}{{ delimit . ", " }}{{end}}</td>
-        </tr>
-        {{ end }}
     </table>-->
+
 </article>
 {{ end }}

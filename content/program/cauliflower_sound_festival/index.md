@@ -4,7 +4,7 @@ date: 2022-04-13
 publishDate: 2022-04-13
 artists: [
     Cosma Grosser,
-    Eduardo TriviÃ±o Cely,
+    Eduardo triviño Cely,
     Jan Brocza,
     Jennifer Posny & Jonas Hammerer,
     Angela Lau interpretiert Philippe Mion Hope,

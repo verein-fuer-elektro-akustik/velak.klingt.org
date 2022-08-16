@@ -1,31 +1,155 @@
 {{ define "main" }}
-<!--<article>
-    <div>{{- .Content -}}</div>
 
-    <ol class="nolist">
-    {{ range (where .Site.RegularPages "Section" "program").ByDate }}
-        {{ if (time .Date).After now }}
-        <li>
-            <div><a href="{{ .RelPermalink }}">{{- .Title -}}</a></div>
-            <div>{{ .Date.Format "Mon 2006/01/02" }}</div>
-        </li>
-        {{ end }}
-    {{ end }}
-    </ol>
-    <ol>
-        {{ range first 23 (where .Site.RegularPages "Section" "program").ByDate }}
-        <li>
-            <div><a href="{{ .RelPermalink }}">{{- .Title -}}</a></div>
-        </li>
-        {{ end }}
-    </ol>
-</article>
--->
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" name="fq">
+        <style>
+            path {
+                stroke: var(--f_med); 
+                stroke-width: 2;
+            }
+        </style>
+        <pattern id="pattern" width="1" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0 15h1"></path>
+        </pattern>
+        <filter id="filter">
+            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.02 0.008" numOctaves="3" result="n"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="n" xChannelSelector="R"
+            scale="50"></feDisplacementMap>
+        </filter>
+        <rect x="-10%" y="-10%" width="120%" height="120%" fill="url(#pattern)" filter="url(#filter)"></rect>
 
-<!--<div style="height: 100%; margin:0 1rem;">-->
-<div style="height: 100%; overflow-y: hidden;">
-{{ partial "fq" . }} 
-</div>
+        <script>
+            const root = document.getElementsByTagNameNS('http://www.w3.org/2000/svg', 'svg')[0];
+            const turb = document.getElementById("turbulence");
+            let a, b; 
+            function randomize() {
+                a = 0.005 + Math.random() * 0.02;
+                b = 0.004 +Math.random() * 0.005;
+                turb.setAttribute("baseFrequency",a+" "+b);
+                //turb.setAttribute("numOctaves",1+Math.round(Math.random()*2));
+                //console.log(a,b);
+                // HACK force chrome redraw 
+                root.remove();
+                document.querySelector("main").append(root);
+            }
+            randomize();
+            // //let b = 0.008;
+            // let va = 0.000001 + Math.random()* 0.000005;
+            // let vb = 0.000001 + Math.random()* 0.000005;
+            // // let vb = 0.00001;
+            // function onFrame() {
+            //     window.requestAnimationFrame(onFrame);
+            //     if(va>0) {
+            //         if(a>0.03) va = -0.00001;
+            //     } else {
+            //         if(a<0.00001) va = 0.00001;
+            //     }
+            //     a += 0.00001;
+            //     if(vb>0) {
+            //         if(b>0.013) vb = -0.00001;
+            //     } else {
+            //         if(b<0.001) vb = 0.00001;
+            //     }
+            //     b += 0.00001;
+            //     turb.setAttribute("baseFrequency",a+" "+b);
+            //     //turb.setAttribute("numOctaves",octaves);
+            // } 
+            // window.requestAnimationFrame(onFrame);
+            //document.querySelector("svg").onclick = randomize;
+            //window.setInterval(randomize, 2000);
+        </script>
+    </svg>
+
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px"
+
+        viewBox="0 0 80 60" class="sinewave" style="position: fixed; top:50%;
+        left: 50%; background: var(--b_med); transform: translate(-50%,-50%);">
+        <style>
+            @keyframes move_wave {
+                0% {
+                    stroke-dashoffset: 0;
+                    transform: translate3d(0, 0, 0);
+                }
+
+                100% {
+                    /* stroke-dashoffset: -133; */
+                    transform: translate3d(-90px, 0, 0);
+                }
+            }
+            svg.sinewave {
+                border: 1px solid #aaa;
+                /*border-radius: 4px;*/
+            }
+            path.sinewave {
+                fill: none;
+                stroke: #aaa;
+                stroke-width: 4;
+                /*stroke-dasharray: 0 16 101 16;*/
+                /*stroke-linecap: round;*/
+                animation: move_wave 2400ms linear infinite;
+            }
+        </style>
+        <path class="sinewave">
+        </path>
+        <script>
+            const m = 0.512286623256592433;
+            function buildWave(w, h) {
+                const a = h / 4;
+                const y = h / 2;
+                const pathData = [
+                    'M', w * 0, y + a / 2,
+                    'c',
+                    a * m, 0,
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a,
+                    's',
+                    -(1 - a) * m, a,
+                    a, a,
+                    's',
+                    -(1 - a) * m, -a,
+                    a, -a
+                ].join(' ');
+                const path = document.querySelector('path.sinewave');
+                path.setAttribute('d', pathData);
+            }
+            buildWave(60, 60);
+        </script>
+    </svg> -->
+
 
 {{ end }}
-

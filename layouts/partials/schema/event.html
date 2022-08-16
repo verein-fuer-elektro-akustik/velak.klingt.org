@@ -10,7 +10,7 @@
     {{ with index $.Site.Data.locations . }}
     {{ $loc := . }}
     {{ with $loc.address }}
-    "address": {
+    "location": {
         "@type": "PostalAddress",
         "streetAddress": "{{- . -}}"
     }

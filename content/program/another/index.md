@@ -1,5 +1,5 @@
 ---
-title: "some#23"
+title: "gala#122"
 date: 2023-01-02
 artists: [
     stefan wunder,

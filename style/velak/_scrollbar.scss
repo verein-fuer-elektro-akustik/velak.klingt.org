@@ -9,12 +9,12 @@ $thick: 1px;
 *::-webkit-scrollbar {
     border: none;
     &:horizontal {
-        //display: none;
-        height: $thick;
+        display: none;
+        // height: $thick;
     }
     &:vertical {
         //width: $thick;
-        width: 4px;
+        width: 1px;
         //min-width: $min-thick;
     }
     }
@@ -27,17 +27,16 @@ $thick: 1px;
 
 }
 ::-webkit-scrollbar-thumb {
-    border-top: 4px solid var(--fg);
-
-    border-bottom: 4px solid var(--fg);
-
-    //background: var(--fg);
+    //border-top: 4px solid var(--fg);
+    //border-bott
+    // border: 1px solid var(--f_med);
+    background: var(--f_med);
     //height: 20px;
     //border-left: 1px solid var(--bg);
     &:hover {
-        background: var(--acc);
+        // background: var(--acc);
     }
     &:active {
-        background: var(--acc);
+        // background: var(--acc);
     }
 }

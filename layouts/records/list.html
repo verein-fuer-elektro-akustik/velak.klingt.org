@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="records">
+    <!--<header>-->
+        <!--{{ with .Title }}<h2>{{- . -}}</h2>{{ end }}-->
+    <!--</header>-->
+	{{ with .Content }}
+    <div class="content">{{- . -}}</div>
+    {{ end }}
+	<ol class="records">
+        {{ range .Pages }}
+        <li>
+            {{ $id := .File.ContentBaseName }}
+            <a href="{{ .Permalink }}">
+                <figure>
+                
+                    <img src="{{ $id }}/velak-{{ replace $id "-" "_" }}.jpg">
+
+                    <figcaption>
+                    {{- .Title  -}}
+                    </figcaption>
+
+                </figure>
+            </a>
+        </li>
+        {{ end }}
+	</ol>
+</article>
+{{ end }}
+

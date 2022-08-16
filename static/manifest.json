@@ -1,9 +1,9 @@
 {
     "name": "VELAK",
     "short_name": "velak",
-	"description": "non-profit organisation and platform for artists who work in fields of experimental music and sound/art",
+	"description": "Verein für Elektro Akustik",
     "start_url": "/",
-    "display": "standalone",
+    "display": "browser",
     "theme_color": "#000",
     "background_color": "#000",
     "icons": [

@@ -4,26 +4,27 @@
 
 {{ define "main" }}
 {{ $id := .File.ContentBaseName }}
-<article class="event">
-    <header>
-        <h2 class="title">{{- .Title -}}</h2>
-        <time>{{ .Date.Format "2006/01/02" }}</time>
-        {{ partial "location" . }}
-    </header>
+<article data-page="{{ .File.ContentBaseName }}" class="event">
     
+    <h1 class="title">{{- .Title -}}</h1>
+    
+    <div class="meta">
+        <span class="location">
+            <i class="ic-date_range"></i>
+            <time class="date">{{ .Date.Format "2006/01/02" }}</time>
+        </span>
+        <span class="location">
+            {{ .Scratch.Set "address" true }}
+            {{ partial "location" . }}
+        </span>
+    </div>
+    
+    <div class="artists">
     {{ partial "artists" . }}
+    </div>
 
-    <!--<ul class="artists">
-    {{ range .Params.artists }}
-        <li>
-            {{ $artist := replace (.) " " "-" }}
-            <a href="/artists/{{ $artist }}">{{ $artist }}</a>
-        </li>
-    {{ end }}
-    </ul>-->
-    
     {{ with .Content }}
-    <div class="content">{{- . | safeHTML -}}</div>
+    <div class="content">{{- . -}}</div>
     {{ end }}
 
     <div class="audiofiles">
@@ -49,33 +50,16 @@
 
     {{ partial "gallery" . }}
     
-        <!--{{ with .GitInfo }}
-        <div>
-            <span>MOD</span>
-            <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">
-                <time>{{ .AuthorDate.Format "2006/01/02"  }}</time>
-            </a>
-        </div>
-        {{ end }}-->
-    
-    <div class="page-nav">
-        {{ partial "nav_top_prev_next.html" . }}
-        {{ partial "tags" . }}
-    </div>
 
 </article>
-<script>
-let btn;
-function checkScrollHeight() {
-    btn.style.display = (document.body.scrollHeight > window.innerHeight) ? "block":"none";
-}
-window.onload = e => {
-    btn = document.body.querySelector('i.ic-arrow_upward');
-    checkScrollHeight();
-    window.addEventListener("resize", e => {
-        checkScrollHeight();
-    }, false);
-}
-</script>
 {{ end }}
+
+{{ define "footer-right" }}
+<nav class="meta">{{ partial "nav_prev_next" . }}</nav>
+{{ end }}
+
+{{ define "footer-content" }}
+<!--<i class="ic-arrow_upward" onclick="window.scrollTo(0,0)"></i>-->
+{{ end }}
+
 

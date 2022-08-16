@@ -7,7 +7,7 @@
 @mixin url-after-link() {
     @media print {
         a[href^="http"]::after {
-            content: " ("attr(href)")";
+            content: " ["attr(href)"]";
         }
     }
 }

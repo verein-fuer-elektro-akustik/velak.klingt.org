@@ -1,8 +1,11 @@
 
 @font-face {
-	font-family: "RobotoMono";
+	font-family: "Mono";
 	font-display: block;
 	src:
+        // url("font/ssmono.woff2") format("woff2"),
+        // url("font/JetBrainsMono-Regular.woff2") format("woff2"),
+        // url("font/JetBrainsMono-Regular.ttf") format("truetype");
         url("font/RobotoMono-Regular.woff2") format("woff2"),
         url("font/RobotoMono-Regular.ttf") format("truetype");
 }
@@ -13,7 +16,7 @@
     font-weight: 100;
 	font-display: block;
 	src:
-        local("Inter-Thin"),
+        // local("Inter-Thin"),
         url("font/Inter-Thin.woff2") format("woff2"),
         url("font/Inter-Thin.ttf") format("truetype");
 }
@@ -23,7 +26,7 @@
     font-weight: 200;
 	font-display: block;
 	src:
-        local("Inter-ExtraLight"),
+        // local("Inter-ExtraLight"),
         url("font/Inter-ExtraLight.woff2") format("woff2"),
         url("font/Inter-ExtraLight.ttf") format("truetype");
 }
@@ -33,7 +36,7 @@
     font-weight: 300;
 	font-display: block;
 	src:
-        local("Inter-Light"),
+        // local("Inter-Light"),
         url("font/Inter-Light.woff2") format("woff2"),
         url("font/Inter-Light.ttf") format("truetype");
 }
@@ -43,7 +46,7 @@
     font-weight: 400;
 	font-display: block;
 	src:
-        local("Inter-Regular"),
+        // local("Inter-Regular"),
         url("font/Inter-Regular.woff2") format("woff2"),
         url("font/Inter-Regular.ttf") format("truetype");
 }
@@ -53,7 +56,7 @@
     font-weight: 500;
 	font-display: block;
 	src:
-        local("Inter-Medium"),
+        // local("Inter-Medium"),
         url("font/Inter-Medium.woff2") format("woff2"),
         url("font/Inter-Medium.ttf") format("truetype");
 }
@@ -63,7 +66,7 @@
     font-weight: 600;
 	font-display: block;
 	src:
-        local("Inter-SemiBold"),
+        // local("Inter-SemiBold"),
         url("font/Inter-SemiBold.woff2") format("woff2"),
         url("font/Inter-SemiBold.ttf") format("truetype");
 }
@@ -73,7 +76,7 @@
     font-weight: 700;
 	font-display: block;
 	src:
-        local("Inter-Bold"),
+        // local("Inter-Bold"),
         url("font/Inter-Bold.woff2") format("woff2"),
         url("font/Inter-Bold.ttf") format("truetype");
 }
@@ -83,7 +86,7 @@
     font-weight: 800;
 	font-display: block;
 	src:
-        local("Inter-ExtraBold"),
+        // local("Inter-ExtraBold"),
         url("font/Inter-ExtraBold.woff2") format("woff2"),
         url("font/Inter-ExtraBold.ttf") format("truetype");
 }
@@ -93,7 +96,7 @@
     font-weight: 900;
 	font-display: block;
 	src:
-        local("Inter-Black"),
+        // local("Inter-Black"),
         url("font/Inter-Black.woff2") format("woff2"),
         url("font/Inter-Black.ttf") format("truetype");
 }

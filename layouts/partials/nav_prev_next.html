@@ -1,8 +1,9 @@
 <nav class="prev_next">
 	{{with .PrevInSection}}
-	<a rel="prev" href="{{.Permalink}}" title="{{- .Title | safeHTML -}}"><i class="ic-arrow_back"></i><span>&#60;</span></a>
+	<!--<a rel="prev" href="{{.Permalink}}" title="{{- .Title -}}"><i class="ic-arrow_back"></i><span>&#60;</span>{{- .Title -}}</a>-->
+	<a rel="prev" href="{{.Permalink}}" title="{{- .Title -}}"><i class="ic-arrow_back"></i><span>&#60;</span></a>
 	{{end}}
 	{{with .NextInSection}}
-    <a rel="next" href="{{.Permalink}}" title="{{- .Title | safeHTML -}}"><span>&#62;</span><i class="ic-arrow_forward"></i></a>
+    <a rel="next" href="{{.Permalink}}" title="{{- .Title -}}"><span>&#62;</span><i class="ic-arrow_forward"></i></a>
 	{{end}}
 </nav>

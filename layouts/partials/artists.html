@@ -1,23 +1,72 @@
+{{ define "partials/inline-artist" }}
+
+{{ $id := replace . " " "_" }}
+<!--<a href="/artists/{{ $id }}">{{- . -}}</a>-->
+<!--<span>{{- . -}}</span>-->
+{{ return . }}
+{{ end }}
+
+{{ define "partials/inline-artists" }}
+<ul>
+    {{ range . }}
+    <li>{{ partial "inline-artist" . }}</li>
+    {{ end }}
+</ul>
+{{ end }}
+
+<!--{{ define "partials/aaa" }}-->
+<!--dddddddddddddddddddddddddd    -->
+<!--{{ site }}-->
+<!--{{ end }}-->
+
 <ul class="artists">
     {{ with .Params.artists }}
     {{ range . }}
     <li>
-        {{ $parts := split . " - " }}
-        {{ if eq (len $parts) 1 }}
-            {{ $artists := split . "&" }}
-            {{ if eq (len $artists) 1 }}
-                {{ partial "artist" .}}
-            {{ else }}
-                {{ partial "artist_group" $artists }}
-            {{ end }}
+        {{ $collab := split . "+" }}
+        {{ if eq (len $collab) 1 }}
+        <span>{{- (index $collab 0) | markdownify -}}</span>
         {{ else }}
-            {{ $group := index $parts 0 }}
-            {{ $artists := index $parts 1 }}
-            <span>{{ $group }}:</span>
-            {{ partial "artist_group" (split $artists "&") }}
-            TODO
+            <ul>
+            {{ range $collab }}
+                <li>{{- . | markdownify -}}</li>
+            {{ end }}
+            </ul>
         {{ end }}
-           </li>
+        <!--{{ $artists := split . "+" }}-->
+        <!--{{ len $artists }}-->
+        <!--{{ if eq (len $artists) 0 }}-->
+        <!--<span>{{- (index $artists 0) | markdownify -}}</span>-->
+        <!--{{ else }}-->
+        <!--<ul>-->
+            <!--{{ range $artists }}-->
+            <!--<li>{{- . | markdownify -}}</li>-->
+            <!--{{ end }}-->
+        <!--</ul>-->
+        <!--{{ end }}-->
+
+        <!--{{ $html := (. | markdownify) }}-->
+        <!--{{ if eq . $html }}-->
+            <!--{{ $artists := split . "+" }}-->
+
+            <!--{{ if eq (len $artists) 0 }}-->
+            <!--<span>{{ index $artists 0 }}</span>-->
+            <!--{{ else }}-->
+            <!--<ul>-->
+                <!--{{ range $artists }}-->
+                <!--<li>{{ .  }}</li>-->
+                <!--{{ end }}-->
+            <!--</ul>-->
+            <!--{{ end }}-->
+        <!--{{ else }}-->
+            <!--{{ $artists := split $html "&" }}-->
+            <!--<ul>-->
+                <!--{{ range $artists }}-->
+                <!--<li>{{ . |  }}</li>-->
+                <!--{{ end }}-->
+            <!--</ul>-->
+        <!--{{ end }}-->
+    </li>
     {{ end }}
     {{ end }}
 </ul>
