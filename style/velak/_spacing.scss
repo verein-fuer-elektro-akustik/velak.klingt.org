@@ -1,0 +1,31 @@
+:root {
+    
+    --space-unit:  1rem;
+    //--space-factor-sxx: 0.25;
+    //--space-factor-sx:  0.5;
+    //--space-factor-s:   0.75;
+    //--space-factor-m:   1.0;
+    //--space-factor-l:   1.5;
+    //--space-factor-lx:  2.0;
+    //--space-factor-lxx: 3.0;
+    
+    //--space-sxx:    calc(var(--space-factor-sxx) * var(--space-unit));
+    //--space-sx:     calc(var(--space-factor-sx) * var(--space-unit));
+    //--space-s:      calc(var(--space-factor-s) * var(--space-unit));
+    //--space-m:      calc(var(--space-factor-m) * var(--space-unit));
+    //--space-l:      calc(var(--space-factor-l) * var(--space-unit));
+    //--space-lx:     calc(var(--space-factor-lx) * var(--space-unit));
+    //--space-lxx:    calc(var(--space-factor-lxx) * var(--space-unit));
+
+    --space-xxxxs: calc(0.125 * var(--space-unit));
+    --space-xxxs:  calc(0.25 * var(--space-unit));
+    --space-xxs:   calc(0.375 * var(--space-unit));
+    --space-xs:    calc(0.5 * var(--space-unit));
+    --space-sm:    calc(0.75 * var(--space-unit));
+    --space-md:    calc(1.25 * var(--space-unit));
+    --space-lg:    calc(2 * var(--space-unit));
+    --space-xl:    calc(3.25 * var(--space-unit));
+    --space-xxl:   calc(5.25 * var(--space-unit));
+    --space-xxxl:  calc(8.5 * var(--space-unit));
+    --space-xxxxl: calc(13.75 * var(--space-unit));
+}
