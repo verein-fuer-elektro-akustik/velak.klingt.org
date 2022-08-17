@@ -1,7 +1,7 @@
 ---
 title: "export#18"
 date: 2016-12-23
-location: "Instants ChavirÃ©s / Brasserie Bouchoule/ montreuil/paris"
+location: "Instants Chavirés / Brasserie Bouchoule/ montreuil / paris"
 description: ""
 artists: [
     clément vercelleto,

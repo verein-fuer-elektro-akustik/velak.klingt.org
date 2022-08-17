@@ -7,7 +7,7 @@ artists: [
     düsseldorf,
     norman bates,
 ]
-location: "[una casa / buenos aires](https://cap8.webnode.page/)"
+location: "[una casa, buenos aires](https://cap8.webnode.page/)"
 tags: []
 ---
 

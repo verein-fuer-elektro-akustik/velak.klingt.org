@@ -128,5 +128,10 @@ TODO
 
 ###### Images
 <!-- ![alt text](image.jpg) -->
+![](/assets/sinewave.svg)
+
+
+---
+
 
 
