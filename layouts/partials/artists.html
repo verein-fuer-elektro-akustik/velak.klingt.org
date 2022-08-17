@@ -27,7 +27,7 @@
         {{ if eq (len $collab) 1 }}
         <span>{{- (index $collab 0) | markdownify -}}</span>
         {{ else }}
-            <ul>
+            <ul class="collab">
             {{ range $collab }}
                 <li>{{- . | markdownify -}}</li>
             {{ end }}

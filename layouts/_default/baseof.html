@@ -69,6 +69,8 @@
         </style>
 
         <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2">
+        <link rel="preload" href="{{ $root }}/font/Inter-Regular.woff2" as="font" type="font/woff2">
+
         <link rel="stylesheet" href="{{ $root }}/style.css" media="screen">
         <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         <link rel="manifest" href="{{ $root }}/manifest.json">
@@ -88,6 +90,7 @@
 	</head>
     <body>
         <header>
+            <!--{{ partial "svg/sinewave.svg" . }}-->
             {{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}
             <nav class="site">{{ block "nav-site" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
             <nav class="page">{{ block "nav-page" . }}{{ end }}</nav>

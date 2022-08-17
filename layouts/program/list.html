@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<!--<script src="{{ (resources.Get "script/program-list.js").Permalink }}" async></script>-->
+<script src="{{ (resources.Get "script/program-list.js").Permalink }}" async></script>
 
 <article data-page="{{ .File.ContentBaseName }}" class="program">
 
@@ -24,7 +24,7 @@
     <ol class="events">
         {{ range .RegularPagesRecursive.ByDate.Reverse }}
         <li>
-            <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}" class="title" id="{{ .File.ContentBaseName }}">{{ .Title }}</a>
             <!--<div class="location">-->
                 <!--<i class="ic-location_on"></i>-->
                 <!--{{ with .Params.location }}-->
@@ -45,12 +45,6 @@
             
             <div class="artists">
                 {{ partial "artists" . }}
-                <!--<ul>-->
-                    <!--{{ range .Params.artists }}-->
-                    <!--<li>{{ . | markdownify }}</li>-->
-                    <!--{{ end }}-->
-                <!--</ul>-->
-
             </div>
         </li>
         {{ end }}

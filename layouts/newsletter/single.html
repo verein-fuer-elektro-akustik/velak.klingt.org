@@ -1,39 +1,95 @@
 {{ define "main" }}
-{{ $mailman := "https://klingt.org/cgi-bin/mailman" }}
+{{ $mailman := .Site.Params.mailman }}
 <article>
-    <!--<header>
-        {{ with .Title }}<h1>{{- . -}}</h1>{{ end }}
-    </header>-->
+    
     <div class="content">{{- .Content -}}</div>
+    
     <section>
-        <h5>Subscribe</h5>
-        <p>
-            <div>Subscribe to the newsletter by filling out the following form.</div>
-            <div>You will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.</div>
-        </p>
+        <div class="content">
+            <p>
+                Subscribe to the newsletter by filling out the following form.  
+                You will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.
+            </p>
+        </div>
         <form method="POST" action="{{ $mailman }}/subscribe/velak-announce">
             <fieldset>
-                <!--<legend>From</legend>-->
-                <input type="email" name="email" placeholder="email …" autofocus required>
-                <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="your name ...">
+                <!--<legend>Subscribe</legend>-->
+                <div>
+                    <label for="email"><span>Email</span></label>
+                    <input type="email" name="email" placeholder="…" autofocus required>
+                </div>
+                <div>
+                    <label for="email"><span>Name</span></label>
+                    <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="...">
+                </div>
+
             </fieldset>
             <fieldset>
                 <!--<legend>Pick a password</legend>-->
-                <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="password ..." required>
-                <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="reeenter password ..." required>
+                <div>
+                    <label for="pw"><span>Password</span></label>
+                    <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="..." required>
+                </div>
+                <div>
+                    <label for="pw-conf"><span>Confirm</span></label>
+                    <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="..." required>
+                </div>
             </fieldset>
-            <fieldset>
-                <input name="language" type="hidden" value="en">
-                <!--<select name="language">
-                    <option value="en" selected=""> English (USA) </option>
-                    <option value="de"> German </option>
-                    <option value="uk"> Ukrainian </option>
-                </select>-->
-            </fieldset>
+            <!--
+               -<fieldset>
+               -    <input name="language" type="hidden" value="en">
+               -    <select name="language">
+               -        <option value="en" selected=""> English (USA) </option>
+               -        <option value="de"> German </option>
+               -        <option value="uk"> Ukrainian </option>
+               -    </select>
+               -</fieldset>
+               -->
+            <input name="language" type="hidden" value="en">
             <input type="submit" name="email-button" value="subscribe">
-        </form>
+        </form> 
     </section>
+
+       <!-- <form method="POST" action="{{ $mailman }}/subscribe/velak-announce"-->
+            <!--class="ichiro">-->
+           <!--<fieldset>-->
+                <!--[><legend>From</legend><]-->
+                <!--<label for="email"><span>Email</span></label>-->
+                <!--<input type="email" name="email" placeholder="" required-->
+                <!--autocomplete="false">-->
+
+                <!--[> <label for="fullname">Full Name</label> <]-->
+                <!--[> <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="your name ..."> <]-->
+            <!--</fieldset>-->
+            <!--[> <input type="submit" name="email-button" value="subscribe"> <]-->
+        <!--</form>-->
+
     <section>
+        <div class="content">
+            <p>
+                To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:
+            </p>
+        </div>
+        <form method="POST" action="{{ $mailman }}/options/velak-announce">
+            <fieldset>
+                <div>
+                    <label for="email"><span>Email</span></label>
+                    <input name="email" type="email" placeholder="..." required>
+                </div>
+                <div>
+                    <label for="email"><span>Password</span></label>
+                    <input name="password" type="password" placeholder="..." required>
+                </div>
+            </fieldset>
+            <input name="language" type="hidden" value="en">
+            <fieldset>
+                <input type="submit" name="login-unsub" value="unsubscribe">
+                <input type="submit" name="login-remind" value="remind">
+            </fieldset>
+        </form>
+
+    </section>
+    <!-- <section>
         <h5>Unsubscribe</h5>
         <p>
             <div>To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:</div>
@@ -49,19 +105,12 @@
                 <input type="submit" name="login-remind" value="remind">
             </fieldset>
         </form>
-    </section>
-    <section>
-        <h5>Post</h5>
-        <p>
-            <div>To post a message to all the list members, send email to <a href="mailto:velak-announce@klingt.org"><strong>velak-announce@klingt.org</strong></a>.</div>
-        </p>
-    </section>
-    <section>
-        <h5>Archive</h5>
-        <p>
-            <div>To see the collection of prior postings to the list, visit the <a href="http://klingt.org/pipermail/velak-announce/" rel="external">archives</a>.</div>
-        </p>
-    </section>
+    </section> -->
+    <!-- <section> -->
+    <!--         <div>To post a message to all the list members, send email to <a href="mailto:velak-announce@klingt.org"><strong>velak-announce@klingt.org</strong></a>.</div> -->
+    <!--         <div>To see the collection of prior postings to the list, visit the <a href="http://klingt.org/pipermail/velak-announce/" rel="external">archives</a>.</div> -->
+    <!--     </p> -->
+    <!-- </section> -->
 
 </article>
 {{ end }}
