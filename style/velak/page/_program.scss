@@ -18,19 +18,26 @@ ul.artists {
     text-transform: lowercase;
     &, ul, li { 
         list-style: none;
-    } 
+    }
+    li {
+        line-height: 1em;
+    }
     > li {
         display: flex;
+        margin-bottom: 1rem;
         > span.group {
            margin-right: 0.5ch; 
         }
         > ul {
-            display:  flex;
+            display: flex;
+            flex-wrap: wrap;
             > li {
+                display: flex;
+                white-space: nowrap;
                 &:not(:last-child) {
                     &::after {
                         content: "+";
-                        margin: 0 0.5ch;
+                        margin: 0 0.25ch;
                         padding: 0;
                     }
                 }
@@ -40,9 +47,6 @@ ul.artists {
 }
 
 article.program {
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
     .date, .location {
         @include typography.meta;
         color: var(--f_low);
@@ -71,28 +75,34 @@ article.program {
     }
     */
     > ol.events {
+        width: 100%;
+        overflow: hidden;
         max-width: breakpoint.$laptop;
         > li {
             display: flex;
             width: 100%;
             //justify-content: space-between;
-            //align-items: center;
+            align-items: center;
             white-space: nowrap;
             > time.data, a.title {
                 z-index: 10000;
             }
             > a.title {
                 order: 2;
-                padding: 0 0.25ch;
+                //padding: 0 0.25ch;
+                margin: 0 0.25ch;
                 //font-size: 1.25rem;
                 font-weight: 600;
                 text-transform: uppercase;
                 white-space: nowrap;
-                background: var(--background);
+                //background: var(--f_med);
+                //color: var(--f_med);
+                z-index: 1000;
+                //box-shadow: 10px 0 10px rgba(9,9,9,1.0);
             }
             > time.date {
                 order: 1;
-                padding: 0 0.25ch 0 0;
+                //padding: 0 0.25ch 0 0;
                 @include typography.meta(1em);
                 background: var(--b_low);
                 z-index: 1000;
@@ -101,12 +111,112 @@ article.program {
                 order: 4;
                 display: flex;
                 margin: 0;
+                //padding: 0 0.5rem 0 0;
                 white-space: nowrap;
+                //overflow: hidden;;
+                text-overflow: hidden;
+                //justify-self: end;
                 @include typography.meta(1em);
                 background: var(--b_low);
-                color: var(--f_low);
+                background: var(--background);
+                //box-shadow: -10px 0 10px rgba(9,9,9,1.0);
+                &, a {
+                    color: var(--f_low);
+                }
                 z-index: 1000;
+                //&::before {
+                    //content: "";
+                    //position: absolute;
+                    //height: 1.5em;
+                    //width: 2rem; //rem;
+                    //z-index: 100;
+                    //background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+                    //width: 5vw; //rem;
+                    //left: 0;
+                //}
+
             }
+            > .artists {
+                order: 3;
+                display: flex;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 0 0.25rem;
+                //position: absolute;
+                z-index: 1;
+
+                //&::before, &::after {
+                    //content: '';
+                    //position: relative;
+                    //background: red;
+                    //width: 1rem;
+                    //height: 1rem;
+                    //z-index: 10000;
+                //}
+                //&::before {
+                    //background: linear-gradient(90deg, rgba(9,9,9,1.0), rgba(9,9,9,0.0));
+                    //width: 10rem; //5vw; //rem;
+                    //left: 0;
+                //}
+                //&::after {
+                    //right: 0;
+                    //width: 100%;
+                    //background: blue;
+                    //background: linear-gradient(-90deg, rgba(9,9,9,1.0), rgba(9,9,9,0.0));
+                    //width: 300px;
+                //}
+
+                ul, li {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    white-space: nowrap;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+                > ul.artists {
+                    //display: inline-flex;
+                    //width: 100%;
+                    white-space: nowrap;
+                    //overflow: hidden;
+                    //text-overflow: ellipsis;
+                    //position: relative;
+                    //box-shadow: 4px 0 10px rgba(255,9,9,1.0) inset;
+                    //&::before, &::after {
+                        //content: "";
+                        //position: absolute;
+                        //height: 1.5em;
+                        //width: 2rem; //rem;
+                        //z-index: 1000;
+                        ////filter: blur(20px);
+                    //}
+                    //&::before {
+                        //background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+                        //width: 5vw; //rem;
+                    //}
+                    //&::after {
+                        //background: linear-gradient(-90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+                        //width: 5vw; //rem;
+                        //right: 0;
+                    //}
+
+                    > li {
+                        display: flex;
+                        //font-style: italic;
+                        //background: var(--b_med);
+                        &, a {
+                            color: var(--f_low);
+                        }
+                        &:not(:last-child)::after {
+                            content: ',';
+                            margin-right: 0.5ch;
+                        }
+                    }
+                }
+
+            }
+                    /*
             > div.artists {
                 order: 3;
                 display: flex;
@@ -114,7 +224,11 @@ article.program {
                 overflow: hidden;
                 white-space: nowrap;
                 text-transform: lowercase;
-                color: var(--f_low);
+                ul, li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
                 > ul.artists {
                     display: inline-flex;
                     width: 100%;
@@ -142,14 +256,23 @@ article.program {
                         right: 0;
                     }
                     > li {
-                        display: inline-flex;
+
+                        display: flex;
+                        //background: var(--b_hig cih);
+                        //color: var(--background);
+                        color: var(--f_low);
                         &:not(:last-child)::after {
                             content: ',';
                             margin-right: 0.75ch;
                         }
+                        ul {
+                            display: flex;
+                            flex-wrap: nowrap;
+                        }
                     }
                 }
             }
+                    */
         }
     }
 }
@@ -161,40 +284,40 @@ article.event {
     flex-direction: column;
     > .title {
         order: 1;
-        padding: 1rem 0;
+        //padding: 1rem 0;
+        padding-bottom: 1rem;
     }
     > .meta {
         order: 2;
         display: flex;
         flex-direction: row;
-        //flex-wrap: nowrap;
-        padding: 1rem 0;
+        flex-wrap: wrap;
+        //padding: 1rem 0;
+        margin-bottom: 1rem;
         > *:not(:last-child) {
             margin-right: 1ch;
         }
         .date {
-            display: inline-flex;
-            flex-wrap: wrap;
-            flex-direction: row;
+            //display: inline-flex;
+            //flex-wrap: wrap;
+            //flex-direction: row;
         }
         .location {
-            display: inline-flex;
+            //display: inline-flex;
         }
     }
     > .artists {
         order: 3;
-        padding: 2rem 0;
-        font-size: 1.75rem;
+        padding: 1rem 0;
+        font-size: 1.25rem;
     }
     > .content {
         order: 4;
-        //order: 4;
-        padding: 2rem 0;
+        padding-bottom: 1rem;
     }
      > .gallery {
         order: 5;
-        //order: 10;
-        padding: 2rem 0 3rem 0;
+        padding: 1rem 0 3rem 0;
     }
     nav.prev_next {
         justify-self: flex-end;
