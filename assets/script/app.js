@@ -8,8 +8,8 @@ function updatescrolltopbuttom() {
 }
 window.addEventListener("load", e => {
     console.info("%c⬤","color:#fff;background:#000;padding:3rem 3rem;font-size:32px;");
-    console.info('%chttps://disktree.net', 'background:#000;color:#fff;padding:20px;');
-    console.info('%cSOURCE: https://github.com/verein-fuer-elektro-akustik/velak.klingt.org', 'background:#000;color:#fff;padding:1rem;');
+    //console.info('%cDEVELOPER: https://disktree.net', 'background:#000;color:#fff;padding:20px;');
+    //console.info('%cSOURCE: https://github.com/verein-fuer-elektro-akustik/velak.klingt.org', 'background:#000;color:#fff;padding:1rem;');
     updatescrolltopbuttom();
     window.addEventListener("resize", e => {
         updatescrolltopbuttom();
