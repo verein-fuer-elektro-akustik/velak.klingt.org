@@ -1,11 +1,16 @@
-description = "Verein für Elektro Akustik"
-keywords =  ["velak","verein","akustik","musik","events"]
+name = "VELAK"
+description = "Verein für Elektro Akustische Musik"
+keywords =  ["velak","verein","akustik","musik","events","kunst"]
 theme_color = "#000000"
 
 publisher = "velak"
+url = "https://velak.klingt.org"
 email = "velak@klingt.org"
+mailannounce = "velak-announce@klingt.org"
+mailman = "https://klingt.org/cgi-bin/mailman"
 repository = "https://github.com/disktree/velak"
 
 [developer]
-    email="tong@disktree.net"
-    web = "https://disktree.net"
+    name = "disktree"
+    email = "admin@disktree.net"
+    url = "https://disktree.net/"

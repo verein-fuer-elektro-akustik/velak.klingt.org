@@ -41,5 +41,5 @@ enableRobotsTXT = true
 [taxonomies]
     category = "categories"
     tag = "tags"
-    artist = "artists"
+    #artist = "artists"
     #location = "locations"
