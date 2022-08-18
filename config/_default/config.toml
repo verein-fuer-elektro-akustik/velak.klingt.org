@@ -19,17 +19,18 @@ enableRobotsTXT = true
 #[permalinks]
     #program = '/:year/:month/:day/'
 
-#[imaging]
+[imaging]
+    quality = 80
     #[imaging.exif]
         #disableDate = false
         #disableLatLong = false
         #excludeFields = ''
         #includeFields = ''
 
-#[outputs]
-    #home = ["HTML", "RSS", "JSON" ]
-    #page = ["HTML","JSON"]
-    #section = ["HTML","RSS","JSON"]
+[outputs]
+    home = ["HTML"]
+    #page = ["HTML", "JSON"]
+    section = ["HTML","RSS","JSON"]
     #taxonomyTerm = ["HTML", "RSS"]
     #taxonomy = ["HTML", "RSS"]
 
