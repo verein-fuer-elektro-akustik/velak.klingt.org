@@ -37,8 +37,7 @@ ul.artists {
                 &:not(:last-child) {
                     &::after {
                         content: "+";
-                        margin: 0 0.25ch;
-                        padding: 0;
+                        margin: 0 0.125ch;
                     }
                 }
             }
@@ -46,11 +45,9 @@ ul.artists {
     }
 }
 
+//div.meta {}
+
 article.program {
-    .date, .location {
-        @include typography.meta;
-        color: var(--f_low);
-    }
     /*
     > ol.upcoming {
         list-style: none;
@@ -78,48 +75,62 @@ article.program {
         width: 100%;
         overflow: hidden;
         max-width: breakpoint.$laptop;
+        .date, .location {
+            @include typography.meta(75%);
+            color: var(--f_low);
+        }
         > li {
             display: flex;
-            width: 100%;
-            //justify-content: space-between;
             align-items: center;
+            width: 100%;
+            height: 100%;
+            //justify-content: space-between;
             white-space: nowrap;
+            //background: red;
+            //border-bottom: 1px solid white;
             > time.data, a.title {
                 z-index: 10000;
             }
-            > a.title {
+            > .title {
                 order: 2;
-                //padding: 0 0.25ch;
-                margin: 0 0.25ch;
+                padding: 0 0.375ch;
                 //font-size: 1.25rem;
-                font-weight: 600;
+                font-weight: 500;
                 text-transform: uppercase;
                 white-space: nowrap;
                 //background: var(--f_med);
                 //color: var(--f_med);
                 z-index: 1000;
                 //box-shadow: 10px 0 10px rgba(9,9,9,1.0);
+                background: blue;
+                background: var(--background);
             }
-            > time.date {
+            > .date {
+                display: flex;
                 order: 1;
+                padding: 0 0.2rem;
                 //padding: 0 0.25ch 0 0;
-                @include typography.meta(1em);
-                background: var(--b_low);
+                //overflow: hidden;
+                //text-overflow: ellipsis;
+                //width: 100%;
+                background: yellow;
+                background: var(--background);
+                background: var(--b_med);
                 z-index: 1000;
             }
             > .location {
                 order: 4;
                 display: flex;
-                margin: 0;
-                //padding: 0 0.5rem 0 0;
+                padding: 0 0.15rem;
                 white-space: nowrap;
                 //overflow: hidden;;
-                text-overflow: hidden;
+                //text-overflow: hidden;
                 //justify-self: end;
-                @include typography.meta(1em);
-                background: var(--b_low);
-                background: var(--background);
+                //background: var(--b_low);
+                //background: var(--background);
                 //box-shadow: -10px 0 10px rgba(9,9,9,1.0);
+                background: darkblue;
+                background: var(--b_med);
                 &, a {
                     color: var(--f_low);
                 }
@@ -134,18 +145,20 @@ article.program {
                     //width: 5vw; //rem;
                     //left: 0;
                 //}
-
             }
             > .artists {
                 order: 3;
+                flex-grow: 100;
                 display: flex;
                 width: 100%;
-                overflow: hidden;
+                height: 100%;
+                overflow: scroll;
                 white-space: nowrap;
-                padding: 0 0.25rem;
+                font-size: 93%;
+                //padding: 0 0.25rem;
                 //position: absolute;
                 z-index: 1;
-
+                //background: green;
                 //&::before, &::after {
                     //content: '';
                     //position: relative;
@@ -176,9 +189,11 @@ article.program {
                     list-style: none;
                 }
                 > ul.artists {
-                    //display: inline-flex;
+                    display: inline-flex;
                     //width: 100%;
                     white-space: nowrap;
+                    margin: 0;
+                    padding: 0;
                     //overflow: hidden;
                     //text-overflow: ellipsis;
                     //position: relative;
@@ -205,6 +220,8 @@ article.program {
                         display: flex;
                         //font-style: italic;
                         //background: var(--b_med);
+                        //background: red;
+                        margin: 0 0.125ch;
                         &, a {
                             color: var(--f_low);
                         }
@@ -216,63 +233,6 @@ article.program {
                 }
 
             }
-                    /*
-            > div.artists {
-                order: 3;
-                display: flex;
-                width: 100%;
-                overflow: hidden;
-                white-space: nowrap;
-                text-transform: lowercase;
-                ul, li {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                }
-                > ul.artists {
-                    display: inline-flex;
-                    width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    list-style: none;
-                    position: relative;
-                    //animation: users_scroll 15s infinite ease-in-out;
-                    &::before, &::after {
-                        content: "";
-                        position: absolute;
-                        height: 1.5em;
-                        width: 2rem; //rem;
-                        z-index: 1000;
-                        //filter: blur(20px);
-                    }
-                    &::before {
-                        background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
-                        width: 15vw; //rem;
-                    }
-                    &::after {
-                        background: linear-gradient(-90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
-                        width: 50vw; //rem;
-                        right: 0;
-                    }
-                    > li {
-
-                        display: flex;
-                        //background: var(--b_hig cih);
-                        //color: var(--background);
-                        color: var(--f_low);
-                        &:not(:last-child)::after {
-                            content: ',';
-                            margin-right: 0.75ch;
-                        }
-                        ul {
-                            display: flex;
-                            flex-wrap: nowrap;
-                        }
-                    }
-                }
-            }
-                    */
         }
     }
 }
@@ -280,22 +240,33 @@ article.program {
 article.event {
     //display: grid;
     display: flex;
+    gap: 2rem;
     //flex-wrap: nowrap;
     flex-direction: column;
     > .title {
         order: 1;
+        position: relative;
+        left: -2px; // HACK
         //padding: 1rem 0;
-        padding-bottom: 1rem;
+        //padding-bottom: 1rem;
     }
     > .meta {
         order: 2;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        //padding: 1rem 0;
         margin-bottom: 1rem;
-        > *:not(:last-child) {
-            margin-right: 1ch;
+        column-gap: 1em;
+        align-items: baseline;
+        //padding: 1rem 0;
+        > * {
+            display: flex;
+            i {
+                margin-right: 0.25ch;
+            }
+            &:not(:last-child) {
+                //margin-right: 1ch;
+            }
         }
         .date {
             //display: inline-flex;
@@ -308,16 +279,20 @@ article.event {
     }
     > .artists {
         order: 3;
-        padding: 1rem 0;
+        //padding: 1rem 0;
         font-size: 1.25rem;
     }
     > .content {
         order: 4;
-        padding-bottom: 1rem;
+        //padding-bottom: 1rem;
     }
-     > .gallery {
+    > *.audiofiles {
         order: 5;
-        padding: 1rem 0 3rem 0;
+        //padding-bottom: 1rem;
+    }
+    > .gallery {
+        order: 6;
+        //padding: 1rem 0 3rem 0;
     }
     nav.prev_next {
         justify-self: flex-end;

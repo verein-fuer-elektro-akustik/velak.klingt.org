@@ -12,6 +12,7 @@
     --text-line-height: 1.5;
 
 	--heading-line-height: 1.5;
+	//--heading-line-height: 1;//.5;
 	--heading-font-weight: 500;
 	
     --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
@@ -49,26 +50,13 @@
     text-transform: uppercase;
 }
 
+//[hidden] {
+    //display: none;
+//}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-	border: none;
-    box-sizing: border-box;
-}
-
-[hidden] {
-    display: none;
-}
-
-[tabindex='-1']:focus {
-    outline: 0 !important;
-}
+//[tabindex='-1']:focus {
+    //outline: 0 !important;
+//}
 
 html, body {
     width: 100%;
@@ -80,7 +68,7 @@ html, body {
 
 html {
     font-size: var(--text-base-size);
-    font-family: var(--font-primary);
+    font-family: var(--font-primary), sans;
     font-weight: var(--body-font-weight, normal);
     font-optical-sizing: auto;
     line-height: var(--text-line-height);
@@ -130,12 +118,16 @@ code, pre {
 }
 
 dl {
+    &, * {
+        margin: 0;
+        padding: 0;
+    }
     > dt {
-        font-weight: 200;
-        font-style: italic;
+        //font-weight: 200;
+        //font-style: italic;
     }
     > dd {
-        margin-left: 1.5rem;
+        //margin-left: 1.5rem;
     }
 }
 
@@ -157,33 +149,41 @@ figure {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-font-weight);
-    line-height: var(--heading-line-height);
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
+    line-height: 1; // var(--heading-line-height);
+    //line-height: 1em; //var(--heading-line-height);
+    margin: 0 0 var(--heading-line-height) 0;
+    margin: 1rem 0 1rem 0;
     word-break: break-word;
-    margin: 0;
-    padding: 0;
+    //letter-spacing: -0.05em;
 }
 h1 {
     font-size: var(--text-xxxxl);
     letter-spacing: -0.05em;
+    text-transform: uppercase;
 }
 h2 {
     font-size: var(--text-xxxl);
     letter-spacing: -0.055em;
+    text-transform: uppercase;
 }
 h3 {
     font-size: var(--text-xxl);
+    text-transform: uppercase;
 }
 h4 {
-    font-size: var(--text-xl);
-}
-h5 {
     font-size: var(--text-lg);
     text-transform: uppercase;
 }
-h6 {
+h5 {
     font-size: var(--text-md);
+    //line-height: calc(var(--heading-line-height)*1.5);
+    //text-transform: lowercase;
+    text-transform: uppercase;
+}
+h6 {
+    font-size: var(--text-sm);
+    //line-height: calc(var(--heading-line-height)*1.5);
+    //text-transform: lowercase;
     text-transform: uppercase;
 }
 
@@ -208,6 +208,9 @@ input, select {
     &:focus {
         background: var(--f_med);
         color: var(--f_inv);
+    }
+    &::placeholder {
+        color: var(--background);
     }
     &:invalid {
         //border: 1px dashed var(--fg);
@@ -244,18 +247,21 @@ p, ol, ul {
 ol, ul {
     list-style-position: inside;
     &, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
     // ol, ul {
     //     padding-left: 1em;
     //     margin-bottom: 0;
     // }
 }
-ol {
-    list-style-type: decimal;
-}
-ul {
-    list-style-type: disc;
-}
+//ol {
+    //list-style-type: decimal;
+//}
+//ul {
+    //list-style-type: disc;
+//}
 
 p {
     margin: 0 0 1rem 0;

@@ -33,35 +33,110 @@ body {
     grid-template-rows: auto 1fr auto auto;
     //gap: calc(1rem*var(--spacing));
     //gap: 0.5rem;
-
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 0;
     overflow-x: hidden;
     overflow-y: scroll;
 
-    > header, > nav, > footer {
-        //width: 100%;
-    }
-    > header, > nav, > footer {
+    > header, > footer {
         z-index: 1000;
     }
+    > header {
+        //--hpad: 0.5rem;
+        display: flex;
+        column-gap: 0.75em;
+        //justify-content: space-between;
+        margin: 0 calc(var(--spacing) * 1rem);
+        //padding: calc(var(--spacing)*1rem) 0 calc(var(--spacing)*1rem) 0;
+        padding: calc(var(--spacing)*0.5rem) 0;
+        text-transform: uppercase;
+        * {
+            font-size: 1.25rem;
+            line-height: 1em;
+        }
+        > h1 {
+            display: inline-block;
+            line-height: 1em;
+            margin: 0.5rem 0;
+            white-space: nowrap;
+            #title-name { display: bloc; }
+            #title-description { display: none; }
+            @media screen and (min-width: breakpoint.$laptop) {
+                #title-name { display: none; }
+                #title-description { display: block; }
+            }
+        }
+        @media screen and (max-width: breakpoint.$phone) {
+            flex-wrap: wrap;
+        }
+        @media screen and (max-width: breakpoint.$tablet) {
+            justify-items: flex-start;
+        }
+        @media screen and (max-width: breakpoint.$laptop) {
+            font-size: 1.5rem;
+        }
+        > nav {
+            //letter-spacing: -0.0125em;
+            margin: 0;
+                width: 100%;
+            > ul {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                //justify-content: space-between;
+                //justify-content: space-around;
+                column-gap: 0.75em;
+                > li {
+                    padding: 0.5rem 0;
+                    &.active {
+                        background: var(--f_med);
+                    }
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        &.active {
+                            padding: 0 0.75rem;
+                            font-weight: 500;
+                            //letter-spacing: 0.1em;
+                            //background: var(--f_med);
+                            color: var(--background);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*
     > header {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
         margin: 0 calc(var(--spacing) * 1rem);
         padding: calc(var(--spacing)*1rem) 0 calc(var(--spacing)*0.5rem) 0;
+        text-transform: uppercase;
+        font-size: 1.25rem;
         > h1, > nav  {
-            font-size: 1.25rem;
+            //font-size: 1.25rem;
         }
         h1 {
+            //all: unset;
+            //padding: 0.5rem 0;
+            //line-height: 1em;
+            font-size: 1.25rem;
+            display: flex;
+            //align-items: center;
             font-weight: 600;
             white-space: nowrap;
-            padding: 0.5rem 0;
+            //padding: 0.5rem 0;
+            background: red;
             #title-description {
                 display: none;
+            }
+            a {
+                background: greenyellow;
             }
             @media screen and (min-width: breakpoint.$laptop) {
                 #title-name { display: none; }
@@ -70,22 +145,30 @@ body {
         }
         > nav {
             display: flex;
+            //align-items: center;
             //width: 100%;
             //font-size: 1.25rem;
+            vertical-align: top;
             //vertical-align: top;
+            background: blue;
             > ul {
                 display: flex;
                 flex-wrap: wrap;
                 //justify-content: space-between;
                 justify-content: flex-start;
+                background: darkorange;
                 @media screen and (min-width: breakpoint.$laptop) {
                 }
                 //margin: 0 calc(var(--spacing) * 1rem);
                 //padding: calc(var(--spacing) * 0.8rem) 0 calc(var(--spacing) * 0.5rem) 0;
                 list-style: none;
                 > li {
-                    padding: 0.5rem 0;
+                    display: inline-block;
+
+                    //padding: 0.5rem 0;
                     //margin: 0 0.25rem;
+                    margin: 0;
+                    padding: 0;
                     &.active {
                         // width: 100%;
                     }
@@ -96,12 +179,14 @@ body {
                         margin-right: 0.75rem;
                     }
                     //&:not(:last-child)::after {
+                        background: darkgoldenrod;
                     > a {
-                        padding: 0.5rem 0;
+                        //padding: 0.5rem 0;
                         margin: 0;
                         text-transform: uppercase;
+                        background: yellow;
                         &.active {
-                            padding: 0.5rem 0.75rem;
+                            //padding: 0.5rem 0.75rem;
                             width: 100%;
                             font-weight: 600;
                             //letter-spacing: 0.1em;
@@ -111,12 +196,9 @@ body {
                     }
                 }
             }
-            > #res {
-                display: table;
-            }
         }
-
     }
+    */
     > main {
         height: 100%;
         max-width: 100vw;
@@ -126,11 +208,15 @@ body {
         > article {
             width: 100%;
             //margin: 0 1rem;
-            padding: 0.5rem 1px; // HACK
-            //padding: 1rem 0; // HACK
+            //padding: 0.5rem 1px; // HACK
+            //padding-top: 1rem;
+            &.content {
+                padding: 1rem 0; 
+            }
+            //&.full {
+            //&.page-full {
             section {
                 padding: 1rem 0;
-                //border-top: 1px solid var(--fg);
             }
             div.content {
                 max-width: 600px;
@@ -150,10 +236,11 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 0 calc(var(--spacing) * 1rem);
-        padding: calc(var(--spacing) * 0.5rem)  0 calc(var(--spacing) * 1rem) 0;
+        //padding: calc(var(--spacing) * 0.5rem)  0 calc(var(--spacing) * 0.5rem) 0;
+        padding: 0.75rem  0 calc(var(--spacing) * 0.5rem) 0;
         //padding: 4rem 0;
         white-space: nowrap;
-        //overflow-x: hidden;
+        overflow-x: hidden;
         > * {
             display: flex;
             overflow-x: hidden;

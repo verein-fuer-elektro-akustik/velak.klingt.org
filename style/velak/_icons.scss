@@ -19,7 +19,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 $ic-social-github: "\e909";
 $ic-git-pull-request: "\e904";
 $ic-git-merge: "\e905";
@@ -34,6 +33,7 @@ $ic-fast_forward: "\e96d";
 $ic-fast_rewind: "\e96e";
 $ic-loop: "\e972";
 $ic-movie: "\e976";
+$ic-library_music: "\e979";
 $ic-pause: "\e97c";
 $ic-play_arrow: "\e97f";
 $ic-queue_music: "\e983";
@@ -44,12 +44,15 @@ $ic-shuffle: "\e989";
 $ic-skip_next: "\e98a";
 $ic-skip_previous: "\e98b";
 $ic-stop: "\e98d";
+$ic-surround_sound: "\e98f";
 $ic-videocam: "\e991";
 $ic-videocam_off: "\e992";
 $ic-volume_down: "\e993";
 $ic-volume_mute: "\e994";
 $ic-volume_off: "\e995";
 $ic-volume_up: "\e996";
+$ic-fiber_manual_record: "\e9a6";
+$ic-music_video: "\e9a8";
 $ic-email: "\e9c5";
 $ic-location_off: "\e9c9";
 $ic-location_on: "\e9ca";
@@ -63,6 +66,7 @@ $ic-forward: "\e911";
 $ic-link: "\e9f7";
 $ic-link_off: "\ea0c";
 $ic-access_time: "\ea19";
+$ic-insert_invitation: "\ea72";
 $ic-file_download: "\e91b";
 $ic-file_upload: "\e91c";
 $ic-folder: "\e91d";
@@ -106,8 +110,10 @@ $ic-copyright: "\ec69";
 $ic-compare_arrows: "\ec71";
 $ic-date_range: "\ec72";
 $ic-watch_later: "\e95e";
+$ic-calendar_today: "\ec8c";
 $ic-arrow_right_alt: "\ec98";
 $ic-all_inbox: "\ecd3";
+$ic-tag: "\ed0b";
 $ic-bolt: "\ed18";
 $ic-euro: "\ed22";
 $ic-sync_alt: "\ed25";
@@ -122,6 +128,7 @@ $ic-wine_bar: "\ee69";
 $ic-coronavirus: "\e964";
 $ic-git-square: "\e902";
 $ic-git: "\e903";
+
 
 .ic-social-github {
   &:before {
@@ -193,6 +200,11 @@ $ic-git: "\e903";
     content: $ic-movie; 
   }
 }
+.ic-library_music {
+  &:before {
+    content: $ic-library_music; 
+  }
+}
 .ic-pause {
   &:before {
     content: $ic-pause; 
@@ -243,6 +255,11 @@ $ic-git: "\e903";
     content: $ic-stop; 
   }
 }
+.ic-surround_sound {
+  &:before {
+    content: $ic-surround_sound; 
+  }
+}
 .ic-videocam {
   &:before {
     content: $ic-videocam; 
@@ -271,6 +288,16 @@ $ic-git: "\e903";
 .ic-volume_up {
   &:before {
     content: $ic-volume_up; 
+  }
+}
+.ic-fiber_manual_record {
+  &:before {
+    content: $ic-fiber_manual_record; 
+  }
+}
+.ic-music_video {
+  &:before {
+    content: $ic-music_video; 
   }
 }
 .ic-email {
@@ -336,6 +363,11 @@ $ic-git: "\e903";
 .ic-access_time {
   &:before {
     content: $ic-access_time; 
+  }
+}
+.ic-insert_invitation {
+  &:before {
+    content: $ic-insert_invitation; 
   }
 }
 .ic-file_download {
@@ -553,6 +585,11 @@ $ic-git: "\e903";
     content: $ic-watch_later; 
   }
 }
+.ic-calendar_today {
+  &:before {
+    content: $ic-calendar_today; 
+  }
+}
 .ic-arrow_right_alt {
   &:before {
     content: $ic-arrow_right_alt; 
@@ -561,6 +598,11 @@ $ic-git: "\e903";
 .ic-all_inbox {
   &:before {
     content: $ic-all_inbox; 
+  }
+}
+.ic-tag {
+  &:before {
+    content: $ic-tag; 
   }
 }
 .ic-bolt {
@@ -633,5 +675,4 @@ $ic-git: "\e903";
     content: $ic-git; 
   }
 }
-
 
