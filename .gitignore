@@ -1,8 +1,11 @@
-hook/
+art/
+audio/
 misc/
 node_modules/
 public/
 resources/
+scripts/
+server/
 uploads/
 _income/
 _old/
