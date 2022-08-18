@@ -1,7 +1,6 @@
 ---
 title: "gala#38"
 date: 2008-12-03
-publishDate: 2008-12-03
 artists: [
     dirac,
     alexander martinz,
@@ -14,5 +13,4 @@ artists: [
 location: "brut"
 photos: "tina vareško & daniel lercher"
 tags: [gala]
-recordings: []
 ---
