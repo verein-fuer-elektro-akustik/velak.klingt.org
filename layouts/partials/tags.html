@@ -1,8 +1,8 @@
 <dl class="tags">
     <dt class="visuallyhidden">Tags</dt>
-	{{ range .Params.tags }}
-	<dd class="tag">
-		<a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1">#{{ . | safeHTML }}</a>
-	</dd>
-	{{ end }}
+    {{ range .Params.tags }}
+    <dd class="tag">
+        <a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1"><i class="ic-tag"></i>{{ . | safeHTML }}</a>
+    </dd>
+    {{ end }}
 </dl>

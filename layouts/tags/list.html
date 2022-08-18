@@ -1,16 +1,10 @@
 {{ define "main" }}
-<article>
+<article class="program">
     <header>
-	{{ with .Title }}<h2>{{- . | safeHTML -}}</h2>{{ end }}
+	{{ with .Title }}<h2><i class="ic-tag"></i>{{- . -}}</h2>{{ end }}
 	{{ if .Content }}<div class="content">{{- .Content | safeHTML -}}</div>{{ end }}
     </header>
-    <ul>
-	    {{ range .Pages }}
-        <li>
-            <a href="{{ .Permalink }}">{{- .Title | safeHTML -}}</a>
-        </li>
-	    {{ end }}
-	</ul>
+    {{ partial "program" . }}
 </article>
 {{ end }}
 

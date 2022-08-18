@@ -1,10 +1,11 @@
 {{ define "main" }}
 {{ $mailman := .Site.Params.mailman }}
-<article>
+<article class="content">
     
     <div class="content">{{- .Content -}}</div>
     
     <section>
+        <h5>Subscribe</h5>
         <div class="content">
             <p>
                 Subscribe to the newsletter by filling out the following form.  
@@ -20,7 +21,7 @@
                 </div>
                 <div>
                     <label for="email"><span>Name</span></label>
-                    <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="...">
+                    <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="…">
                 </div>
 
             </fieldset>
@@ -28,11 +29,11 @@
                 <!--<legend>Pick a password</legend>-->
                 <div>
                     <label for="pw"><span>Password</span></label>
-                    <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="..." required>
+                    <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="…" required>
                 </div>
                 <div>
                     <label for="pw-conf"><span>Confirm</span></label>
-                    <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="..." required>
+                    <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="…" required>
                 </div>
             </fieldset>
             <!--
@@ -65,6 +66,7 @@
         <!--</form>-->
 
     <section>
+        <h5>Unubscribe</h5>
         <div class="content">
             <p>
                 To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:
@@ -74,11 +76,11 @@
             <fieldset>
                 <div>
                     <label for="email"><span>Email</span></label>
-                    <input name="email" type="email" placeholder="..." required>
+                    <input name="email" type="email" placeholder="…" required>
                 </div>
                 <div>
                     <label for="email"><span>Password</span></label>
-                    <input name="password" type="password" placeholder="..." required>
+                    <input name="password" type="password" placeholder="…" required>
                 </div>
             </fieldset>
             <input name="language" type="hidden" value="en">

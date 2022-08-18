@@ -4,19 +4,15 @@
 
 {{ define "main" }}
 {{ $id := .File.ContentBaseName }}
-<article data-page="{{ .File.ContentBaseName }}" class="event">
+<article data-page="{{ .File.ContentBaseName }}" class="event content">
     
     <h1 class="title">{{- .Title -}}</h1>
     
     <div class="meta">
-        <span class="location">
-            <i class="ic-date_range"></i>
-            <time class="date">{{ .Date.Format "2006/01/02" }}</time>
-        </span>
-        <span class="location">
-            {{ .Scratch.Set "address" true }}
-            {{ partial "location" . }}
-        </span>
+        {{ partial "datetime" . }}
+        {{ .Scratch.Set "address" true }}
+        {{ partial "location" . }}
+        {{ partial "tags" . }}
     </div>
     
     <div class="artists">
@@ -28,7 +24,7 @@
     {{ end }}
 
     <div class="audiofiles">
-        <ol class="nolist">
+        <ol>
             {{ range .Resources.ByType "audio" }}
             <li>
                 <i class="ic-audiotrack"></i>
@@ -36,21 +32,11 @@
             </li>
             {{ end }}
         </ol>
-        {{ with .Params.recordings }}
-        <ol class="nolist">
-            {{ range . }}
-            <li>
-                <i class="ic-audiotrack"></i>
-                <a href="{{.}}">{{- . | safeHTML -}}</a>
-            </li>
-            {{ end }}
-        </ol>
-        {{ end }}
     </div>
 
     {{ partial "gallery" . }}
 
-<!--<nav class="meta">{{ partial "nav_prev_next" . }}</nav>-->
+    <!--<nav class="meta">{{ partial "nav_prev_next" . }}</nav>-->
 
 </article>
 {{ end }}
@@ -62,5 +48,4 @@
 {{ define "footer-content" }}
 <!--<i class="ic-arrow_upward" onclick="window.scrollTo(0,0)"></i>-->
 {{ end }}
-
 
