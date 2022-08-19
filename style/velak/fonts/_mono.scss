@@ -1,0 +1,12 @@
+$path: "font" !default;
+
+@font-face {
+	font-family: "Mono";
+	font-display: block;
+	src:
+        // url("#{$path}/ssmono.woff2") format("woff2"),
+        // url("#{$path}/JetBrainsMono-Regular.woff2") format("woff2"),
+        // url("#{$path}/JetBrainsMono-Regular.ttf") format("truetype");
+        url("#{$path}/RobotoMono-Regular.woff2") format("woff2"),
+        url("#{$path}/RobotoMono-Regular.ttf") format("truetype");
+}
