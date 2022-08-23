@@ -1,0 +1,32 @@
+article.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    > .title {
+        order: 1;
+        text-transform: lowercase;
+        position: relative;
+        left: -2px; // HACK
+    }
+    > .details {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        column-gap: 1em;
+        align-items: baseline;
+    }
+    > .artists {
+        font-size: 1.5rem;
+    }
+    > .content {
+        order: 4;
+    }
+    > .gallery {
+        order: 1000;
+    }
+    > nav {
+        order: 10000;
+    }
+}

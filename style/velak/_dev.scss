@@ -1,0 +1,16 @@
+pre.dev {
+    display: table;
+    font-size: 12px;
+    padding: 1em;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0.5;
+    background: var(--f_med);
+    color: var(--b_med);
+    z-index: 100000;
+    &:hover {
+        background: var(--f_high);
+        opacity: 1;
+    }
+}

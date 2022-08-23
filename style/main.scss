@@ -3,12 +3,14 @@
 @use 'velak/fonts';
 @use 'velak/typography';
 //@use 'velak/form';
-@use 'velak/spacing';
 @use 'velak/icons';
-@use 'velak/site';
 @use 'velak/scrollbar';
+@use 'velak/site';
+@use 'velak/page';
+@use 'velak/dev';
 
 @use 'velak/page/gallery';
+@use 'velak/page/artists';
 @use 'velak/page/program';
 @use 'velak/page/records';
 @use 'velak/page/stream';

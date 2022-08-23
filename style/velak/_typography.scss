@@ -13,7 +13,7 @@
 
 	--heading-line-height: 1.5;
 	//--heading-line-height: 1;//.5;
-	--heading-font-weight: 500;
+	--heading-font-weight: 400;
 	
     --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
     --text-space-y-multiplier: 1;
@@ -43,20 +43,15 @@
     }
 }
 
-
 @mixin meta($size: 75%) {
     font-family: var(--font-mono);
     font-size: $size;
     text-transform: uppercase;
 }
 
-//[hidden] {
-    //display: none;
-//}
-
-//[tabindex='-1']:focus {
-    //outline: 0 !important;
-//}
+[hidden] {
+    display: none;
+}
 
 html, body {
     width: 100%;
@@ -151,8 +146,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-font-weight);
     line-height: 1; // var(--heading-line-height);
     //line-height: 1em; //var(--heading-line-height);
-    margin: 0 0 var(--heading-line-height) 0;
-    margin: 1rem 0 1rem 0;
+    //margin: 0 0 var(--heading-line-height) 0;
+    //margin: 1.5em 0 1em 0;
     word-break: break-word;
     //letter-spacing: -0.05em;
 }
@@ -240,9 +235,8 @@ label {
 }
 
 p, ol, ul {
-	// margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier,1));
+     //margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier,1));
 }
-
 
 ol, ul {
     list-style-position: inside;
@@ -264,8 +258,8 @@ ol, ul {
 //}
 
 p {
-    margin: 0 0 1rem 0;
-    padding: 0;
+    //margin: 0 0 1em 0;
+    //padding: 0;
 }
 
 section {

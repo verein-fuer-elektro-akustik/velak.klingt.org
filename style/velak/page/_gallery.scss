@@ -224,7 +224,7 @@ div.gallery {
     }
     > ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 800px));
         //grid-template-rows: repeat(auto-fit, minmax(200px, 0.75fr));
         // column-gap: 1vw;
 

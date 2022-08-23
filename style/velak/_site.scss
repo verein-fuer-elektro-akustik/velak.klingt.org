@@ -61,6 +61,7 @@ body {
             line-height: 1em;
             margin: 0.5rem 0;
             white-space: nowrap;
+            font-weight: 500;
             #title-name { display: bloc; }
             #title-description { display: none; }
             @media screen and (min-width: breakpoint.$laptop) {
@@ -80,7 +81,7 @@ body {
         > nav {
             //letter-spacing: -0.0125em;
             margin: 0;
-                width: 100%;
+            width: 100%;
             > ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -109,96 +110,6 @@ body {
             }
         }
     }
-    /*
-    > header {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 0 calc(var(--spacing) * 1rem);
-        padding: calc(var(--spacing)*1rem) 0 calc(var(--spacing)*0.5rem) 0;
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        > h1, > nav  {
-            //font-size: 1.25rem;
-        }
-        h1 {
-            //all: unset;
-            //padding: 0.5rem 0;
-            //line-height: 1em;
-            font-size: 1.25rem;
-            display: flex;
-            //align-items: center;
-            font-weight: 600;
-            white-space: nowrap;
-            //padding: 0.5rem 0;
-            background: red;
-            #title-description {
-                display: none;
-            }
-            a {
-                background: greenyellow;
-            }
-            @media screen and (min-width: breakpoint.$laptop) {
-                #title-name { display: none; }
-                #title-description { display: block; }
-            }
-        }
-        > nav {
-            display: flex;
-            //align-items: center;
-            //width: 100%;
-            //font-size: 1.25rem;
-            vertical-align: top;
-            //vertical-align: top;
-            background: blue;
-            > ul {
-                display: flex;
-                flex-wrap: wrap;
-                //justify-content: space-between;
-                justify-content: flex-start;
-                background: darkorange;
-                @media screen and (min-width: breakpoint.$laptop) {
-                }
-                //margin: 0 calc(var(--spacing) * 1rem);
-                //padding: calc(var(--spacing) * 0.8rem) 0 calc(var(--spacing) * 0.5rem) 0;
-                list-style: none;
-                > li {
-                    display: inline-block;
-
-                    //padding: 0.5rem 0;
-                    //margin: 0 0.25rem;
-                    margin: 0;
-                    padding: 0;
-                    &.active {
-                        // width: 100%;
-                    }
-                    &:first-child {
-                        //font-weight: 700;
-                    }
-                    &:not(:last-child) {
-                        margin-right: 0.75rem;
-                    }
-                    //&:not(:last-child)::after {
-                        background: darkgoldenrod;
-                    > a {
-                        //padding: 0.5rem 0;
-                        margin: 0;
-                        text-transform: uppercase;
-                        background: yellow;
-                        &.active {
-                            //padding: 0.5rem 0.75rem;
-                            width: 100%;
-                            font-weight: 600;
-                            //letter-spacing: 0.1em;
-                            background: var(--f_med);
-                            color: var(--b_med);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    */
     > main {
         height: 100%;
         max-width: 100vw;
@@ -211,7 +122,10 @@ body {
             //padding: 0.5rem 1px; // HACK
             //padding-top: 1rem;
             &.content {
-                padding: 1rem 0; 
+                padding: 1rem 0;
+            }
+            header {
+                padding: 1rem 0;
             }
             //&.full {
             //&.page-full {
@@ -219,7 +133,7 @@ body {
                 padding: 1rem 0;
             }
             div.content {
-                max-width: 600px;
+                max-width: 800px;
                 //display: grid;
                 //grid-template-columns: repeat(auto-fill, minmax(max(320px),
                 //800px), 1fr);
@@ -229,6 +143,12 @@ body {
                 //max-width: 800px;
                 text-transform: lowercase;
                 @include print.url-after-link;
+                h1, h2, h2, h4   {
+                   margin: 2em 0 0.75em 0;
+                }
+                p {
+                    margin: 0 0 1em 0;
+                }
             }
         }
     }
