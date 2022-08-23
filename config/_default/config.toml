@@ -40,7 +40,6 @@ enableRobotsTXT = true
     priority = 0.5
 
 [taxonomies]
-    category = "categories"
     tag = "tags"
-    #artist = "artists"
-    #location = "locations"
+    artist = "artists"
+
