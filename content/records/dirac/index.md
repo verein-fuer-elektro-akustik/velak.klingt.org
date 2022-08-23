@@ -1,6 +1,7 @@
 ---
 title: dirac
-date: 2007
+date: 2007-01-01
+format: cd
 artists: [
     dirac
 ]

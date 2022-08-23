@@ -1,6 +1,10 @@
 ---
-title: in-asia
-date: 2004
+title: in asia
+date: 200
+format: cd
+label: ostblock-records
+artists: [
+    tiempo libre  
+]
 rss_ignore: true
-draft: true
 ---
