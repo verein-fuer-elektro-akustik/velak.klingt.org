@@ -1,0 +1,19 @@
+{{ $img := . }}
+{{ $tinyw := default "400x" }}
+{{ $smallw := default "800x" }}
+{{ $mediumw := default "1200x" }}
+{{ $largew := default "1600x" }}
+{{ $tiny := $img.Resize $tinyw }}
+{{ $small := $img.Resize $smallw }}
+{{ $medium := $img.Resize $mediumw }}
+{{ $large := $img.Resize $largew }}
+<img
+    alt="{{ .Title }}"
+    sizes="(min-width: 400px) 1200px, 100vw"
+    srcset='
+        {{ if ge $img.Width "400" }}{{ with $tiny.RelPermalink }}{{.}} 400w{{ end }}{{ end }}
+        {{ if ge $img.Width "800" }}{{ with $small.RelPermalink }}, {{.}} 800w{{ end }}{{ end }}
+        {{ if ge $img.Width "1200" }}{{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}{{ end }}
+        {{ if ge $img.Width "1600" }}{{ with $large.RelPermalink }}, {{.}} 1600w {{ end }}{{ end }}'
+    src="{{ $img.RelPermalink }}"
+/>
