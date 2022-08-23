@@ -1,5 +1,4 @@
 <!-- https://www.cgfootman.com/2020/06/06/add-responsive-images-to-a-hugo-site/ -->
-
 <div class="gallery">
     <!--{{ $images := where (.Resources.ByType "image") "Name" "!=" "cover.jpg" }}-->
     {{ $images := (.Resources.ByType "image") }}
@@ -10,7 +9,27 @@
         {{ range $img := $images }}
         <!-- { { if gt $img.Width $img.Height }} -->
         <!-- { { if lt $img.Width $img.Height }} -->
-        {{ $tinyw := default "400x" }}
+        <li>
+            <figure>
+                {{ partial "img" $img }}
+                <figcaption class="meta">
+                    <div class="exif">
+                    {{ with $img.Exif }}
+                        {{ with .Tags }}
+                            {{ with .DateTimeOriginal }}
+                                {{ if hasPrefix . "0000:00:00" }}
+                                {{ else }}
+                                    {{ (time .).Format "15:04" }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    </div>
+                    <a href="{{ $img.RelPermalink }}">SRC</a>
+                </figcaption>
+            </figure>
+        </li>
+        <!-- {{ $tinyw := default "400x" }}
         {{ $smallw := default "800x" }}
         {{ $mediumw := default "1200x" }}
         {{ $largew := default "1600x" }}
@@ -46,10 +65,10 @@
                         {{ end }}
                     {{ end }}
                     </div>
-                    <!--<a href="{{ $img.RelPermalink }}">SRC</a>-->
+                    <a href="{{ $img.RelPermalink }}">SRC</a>
                 </figcaption>
             </figure>
-        </li>
+        </li> -->
         {{ end }}
     </ul>
     {{ with .Params.photos }}

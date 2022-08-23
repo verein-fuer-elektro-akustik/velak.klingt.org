@@ -1,0 +1,24 @@
+<ol class="records">
+    <!-- {. { range where .Site.RegularPages "Section" "records" }} -->
+    {{ $records := .Scratch.Get "records" }}
+    {{ range $records }}
+    <li>
+        {{ $id := .File.ContentBaseName }}
+        {{ $img := .Params.image }}
+        {{ $basepath := .Permalink }}
+        {{ $path := "" }}
+        <a href="{{ .RelPermalink }}">
+        <!-- <h2>{{ .Title }}</h2> -->
+        {{ if $img }} 
+            {{ $path = print $basepath $img }}
+        {{ else }}
+            {{ $path = print .Site.BaseURL "/records/" $id "/velak-" (replace $id "-" "_") ".jpg" }}
+        {{ end }}
+        <figure>
+            <img src="{{ $path }}" alt="{{ print $id "-" "cover" }}">
+            <figcaption>{{- .Title -}}</figcaption>
+        </figure>
+        </a>
+    </li>
+    {{ end }}
+</ol>

@@ -1,0 +1,8 @@
+
+{{ $show_address := .Scratch.Get "show_address" | default true }}
+{{ with .Params.location }}
+<div class="location">
+    <i class="ic-location_on"></i>
+    <span>{{ . }}</span>
+</div>
+{{ end }}

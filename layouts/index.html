@@ -1,20 +1,21 @@
 {{ define "main" }}
-<article class="fill">
+<!-- <article class="page-fill"> -->
     {{ partial "svg/fq" . }}
-</article>
+<!-- </article> -->
 <script>
     const root = document.getElementsByTagNameNS('http://www.w3.org/2000/svg', 'svg')[0];
     const turb = document.getElementById("turbulence");
     let a, b; 
     function randomize() {
         a = 0.005 + Math.random() * 0.02;
+        //b = 0.004 +Math.random() * 0.005;
         b = 0.004 +Math.random() * 0.005;
         turb.setAttribute("baseFrequency",a+" "+b);
         //turb.setAttribute("numOctaves",1+Math.round(Math.random()*2));
         //console.log(a,b);
         // HACK force chrome redraw 
-        root.remove();
-        document.querySelector("main").append(root);
+        // root.remove();
+        // document.querySelector("main").append(root);
     }
     // //let b = 0.008;
     // let va = 0.000001 + Math.random()* 0.000005;
@@ -40,6 +41,6 @@
     // window.requestAnimationFrame(onFrame);
     //document.querySelector("svg").onclick = randomize;
     //window.setInterval(randomize, 2000);
-    randomize();
+    // randomize();
 </script>
 {{ end }}

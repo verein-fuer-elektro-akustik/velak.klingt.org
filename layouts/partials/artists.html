@@ -1,72 +1,55 @@
-{{ define "partials/inline-artist" }}
-
-{{ $id := replace . " " "_" }}
-<!--<a href="/artists/{{ $id }}">{{- . -}}</a>-->
-<!--<span>{{- . -}}</span>-->
-{{ return . }}
-{{ end }}
-
-{{ define "partials/inline-artists" }}
-<ul>
-    {{ range . }}
-    <li>{{ partial "inline-artist" . }}</li>
-    {{ end }}
-</ul>
-{{ end }}
-
-<!--{{ define "partials/aaa" }}-->
-<!--dddddddddddddddddddddddddd    -->
-<!--{{ site }}-->
-<!--{{ end }}-->
-
 <ul class="artists">
     {{ with .Params.artists }}
     {{ range . }}
     <li>
+        {{ $id := replace . " " "-" }}
+        {{ $path := print "/artists/" $id }}
+        {{ $page := $.Site.GetPage $path }}
+        <a href="{{ $page.RelPermalink }}">{{ . }}</a>
+
+
+<!--
         {{ $collab := split . "+" }}
         {{ if eq (len $collab) 1 }}
-        <span>{{- (index $collab 0) | markdownify -}}</span>
+            {{ $artist := index $collab 0 }}
+            {{ $id := replace $artist " " "-" }}
+            {{ $path := print "/artists/" $id }}
+            {{ $page := $.Site.GetPage $path }}
+            {{ with $page }}
+                <a href="{{ .RelPermalink }}">{{ $artist }}</a>
+            {{ else }}
+                <a href="{{ $path }}">{{ $artist }}</a>
+            {{ end }}
         {{ else }}
             <ul class="collab">
-            {{ range $collab }}
-                <li>{{- . | markdownify -}}</li>
-            {{ end }}
+                {{ range $collab }}
+                {{ $artist := trim . " " }} 
+                {{ $id := replace $artist " " "-" }}
+                {{ $path := (print "/artists/" $id) }}
+                {{ $page := $.Site.GetPage $path }}
+                <li>
+                {{ with $page }}
+                    <a href="{{ $page.RelPermalink}}">{{ $artist }}</a>
+                {{ else }}
+                    {{ warnf "MISSING ARTIST PAGE: %s" $id }}
+                    <a href="{{ $path }}" class="warning">{{ $artist }}</a>
+                {{ end }}
+                </li>
+                {{ end }}
             </ul>
-        {{ end }}
-        <!--{{ $artists := split . "+" }}-->
-        <!--{{ len $artists }}-->
-        <!--{{ if eq (len $artists) 0 }}-->
-        <!--<span>{{- (index $artists 0) | markdownify -}}</span>-->
-        <!--{{ else }}-->
-        <!--<ul>-->
-            <!--{{ range $artists }}-->
-            <!--<li>{{- . | markdownify -}}</li>-->
-            <!--{{ end }}-->
-        <!--</ul>-->
-        <!--{{ end }}-->
-
-        <!--{{ $html := (. | markdownify) }}-->
-        <!--{{ if eq . $html }}-->
-            <!--{{ $artists := split . "+" }}-->
-
-            <!--{{ if eq (len $artists) 0 }}-->
-            <!--<span>{{ index $artists 0 }}</span>-->
-            <!--{{ else }}-->
-            <!--<ul>-->
-                <!--{{ range $artists }}-->
-                <!--<li>{{ .  }}</li>-->
-                <!--{{ end }}-->
-            <!--</ul>-->
-            <!--{{ end }}-->
-        <!--{{ else }}-->
-            <!--{{ $artists := split $html "&" }}-->
-            <!--<ul>-->
-                <!--{{ range $artists }}-->
-                <!--<li>{{ . |  }}</li>-->
-                <!--{{ end }}-->
-            <!--</ul>-->
-        <!--{{ end }}-->
+        {{ end }} -->
     </li>
     {{ end }}
     {{ end }}
+    
+    {{ with .Params.collabs }}
+    <li>
+        <ul class="collab">
+        {{ range . }}
+            {{ split . "+" }}
+        {{ end }}
+        </ul>
+    </li>
+    {{ end }}
+    <li>
 </ul>

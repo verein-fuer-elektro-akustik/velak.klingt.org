@@ -4,7 +4,7 @@
 	{{ with .Title }}<h2><i class="ic-tag"></i>{{- . -}}</h2>{{ end }}
 	{{ if .Content }}<div class="content">{{- .Content | safeHTML -}}</div>{{ end }}
     </header>
-    {{ partial "program" . }}
+    {{ partial "list/program" . }}
 </article>
 {{ end }}
 

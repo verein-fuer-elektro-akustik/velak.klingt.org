@@ -1,0 +1,9 @@
+{{ if .Site.Params.dev }}
+<pre class="dev">
+SECTION: {{ .Section }}
+BUNDLETYPE: {{ .BundleType }}
+TERM: {{ . }}
+KIND: {{ .Kind }}
+</pre>
+{{ end }}
+

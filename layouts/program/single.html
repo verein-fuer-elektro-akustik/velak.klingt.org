@@ -3,25 +3,21 @@
 {{ end }}
 
 {{ define "main" }}
-{{ $id := .File.ContentBaseName }}
 <article data-page="{{ .File.ContentBaseName }}" class="event content">
-    
+
     <h1 class="title">{{- .Title -}}</h1>
     
-    <div class="meta">
-        {{ partial "datetime" . }}
-        {{ .Scratch.Set "address" true }}
-        {{ partial "location" . }}
-        {{ partial "tags" . }}
+    <div class="details meta">
+        {{ partial "meta/date" . }}
+        {{ .Scratch.Set "address" true }}{{ partial "meta/location" . }}
+        {{ partial "meta/tags" .Params.tags }}
     </div>
     
     <div class="artists">
-    {{ partial "artists" . }}
+        {{ partial "artists" . }}
     </div>
 
-    {{ with .Content }}
-    <div class="content">{{- . -}}</div>
-    {{ end }}
+    {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
 
     <div class="audiofiles">
         <ol>
@@ -36,7 +32,7 @@
 
     {{ partial "gallery" . }}
 
-    <!--<nav class="meta">{{ partial "nav_prev_next" . }}</nav>-->
+    <nav class="meta">{{ partial "nav_prev_next" . }}</nav>
 
 </article>
 {{ end }}

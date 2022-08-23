@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article>
+    <ul class="artists">
+        {{ range sort .Pages "Name" "asc" }}
+        <li class="artist">
+            <a href="{{ .Permalink }}">{{- .Name -}}</a>
+        </li>
+        {{ end }}
+	</ul>
+</article>
+{{ end }}
+
+

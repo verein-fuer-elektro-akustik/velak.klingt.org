@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="content artist">
+
+    <h1 class="title">{{- .Title -}}</h1>
+   
+    <div class="details meta">
+        {{ partial "meta/link" . }}
+        {{ partial "meta/email" .Params.email }}
+    </div>
+    
+    {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
+    
+    {{ partial "list/program" . }}
+    
+    {{ $id := replace (lower .Name) "-" " " }}
+    {{ $records := slice }}
+    {{ range where .Site.RegularPages "Section" "records" }}
+        {{ if in .Params.artists $id }}
+            {{ $records = $records | append . }}
+        {{ end }}
+    {{ end }}
+    {{ .Scratch.Set "records" $records }}
+    {{ partial "list/records" . }}
+
+    {{ partial "gallery" . }}
+
+ </article>
+{{ end }}
+

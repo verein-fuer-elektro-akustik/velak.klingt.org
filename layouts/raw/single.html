@@ -32,7 +32,7 @@
                 <pre class="error">missing frontmatter field</pre>
             {{end}}
             </td>
-            <td>{{ partial "tags" . }}</td>
+            <td>{{ partial "meta/tags" .Params.tags }}</td>
             <td>{{ .Params.image }}</td>
             <td>{{ with .Resources.ByType "image" }}{{ len . }}{{ end }}</td>
             <td>{{ .Params.photos }}</td>

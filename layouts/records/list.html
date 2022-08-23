@@ -1,29 +1,14 @@
 {{ define "main" }}
 <article class="records">
+
     <!--<header>-->
         <!--{{ with .Title }}<h2>{{- . -}}</h2>{{ end }}-->
     <!--</header>-->
-	{{ with .Content }}
-    <div class="content">{{- . -}}</div>
-    {{ end }}
-	<ol class="records">
-        {{ range .Pages }}
-        <li>
-            {{ $id := .File.ContentBaseName }}
-            <a href="{{ .Permalink }}">
-                <figure>
-                
-                    <img src="{{ $id }}/velak-{{ replace $id "-" "_" }}.jpg">
+	
+    {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
 
-                    <figcaption>
-                    {{- .Title  -}}
-                    </figcaption>
+    {{ .Scratch.Set "records" .RegularPages }}{{ partial "list/records" . }}
 
-                </figure>
-            </a>
-        </li>
-        {{ end }}
-	</ol>
 </article>
 {{ end }}
 

@@ -1,13 +1,27 @@
+{{ define "schema" }}
+{{ partial "schema/record" . }}
+{{ end }}
+
 {{ define "main" }}
-<article>
-    <header>
-        {{ if not .Params.hide_title }}
-        {{ with .Title }}
-        <h1>{{- . -}}</h1>
-        {{ end }}
-        {{ end }}
-    </header>
+<article class="record content">
+   
+    <h1 class="title">{{- .Title -}}</h1>
+
+    <div class="details meta">
+        {{ partial "meta/date" . }}
+        {{ partial "meta/format" . }}
+        {{ partial "meta/label" . }}
+        {{ partial "meta/tags" .Params.tags }}
+    </div>
+    
+    <div class="artists">{{ partial "artists" . }}</div>
+
     <div class="content">{{- .Content -}}</div>
+
+    {{ partial "gallery" . }}
+
+    <nav class="meta">{{ partial "nav_prev_next" . }}</nav>
+
 </article>
 {{ end }}
 

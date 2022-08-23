@@ -1,0 +1,17 @@
+{{ $show_artists := .Scratch.Get "show_artists" | default true }}
+<ol class="program" reversed>
+    {{ range where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
+    <li class="event">
+        <a href="{{ .RelPermalink }}" class="title" id="{{ .File.ContentBaseName }}">{{ .Title }}</a>
+        {{ partial "meta/date" . }}
+        {{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
+        <div class="artists">
+            {{ if $show_artists }}{{ partial "artists" . }}{{ end }}
+        </div>
+    </li>
+    {{ end }}
+    {{ if $show_artists }}
+    <script src="{{ (resources.Get "/script/program-list.js").Permalink }}" async></script>
+    {{ end }}
+</ol>
+

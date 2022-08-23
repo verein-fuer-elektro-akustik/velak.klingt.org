@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article>
+	<!-- {{ with .Title }}<h1><i class="ic-tag"></i>{{- . -}}</h1>{{ end }} -->
+	<!-- {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }} -->
+    <ul>
+        {{ range sort .Pages "Name" "asc" }}
+        <li>
+            <a href="{{ .Permalink }}">
+                <i class="ic-tag"></i>
+                <span>{{- .Name -}}</span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</article>
+{{ end }}
+

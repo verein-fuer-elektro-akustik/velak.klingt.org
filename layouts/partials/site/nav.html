@@ -1,15 +1,10 @@
-{{ $curPage := . }}
+{{ $type := .Type }}
 <ul>
     {{ range .Site.Menus.nav }}
-        {{ if or ( $curPage.IsMenuCurrent "nav" .) ( $curPage.HasMenuCurrent "nav" .) }}
-        <li class="active">
-            <a href="{{ .URL }}" class="active">{{- .Name | safeHTML -}}</a>
-        </li>
-        {{ else }}
-        <li>
-            <a href="{{ .URL }}" class="">{{- .Name | safeHTML -}}</a>
-        </li>
-        {{ end }}
+    {{ $active := eq .Name $type }}
+    <li{{if $active}} class="active"{{end}}>
+        <a href="{{ .URL }}"{{if $active}} class="active"{{end}}>{{- .Name -}}</a>
+    </li>
     {{ end }}
 </ul>
 
