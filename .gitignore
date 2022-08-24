@@ -20,6 +20,8 @@ static/style.css*
 *.ogg
 *.wav
 *.zip
+_*.*[0-9]
+_*.[0-9].*
 hugo_stats.json
 
 #content/program/*/*.JPG
