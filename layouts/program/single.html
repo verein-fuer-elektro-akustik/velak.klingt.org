@@ -7,15 +7,13 @@
 
     <h1 class="title">{{- .Title -}}</h1>
     
-    <div class="details meta">
+    <div class="details">
         {{ partial "meta/date" . }}
         {{ .Scratch.Set "address" true }}{{ partial "meta/location" . }}
         {{ partial "meta/tags" .Params.tags }}
     </div>
     
-    <div class="artists">
-        {{ partial "artists" . }}
-    </div>
+    <div class="artists">{{ partial "list/artists" . }}</div>
 
     {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
 

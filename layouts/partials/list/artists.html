@@ -27,7 +27,8 @@
                 {{ with $page }}
                     <a href="{{ .RelPermalink }}">{{ $artist }}</a>
                 {{ else }}
-                    {{ warnf "MISSING ARTIST PAGE: %s : %s" $id $cur_page.Title }}
+                    <!-- { { warnf "MISSING ARTIST PAGE: %s : %s" $id $cur_page.Title }} -->
+                    {{ warnf "%s" $id }}
                     <a href="{{ $path }}">{{ $artist }}</a>
                 {{ end }}
             </li>

@@ -6,8 +6,10 @@
     <h1 class="title">{{- .Title -}}</h1>
    
     <div class="details meta">
-        {{ partial "meta/link" . }}
         {{ partial "meta/email" .Params.email }}
+        {{ range .Params.links }}
+            {{ partial "meta/link" . }}
+        {{ end }}
     </div>
     
     {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}

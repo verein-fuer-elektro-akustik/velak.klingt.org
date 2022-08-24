@@ -1,7 +1,7 @@
-{{ with .Params.link }} 
-<div>
+{{ with . }} 
+<a href="{{ . }}" rel="external" class="link">
     <i class="ic-link"></i>
-    <a href="{{ . }}" rel="external">{{ . }}</a>
-</div>
+    <span>{{- . -}}</span>
+</a>
 {{ end }}
 

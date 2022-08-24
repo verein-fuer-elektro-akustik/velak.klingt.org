@@ -1,14 +1,7 @@
 {{ define "main" }}
 <article class="records">
-
-    <!--<header>-->
-        <!--{{ with .Title }}<h2>{{- . -}}</h2>{{ end }}-->
-    <!--</header>-->
-	
     {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
-
     {{ .Scratch.Set "records" .RegularPages }}{{ partial "list/records" . }}
-
 </article>
 {{ end }}
 

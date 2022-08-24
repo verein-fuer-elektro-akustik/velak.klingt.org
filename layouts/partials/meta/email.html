@@ -1,6 +1,6 @@
 {{ with . }}
-<div>
+<a href="mailto:{{ . }}" class="email">
     <i class="ic-alternate_email"></i>
-    <a href="mailto:{{ . }}">{{ . }}</a>
-</div>
+    <span>{{- . -}}</span>
+</a>
 {{ end }}

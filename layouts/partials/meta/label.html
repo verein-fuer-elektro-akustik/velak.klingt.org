@@ -1,7 +1,12 @@
-{{ with .Params.label }} 
-<div>
-    <i class="ic-link"></i>
-    <a href="{{ . }}" rel="external">{{ . }}</a>
+{{ with .Params.label }}
+{{ $name := .name }}
+<div class="meta label">
+    {{ with .url }}
+    <a href="{{ . }}" rel="external">{{- $name -}}</a>
+    {{ else }}
+    <span>{{- $name -}}</span>
+    {{ end }}
+    <i class="ic-language"></i>
 </div>
 {{ end }}
 
