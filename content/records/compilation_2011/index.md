@@ -2,7 +2,7 @@
 title: velak_rec 2007-2011
 date: 2011-01-01
 format: cd
-label: audition_records
+label: { name: "audition records" }
 artists: [
     a.d. martinz,
     caroline profanter,

@@ -2,7 +2,7 @@
 title: An ihren Daten sollt ihr sie erkennen
 date: 2007-01-01
 format: cd
-label: ostblock-records
+label: { name: ostblock-records, url: "http://ostblock.at/" }
 artists: [
     andreas stoiber,
     richard h.s.j. bruzek,

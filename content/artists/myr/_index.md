@@ -1,4 +1,4 @@
 ---
-title: Myr
-link: https://myr.klingt.org/
+title: "Myr"
+links: ["https://myr.klingt.org/"]
 ---

@@ -1,4 +1,4 @@
 ---
-title: Laura Mello
-link: https://lauramello.org
+title: "Laura Mello"
+links: [https://lauramello.org]
 ---

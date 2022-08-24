@@ -1,6 +1,8 @@
 ---
 title: "Frederic Stritter"
-link: https://stritter.audio
+links: [
+    "https://stritter.audio"
+]
 email: frederic@stritter.audio
 ---
 Lives and works in Vienna.  

@@ -1,3 +1,3 @@
-title: Limpe Fuchs
-link: http://limpefuchs.de/
+title: "Limpe Fuchs"
+links: [http://limpefuchs.de/]
 ---

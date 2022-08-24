@@ -6,7 +6,7 @@ artists: [
 ]
 collabs: [
 ]
-location: "fluc"
+location: "symposion_lindabrunn"
 tags: [test]
 ---
 This is just a future test event.  

@@ -1,5 +1,5 @@
 ---
 title: "Dieb13"
-link: https://dieb13.klingt.org/
+links: [https://dieb13.klingt.org/]
 ---
 

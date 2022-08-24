@@ -1,6 +1,6 @@
 ---
 title: "Fabian Lanzmaier"
-link: https://www.fabianlanzmaier.com
+links: [https://www.fabianlanzmaier.com]
 ---
 Fabian Lanzmaier works with sound and music, as a solo artist as well as in several formations combining sound with installations, theater, dance, moving image and live performances.
 

@@ -2,7 +2,7 @@
 title: kapo-ambro
 date: 2004-01-01
 format: cd
-label: "ostblock-records"
+label: { name: ostblock-records, url: "http://ostblock.at/" }
 artists: [
     kapo,
     ambro

@@ -1,3 +1,4 @@
 ---
-web: https://soundcloud.com/krachderroboter
+title: "Andreas Stoiber"
+links: [https://soundcloud.com/krachderroboter]
 ---

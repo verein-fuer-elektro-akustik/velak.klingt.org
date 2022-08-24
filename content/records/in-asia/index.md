@@ -2,7 +2,7 @@
 title: in asia
 date: 200
 format: cd
-label: ostblock-records
+label: { name: "ostblock-records", url: "http://ostblock.at/" }
 artists: [
     tiempo libre  
 ]

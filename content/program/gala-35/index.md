@@ -13,7 +13,7 @@ artists: [
 ]
 collabs: [
     fm einheit + velak orchester,
-    peter kutin + stefan fraungberger,
+    peter kutin + stefan fraunberger,
     manuel knapp + tim blechmann + silvia faessler,
     daniel lercher + bernhard schöberl + gloria damijan
 ]
