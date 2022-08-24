@@ -11,7 +11,6 @@ function init() {
     events.forEach(li => {
 
         //console.log('---------');
-        
         //const li = events[0];
         const container = li.querySelector('div.artists');
         const ul = container.querySelector('ul');
@@ -22,6 +21,7 @@ function init() {
         }
         const ulRect = ul.getBoundingClientRect();
         if(ulRect.width == 0) {
+            console.warn("ulRect = 0900", li);
             return;
         }
         
@@ -88,7 +88,6 @@ function init() {
             }
         }
         */
-            
         /*
         if (diff < 0) {
             diff = Math.abs(diff);
@@ -120,12 +119,11 @@ function init() {
 }
 
 window.addEventListener('load', _ => {
-    events = document.body.querySelectorAll('article > ol.program > li');
-    //init();
+    events = document.body.querySelectorAll('article > .data-list > li');
     init();
-    document.body.addEventListener('mousemove', e => {
-       //console.log(e); 
-    }, false );
+    // document.body.addEventListener('mousemove', e => {
+    //    //console.log(e); 
+    // }, false );
     window.addEventListener('resize', _ => {
         //update();
     }, false)
