@@ -1,4 +1,4 @@
-@use '../breakpoint';
+@use 'breakpoint';
 
 /*
 ul.gallery {
@@ -234,12 +234,12 @@ div.gallery {
         gap: 0.5rem;
         > li {
             min-width: 0;
-            background: var(--b_low);
+            // background: var(--b_low);
             transition: transform 0.2s;
             z-index: 10;
-            &:nth-child(3) {
-                // grid-column: span 2;
-            }
+            // &:nth-child(3) {
+            //     // grid-column: span 2;
+            // }
             > figure {
                 display: block;
                 width: 100%;
@@ -276,9 +276,9 @@ div.gallery {
                 //border: 1px solid var(--b_inv);
                 //box-shadow: 0 0 20px rgba(0,0,0,0.9);
                 > figure {
-                    > img {
-                        //object-fit: none;
-                    }
+                    // > img {
+                    //     //object-fit: none;
+                    // }
                     > figcaption {
                         transition: opacity 0.1s;
                         opacity: 1;

@@ -1,3 +1,95 @@
+@use 'typography';
+
+// Program/Records data list base style
+
+.data-list {
+    width: 100%;
+    overflow: hidden;
+    > li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--background);
+        > *:not(.artists) {
+            z-index: 10000;
+        }
+        > .meta {
+            display: flex;
+            gap: 0.5ch;
+            padding: 0.5ch 1ch;
+            height: 100%;
+            @include typography.meta(98%);
+            text-transform: uppercase;
+            background: var(--b_med);
+            color: var(--f_low);
+        }
+        > .title {
+            order: 2;
+            padding: 0 0.75ch;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            white-space: nowrap;
+            background: var(--background);
+        }
+        > .date {
+            order: 1;
+        }
+        > .artists {
+            // order: 4;
+            display: flex;
+            width: 100%;
+            color: var(--f_low);
+            overflow: hidden;
+            > ul.artists {
+                display: inline-flex;
+                white-space: nowrap;
+                text-transform: lowercase;
+                > li {
+                    margin: 0 0.125ch;
+                    &::after {
+                        content: ',';
+                        margin-right: 0.5ch;
+                    }
+                }
+            }
+        }
+    }
+}
+
+ul.artists {
+    text-transform: lowercase;
+    &, ul, li { 
+        list-style: none;
+    }
+    li {
+        line-height: 1em;
+    }
+    > li {
+        display: flex;
+        margin-bottom: 1rem;
+        > span.group {
+           margin-right: 0.5ch; 
+        }
+        > ul.collab {
+            display: flex;
+            //flex-wrap: wrap;
+            > li {
+                display: flex;
+                white-space: nowrap;
+                &:not(:last-child) {
+                    &::after {
+                        content: "+";
+                        margin: 0 0.25ch;
+                    }
+                }
+            }
+        }
+    }
+}
+
 article.content {
     display: flex;
     flex-direction: column;
@@ -28,5 +120,137 @@ article.content {
     }
     > nav {
         order: 10000;
+    }
+}
+
+//// --- Artists ----------------------------------------------------------------
+
+article.artist {
+    > .content {
+        order: 3;
+    }
+    > .program {
+        order: 3;
+    }
+    > .records {
+        order: 4
+    }
+    > .gallery {
+        order: 6;
+    }
+    nav.prev_next {
+        justify-self: flex-end;
+    }
+}
+
+
+//// --- Program ---------------------------------------------------------------
+
+ol.data-list.program {
+    > li {
+        > .artists {
+            order: 3;
+        }
+        > .location {
+            order: 4;
+        }
+    }
+}
+
+article.event {
+    > .details {
+        order: 2;
+        align-items: baseline;
+        //padding: 1rem 0;
+        > * {
+            display: flex;
+            // i {
+            //     // margin-right: 0.25ch;
+            // }
+            // &:not(:last-child) {
+            //     //margin-right: 1ch;
+            // }
+        }
+        // .date {
+        //     //display: inline-flex;
+        //     //flex-wrap: wrap;
+        //     //flex-direction: row;
+        // }
+        // .location {
+        //     //display: inline-flex;
+        // }
+    }
+    > .artists {
+        order: 3;
+    }
+    > .content {
+        order: 4;
+    }
+    > *.audiofiles {
+        order: 5;
+    }
+    > .gallery {
+        order: 6;
+    }
+    nav.prev_next {
+        justify-self: flex-end;
+    }
+}
+
+
+//// --- Records ---------------------------------------------------------------
+
+ol.data-list.records {
+    > li {
+        > .format {
+            order: 3;
+        }
+        > .label {
+            order: 5;
+        }
+        > .artists {
+            order: 4;
+        }
+    }
+}
+
+article.record {
+    > .artists {
+        order: 3;
+    }
+    > nav {
+        order: 10000;
+    }
+    // ol.records {
+        // display: flex;
+        // flex-wrap: wrap;
+    //     gap: 1rem;
+    //     column-gap: 2rem;
+    //     list-style: none;
+    //     > li {
+    //
+    //         img {
+    //             max-width: 140px;
+    //         }
+    //     }
+    // }
+}
+
+//// --- Stream ----------------------------------------------------------------
+
+article.stream {
+    display: grid;
+    place-items: center;
+    padding: 4rem;
+    canvas.spectrum {
+        //position: absolute;
+         //z-index: 100;
+        background: var(--f_low);
+        border-radius: 100%;
+        &.hidden {
+            cursor: default;
+            pointer-events: none;
+            display: none;
+        }
     }
 }

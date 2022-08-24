@@ -22,10 +22,9 @@ $thick: 1px;
 ::-webkit-scrollbar-corner {
     display: none !important;
 }
-::-webkit-scrollbar-track {
-    //background: var(--bg);
-
-}
+// ::-webkit-scrollbar-track {
+//     //background: var(--bg);
+// }
 ::-webkit-scrollbar-thumb {
     //border-top: 4px solid var(--fg);
     //border-bott
@@ -33,10 +32,10 @@ $thick: 1px;
     background: var(--f_med);
     //height: 20px;
     //border-left: 1px solid var(--bg);
-    &:hover {
-        // background: var(--acc);
-    }
-    &:active {
-        // background: var(--acc);
-    }
+    // &:hover {
+    //     // background: var(--acc);
+    // }
+    // &:active {
+    //     // background: var(--acc);
+    // }
 }

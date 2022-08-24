@@ -19,6 +19,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+$ic-cd: "\e90a";
+$ic-compact: "\e90a";
+$ic-disk: "\e90a";
+$ic-save: "\e90a";
+$ic-store: "\e90a";
 $ic-social-github: "\e909";
 $ic-git-pull-request: "\e904";
 $ic-git-merge: "\e905";
@@ -51,6 +57,7 @@ $ic-volume_down: "\e993";
 $ic-volume_mute: "\e994";
 $ic-volume_off: "\e995";
 $ic-volume_up: "\e996";
+$ic-fiber_new: "\e9a3";
 $ic-fiber_manual_record: "\e9a6";
 $ic-music_video: "\e9a8";
 $ic-email: "\e9c5";
@@ -76,6 +83,7 @@ $ic-keyboard_arrow_right: "\e920";
 $ic-keyboard_arrow_up: "\e921";
 $ic-speaker: "\eaaa";
 $ic-headset_off: "\eab6";
+$ic-adjust: "\eab7";
 $ic-audiotrack: "\eab9";
 $ic-brightness_1: "\e928";
 $ic-grain: "\e92e";
@@ -105,14 +113,18 @@ $ic-disc_full: "\eb84";
 $ic-person: "\ebc5";
 $ic-share: "\ebcb";
 $ic-favorite: "\ebfd";
+$ic-label: "\ec0b";
+$ic-language: "\ec0d";
 $ic-today: "\ec46";
 $ic-copyright: "\ec69";
 $ic-compare_arrows: "\ec71";
 $ic-date_range: "\ec72";
 $ic-watch_later: "\e95e";
 $ic-calendar_today: "\ec8c";
+$ic-label_important: "\ec8e";
 $ic-arrow_right_alt: "\ec98";
 $ic-all_inbox: "\ecd3";
+$ic-panorama_photosphere_select: "\ecf5";
 $ic-tag: "\ed0b";
 $ic-bolt: "\ed18";
 $ic-euro: "\ed22";
@@ -126,10 +138,35 @@ $ic-signal_cellular_0_bar: "\ee40";
 $ic-stop_circle: "\ee4e";
 $ic-wine_bar: "\ee69";
 $ic-coronavirus: "\e964";
+$ic-bandcamp: "\e90c";
 $ic-git-square: "\e902";
 $ic-git: "\e903";
 
-
+.ic-cd {
+  &:before {
+    content: $ic-cd; 
+  }
+}
+.ic-compact {
+  &:before {
+    content: $ic-compact; 
+  }
+}
+.ic-disk {
+  &:before {
+    content: $ic-disk; 
+  }
+}
+.ic-save {
+  &:before {
+    content: $ic-save; 
+  }
+}
+.ic-store {
+  &:before {
+    content: $ic-store; 
+  }
+}
 .ic-social-github {
   &:before {
     content: $ic-social-github; 
@@ -290,6 +327,11 @@ $ic-git: "\e903";
     content: $ic-volume_up; 
   }
 }
+.ic-fiber_new {
+  &:before {
+    content: $ic-fiber_new; 
+  }
+}
 .ic-fiber_manual_record {
   &:before {
     content: $ic-fiber_manual_record; 
@@ -413,6 +455,11 @@ $ic-git: "\e903";
 .ic-headset_off {
   &:before {
     content: $ic-headset_off; 
+  }
+}
+.ic-adjust {
+  &:before {
+    content: $ic-adjust; 
   }
 }
 .ic-audiotrack {
@@ -560,6 +607,16 @@ $ic-git: "\e903";
     content: $ic-favorite; 
   }
 }
+.ic-label {
+  &:before {
+    content: $ic-label; 
+  }
+}
+.ic-language {
+  &:before {
+    content: $ic-language; 
+  }
+}
 .ic-today {
   &:before {
     content: $ic-today; 
@@ -590,6 +647,11 @@ $ic-git: "\e903";
     content: $ic-calendar_today; 
   }
 }
+.ic-label_important {
+  &:before {
+    content: $ic-label_important; 
+  }
+}
 .ic-arrow_right_alt {
   &:before {
     content: $ic-arrow_right_alt; 
@@ -598,6 +660,11 @@ $ic-git: "\e903";
 .ic-all_inbox {
   &:before {
     content: $ic-all_inbox; 
+  }
+}
+.ic-panorama_photosphere_select {
+  &:before {
+    content: $ic-panorama_photosphere_select; 
   }
 }
 .ic-tag {
@@ -663,6 +730,11 @@ $ic-git: "\e903";
 .ic-coronavirus {
   &:before {
     content: $ic-coronavirus; 
+  }
+}
+.ic-bandcamp {
+  &:before {
+    content: $ic-bandcamp; 
   }
 }
 .ic-git-square {

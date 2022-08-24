@@ -61,7 +61,7 @@ body {
             line-height: 1em;
             margin: 0.5rem 0;
             white-space: nowrap;
-            font-weight: 500;
+            font-weight: 600;
             #title-name { display: bloc; }
             #title-description { display: none; }
             @media screen and (min-width: breakpoint.$laptop) {
@@ -285,9 +285,9 @@ dl.tags {
         font-style: normal;
         text-transform: uppercase;
         &:not(:last-child) {
-            &::after {
-                //content: ", ";
-            }
+            // &::after {
+            //     //content: ", ";
+            // }
             margin-right: 0.5ch;
         }
         > a {
@@ -303,9 +303,9 @@ nav.top {
 nav.prev_next {
     display: flex;
     gap: 1em;
-    &:hover {
-        //transform: scale(1.3);
-    }
+    // &:hover {
+    //     //transform: scale(1.3);
+    // }
     > a {
         font-family: var(--font-mono);
         //font-size: var(--text-sm);
@@ -316,9 +316,9 @@ nav.prev_next {
             //transform: scale(1.2);
             margin: 0 0.5em;
             transition: transform 0.12s;
-            &:hover::before {
-                //transform: scale(2); // TODO ?
-            }
+            // &:hover::before {
+            //     //transform: scale(2); // TODO ?
+            // }
         }
         > span {
             display: none;
