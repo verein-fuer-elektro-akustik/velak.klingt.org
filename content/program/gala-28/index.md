@@ -1,21 +1,20 @@
 ---
 title: "gala#28"
 date: 2007-12-11
-publishDate: 2007-12-11
 artists: [
     mathias markovski,
     christian friedrich,
     robert schwarz,
-    blechmann &  kutin & lercher,
     andreas stoiber,
-    peter seher & richard bruzek,
     stefan fraunberger,
-    knapp,
+    manuel knapp,
+]
+collabs: [
+    tim blechmann + peter kutin + daniel lercher,
+    peter seher + richard bruzek,
 ]
 location: "brut"
-photos:
 tags: [gala]
-recordings: []
 ---
 #### video screenings
 - alexander martinz

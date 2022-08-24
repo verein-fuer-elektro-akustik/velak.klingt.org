@@ -4,9 +4,11 @@ date: 2020-03-07
 location: "rhiz"
 artists: [
     simone b,
-    daniel lercher & vinzenz schwab,
     paule perrier,
     alan courtis
+]
+collabs: [
+    daniel lercher + vinzenz schwab,
 ]
 tags: [gala]
 photos: "Klemens Kohlweis"

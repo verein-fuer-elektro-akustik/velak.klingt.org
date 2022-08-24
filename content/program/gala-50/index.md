@@ -1,7 +1,6 @@
 ---
 title: "gala#50"
 date: 2010-03-24
-publishDate: 2010-03-24
 artists: [
     siegfried friedrich,
     vinzenz schwab,
@@ -18,11 +17,10 @@ artists: [
     richard bruzek,
     daniel lercher,
     helmut kleinfercher, 
-    felipe-wagner dossantos, 
+    felipe wagner dos santos, 
     matthias makowsky, 
     andreas stoiber, 
     susanna gartmayer,
-    a.o.
 ]
 description: "oratorium aus strom holz metal"
 location: "brut"

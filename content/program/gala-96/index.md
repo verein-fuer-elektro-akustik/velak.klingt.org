@@ -4,7 +4,9 @@ date: 2017-07-07
 artists: [
     eduardo triviño cely,
     hui ye,
-    stefan voglsinger & tobias leibetseder
+]
+collabs: [
+    stefan voglsinger + tobias leibetseder
 ]
 location: "centralgarden"
 tags: [gala]

@@ -1,11 +1,10 @@
 ---
 title: "gala#15"
 date: 2006-05-07
-publishDate: 2006-05-07
 artists: [
     stefan fraunberger,
     daniel lercher,
-    kutin peter,
+    peter kutin,
     lars stigler,
     le mat, 
     peter seher,
@@ -13,7 +12,5 @@ artists: [
     helmut kleinfercher,
 ]
 location: "fluc"
-photos:
 tags: [gala]
-recordings: []
 ---

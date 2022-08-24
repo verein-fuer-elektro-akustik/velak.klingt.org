@@ -5,8 +5,10 @@ location: "b5"
 artists: [
     laura mello,
     dario sanfilippo,
-    susanna gartmayer & misha marks & stefan voglsinger & thomas berghammer,
     christian schröder
+]
+collabs: [
+    susanna gartmayer + misha marks + stefan voglsinger + thomas berghammer,
 ]
 tags: [gala]
 photos: "Sophie Dvořák"

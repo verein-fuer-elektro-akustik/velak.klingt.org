@@ -1,13 +1,11 @@
 ---
 title: "gala#27"
 date: 2007-11-27
-publishDate: 2007-11-27
 artists: [
-    tim blechmann & rossi,
-    wagner felipe dos santos,
+    felipe wagner dos santos,
     alexander martinz,
     richard bruzek,
-    vinzent schwab,
+    vinzenz schwab,
     daniel lercher,
     stefan fraunberger,
     peter seher,
@@ -18,8 +16,9 @@ artists: [
     alexander martinz,
     florian kindlinger
 ]
+collabs: [
+    tim blechmann + rossi,
+]
 location: "brut"
-photos:
 tags: [gala]
-recordings: []
 ---

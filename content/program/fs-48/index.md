@@ -1,7 +1,6 @@
 ---
 title: "fs#48"
 date: 2008-11-16
-publishDate: 2008-11-16
 artists: [
     laura mello,
     helmut kleinfercher,

@@ -1,19 +1,19 @@
 ---
 title: "gala#40"
 date: 2009-02-24
-publishDate: 2009-02-24
 artists: [
     stefan fraunberger,
     vehlharkophonisches pfingstoratorium,
-    bruzek & kleinfercher & dos santos & zlanabitnig,
     bezirkshäuptling,
-    b. schoeberl & b. hammer,
-    liondialer & daniel lercher,
     matthias erian,
     instant reality
+]
+collabs: [
+    richard bruzek + helmut kleinfercher + felipe wagner dos santos + zlanabitnig,
+    bernhard schöberl + bernhard hammer,
+    liondialer + daniel lercher,
 ]
 location: "brut"
 photos: "tina vareško"
 tags: [gala]
-recordings: []
 ---

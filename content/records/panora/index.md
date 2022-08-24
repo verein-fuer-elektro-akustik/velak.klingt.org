@@ -3,7 +3,7 @@ title: panora
 date: 2006-10-01
 format: cd
 artists: [
-    kutin
+    peter kutin
 ]
 rss_ignore: true
 ---

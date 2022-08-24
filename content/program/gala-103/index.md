@@ -3,10 +3,12 @@ title: "gala#103"
 date: 2018-09-21
 location: "steinergasse8"
 artists: [
-    finn loxbo & anders vestergaard,
     noid,
-    isabella forciniti & patrick k.h.,
-    andreas 'krach' stoiber
+    andreas stoiber
+]
+collabs: [
+    finn loxbo + anders vestergaard,
+    isabella forciniti + patrick k.h.,
 ]
 tags: [gala]
 photos: "Klemens Kohlweis"

@@ -6,8 +6,10 @@ artists: [
     pierre-yves martel,
     matija schellander,
     marina vesic,
-    patrik redl & wolfgang musil,
     matthias erian
+]
+collabs: [
+    patrik redl + wolfgang musil,
 ]
 location: "moe"
 tags: [export]

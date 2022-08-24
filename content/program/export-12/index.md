@@ -2,7 +2,6 @@
 title: "export#12"
 date: 2016-01-07
 location: "venster99"
-description: ""
 artists: [
     alan courtis,
     manuel knapp,

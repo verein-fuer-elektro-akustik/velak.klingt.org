@@ -1,14 +1,13 @@
 ---
 title: "gala#11"
 date: 2006-02-14
-publishDate: 2006-02-14
 artists: [
     stefan fraunberger,
     richard bruzek,
-    felipe wagner dossantos,
+    felipe wagner dos santos,
     andreas stoiber, 
     dino spiluttini,
-    kutin peter,
+    peter kutin,
     stefan brunner
 ]
 location: "picknick am wegesrand"

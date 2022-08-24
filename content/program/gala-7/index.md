@@ -1,15 +1,14 @@
 ---
 title: "gala#7"
 date: 2005-06-27
-publishDate: 2005-06-27
 artists: [
     dirac,
     stefan fraunberger,
-    krach aka andreas stoiber,
-    stefan loewenstein & robert gruendler,
+    andreas stoiber,
+]
+collabs: [
+    stefan löwenstein + robert gruendler,
 ]
 location: "kuenstlerhauspassage"
-photos:
 tags: [gala]
-recordings: []
 ---

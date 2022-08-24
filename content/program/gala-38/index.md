@@ -4,13 +4,15 @@ date: 2008-12-03
 artists: [
     dirac,
     alexander martinz,
-    bruzek & lercher & schwab,
-    tim blechmann & seiji murayama,
-    susanna gartmayer & stefan fraunberger & peter kutin,
-    glim & michaela grill,
     david grove,
 ]
+collabs: [
+    bruzek + daniel lercher + vinzenz schwab,
+    tim blechmann + seiji murayama,
+    glim + michaela grill,
+    susanna gartmayer + stefan fraunberger + peter kutin,
+]
 location: "brut"
-photos: "tina vareško & daniel lercher"
+photos: "tina vareško + daniel lercher"
 tags: [gala]
 ---

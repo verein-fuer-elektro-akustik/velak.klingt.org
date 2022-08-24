@@ -2,11 +2,13 @@
 title: "gala#93"
 date: 2017-02-05
 artists: [
-    michaela grill & andi berger,
-    thomas lehn & kjell bjorgeengen,
     ulla rauter,
-    veronika mayer & conny zenk,
-    peter kutin & flo kindlinger
+]
+collabs: [
+    michaela grill + andi berger,
+    thomas lehn + kjell bjorgeengen,
+    veronika mayer + conny zenk,
+    peter kutin + flo kindlinger
 ]
 location: "gudrunkino"
 tags: [gala]

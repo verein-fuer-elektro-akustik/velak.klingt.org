@@ -1,11 +1,13 @@
 ---
 title: "ayumu01.1"
 date: 2019-08-31
-location: "[bar ishee](http://www.bloc.jp/barisshee/), tokyo"
+location: "bar ishee, tokyo"
 artists: [
-    frederic stritter & yuji ishihara,
-    fabian lanzmaier,
-    doris pollhammer & nina bauer & yuji ishihara
+    fabian lanzmaier
+]
+collabs: [
+    frederic stritter + yuji ishihara,
+    doris pollhammer + nina bauer + yuji ishihara
 ]
 tags: [ayumu]
 ---

@@ -1,17 +1,16 @@
 ---
 title: "gala#29"
 date: 2008-01-22
-publishDate: 2008-01-22
 artists: [
-    erian & kutin & fraunberger & lercher & kindlinger,
     sascha neudeck,
     andreas stoiber,
+]
+collabs: [
+    matthias erian + peter kutin + stefan fraunberger + daniel lercher + florian kindlinger,
     me + laminadyz
 ]
 location: "brut"
-photos:
 tags: [gala]
-recordings: []
 ---
 #### tape music
 - alexander martinz : "captain america"

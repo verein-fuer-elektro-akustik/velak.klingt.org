@@ -1,18 +1,15 @@
 ---
 title: "gala#24"
 date: 2007-04-10
-publishDate: 2007-04-10
 artists: [
     manuel knapp,
-    Kutin Peter,
-    soon I/O,
+    peter kutin,
+    soon i/o,
     manuel knapp,
     laura mello
 ]
 location: "dietheater"
-photos:
 tags: [gala]
-recordings: []
 ---
 screening: "accelerated lines " by manuel knapp	aut
  	 

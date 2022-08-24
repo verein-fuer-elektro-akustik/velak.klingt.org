@@ -5,8 +5,10 @@ location: "echoraeume"
 artists: [
     chris janka,
     anna sophie adelt,
-    miriam ragam & barbara wilding & vinzenz schwab,
     shayan assadi,
+]
+collabs: [
+    miriam ragam + barbara wilding + vinzenz schwab,
 ]
 tags: [gala,echoraeume]
 ---

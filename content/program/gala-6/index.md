@@ -1,16 +1,13 @@
 ---
 title: "gala#6"
 date: 2005-02-02
-publishDate: 2005-02-02
 artists: [
-    vinzent schwab,
+    vinzenz schwab,
     helmut kleinfercher,
-    dino spiluttini	git.
+    dino spiluttini,
     peter seher,
     daniel lercher,
 ]
 location: "fluc"
-photos:
 tags: [gala]
-recordings: []
 ---

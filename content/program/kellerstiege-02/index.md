@@ -3,10 +3,10 @@ title: "kellerstiege#2"
 date: 2009-04-16
 location: "garnison"
 artists: [
+    mamoru okuno
+]
+collabs: [
+    seijiro murayama + tim blechmann,
 ]
 tags: [kellerstiege]
-recordings: [
-]
 ---
-- seijiro murayama & tim blechmann (JP, D) (snaredrum, microphones, laptop)
-- mamoru okuno (JP) (sound objects, microphone) 

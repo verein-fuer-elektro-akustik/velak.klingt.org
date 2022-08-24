@@ -1,15 +1,15 @@
 ---
 title: "gala#69"
 date: 2012-05-22
-publishDate: 2012-05-22
 artists: [
-    Mário Del Nunzio & Vinzenz Schwab,
     Caroline Profanter,
-    Peter Marsh & Conor Curran & Paul May & Wei-ya Lin,
     Leo Bettinelli
+]
+collabs: [
+    Mário Del Nunzio + Vinzenz Schwab,
+    Peter Marsh + Conor Curran + Paul May + Wei-ya Lin,
 ]
 location: "brut"
 photos: "edward chapon"
 tags: [gala]
-recordings: []
 ---

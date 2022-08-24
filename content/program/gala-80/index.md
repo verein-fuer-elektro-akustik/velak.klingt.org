@@ -2,14 +2,16 @@
 title: "gala#80"
 date: 2013-12-05
 artists: [
-    claudia cervenca & daniel mayer,
-    vinzenz schwab & manon bancsich,
-    eric arn & stefan kushima & vanessa arn,
-    xavier lopez & bryan eubanks,
-    matthias erian & howool baek,
     katharina klement,
     patrick lechner,
     velharmonisches orchester
+]
+collabs: [
+    claudia cervenca + daniel mayer,
+    vinzenz schwab + manon bancsich,
+    eric arn + stefan kushima + vanessa arn,
+    xavier lopez + bryan eubanks,
+    matthias erian + howool baek,
 ]
 location: "brut"
 tags: [gala,special]

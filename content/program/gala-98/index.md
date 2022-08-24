@@ -9,7 +9,6 @@ artists: [
 ]
 location: "garnison"
 tags: [gala]
-photos: ""
 ---
 doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€

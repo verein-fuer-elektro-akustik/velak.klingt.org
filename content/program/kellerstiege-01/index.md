@@ -4,9 +4,9 @@ date: 2009-03-24
 location: "garnison"
 artists: [
 ]
-tags: [kellerstiege]
-recordings: [
+collabs: [
+    peter kutin + stefan fraunberger,
+    george cremaschi + matthew ostrowski
 ]
+tags: [kellerstiege]
 ---
-- kutin peter & stefan fraunberger (AT) (electronics, doublebass)
-- KRK (george cremaschi & matthew ostrowski) (electronics, double bass) (USA) 

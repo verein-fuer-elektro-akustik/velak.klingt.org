@@ -6,9 +6,11 @@ description: "Velak goes Lindabrunn II"
 artists: [
     Aki Traar,
     Hui Ye,
-    Roy Culbertson III + Lucas Henao,
     Julia Zastava,
     Veronika Mayer,
+]
+collabs: [
+    Roy Culbertson III + Lucas Henao,
 ]
 ---
 open doors 17:00 / [directions](http://www.symposion-lindabrunn.at/?page_id=55)

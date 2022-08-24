@@ -7,6 +7,14 @@ artists: [
     Christian Rainer,
     Florian Fennes,
     Matthias Koch,
+    peter kutin,
+    tim blechmann,
+    daniel lercher,
+    bernhard schöberl,
+    gloria damijan
+]
+collabs: [
+    stefan fraunberger + manuel knapp,
 ]
 tags: [rec]
 recordings: [
@@ -14,14 +22,3 @@ recordings: [
     https://archive.org/download/velak_rec00/lsp_velakrec00_2.mp3
 ]
 ---
-### pdt
-- kutin peter (laptop)  
-- tim blechmann (laptop)  
-- daniel lercher (cymbal)  
-- stefan fraunberger & manuel knapp
-- (santouri & analoge devices)
-
-### lsd
-- bernhard schoeberl (git)
-- gloria damijan (piano)
-- daniel lercher (laptop)

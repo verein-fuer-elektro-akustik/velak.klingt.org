@@ -1,11 +1,10 @@
 ---
 title: "gala#12"
 date: 2006-02-15
-publishDate: 2006-02-15
 artists: [
     dirac,
     richard bruzek,
-    felipe wagner dossantos,
+    felipe wagner dos santos,
     stefan fraunberger,
     andreas stoiber,
     peter seher

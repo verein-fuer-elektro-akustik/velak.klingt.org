@@ -3,16 +3,10 @@ title: "rec#5"
 date: 2009-10-07
 location: "garnison"
 artists: [
-    Philip Leitner (piano, electronics),
-    Christian Rainer (vocals),
-    Florian Fennes (bariton saxophon),
-    Matthias Koch (drums),
+    Philip Leitner,
+    Christian Rainer,
+    Florian Fennes,
+    Matthias Koch,
 ]
 tags: [rec]
-recordings: [
-]
 ---
-- Philip Leitner (piano, electronics)
-- Christian Rainer (vocals)
-- Florian Fennes (bariton saxophon)
-- Matthias Koch (drums)

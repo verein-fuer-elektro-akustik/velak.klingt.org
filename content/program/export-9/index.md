@@ -2,12 +2,14 @@
 title: "export#9"
 date: 2015-09-26
 artists: [
-    billy roisz & dieb13 & tamara wilhelm,
-    paul gründorfer & réka kutas & claudia larcher,
-    veronika mayer & conny zenk,
-    brigitta bödenauer & prszr,
-    irene pacini & caroline profanter,
     jerobeam fenderson
+]
+collabs: [
+    billy roisz + dieb13 + tamara wilhelm,
+    paul gründorfer + réka kutas + claudia larcher,
+    veronika mayer + conny zenk,
+    brigitta bödenauer + prszr,
+    irene pacini + caroline profanter,
 ]
 location: "rue d’arenbergstraat, brussels"
 tags: [export]

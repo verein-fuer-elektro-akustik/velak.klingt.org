@@ -2,12 +2,12 @@
 title: "gala#109"
 date: 2019-07-16
 location: "steinergasse8"
-
-
 artists: [
-    "[gabriela areal](https://soundcloud.com/misotosh) + [radu malfatti](http://www.radumalfatti.eu/radu_malfatti/start.html)",
-    "stefan nussbaumer + michael fischer",
     julian klien
+]
+collabs: [
+    stefan nussbaumer + michael fischer,
+    gabriela areal + radu malfatti
 ]
 tags: [gala]
 photos: "Nina Bauer"

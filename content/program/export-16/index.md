@@ -2,12 +2,13 @@
 title: "export#16"
 date: 2016-10-06
 location: steinergasse8
-description: ""
 artists: [
-    isabelle duthoit & franz hautzinger & arnold haberl & klaus filip,
-    zoro babel,
-    shayan assadi & paule perrier & harald stojan,
-    limpe fuchs & vinzenz schwab & caroline profanter
+    zoro babel
+]
+collabs: [
+    isabelle duthoit + franz hautzinger + arnold haberl + klaus filip,
+    shayan assadi + paule perrier + harald stojan,
+    limpe fuchs + vinzenz schwab + caroline profanter
 ]
 tags: [export]
 photos: "Edward Chapon"

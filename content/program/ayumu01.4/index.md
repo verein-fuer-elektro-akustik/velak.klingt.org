@@ -4,8 +4,10 @@ date: 2019-09-21
 location: "arcade and atami coast stage, tokyo"
 description: ""
 artists: [
-    anna lerchbaumer & andreas zißler,
     koichi makigami
+]
+collabs: [
+    anna lerchbaumer + andreas zißler
 ]
 tags: [ayumu]
 ---

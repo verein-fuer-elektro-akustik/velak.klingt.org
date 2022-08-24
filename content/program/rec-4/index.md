@@ -9,10 +9,4 @@ artists: [
     Daniel Lercher,
 ]
 tags: [rec]
-recordings: [
-]
 ---
-- Maja Osojnik (recorder, electr.,...)
-- Bernhard Schöberl (guitar)
-- Gobi Drab (recorder)
-- Daniel Lercher (electronics) 

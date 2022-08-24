@@ -18,7 +18,7 @@ artists: [
     maja osojnik,
     daniel lercher,
     gobi drab,
-    bernhard schoeberl
+    bernhard schöberl
 ]
 rss_ignore: true
 ---

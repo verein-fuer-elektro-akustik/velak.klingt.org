@@ -1,16 +1,14 @@
 ---
 title: "gala#49"
 date: 2010-02-23
-publishDate: 2010-02-23
 artists: [
-    z.b. & elffriede,
     robert piotrowicz,
     philip leitner,
-    klaus filip & seijiro murayama
+]
+collabs: [
+    z.b. + elffriede,
+    klaus filip + seijiro murayama
 ]
 location: "brut"
-photos: 
 tags: [gala]
-recordings: []
-image:
 ---

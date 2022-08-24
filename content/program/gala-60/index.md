@@ -1,7 +1,6 @@
 ---
 title: "gala#60"
 date: 2011-05-17
-publishDate: 2011-05-17
 artists: [
     siegfried friedrich,
     vinzenz schwab,
@@ -18,15 +17,13 @@ artists: [
     richard bruzek,
     daniel lercher,
     helmut kleinfercher, 
-    felipe-wagner dossantos, 
+    felipe wagner dos santos, 
     matthias makowsky, 
     andreas stoiber, 
-    susanna gartmayer,
-    a.o.
+    susanna gartmayer
 ]
 location: "brut"
 photos: "winnie küchl"
 tags: [gala,special]
-recordings: []
 ---
 mehrkanalTAPEkompositionen

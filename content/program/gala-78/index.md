@@ -3,7 +3,7 @@ title: "gala#78"
 date: 2013-06-04
 artists: [
     skylla,
-    christine schörkhuber,
+    christine schröckhuber,
     sergio sanchez,
     chrs galarreta,
 ]

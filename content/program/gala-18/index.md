@@ -1,19 +1,19 @@
 ---
 title: "gala#18"
 date: 2006-06-27
-publishDate: 2006-06-27
 artists: [
     tim blechmann,
-    daniel lercher & kutin peter,
-    matthias markovski,
+    matthias markovsky,
     wolfgang musil,
-    wagner felipe dossantos,
+    felipe wagner dos santos,
     peter seher
+]
+collabs: [
+    daniel lercher + peter kutin,
 ]
 location: "dietheater"
 photos: "Julia Tazreiter"
 tags: [gala]
-recordings: []
 ---
 performance: "soundwheel" by matthias markovski  
 wolfgang musil: "ich" (by christian loidl)  

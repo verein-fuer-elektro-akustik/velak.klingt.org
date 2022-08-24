@@ -2,11 +2,13 @@
 title: "gala#92"
 date: 2017-01-17
 artists: [
-    daniel lercher & agnes hvizdalek,
-    barbara togander & dieb13,
     hernán kerlleñevich,
     doris pollhammer,
     karolina jawad
+]
+collabs: [
+    daniel lercher + agnes hvizdalek,
+    barbara togander + dieb13,
 ]
 location: "garnison"
 tags: [gala]

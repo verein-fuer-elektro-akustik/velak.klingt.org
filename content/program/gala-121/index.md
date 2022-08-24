@@ -2,11 +2,9 @@
 title: "gala#121"
 date: 2022-09-10
 artists: [
-    stefan wunder,
-    martin uzi,
-    "[frederic stritter](https://stritter.audio)",
-    "[frederic stritter](https://stritter.audio) + someone else + anotherone",
-    aaa + bbb + ccc
+
+]
+collabs: [
 ]
 location: "fluc"
 tags: [test]

@@ -1,14 +1,15 @@
 ---
 title: "gala#13"
 date: 2006-03-07
-publishDate: 2006-02-14
 artists: [
-    kutin peter & lars stigler,
-    lars stigler
+    lars stigler,
     stefan fraunberger,
     richard bruzek,
-    alexander martins
+    alexander martinz,
     sahra bogner
+]
+collab: [
+    kutin peter + lars stigler,
 ]
 location: "dietheater"
 tags: [gala]

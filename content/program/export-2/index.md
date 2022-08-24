@@ -2,10 +2,12 @@
 title: "export#2"
 date: 2014-05-13
 artists: [
-    maierhofer & allgaier & tomasi, 
     paranoiz,
     stefan fraunberger,
     stefan nussbaumer
+]
+collabs: [
+    maierhofer + allgaier + tomasi, 
 ]
 location: "moe"
 tags: [export]

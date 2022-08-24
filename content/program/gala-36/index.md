@@ -1,20 +1,19 @@
 ---
 title: "gala#36"
 date: 2008-10-14
-publishDate: 2008-10-14
 artists: [
     dirac,
-    field-recordings,
-    kindlinger & kutin & lercher,
     laura mello	bra,
-    ora cogan & daniel lercher,
-    felipe wagner,
+    felipe wagner dos santos,
     tim blechmann,
     rrrr,
-    daurer & eigner & gerold
+]
+collabs: [
+    florian kindlinger + peter kutin + daniel lercher,
+    ora cogan + daniel lercher,
+    daurer + eigner + gerold
 ]
 location: "brut"
 photos: "tina vareško"
 tags: [gala]
-recordings: []
 ---

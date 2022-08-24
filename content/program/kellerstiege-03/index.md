@@ -4,10 +4,11 @@ date: 2009-04-30
 location: "garnison"
 artists: [
 ]
+collabs: [
+    george cremaschi + liz allbee,
+    mamoru, peter kutin, daniel lercher, philip leitner
+]
 tags: [kellerstiege]
-recordings: []
 ---
 meet & greet _ coded cultures festival
 
-- no sugar (george cremaschi & liz allbee ; USA)
-- quartet sonor [mamoru (JP), peter kutin, daniel lercher, philip leitner (all AT)] 

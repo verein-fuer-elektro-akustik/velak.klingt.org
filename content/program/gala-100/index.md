@@ -2,7 +2,6 @@
 title: "gala#100"
 date: 2017-12-02
 artists: [
-    niklas adam & daniel lercher,
     stefan fraunberger,
     nava hemyari,
     katharina klement,
@@ -12,6 +11,9 @@ artists: [
     günther rabl,
     jhidden shards,
     velharmonisches orchester
+]
+collabs: [
+    niklas adam + daniel lercher,
 ]
 location: steinergasse8
 tags: [gala]

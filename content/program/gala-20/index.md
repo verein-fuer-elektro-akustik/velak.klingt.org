@@ -6,9 +6,9 @@ artists: [
     stefan brunner,
     stefan fraunberger,
     daniel lercher,
-    kutin peter,
+    peter kutin,
     peter seher,
-    felipe wagner dossantos
+    felipe wagner dos santos,
     florian kindlinger
 ]
 location: "fluc"

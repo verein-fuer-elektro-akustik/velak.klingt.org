@@ -13,15 +13,17 @@ artists: [
     falon cañon,
     victor mazon,
     juan carlos pellegrino,
-    juan betancurth & daniel neumann,
-    martina moro & fabian lanzmaier,
     brigitte hart,
-    fabian lanzmaier & martina moro,
     conrad burnham,
     felix blume,
-    betancurth & neumann,
     gudinni cortina,
     özcan ertek,
+]
+collabs: [
+    juan betancurth + daniel neumann,
+    martina moro + fabian lanzmaier,
+    fabian lanzmaier + martina moro,
+    betancurth + neumann,
 ]
 location: "radar"
 recordings: [

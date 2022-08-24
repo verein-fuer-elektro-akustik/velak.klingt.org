@@ -5,11 +5,12 @@ artists: [
     Werner Kodytek,
     Wizard Ashdod,
     Stefan Fraunberger,
-    Thomas Lehn & Tiziana Bertoncini,
+]
+collabs: [
+    Thomas Lehn + Tiziana Bertoncini,
 ]
 location: "brut"
 tags: [gala]
-image: ""
 photos: "Edward Chapon"
 ---
 doors: 7pm / begin: 8pm (sharp!)  

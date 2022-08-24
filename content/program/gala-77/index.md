@@ -3,10 +3,12 @@ title: "gala#77"
 date: 2013-05-21
 artists: [
     hannes lingens,
-    caroline profanter & ingrid schmoliner,
     paul gründorfer,
     her mit der frucht,
-    martin siewert & dieb13
+]
+collabs: [
+    caroline profanter + ingrid schmoliner,
+    martin siewert + dieb13
 ]
 location: "brut"
 tags: [gala]

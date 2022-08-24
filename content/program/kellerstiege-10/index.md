@@ -11,5 +11,4 @@ artists: [
     gandolfo pagano
 ]
 tags: [kellerstiege]
-recordings: []
 ---

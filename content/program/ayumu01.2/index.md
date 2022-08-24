@@ -5,10 +5,12 @@ location: ", tokyo, japan"
 location: "otooto, tokyo"
 description: ""
 artists: [
-    anne-f jacques & makoto oshiro,
     frederic stritter,
     fabian lanzmaier,
-    doris pollhammer & nina bauer,
+]
+collabs: [
+    anne-f jacques + makoto oshiro,
+    doris pollhammer + nina bauer,
 ]
 tags: [ayumu]
 ---

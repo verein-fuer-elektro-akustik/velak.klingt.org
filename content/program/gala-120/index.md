@@ -6,7 +6,9 @@ artists: [
     anna lerchbaumer,
     fabian lanzmaier,
     Katharina Klement,
-    Paul Gründorfer & Mikko Savela
+]
+collabs: [
+    Paul Gründorfer + Mikko Savela
 ]
 gala: [gala]
 ---

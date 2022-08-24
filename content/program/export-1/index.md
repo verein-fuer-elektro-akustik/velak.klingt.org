@@ -2,10 +2,12 @@
 title: "export#1"
 date: 2014-03-25
 artists: [
-    lia mazzari & jonas gustafsson,
     andreas trobollowitsch,
-    alexander chernyshkov & marina poleukhina,
-    gobi drab & tamara friebel
+]
+collabs: [
+    lia mazzari + jonas gustafsson,
+    alexander chernyshkov + marina poleukhina,
+    gobi drab + tamara friebel
 ]
 location: "hut"
 tags: [export]

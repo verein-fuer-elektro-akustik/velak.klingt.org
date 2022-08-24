@@ -1,12 +1,13 @@
 ---
 title: "export#18"
 date: 2016-12-23
-location: "Instants Chavirés / Brasserie Bouchoule/ montreuil / paris"
-description: ""
+location: "Instants Chavirés, Brasserie Bouchoule, montreuil/paris"
 artists: [
     clément vercelleto,
-    léa drouet,
-    stefan tiefengraber & thomas tilly & möström & raymonde iv
+    léa drouet
+]
+collabs: [
+    stefan tiefengraber + thomas tilly + möström + raymonde iv
 ]
 tags: [export]
 photos: "Edward Chapon"

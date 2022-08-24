@@ -2,14 +2,15 @@
 title: "gala#72"
 date: 2012-12-11
 artists: [
-    richard bruzek & martina cizek,
-    kollektiv/rauschen,
-    matthias kranebitter & florian fennes,
+    kollektiv rauschen,
     tim blechmann
+]
+collabs: [
+    richard bruzek + martina cizek,
+    matthias kranebitter + florian fennes,
 ]
 location: "brut"
 tags: [gala]
-image: ""
 photos: "edward chapon"
 ---
 doors: 7pm / begin: 8pm (sharp!)  

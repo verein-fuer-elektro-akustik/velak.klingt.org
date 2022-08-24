@@ -2,7 +2,7 @@
 title: rrrr
 date: 2008-01-11
 artists: [
-    tim blechman
+    tim blechmann
 ]
 artwork: "manuel knapp"
 rss_ignore: true

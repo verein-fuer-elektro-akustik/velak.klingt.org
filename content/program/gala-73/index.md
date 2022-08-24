@@ -4,12 +4,11 @@ date: 2013-01-29
 artists: [
     Jörg Zemmler,
     Sorjuana re-enacted,
-    Wagner Felipe Dos Santos,
+    Felipe Wagner Dos Santos,
     Johannes Deutschmann
 ]
 location: "brut"
 tags: [gala]
-image: ""
 photos: "edward chapon"
 ---
 doors: 7pm / begin: 8pm (sharp!)  

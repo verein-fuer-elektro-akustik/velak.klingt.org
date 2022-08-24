@@ -3,9 +3,11 @@ title: "gala#79"
 date: 2013-10-15
 artists: [
     kristen roos,
-    manuel knapp & takashi makino,
-    brigitta bödenauer & susanna gartmayer,
     maria chavez
+]
+collabs: [
+    manuel knapp + takashi makino,
+    brigitta bödenauer + susanna gartmayer,
 ]
 location: "brut"
 tags: [gala]

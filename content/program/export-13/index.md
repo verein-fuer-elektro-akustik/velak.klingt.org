@@ -5,9 +5,11 @@ location: "garnison"
 description: ""
 artists: [
     ingrid schmoliner,
-    jd zazie &amp; billy roisz,
     black biuti,
     katharina klement
+]
+collabs: [
+    jd zazie + billy roisz,
 ]
 tags: [export]
 ---

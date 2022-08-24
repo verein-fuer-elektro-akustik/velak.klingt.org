@@ -9,10 +9,4 @@ artists: [
     Jakob Schneidewind,
 ]
 tags: [rec]
-recordings: [
-]
 ---
-- Florian Kindlinger (electronics)
-- Manon Bancich (piano)
-- Stefan Fraunberger (double bass)
-- Jakob Schneidewind (double bass)

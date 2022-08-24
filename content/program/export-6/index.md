@@ -2,10 +2,12 @@
 title: "export#6"
 date: 2015-03-17
 artists: [
-    poisonous frequencies (petr vrba - federsel - dd kern),
     sörés zsolt,
-    gueule populaire (bogner/kutas),
-    christine schoerkhuber
+    gueule populaire,
+    christine schröckhuber
+]
+collabs: [
+    petr vrba + federsel + dd kern,
 ]
 location: "das_werk"
 tags: [export]

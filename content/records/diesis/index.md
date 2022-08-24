@@ -10,7 +10,7 @@ artists: [
     tamara wilhelm,
     alexander martinz,
     stefan brunner,
-    stefan loewenstein,
+    stefan löwenstein,
     daniel lercher
 ]
 rss_ignore: true

@@ -7,7 +7,9 @@ artists: [
     klaus filip,
     wiener arp ensemble,
     st.off,
-    julius biswurm & xavier weydert
+]
+collabs: [
+    julius biswurm + xavier weydert
 ]
 tags: [gala]
 youtube: [oSQrv411264,KpsZ40Pc6fU]

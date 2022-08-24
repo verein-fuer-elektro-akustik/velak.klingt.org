@@ -2,6 +2,25 @@
 title: "VELAK & das Wiener Akusmonium"
 date: 2021-09-30
 artists: [
+    Ã…ke Parmerud,
+    Armando Balice,
+    Nana Dahlin,
+    Thomas Gorbach,
+    Angela Lau,
+    Frederic Stritter,
+    Dieter Kaufmann,
+    Research and Waves,
+    Patrick K.- H,
+    Sweet Spot,
+    Dilian,
+    Kisling,
+    Daniel Lercher,
+    Artjom
+]
+collabs: [
+    Katharina Arnold + Elisabeth Hillinger + Martina Claussen,
+    Engelsharfen + Teufelsgeigen,
+    Bruno Liberda + Günther Auer,
 ]
 location: "akbild"
 ---
@@ -14,7 +33,7 @@ location: "akbild"
 
 #### Freitag, 01.10.2021
 - Nana Dahlin
-- Engelsharfen+Teufelsgeigen (E+T)
+- Engelsharfen + Teufelsgeigen,
 - Thomas Gorbach
 - Angela Lau
 - Bruno Liberda + Günther Auer 

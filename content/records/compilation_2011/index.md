@@ -13,7 +13,7 @@ artists: [
     stefan fraunberger,
     vinzenz schwab,
     peter seher,
-    wagner felipe dos santos,
+    felipe wagner dos santos,
     velharmonisches orchester,
     andreas stoiber,
     tamara wilhelm,

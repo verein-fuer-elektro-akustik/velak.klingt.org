@@ -2,10 +2,12 @@
 title: "gala#81"
 date: 2014-02-01
 artists: [
-    keiko uenishi & bernd klug,
     adam donovan,
     thomas havlik,
     be-muvi
+]
+collabs: [
+    keiko uenishi + bernd klug,
 ]
 location: "brut"
 tags: [gala]

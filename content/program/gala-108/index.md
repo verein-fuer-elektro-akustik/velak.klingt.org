@@ -3,12 +3,14 @@ title: "gala#108"
 date: 2019-06-27
 description: "velak und ventil"
 artists: [
-    yuzu (milena castagna georgi),
+    milena castagna georgi,
     paul ebhart,
-    lentsi biografie (nina bauer & johanna schlömichler),
-    idklang (markus steinkellner),
-    a certain trio - frederic stritter & marcin morga & eugene ignashev,
+    markus steinkellner,
     rojin sharafi
+]
+collabs: [
+    nina bauer + johanna schlömichler,
+    frederic stritter + marcin morga + eugene ignashev
 ]
 location: "fluc"
 photos: "Doris Pollhammer & Nina Bauer" 

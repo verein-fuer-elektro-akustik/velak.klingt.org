@@ -3,18 +3,20 @@ title: "Cauliflower Sound Festival"
 date: 2022-04-13
 publishDate: 2022-04-13
 artists: [
-    Cosma Grosser,
-    Eduardo triviño Cely,
-    Jan Brocza,
-    Jennifer Posny & Jonas Hammerer,
-    Angela Lau interpretiert Philippe Mion Hope,
-    Kisling,
-    Mad Lane,
-    Vinzenz Schwab,
-    Frederic Stritter & Nina Bauer,
-    Thomas Gorbach,
-    Zahaikevych MISTO,
-    Gischt,
+    cosma grosser,
+    eduardo triviño cely,
+    jan brocza,
+    angela lau,
+    kisling,
+    mad lane,
+    vinzenz schwab,
+    thomas gorbach,
+    zahaikevych misto,
+    gischt,
+]
+collabs: [
+    jennifer posny + jonas hammerer,
+    frederic stritter + nina bauer
 ]
 location: "prospekthof"
 link: "https://theacousmaticproject.at/1912/"

@@ -1,17 +1,18 @@
 ---
 title: "gala#42"
 date: 2009-04-14
-publishDate: 2009-04-14
 artists: [
-    daniel lercher & peter kutin,
     michael rataj,
     TARO,
-    erian & schmoliner & schoenlieb,
-    a.d martinz, rhsjb,
+    a.d. martinz,
+    rhsjb,
+]
+collabs: [
+    matthias erian + ingrid schmoliner + schoenlieb,
+    daniel lercher + peter kutin,
 ]
 location: "brut"
 photos: "alexander martinz"
 tags: [gala]
-recordings: []
 image: "velak-gala-42.jpg"
 ---

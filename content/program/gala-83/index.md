@@ -1,12 +1,13 @@
 ---
 title: "gala#83"
 date: 2014-06-10
-publishDate: 2014-06-10
 artists: [
-    olivier di placido & sec,
-    veronika mayer & irene kepl,
     michael zacherl,
     diatribes
+]
+collabs: [
+    olivier di placido + sec,
+    veronika mayer + irene kepl,
 ]
 location: "brut"
 tags: [gala]

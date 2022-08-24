@@ -2,9 +2,11 @@
 title: "gala#45"
 date: 2009-10-20
 artists: [
-    florian kindlinger + peter kutin,
     dm@p,
     skylla,
+]
+collabs: [
+    florian kindlinger + peter kutin,
     hui ye + andreas stoiber,
 ]
 location: "brut"

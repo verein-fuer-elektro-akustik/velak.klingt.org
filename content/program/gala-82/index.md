@@ -2,10 +2,12 @@
 title: "gala#82"
 date: 2014-04-15
 artists: [
-    johanna forster & markus deutschmann,
     tim blechmann,
     rosi rehformen,
-    derek shirley & klaus filip
+]
+collabs: [
+    johanna forster + markus deutschmann,
+    derek shirley + klaus filip
 ]
 location: "brut"
 tags: [gala]

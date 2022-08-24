@@ -2,7 +2,6 @@
 title: "export#17"
 date: 2016-12-13
 location: "moe"
-description: ""
 artists: [
     plenum,
     velharmonisches orchester

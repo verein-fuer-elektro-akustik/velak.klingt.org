@@ -4,7 +4,9 @@ date: 2017-06-15
 artists: [
     ricarda cometa
     hren,
-    tim blechmann - yanjiu er
+]
+collabs: [
+    tim blechmann + yanjiu er
 ]
 location: "garnisongasse"
 tags: [gala]

@@ -4,8 +4,10 @@ date: 2016-10-16
 artists: [
     reni hofmüller,
     john richards,
-    petra dubach & mario van horrik,
-    torùn. grisi weikinger & joki oberhuber & roy rulbertson III
+]
+collabs: [
+    petra dubach + mario van horrik,
+    torùn. grisi weikinger + joki oberhuber + roy rulbertson III
 ]
 location: "garnison"
 tags: [gala]

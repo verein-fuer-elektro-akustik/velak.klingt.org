@@ -10,7 +10,7 @@ artists: [
     tamara wilhelm,
     daniel lercher,
     vinzenz schwab,
-    bernhard schoeberl
+    bernhard schöberl,
     stefan fraunberger,
     peter kutin,
     tim blechmann,
