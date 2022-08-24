@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $name := lower .Name }}
+{{ $id := replace $name "-" " " }}
 <article class="content artist">
 
     <h1 class="title">{{- .Title -}}</h1>
@@ -10,9 +12,26 @@
     
     {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
     
+    {{ $events_solo := where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
+
+    {{ $events_collab := slice }}
+    {{ range $event := where .Site.RegularPages "Section" "program" }}
+        {{ with .Params.collabs }}
+            {{ range . }}
+                    {{ $artists := split . "+" }}
+                    {{ range $artists }}
+                        {{ if eq (trim (lower .) " ") $name }}
+                            {{ $events_collab = $events_collab | append $event }}
+                        {{ end }}
+                    {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    
+    {{ $events := $events_solo | append $events_collab | uniq }}
+    {{ .Scratch.Set "events" $events }}
     {{ partial "list/program" . }}
     
-    {{ $id := replace (lower .Name) "-" " " }}
     {{ $records := slice }}
     {{ range where .Site.RegularPages "Section" "records" }}
         {{ if in .Params.artists $id }}

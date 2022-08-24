@@ -1,4 +1,6 @@
+{{ $cur_page := . }}
 <ul class="artists">
+    
     {{ with .Params.artists }}
     {{ range . }}
     <li>
@@ -6,50 +8,32 @@
         {{ $path := print "/artists/" $id }}
         {{ $page := $.Site.GetPage $path }}
         <a href="{{ $page.RelPermalink }}">{{ . }}</a>
-
-
-<!--
-        {{ $collab := split . "+" }}
-        {{ if eq (len $collab) 1 }}
-            {{ $artist := index $collab 0 }}
-            {{ $id := replace $artist " " "-" }}
-            {{ $path := print "/artists/" $id }}
-            {{ $page := $.Site.GetPage $path }}
-            {{ with $page }}
-                <a href="{{ .RelPermalink }}">{{ $artist }}</a>
-            {{ else }}
-                <a href="{{ $path }}">{{ $artist }}</a>
-            {{ end }}
-        {{ else }}
-            <ul class="collab">
-                {{ range $collab }}
-                {{ $artist := trim . " " }} 
-                {{ $id := replace $artist " " "-" }}
-                {{ $path := (print "/artists/" $id) }}
-                {{ $page := $.Site.GetPage $path }}
-                <li>
-                {{ with $page }}
-                    <a href="{{ $page.RelPermalink}}">{{ $artist }}</a>
-                {{ else }}
-                    {{ warnf "MISSING ARTIST PAGE: %s" $id }}
-                    <a href="{{ $path }}" class="warning">{{ $artist }}</a>
-                {{ end }}
-                </li>
-                {{ end }}
-            </ul>
-        {{ end }} -->
     </li>
     {{ end }}
     {{ end }}
     
     {{ with .Params.collabs }}
+    {{ range . }}
+    {{ $artists := split . "+" }}
     <li>
+        {{ $artists := split . "+" }}
         <ul class="collab">
-        {{ range . }}
-            {{ split . "+" }}
-        {{ end }}
+            {{ range $artists }}
+            {{ $artist := trim . " " }}
+            {{ $id := lower (replace $artist " " "-") }}
+            {{ $path := print "/artists/" $id }}
+            {{ $page := $.Site.GetPage $path }}
+            <li>
+                {{ with $page }}
+                    <a href="{{ .RelPermalink }}">{{ $artist }}</a>
+                {{ else }}
+                    {{ warnf "MISSING ARTIST PAGE: %s : %s" $id $cur_page.Title }}
+                    <a href="{{ $path }}">{{ $artist }}</a>
+                {{ end }}
+            </li>
+            {{ end }}
         </ul>
     </li>
     {{ end }}
-    <li>
+    {{ end }}
 </ul>
