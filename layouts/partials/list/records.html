@@ -7,8 +7,15 @@
             <i class="ic-album"></i>
         </div> -->
         <a href="{{ .RelPermalink }}" class="title">{{- .Title -}}</a>
+        {{ if .Params.image }}
+            {{ with .Resources.GetMatch .Params.image }}
+            <img src="{{ .Permalink }}">
+            {{ end }}
+        {{ end }}
+        {{ .Scratch.Set "date_format" "2006" }}
+        {{ .Scratch.Set "show_icon" false }}
         {{ partial "meta/date" . }}
-        {{ partial "meta/format" . }}
+        {{ partial "meta/record" . }}
         {{ partial "meta/label" . }}
         <div class="artists">{{ partial "list/artists" . }}</div>
     </li>

@@ -1,3 +1,7 @@
+{{ define "prerender" }}
+<link rel="prerender" href="{{ .Site.BaseURL }}/program/">
+{{ end }}
+
 {{ define "main" }}{{ partial "svg/fq" . }}
 <script>
     const svg = document.getElementsByTagNameNS(

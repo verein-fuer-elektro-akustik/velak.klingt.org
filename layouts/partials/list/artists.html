@@ -5,11 +5,12 @@
     {{ $id := lower (replace . " " "-" ) }}
     {{ $path := print "/artists/" $id  }} 
     {{ $page := $.Site.GetPage $path }}
+    {{ if eq $page nil }}
+        {{ warnf "ARTIST PAGE NOT FOUND %s" $path }}
+    {{ end }}
     <li>
-        {{ $id := replace . " " "-" }}
-        {{ $path := print "/artists/" $id }}
-        {{ $page := $.Site.GetPage $path }}
         <a href="{{ $page.RelPermalink }}">{{ . }}</a>
+        <!-- <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a> -->
     </li>
     {{ end }}
     {{ end }}

@@ -1,0 +1,17 @@
+{{ with .Params.format }} 
+<div class="meta format" title="{{.}}">
+    {{ $icon := "disc" }}
+    {{ if eq . "cd" }}
+        {{ $icon = "cd" }}
+    {{ else if eq . "digital" }}
+        {{ $icon = "file_download" }}
+    {{ else if eq . "bandcamp" }}
+        {{ $icon = "bandcamp" }}
+    {{ else if eq . "vinyl" }}
+        {{ $icon = "album" }}
+    {{ end }}
+    <i class="ic-{{ $icon }}"></i>
+    <!-- <span>{{- . -}}</span> -->
+</div>
+{{ end }}
+

@@ -12,9 +12,8 @@
         {{ .Scratch.Set "address" true }}{{ partial "meta/location" . }}
         {{ partial "meta/tags" .Params.tags }}
     </div>
-    
+   
     <div class="artists">{{ partial "list/artists" . }}</div>
-
 
     {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
 

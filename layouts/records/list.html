@@ -3,5 +3,6 @@
     {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
     {{ .Scratch.Set "records" .RegularPages }}{{ partial "list/records" . }}
 </article>
+<script src="{{ (resources.Get "/script/artists-list.js").Permalink }}" async></script>
 {{ end }}
 
