@@ -123,7 +123,8 @@ body {
             //padding: 0.5rem 1px; // HACK
             //padding-top: 1rem;
             &.content {
-                padding: 1rem 0;
+                // padding: 1rem 0;
+                padding: 0 0 4rem 0;
             }
             header {
                 padding: 1rem 0;
@@ -175,70 +176,12 @@ body {
             }
         }
         @media screen and (min-width: breakpoint.$tablet) {
-            justify-content: flex-start;
+            justify-content: flex-end;
         }
     }
     > aside {
         margin: 0 calc(var(--spacing) * 1rem);
     }
-    
-    /*
-    @media screen and (min-width: breakpoint.$phone) {
-        #res { background: red; }
-        > header, > footer {
-            margin: 0 1.5rem;
-        }
-        > header {
-            padding: 2rem 0 0.5rem 0;
-        }
-        > footer {
-            padding: 0.75rem 0 1rem 0;
-        }
-    }
-    @media screen and (min-width: breakpoint.$tablet) {
-        #res { background: green; }
-        > header, > footer {
-            //margin: 0 2rem;
-        }
-        > header {
-            padding: 3rem 0 0.5rem 0;
-        }
-        > footer {
-            padding: 0.75rem 0 2rem 0;
-            > div.meta {
-                justify-content: flex-start;
-            }
-        }
-    }
-    @media screen and (min-width: breakpoint.$laptop) {
-        #res { background: blue; }
-        > header, > footer {
-            margin: 0 4rem;
-        }
-        > header {
-            padding: 4rem 0 2rem 0;
-        }
-        > footer {
-            padding: 0.75rem 0 2.5rem 0;
-        }
-    }
-    @media screen and (min-width: breakpoint.$desktop) {
-        #res { background: yellow; }
-        > header, > footer {
-            margin: 0 5rem;
-        }
-        > header {
-            padding: 4rem 0 2rem 0;
-        }
-        > footer {
-            padding: 1rem 0 3rem 0;
-        }
-
-    }
-    @media screen and (min-width: breakpoint.$uhd) {
-       //--spacing: var(--space-xxl);
-    }
-    */
 }
 
 .nodisplay {
