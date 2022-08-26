@@ -7,7 +7,7 @@ collabs: [
     verena dürr + ulla rauter,
     irena tomazin + tim blechmann,
     thomas grill + enrico malatesta,
-    ddkern + michael strohmann
+    dd kern + michael strohmann
 ]
 location: "brut"
 photos: "winnie küchl"

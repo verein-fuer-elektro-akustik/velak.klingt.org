@@ -10,7 +10,7 @@ artists: [
     alexander martinz,
     stefan brunner,
     löwenstein,
-    lercher
+    daniel lercher
 ]
 location: "brut"
 tags: [gala]

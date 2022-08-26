@@ -4,7 +4,7 @@ date: 2007-04-10
 artists: [
     manuel knapp,
     peter kutin,
-    soon i/o,
+    soon io,
     manuel knapp,
     laura mello
 ]

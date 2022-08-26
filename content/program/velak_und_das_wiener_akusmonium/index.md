@@ -10,7 +10,7 @@ artists: [
     frederic stritter,
     dieter kaufmann,
     research and waves,
-    "patrick k.h.",
+    patrick k.h.,
     sweet spot,
     dilian,
     kisling,
@@ -24,31 +24,4 @@ collabs: [
 ]
 location: "akbild"
 ---
-#### Donnerstag, 30.09.2021
-- Studierende der Kunstuniversität Graz/IEM
-- Ã…ke Parmerud
-- Ensemble Hybrid Voices: Katharina Arnold, Elisabeth Hillinger, Martina Claussen
-- Armando Balice
-
-
-#### Freitag, 01.10.2021
-- Nana Dahlin
-- Engelsharfen + Teufelsgeigen,
-- Thomas Gorbach
-- Angela Lau
-- Bruno Liberda + Günther Auer 
-- Frederic Stritter
-
-
-#### Sonntag, 03.10.2021
-- Studierende der Bruckner Universität Linz
-- Dieter Kaufmann
-- Research and Waves
-
-#### Montag, 04.10.2021
-- Patrick K.- H.
-- Sweet Spot: Live-Improvisation € 4 Spielende + Licht
-- Dilian
-- Kisling
-- Daniel Lercher
-- Artjom
+open doors 19:00

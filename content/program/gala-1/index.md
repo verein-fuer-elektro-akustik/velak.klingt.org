@@ -8,7 +8,7 @@ artists: [
     peter seher
 ]
 collabs: [
-    phillip sollmann + helmut kleinfercher,
+    philip sollmann + helmut kleinfercher,
 ]
 tags: [gala]
 ---

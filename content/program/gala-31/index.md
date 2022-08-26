@@ -4,7 +4,7 @@ date: 2008-03-08
 artists: [
     elektronischer wildschweinschutz,
     guenther rabl,
-    myr bandschleifenstueck
+    myr 
 ]
 collabs: [
     tim blechmann + manuel knapp,

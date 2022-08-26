@@ -9,7 +9,7 @@ artists: [
     rojin sharafi
 ]
 collabs: [
-    nina bauer + johanna schlömichler,
+    nina bauer + johanna schlömicher,
     frederic stritter + marcin morga + eugene ignashev
 ]
 location: "fluc"

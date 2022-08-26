@@ -7,8 +7,8 @@ artists: [
     david grove,
 ]
 collabs: [
-    bruzek + daniel lercher + vinzenz schwab,
-    tim blechmann + seiji murayama,
+    richard bruzek + daniel lercher + vinzenz schwab,
+    tim blechmann + seijiro murayama,
     glim + michaela grill,
     susanna gartmayer + stefan fraunberger + peter kutin,
 ]

@@ -6,7 +6,7 @@ location: "symposion_lindabrunn"
 artists: [
     klaus filip,
     wiener arp ensemble,
-    st.off,
+    "st.off",
 ]
 collabs: [
     julius biswurm + xavier weydert

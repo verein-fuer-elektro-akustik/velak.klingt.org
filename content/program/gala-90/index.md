@@ -7,7 +7,7 @@ artists: [
 ]
 collabs: [
     petra dubach + mario van horrik,
-    torùn. grisi weikinger + joki oberhuber + roy rulbertson III
+    torùn. grisi weikinger + joki oberhuber + roy culbertson III
 ]
 location: "garnison"
 tags: [gala]

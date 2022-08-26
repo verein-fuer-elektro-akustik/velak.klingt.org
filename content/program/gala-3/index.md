@@ -6,7 +6,7 @@ artists: [
    feron, 
 ]
 collabs: [
-    bruzek + spillutini + stoiber
+    richard bruzek + spillutini + andreas stoiber
 ]
 location: "fluc"
 tags: [gala]

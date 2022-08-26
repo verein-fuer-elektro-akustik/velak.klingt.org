@@ -8,7 +8,7 @@ artists: [
 collabs: [
     seijiro murayama + axel dörner,
     teonas borsetto + georg wissa,
-    roy culbertson III + lucas henao serna
+    roy culbertson III + lucas henao 
 ]
 tags: [gala]
 photos: "Doris Pollhammer"

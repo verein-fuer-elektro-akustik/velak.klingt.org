@@ -8,7 +8,7 @@ collabs: [
     michaela grill + andi berger,
     thomas lehn + kjell bjorgeengen,
     veronika mayer + conny zenk,
-    peter kutin + flo kindlinger
+    peter kutin + florian kindlinger
 ]
 location: "gudrunkino"
 tags: [gala]

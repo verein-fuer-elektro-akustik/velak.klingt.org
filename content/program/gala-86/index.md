@@ -3,7 +3,7 @@ title: "gala#86"
 date: 2015-02-24
 artists: [
     Peter Ravel Seher,
-    Trans/Human,
+    Trans Human,
     Ulrich Rois
 ]
 collabs: [

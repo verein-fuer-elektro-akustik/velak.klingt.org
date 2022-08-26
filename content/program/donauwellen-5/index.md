@@ -6,7 +6,7 @@ artists: [
     andrea neumann
 ]
 collabs: [
-    maja osojnik + matija schellander
+    maja osojnik + matija schellander,
     wolfgang musil + stefan fraunberger
 ]
 location: "quietcue"
