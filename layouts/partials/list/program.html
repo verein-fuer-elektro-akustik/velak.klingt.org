@@ -1,6 +1,5 @@
 {{ $events := .Scratch.Get "events" }}
 {{ $show_artists := .Scratch.Get "show_artists" | default true }}
-
 <ol class="data-list program" reversed>
     {{ if eq $events nil }}
         {{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
@@ -14,8 +13,4 @@
     </li>
     {{ end }}
 </ol>
-
-{{ if $show_artists }}
-<script src="{{ (resources.Get "/script/artists-list.js").Permalink }}" async></script>
-{{ end }}
 

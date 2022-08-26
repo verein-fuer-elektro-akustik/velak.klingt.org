@@ -1,5 +1,14 @@
 {{ with . }}
-<dl class="tags">
+<ul class="meta tags nolist">
+    {{ range . }}
+    <li class="tag">
+        <a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1">
+            <i class="ic-tag"></i>{{- . -}}
+        </a>
+    </li>
+    {{ end }}
+</ul>
+<!-- <dl class="tags">
     <dt class="visuallyhidden">Tags</dt>
     {{ range . }}
     <dd class="tag">
@@ -9,5 +18,5 @@
         </a>
     </dd>
     {{ end }}
-</dl>
+</dl> -->
 {{ end }}

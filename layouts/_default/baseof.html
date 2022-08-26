@@ -93,7 +93,7 @@
             <nav class="site">{{ block "nav-site" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
             <!--<nav class="page">{{ block "nav-page" . }}{{ end }}</nav>-->
         </header>
-        <main data-section="{{ .Section }}">
+        <main {{ with .Section }}data-section="{{.}}"{{ end }} data-kind="{{ .Kind }}">
             {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
         </main>
 		<footer>

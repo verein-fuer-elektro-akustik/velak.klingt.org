@@ -1,5 +1,6 @@
 {{ $show_address := .Scratch.Get "show_address" | default true }}
 <div class="meta location">
+    <i class="ic-location_on"></i>
     {{ with .Params.location }}
         {{ with $loc := index $.Site.Data.locations . }}
             {{ with $loc.url }}
@@ -13,5 +14,4 @@
     {{ else }}
     <span>TBA</span>
     {{ end }}
-    <i class="ic-location_on"></i>
 </div>

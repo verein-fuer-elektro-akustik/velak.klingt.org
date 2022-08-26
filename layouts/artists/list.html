@@ -1,10 +1,9 @@
 {{ define "main" }}
-<article>
-    <header>
-	    {{ with .Title }}<h2>{{- . -}}</h2>{{ end }}
-    </header>
+<article class="content artists">
+    <!-- {{ .Page.BundleType }} -->
+	<!-- {{ with .Title }}<h2>{{- . -}}</h2>{{ end }} -->
 	{{ with .Content }}<div class="content">{{- . | safeHTML -}}</div>{{ end }}
-	<ul>
+	<ul class="artists">
         {{ range .Pages }}
         <li>
             <a href="{{ .Permalink }}">{{- .Title | safeHTML -}}</a>

@@ -1,8 +1,10 @@
 {{ $cur_page := . }}
 <ul class="artists">
-    
     {{ with .Params.artists }}
     {{ range . }}
+    {{ $id := lower (replace . " " "-" ) }}
+    {{ $path := print "/artists/" $id  }} 
+    {{ $page := $.Site.GetPage $path }}
     <li>
         {{ $id := replace . " " "-" }}
         {{ $path := print "/artists/" $id }}
@@ -27,8 +29,6 @@
                 {{ with $page }}
                     <a href="{{ .RelPermalink }}">{{ $artist }}</a>
                 {{ else }}
-                    <!-- { { warnf "MISSING ARTIST PAGE: %s : %s" $id $cur_page.Title }} -->
-                    {{ warnf "%s" $id }}
                     <a href="{{ $path }}">{{ $artist }}</a>
                 {{ end }}
             </li>

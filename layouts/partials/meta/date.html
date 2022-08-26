@@ -1,6 +1,6 @@
 {{ with .Params.date }}
 <time datetime="{{.}}" class="meta date">
-    <!-- <i class="ic-insert_invitation"></i> -->
+    <i class="ic-insert_invitation"></i>
     <span>{{ . | time.Format "2006/01/02" }}</span>
 </time>
 {{ end }}

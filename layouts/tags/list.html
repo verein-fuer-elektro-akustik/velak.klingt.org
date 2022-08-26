@@ -1,10 +1,9 @@
 {{ define "main" }}
-<article class="program">
-    <header>
+<article class="content">
 	{{ with .Title }}<h2><i class="ic-tag"></i>{{- . -}}</h2>{{ end }}
 	{{ if .Content }}<div class="content">{{- .Content | safeHTML -}}</div>{{ end }}
-    </header>
     {{ partial "list/program" . }}
+    <script src="{{ (resources.Get "/script/artists-list.js").Permalink }}" async></script>
 </article>
 {{ end }}
 

@@ -1,6 +1,5 @@
 {{ $records := .Scratch.Get "records" }}
 {{ $show_artists := .Scratch.Get "show_artists" | default true }}
-
 <ol class="data-list records">
     {{ range $records }}
     <li>
@@ -15,7 +14,3 @@
     </li>
     {{ end }}
 </ol>
-
-{{ if $show_artists }}
-<script src="{{ (resources.Get "/script/artists-list.js").Permalink }}" async></script>
-{{ end }}
