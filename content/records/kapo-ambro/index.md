@@ -7,6 +7,7 @@ artists: [
     kapo,
     ambro
 ]
+image: "velak-kapo_ambro.jpg"
 rss_ignore: true
 ---
 released 2004 on 'ostblock-records'

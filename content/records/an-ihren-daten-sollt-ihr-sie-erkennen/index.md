@@ -5,7 +5,7 @@ format: cd
 label: { name: ostblock-records, url: "http://ostblock.at/" }
 artists: [
     andreas stoiber,
-    richard h.s.j. bruzek,
+    richard bruzek,
     helmut kleinfercher,
     victor halbnarr,
     stefan fraunberger,
@@ -13,15 +13,16 @@ artists: [
     elektronischer wildschweinschutz,
     philip sollmann
 ]
+image: "velak-an_ihren_daten_sollt_ihr_sie_erkennen.jpg"
 rss_ignore: true
 ---
-* 01.andreas stoiber - zeitpunkt
-* 02.richard h.s.j. bruzek - vih
-* 03.helmut kleinfercher - blowjob
-* 04.victor halbnarr - kuhlbeag
-* 05.stefan fraunberger - symphonie für elektronenkürbisfloete
-* 06.peter seher - miniaturen 1-3
-* 07.elektronischer wildschweinschutz - stück ohne titel
-* 08.andreas stoiber - überlanger polyphoner klingelton
-* 09.philip sollmann - room 1
+1. andreas stoiber - zeitpunkt
+2. richard h.s.j. bruzek - vih
+3. helmut kleinfercher - blowjob
+4. victor halbnarr - kuhlbeag
+5. stefan fraunberger - symphonie für elektronenkürbisfloete
+6. peter seher - miniaturen 1-3
+7. elektronischer wildschweinschutz - stück ohne titel
+8. andreas stoiber - überlanger polyphoner klingelton
+9. philip sollmann - room 1
 

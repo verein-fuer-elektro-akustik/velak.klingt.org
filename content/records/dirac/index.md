@@ -5,8 +5,8 @@ format: cd
 artists: [
     dirac
 ]
+image: "velak-dirac.jpg"
 rss_ignore: true
-draft: true
 ---
 performed and arranged by dirac
 peter kutin/florian kindlinger/daniel lercher

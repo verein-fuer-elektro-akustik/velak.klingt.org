@@ -13,5 +13,6 @@ artists: [
     stefan löwenstein,
     daniel lercher
 ]
+image: "velak-diesis.jpg"
 rss_ignore: true
 ---

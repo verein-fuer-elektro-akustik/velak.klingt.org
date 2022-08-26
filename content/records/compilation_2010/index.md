@@ -9,6 +9,7 @@ artists: [
     katharina klement, wolfgang fuchs, rossi, dieb13,
     philip leitner, klaus filip, veronika mayer, noid
 ]
+image: "velak-compilation_2010.jpg"
 rss_ignore: true
 ---
 recordings from velak_rec-series 2010 at garnison7, vienna

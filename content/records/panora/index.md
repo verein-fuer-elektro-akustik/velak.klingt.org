@@ -5,5 +5,6 @@ format: cd
 artists: [
     peter kutin
 ]
+image: "velak-panora.jpg"
 rss_ignore: true
 ---

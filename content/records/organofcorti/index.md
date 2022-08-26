@@ -5,6 +5,7 @@ format: cd
 artists: [
     
 ]
+image: "velak-organofcorti.jpg"
 artwork: "lau mun leng"
 rss_ignore: true
 ---

@@ -20,6 +20,7 @@ artists: [
     gobi drab,
     bernhard schöberl
 ]
+image: "velak-compilation_2009.jpg"
 rss_ignore: true
 ---
 recordings from [velak_rec-series](/tags/rec) 2009 at garnison7, vienna

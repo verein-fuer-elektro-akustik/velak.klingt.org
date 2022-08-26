@@ -5,6 +5,7 @@ format: cd
 artists: [
     stefan fraunberger
 ]
+image: "velak-safara.jpg"
 rss_ignore: true
 ---
 Limited to 100 hand numbered copies CD-R in half handmade 3 panels digipack.

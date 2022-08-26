@@ -5,6 +5,7 @@ format: cd
 artists: [
     peter kutin
 ]
+image: "velak-menora.jpg"
 artwork: "ImGlück"
 rss_ignore: true
 ---

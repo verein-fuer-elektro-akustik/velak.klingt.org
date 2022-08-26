@@ -20,6 +20,7 @@ artists: [
     richard bruzek,
     helmut kleinfercher,
 ]
+image: "velak-compilation_2011.jpg"
 artwork: "Picture by Alexander D. Martinz. Design by Aniana Heras"
 rss_ignore: true
 draft: true

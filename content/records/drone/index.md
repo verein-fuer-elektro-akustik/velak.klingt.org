@@ -6,6 +6,7 @@ artists: [
     kwang,
     tim blechmann
 ]
+image: "velak-drone.jpg"
 rss_ignore: true
 ---
 recorded and edited by goh lee kwang & tim blechmann
