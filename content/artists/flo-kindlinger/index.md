@@ -1,5 +1,0 @@
----
-title: "flo kindlinger"
-links: []
----
-

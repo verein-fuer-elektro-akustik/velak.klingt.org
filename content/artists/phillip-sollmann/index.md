@@ -1,5 +1,0 @@
----
-title: "phillip sollmann"
-links: []
----
-

@@ -1,5 +1,0 @@
----
-title: "seiji murayama"
-links: []
----
-
