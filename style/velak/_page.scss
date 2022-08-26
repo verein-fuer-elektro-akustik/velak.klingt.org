@@ -41,12 +41,32 @@
             // order: 4;
             display: flex;
             width: 100%;
+            // height: 100%;
             color: var(--f_low);
+            // background: var(--b_low);
             overflow: hidden;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                height: 1.5em;
+                width: 2rem; //rem;
+                z-index: 1000;
+                //filter: blur(20px);
+            }
+            // &::before {
+            //     background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+            //     width: 1vw; //rem;
+            // }
+            //     &::after {
+            //         background: linear-gradient(-90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+            //         width: 5vw; //rem;
+            //         right: 0;
+            //     }
             > ul.artists {
                 display: inline-flex;
                 white-space: nowrap;
                 text-transform: lowercase;
+
                 > li {
                     margin: 0 0.125ch;
                     &::after {
@@ -113,7 +133,7 @@ article.content {
         font-size: 1.5rem;
     }
     > .content {
-        order: 4;
+        // order: 4;
     }
     > .gallery {
         order: 1000;
@@ -125,21 +145,41 @@ article.content {
 
 //// --- Artists ----------------------------------------------------------------
 
-article.artist {
-    > .content {
-        order: 3;
+main[data-section="artists"] {
+    // list
+    &[data-section="section"] {
+        > article.artist {
+            background: red;
+            > div.artists {
+                font-size: 1.5rem;
+            }
+        }
     }
-    > .program {
-        order: 3;
-    }
-    > .records {
-        order: 4
-    }
-    > .gallery {
-        order: 6;
-    }
-    nav.prev_next {
-        justify-self: flex-end;
+    // single
+    &[data-kind="page"] {
+        > article.artist {
+            > .title {
+                order: 1;
+            }
+            > .details {
+                order: 2;
+            }
+            > .content {
+                order: 3;
+            }
+            > .program {
+                order: 4;
+            }
+            > .records {
+                order: 5;
+            }
+            > .gallery {
+                order: 6;
+            }
+            nav.prev_next {
+                justify-self: flex-end;
+            }
+        }
     }
 }
 
@@ -214,26 +254,49 @@ ol.data-list.records {
     }
 }
 
-article.record {
-    > .artists {
-        order: 3;
+main[data-section="records"] {
+    &[data-section="section"] { // list
+        > article.record {
+            > .artists {
+                order: 3;
+            }
+            > nav {
+                order: 10000;
+            }
+            // ol.records {
+                // display: flex;
+                // flex-wrap: wrap;
+            //     gap: 1rem;
+            //     column-gap: 2rem;
+            //     list-style: none;
+            //     > li {
+            //
+            //         img {
+            //             max-width: 140px;
+            //         }
+            //     }
+            // }
+        }
     }
-    > nav {
-        order: 10000;
+    &[data-kind="page"] { // single
+        > article {
+            > .title {
+                order: 1;
+            }
+            > .details {
+                order: 2;
+            }
+            > .artists {
+                order: 3;
+            }
+            > .content {
+                order: 4;
+            }
+            > .gallery {
+                order: 5;
+            }
+        } 
     }
-    // ol.records {
-        // display: flex;
-        // flex-wrap: wrap;
-    //     gap: 1rem;
-    //     column-gap: 2rem;
-    //     list-style: none;
-    //     > li {
-    //
-    //         img {
-    //             max-width: 140px;
-    //         }
-    //     }
-    // }
 }
 
 //// --- Stream ----------------------------------------------------------------

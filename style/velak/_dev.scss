@@ -10,7 +10,7 @@ pre.dev {
     color: var(--b_med);
     z-index: 100000;
     &:hover {
-        background: var(--f_high);
+        background: white;
         opacity: 1;
     }
 }

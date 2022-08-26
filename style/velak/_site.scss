@@ -46,7 +46,7 @@ body {
     > header {
         //--hpad: 0.5rem;
         display: flex;
-        column-gap: 0.75em;
+        column-gap: 1.5rem;
         //justify-content: space-between;
         margin: 0 calc(var(--spacing) * 1rem);
         //padding: calc(var(--spacing)*1rem) 0 calc(var(--spacing)*1rem) 0;
@@ -89,6 +89,7 @@ body {
                 //justify-content: space-between;
                 //justify-content: space-around;
                 column-gap: 0.75em;
+                list-style: none;
                 > li {
                     padding: 0.5rem 0;
                     &.active {
@@ -160,7 +161,8 @@ body {
         padding: 0.75rem  0 calc(var(--spacing) * 0.5rem) 0;
         //padding: 4rem 0;
         white-space: nowrap;
-        overflow-x: hidden;
+        // overflow-x: hidden;
+        // background: red;
         > * {
             display: flex;
             overflow-x: hidden;
