@@ -7,7 +7,7 @@ artists: [
 collabs: [
     howool baek + matthias erian,
     heidrun schramm + nicolas wiese,
-    angelica castello + burkhard stangl
+    angélica castelló + burkhard stangl
 ]
 location: "brut"
 photos: "winnie küchl"

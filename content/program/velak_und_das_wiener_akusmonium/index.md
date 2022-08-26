@@ -2,20 +2,20 @@
 title: "VELAK & das Wiener Akusmonium"
 date: 2021-09-30
 artists: [
-    Ã…ke Parmerud,
-    Armando Balice,
-    Nana Dahlin,
-    Thomas Gorbach,
-    Angela Lau,
-    Frederic Stritter,
-    Dieter Kaufmann,
-    Research and Waves,
-    Patrick K.- H,
-    Sweet Spot,
-    Dilian,
-    Kisling,
-    Daniel Lercher,
-    Artjom
+    ã…ke parmerud,
+    armando balice,
+    nana dahlin,
+    thomas gorbach,
+    angela lau,
+    frederic stritter,
+    dieter kaufmann,
+    research and waves,
+    "patrick k.h.",
+    sweet spot,
+    dilian,
+    kisling,
+    daniel lercher,
+    artjom
 ]
 collabs: [
     Katharina Arnold + Elisabeth Hillinger + Martina Claussen,

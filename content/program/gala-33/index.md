@@ -3,7 +3,7 @@ title: "gala#33"
 date: 2008-05-06
 artists: [
     thomas grill,
-    angelica castello,
+    angélica castelló,
     neuer aesthetik der tonkunst (version II),
     peter seher,
     claire jones,

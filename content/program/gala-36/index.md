@@ -3,7 +3,7 @@ title: "gala#36"
 date: 2008-10-14
 artists: [
     dirac,
-    laura mello	bra,
+    laura mello,
     felipe wagner dos santos,
     tim blechmann,
     rrrr,

@@ -13,10 +13,12 @@ artists: [
     thomas gorbach,
     zahaikevych misto,
     gischt,
+    milena georgieva
 ]
 collabs: [
     jennifer posny + jonas hammerer,
-    frederic stritter + nina bauer
+    frederic stritter + nina bauer,
+    rdeča raketa + patrick k.h.
 ]
 location: "prospekthof"
 link: "https://theacousmaticproject.at/1912/"

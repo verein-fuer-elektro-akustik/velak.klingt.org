@@ -12,7 +12,7 @@ artists: [
     krach,
 ]
 collabs: [
-    fm einheit + velak orchester,
+    fm einheit + velharmonisches orchester,
     peter kutin + stefan fraunberger,
     manuel knapp + tim blechmann + silvia faessler,
     daniel lercher + bernhard schöberl + gloria damijan

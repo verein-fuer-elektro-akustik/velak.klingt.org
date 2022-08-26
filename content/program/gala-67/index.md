@@ -5,7 +5,7 @@ artists: [
     jörg piringer,
 ]
 collabs: [
-    rosi rehformen + patrick,
+    "rosi rehformen + patrick k.h.",
     pierre borel + derek shirley + hannes lingens,
     maja osojnik + matija schellander
 ]
