@@ -1,0 +1,5 @@
+---
+title: "fumiko nakato"
+links: []
+---
+

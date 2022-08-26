@@ -1,0 +1,5 @@
+---
+title: "özcan ertek"
+links: []
+---
+

@@ -1,0 +1,5 @@
+---
+title: "norman bates"
+links: []
+---
+

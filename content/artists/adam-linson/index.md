@@ -1,0 +1,5 @@
+---
+title: "adam linson"
+links: []
+---
+

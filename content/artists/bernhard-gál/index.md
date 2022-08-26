@@ -1,0 +1,5 @@
+---
+title: "bernhard gál"
+links: []
+---
+

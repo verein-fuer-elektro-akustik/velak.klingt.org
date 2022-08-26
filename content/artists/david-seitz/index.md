@@ -1,0 +1,5 @@
+---
+title: "david seitz"
+links: []
+---
+

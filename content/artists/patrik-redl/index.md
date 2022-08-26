@@ -1,0 +1,5 @@
+---
+title: "patrik redl"
+links: []
+---
+

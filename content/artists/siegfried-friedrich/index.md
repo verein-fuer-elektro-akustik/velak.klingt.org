@@ -1,0 +1,5 @@
+---
+title: "siegfried friedrich"
+links: []
+---
+

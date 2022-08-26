@@ -1,0 +1,5 @@
+---
+title: "gerhard daurer"
+links: []
+---
+

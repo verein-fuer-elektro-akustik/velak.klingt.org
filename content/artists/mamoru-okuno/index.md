@@ -1,0 +1,5 @@
+---
+title: "mamoru okuno"
+links: []
+---
+
