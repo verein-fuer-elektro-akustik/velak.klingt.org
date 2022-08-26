@@ -34,6 +34,9 @@ enableRobotsTXT = true
     #taxonomyTerm = ["HTML", "RSS"]
     #taxonomy = ["HTML", "RSS"]
 
+# [permalinks]
+#     program = '/:section/:year/:month/:filename/'
+
 [sitemap]
     changefreq = 'monthly'
     filename = 'sitemap.xml'
@@ -41,5 +44,5 @@ enableRobotsTXT = true
 
 [taxonomies]
     tag = "tags"
-    artist = "artists"
+    # artist = "artists"
 
