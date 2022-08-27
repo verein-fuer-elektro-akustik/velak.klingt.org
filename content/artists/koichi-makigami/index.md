@@ -1,5 +1,5 @@
 ---
 title: "koichi makigami"
-links: []
+links: [http://www.makigami.com/Event-e.html]
 ---
 

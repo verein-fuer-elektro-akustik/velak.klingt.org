@@ -1,5 +1,5 @@
 ---
 title: "hannes lingens"
-links: []
+links: [http://hanneslingens.de/]
 ---
 

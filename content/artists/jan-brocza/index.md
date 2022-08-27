@@ -1,5 +1,5 @@
 ---
 title: "jan brocza"
-links: []
+links: [http://wienmodern.at/2021-bio-jan-brocza-de]
 ---
 

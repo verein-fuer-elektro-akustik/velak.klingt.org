@@ -1,5 +1,5 @@
 ---
 title: "peter trabitzsch"
-links: []
+links: [http://www.galerien-thayaland.at/peter-trabitzsch/]
 ---
 

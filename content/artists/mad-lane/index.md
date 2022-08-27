@@ -1,5 +1,5 @@
 ---
 title: "mad lane"
-links: []
+links: [https://soundcloud.com/madestlane/sets]
 ---
 

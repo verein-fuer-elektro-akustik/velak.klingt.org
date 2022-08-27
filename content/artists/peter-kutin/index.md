@@ -1,5 +1,5 @@
 ---
 title: "peter kutin"
-links: ["https://www.kutin.xyz/"]
+links: ["https://www.kutin.xyz/","https://kutin.klingt.org/"]
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: "victor mazon"
-links: []
+links: [https://victormazon.com/home/]
 ---
 

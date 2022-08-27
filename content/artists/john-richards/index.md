@@ -1,5 +1,5 @@
 ---
 title: "john richards"
-links: []
+links: [http://www.jsrichards.com/]
 ---
 

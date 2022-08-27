@@ -1,5 +1,5 @@
 ---
 title: "florian kindlinger"
-links: []
+links: [http://kindlinger.klingt.org/]
 ---
 

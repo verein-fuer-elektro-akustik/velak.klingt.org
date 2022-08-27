@@ -1,5 +1,5 @@
 ---
 title: "vinzenz schwab"
-links: []
+links: [https://vinzenz.klingt.org/]
 ---
 

@@ -5,6 +5,7 @@ location: "fluc"
 artists: [
     arik kofranek,
     martina moro,
+    maurizio nardo,
     krach
 ]
 tags: [gala]

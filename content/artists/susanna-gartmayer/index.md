@@ -1,5 +1,5 @@
 ---
 title: "susanna gartmayer"
-links: []
+links: [https://klanggalerie.bandcamp.com/album/smaller-sad]
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: "makoto oshiro"
-links: []
+links: [https://soundcloud.com/makoto-oshiro]
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: "manuel knapp"
-links: []
+links: [http://knapp.klingt.org/,https://soundcloud.com/manuelknapp]
 ---
 

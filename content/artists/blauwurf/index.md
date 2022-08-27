@@ -1,5 +1,5 @@
 ---
 title: "blauwurf"
-links: []
+links: [http://blauwurf.at/]
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: "christian schröder"
-links: []
+links: [https://ckonrad.net/]
 ---
 

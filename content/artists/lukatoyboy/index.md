@@ -1,5 +1,5 @@
 ---
 title: "lukatoyboy"
-links: []
+links: [http://flavors.me/lukatoyboy]
 ---
 

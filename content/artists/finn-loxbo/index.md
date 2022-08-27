@@ -1,5 +1,5 @@
 ---
 title: "finn loxbo"
-links: []
+links: [https://www.giktrecords.com/releases/colors.html]
 ---
 

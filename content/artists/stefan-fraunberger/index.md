@@ -1,5 +1,5 @@
 ---
 title: "stefan fraunberger"
-links: []
+links: [https://stefan.fraunberger.at/]
 ---
 

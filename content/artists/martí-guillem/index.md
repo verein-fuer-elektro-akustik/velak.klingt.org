@@ -1,5 +1,5 @@
 ---
 title: "martí guillem"
-links: []
+links: [http://marti-net.blogspot.co.at/]
 ---
 

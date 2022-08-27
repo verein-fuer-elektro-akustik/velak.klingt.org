@@ -1,5 +1,5 @@
 ---
 title: "krach"
-links: []
+links: [http://www.knall.art/]
 ---
 

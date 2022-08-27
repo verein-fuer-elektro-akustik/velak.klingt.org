@@ -1,5 +1,5 @@
 ---
 title: "karl salzmann"
-links: []
+links: [https://www.karlsalzmann.com/]
 ---
 

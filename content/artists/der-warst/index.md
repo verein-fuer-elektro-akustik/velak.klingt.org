@@ -1,5 +1,5 @@
 ---
 title: "der warst"
-links: []
+links: [http://www.der-warst.de/]
 ---
 

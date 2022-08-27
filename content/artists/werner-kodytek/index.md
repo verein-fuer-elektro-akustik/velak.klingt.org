@@ -1,5 +1,5 @@
 ---
 title: "werner kodytek"
-links: []
+links: [http://kodytek.at/]
 ---
 

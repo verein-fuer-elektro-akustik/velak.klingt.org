@@ -1,5 +1,5 @@
 ---
 title: "krk"
-links: []
+links: [https://www.georgecremaschi.com/krk.html]
 ---
 

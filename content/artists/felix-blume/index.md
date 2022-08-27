@@ -1,5 +1,5 @@
 ---
 title: "felix blume"
-links: []
+links: [https://felixblume.com/bio/]
 ---
 

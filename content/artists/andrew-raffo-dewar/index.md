@@ -1,5 +1,5 @@
 ---
 title: "andrew raffo dewar"
-links: []
+links: [http://adewar.web.wesleyan.edu/]
 ---
 

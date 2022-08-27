@@ -2,7 +2,7 @@
 title: "gala#95"
 date: 2017-06-15
 artists: [
-    ricarda cometa
+    ricarda cometa,
     hren,
 ]
 collabs: [

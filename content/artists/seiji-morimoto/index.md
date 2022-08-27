@@ -1,5 +1,5 @@
 ---
 title: "seiji morimoto"
-links: []
+links: [http://urojiise.wixsite.com/seijiromurayama]
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: "yannick dauby"
-links: []
+links: [http://www.kalerne.net/yannickdauby/]
 ---
 

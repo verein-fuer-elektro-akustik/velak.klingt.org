@@ -1,5 +1,5 @@
 ---
 title: "özcan ertek"
-links: []
+links: [https://ozcanertek.com/]
 ---
 

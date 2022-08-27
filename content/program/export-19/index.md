@@ -7,7 +7,7 @@ artists: [
     kisling,
     manuel knapp,
     paul gründorfer,
-    dj karl salzmann,
+    karl salzmann,
 ]
 tags: [export]
 photos: "Doris Pollhammer"

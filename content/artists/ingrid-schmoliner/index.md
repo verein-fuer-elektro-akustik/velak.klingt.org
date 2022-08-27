@@ -1,5 +1,5 @@
 ---
 title: "ingrid schmoliner"
-links: []
+links: [http://ingridschmoliner.com/]
 ---
 

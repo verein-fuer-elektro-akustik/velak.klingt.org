@@ -1,5 +1,5 @@
 ---
 title: "michael fischer"
-links: []
+links: [https://m.fischer.wuk.at/,https://soundcloud.com/michaelfischerofficial/fluctuations-momentum-gallery]
 ---
 

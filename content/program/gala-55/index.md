@@ -8,7 +8,7 @@ artists: [
     stefan fraunberger
 ]
 collabs: [
-    tim blechmann + radu malfatt
+    tim blechmann + radu malfatti
 ]
 location: "brut"
 photos: "winnie küchl"

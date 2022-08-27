@@ -1,5 +1,5 @@
 ---
 title: "norman bates"
-links: []
+links: [https://soundcloud.com/normanbates/]
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: "arik kofranek"
-links: []
+links: [https://www.arikswebsite.at/]
 ---
 

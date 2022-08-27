@@ -1,5 +1,5 @@
 ---
 title: "georg wissa"
-links: []
+links: [https://soundcloud.com/antiduoto]
 ---
 

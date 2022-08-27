@@ -1,5 +1,5 @@
 ---
 title: "conrad burnham"
-links: []
+links: [http://conradburnham.com/]
 ---
 

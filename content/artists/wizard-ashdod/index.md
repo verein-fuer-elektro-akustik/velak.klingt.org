@@ -1,5 +1,5 @@
 ---
 title: "wizard ashdod"
-links: []
+links: [https://soundcloud.com/wizard-ashdod]
 ---
 

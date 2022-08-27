@@ -1,5 +1,5 @@
 ---
 title: "jejuno"
-links: []
+links: [https://urubutapes.bandcamp.com/album/jejuno]
 ---
 

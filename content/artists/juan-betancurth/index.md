@@ -1,5 +1,5 @@
 ---
 title: "juan betancurth"
-links: []
+links: [https://juanbetancurth.myportfolio.com/work]
 ---
 

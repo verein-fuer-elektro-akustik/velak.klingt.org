@@ -1,5 +1,5 @@
 ---
 title: "daniel neumann"
-links: []
+links: [http://danielneumann.org/]
 ---
 
