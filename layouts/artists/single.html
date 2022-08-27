@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{ $name := lower .Name }}
 {{ $id := replace $name "-" " " }}
-<script src="{{ (resources.Get "/script/artists-list.js").Permalink }}" async></script>
 <article class="content artist">
 
     <h1 class="title">{{- .Title -}}</h1>
@@ -22,7 +21,8 @@
     {{ range $event := $events_all }}
         {{ with .Params.artists }}
             {{ range . }}
-                {{ if eq (trim (lower .) " ") $name }}
+                {{ $artist := (trim (lower .) " ") }}
+                {{ if eq $artist $name }}
                     {{ $events_solo = $events_solo | append $event }}
                 {{ end }}
             {{ end }}
@@ -41,8 +41,6 @@
     {{ $events := sort ($events_solo | append $events_collab | uniq) "Date" "desc" }}
     {{ .Scratch.Set "events" $events }}
     {{ partial "list/program" . }}
-    <!-- {{ .Scratch.Set "events" $events_solo }} -->
-    <!-- {{ partial "list/program" . }} -->
     
     <!-- RECORDS -->
     {{ $records := slice }}
@@ -58,6 +56,6 @@
     {{ partial "gallery" . }}
 
 </article>
-
+<script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script>
 {{ end }}
 

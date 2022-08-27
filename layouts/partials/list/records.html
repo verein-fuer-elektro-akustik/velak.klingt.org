@@ -9,7 +9,7 @@
         <a href="{{ .RelPermalink }}" class="title">{{- .Title -}}</a>
         {{ if .Params.image }}
             {{ with .Resources.GetMatch .Params.image }}
-            <img src="{{ .Permalink }}">
+            <img src="{{ .RelPermalink }}">
             {{ end }}
         {{ end }}
         {{ .Scratch.Set "date_format" "2006" }}

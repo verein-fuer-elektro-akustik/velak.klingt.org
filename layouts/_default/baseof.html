@@ -30,16 +30,6 @@
         
         <style>
             :root {
-                --background: #101010;
-                --f_high: #f0f0f0;
-                --f_med: #aaa;
-                --f_low: #777;
-                --f_inv: #000;
-                --b_high: #030303;
-                --b_med: #111;
-                --b_low: #222;
-                --b_inv: #aaa;
-
                 /* muzienca */
                 --background: #090909;
                 --f_high: #818181;
@@ -50,33 +40,33 @@
                 --b_med: #181818;
                 --b_low: #111111;
                 --b_inv: #818181;
+                {{ with .Page.Params.theme }}
+                {{ with .background }}--background: {{- . -}};{{ end }}
+                {{ with .f_high }}--f_high: {{- . -}};{{ end }}
+                {{ with .f_med }}--f_med: {{- . -}};{{ end }}
+                {{ with .f_low }}--f_low: {{- . -}};{{ end }}
+                {{ with .f_inv }}--f_inv: {{- . -}};{{ end }}
+                {{ with .b_high }}--b_high: {{- . -}};{{ end }}
+                {{ with .b_med }}--b_med: {{- . -}};{{ end }}
+                {{ with .b_low }}--b_low: {{- . -}};{{ end }}
+                {{ with .b_inv }}--b_inv: {{- . -}};{{ end }}
+                {{ end }}
             }
             body {
-                background: var(--background);
-                color: var(--f_med);
-            }
-            #overlay {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 50vw;
-                z-index: 1000000;
-                pointer-events: none;
-                background: var(--background);
-                background: linear-gradient(-90deg, rgba(9,9,9,1) 0%, rgba(0,0,0,0) 100%);
+                background: var(--background); color: var(--f_med);
             }
         </style>
 
         <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2" crossorigin>
+        {{ block "prerender" . }}{{ end }}
 
         <link rel="stylesheet" href="{{ $root }}/style.css" media="screen">
         <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         <link rel="manifest" href="{{ $root }}/manifest.json">
         {{ partial "site/favicons" . }}
 
-        {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
-        {{ with .NextInSection }}<link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
+        {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
+        {{ with .NextInSection }}<link rel="next" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
         
         {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -84,7 +74,7 @@
 
         {{ block "schema" . }}{{ end }}
 
-        <script src="{{ (resources.Get "script/app.js").Permalink }}" async></script>
+        <script src="{{ (resources.Get "script/app.js").RelPermalink }}" async></script>
 
 	</head>
     <body>
