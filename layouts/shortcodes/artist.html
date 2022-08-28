@@ -1,2 +1,7 @@
 {{ $name := .Get 0 }}
-{{ $name }}
+{{ $page := .Site.GetPage (print "/artists/" $name) }}
+{{ if eq $page nil }}
+    {{ errorf "artist %s not found" $name }}
+{{ else }}
+    <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+{{ end }}
