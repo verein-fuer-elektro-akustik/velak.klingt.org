@@ -4,78 +4,30 @@
     {{ $images := (.Resources.ByType "image") }}
     {{ $images := where $images "Name" "!=" "cover.jpg" }}
     {{ $images := where $images "Name" "!=" "cover.png" }}
+    <!-- {{ len $images }} -->
+    {{ $images_landscape := slice }}
+    {{ $images_portrait := slice }}
+    {{ range $img := $images }}
+        {{ if ge $img.Width $img.Height }}
+            {{ $images_landscape = $images_landscape | append $img }}
+        {{ else }}
+            {{ $images_portrait = $images_portrait | append $img }}
+        {{ end }}
+    {{ end }}
     <!-- {{ mod (len $images) 2 }} -->
     <ul>
-        {{ range $img := $images }}
-        <!-- { { if gt $img.Width $img.Height }} -->
-        <!-- { { if lt $img.Width $img.Height }} -->
-        <li>
-            <figure>
-                {{ partial "img" $img }}
-                <figcaption class="meta">
-                    <div class="exif">
-                    {{ with $img.Exif }}
-                        {{ with .Tags }}
-                            {{ with .DateTimeOriginal }}
-                                {{ if hasPrefix . "0000:00:00" }}
-                                {{ else }}
-                                    {{ (time .).Format "15:04" }}
-                                {{ end }}
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
-                    </div>
-                    <a href="{{ $img.RelPermalink }}">SRC</a>
-                </figcaption>
-            </figure>
-        </li>
-        <!-- {{ $tinyw := default "400x" }}
-        {{ $smallw := default "800x" }}
-        {{ $mediumw := default "1200x" }}
-        {{ $largew := default "1600x" }}
-        {{ $.Scratch.Set "tiny" ($img.Resize $tinyw) }}
-        {{ $.Scratch.Set "small" ($img.Resize $smallw) }}
-        {{ $.Scratch.Set "medium" ($img.Resize $mediumw) }}
-        {{ $.Scratch.Set "large" ($img.Resize $largew) }}
-        {{ $tiny := $.Scratch.Get "tiny" }}
-        {{ $small := $.Scratch.Get "small" }}
-        {{ $medium := $.Scratch.Get "medium" }}
-        {{ $large := $.Scratch.Get "large" }}
-        <li>
-            <figure>
-                <img 
-                    alt="{{ .Title }}"
-                    sizes="(min-width: 400px) 1200px, 100vw"
-                    srcset='
-                        {{ if ge $img.Width "400" }}{{ with $tiny.RelPermalink }}{{.}} 400w{{ end }}{{ end }}
-                        {{ if ge $img.Width "800" }}{{ with $small.RelPermalink }}, {{.}} 800w{{ end }}{{ end }}
-                        {{ if ge $img.Width "1200" }}{{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}{{ end }}
-                        {{ if ge $img.Width "1600" }}{{ with $large.RelPermalink }}, {{.}} 1600w {{ end }}{{ end }}'
-                    src="{{ $img.RelPermalink }}">
-                <figcaption class="meta">
-                    <div class="exif">
-                    {{ with $img.Exif }}
-                        {{ with .Tags }}
-                            {{ with .DateTimeOriginal }}
-                                {{ if hasPrefix . "0000:00:00" }}
-                                {{ else }}
-                                    {{ (time .).Format "15:04" }}
-                                {{ end }}
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
-                    </div>
-                    <a href="{{ $img.RelPermalink }}">SRC</a>
-                </figcaption>
-            </figure>
-        </li> -->
+        {{ range $img := $images_landscape }}
+            {{ partial "gallery-item" . }}
+        {{ end }}
+        {{ range $img := $images_portrait }}
+            {{ partial "gallery-item" . }}
         {{ end }}
     </ul>
     {{ with .Params.photos }}
     <div class="photographer">
         <i class="ic-copyright"></i>
         <span>Photos by</span>
-        <span>{{- . | safeHTML -}}</span>
+        <span>{{- . -}}</span>
     </div>
     {{ end }}
 </div>

@@ -1,0 +1,30 @@
+{{ $img := . }}
+{{ if le $img.Width 300 }}
+    {{ warnf "%s too small (%d) should at least have a width of 300px" $img.RelPermalink $img.Width }}
+{{ end }}
+<li>
+    <figure>
+        {{ $srcset := slice }}
+        {{ if ge $img.Width 400 }}
+            {{ $srcset = $srcset | append (print ($img.Resize "400x").RelPermalink " 400w") }}
+        {{ end }}
+        {{ $srcset = $srcset | append (print $img.Permalink " " $img.Width "w") }}
+        <img srcset="{{ delimit $srcset ", " }}" alt="">
+        <figcaption class="meta">
+            <div class="exif">
+            {{ with $img.Exif }}
+                {{ with .Tags }}
+                    {{ with .DateTimeOriginal }}
+                        {{ if hasPrefix . "0000:00:00" }}
+                        {{ else }}
+                            {{ (time .).Format "15:04" }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            </div>
+            <a href="{{ $img.RelPermalink }}">SRC</a>
+        </figcaption>
+    </figure>
+</li>
+
