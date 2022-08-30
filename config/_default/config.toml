@@ -29,7 +29,6 @@ enableRobotsTXT = true
 
 [outputs]
     home = ["HTML"]
-    #page = ["HTML", "JSON"]
     section = ["HTML","RSS","JSON"]
     #taxonomyTerm = ["HTML", "RSS"]
     #taxonomy = ["HTML", "RSS"]
