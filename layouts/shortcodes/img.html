@@ -1,0 +1,19 @@
+{{ $src := .Get "src" }}
+{{ $res_orig := resources.Get $src }}
+{{ $srcset := slice }}
+{{ if ge $res_orig.Width 400 }}
+    {{ $srcset = $srcset | append (print ($res_orig.Resize "400x").RelPermalink " 400w") }}
+{{ end }}
+{{ if ge $res_orig.Width 800 }}
+    {{ $srcset = $srcset | append (print ($res_orig.Resize "800x").RelPermalink " 800w") }}
+{{ end }}
+{{ if ge $res_orig.Width 1200 }}
+    {{ $srcset = $srcset | append (print ($res_orig.Resize "1200x").RelPermalink " 1200w") }}
+{{ end }}
+{{ $srcset = $srcset | append (print $res_orig.Permalink " " $res_orig.Width "w") }}
+<img
+    srcset="{{ delimit $srcset ", " }}"
+    {{ with .Get "alt" }}alt="{{- . -}}"{{ end }}
+    {{ with .Get "title" }}title="{{- . -}}"{{ end }}
+    {{ with .Get "style" }}style="{{- . | safeCSS -}}"{{ end }}
+>
