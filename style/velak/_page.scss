@@ -16,7 +16,7 @@
         white-space: nowrap;
         border-bottom: 1px solid var(--background);
         > *:not(.artists) {
-            z-index: 10000;
+            // z-index: 10000;
         }
         > .meta {
             display: flex;
@@ -149,61 +149,23 @@ article.content {
     }
 }
 
-//// --- Artists ----------------------------------------------------------------
-
-main[data-section="artists"] {
-    // list
-    &[data-kind="section"] {
-        > article {
-            > ul.artists {
-                // columns: 4;
-                // display: flex;
-                // flex-direction: column;
-                // flex-wrap: wrap;
-                // column-count: auto;
-                column-width: 200px;
-                font-size: 1.25rem;
-            }
-        }
-    }
-    // single
-    &[data-kind="page"] {
-        > article.artist {
-            > .title {
-                order: 1;
-            }
-            > .details {
-                order: 2;
-            }
-            > .content {
-                order: 3;
-            }
-            > .program {
-                order: 4;
-            }
-            > .records {
-                order: 5;
-            }
-            > .gallery {
-                order: 6;
-            }
-            nav.prev_next {
-                justify-self: flex-end;
-            }
-        }
-    }
-}
-
 
 //// --- Program ---------------------------------------------------------------
 
 ol.data-list.program {
-    > li {
+    > li.event {
         > .artists {
             order: 3;
         }
         > .location {
             order: 4;
+        }
+        &.upcoming {
+            // background: red;
+            // filter: invert(100%);
+            > .title {
+                // font-size: 150%;
+            }
         }
     }
 }
@@ -248,6 +210,51 @@ article.event {
     }
 }
 
+
+//// --- Artists ----------------------------------------------------------------
+
+main[data-section="artists"] {
+    // list
+    &[data-kind="section"] {
+        > article {
+            > ul.artists {
+                // columns: 4;
+                // display: flex;
+                // flex-direction: column;
+                // flex-wrap: wrap;
+                // column-count: auto;
+                column-width: 200px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+    // single
+    &[data-kind="page"] {
+        > article.artist {
+            > .title {
+                order: 1;
+            }
+            > .details {
+                order: 2;
+            }
+            > .content {
+                order: 3;
+            }
+            > .program {
+                order: 4;
+            }
+            > .records {
+                order: 5;
+            }
+            > .gallery {
+                order: 6;
+            }
+            nav.prev_next {
+                justify-self: flex-end;
+            }
+        }
+    }
+}
 
 //// --- Records ---------------------------------------------------------------
 
