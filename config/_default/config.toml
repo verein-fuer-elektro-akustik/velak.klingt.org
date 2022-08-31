@@ -20,7 +20,7 @@ enableRobotsTXT = true
     #program = '/:year/:month/:day/'
 
 [imaging]
-    quality = 80
+    quality = 90
     #[imaging.exif]
         #disableDate = false
         #disableLatLong = false
