@@ -4,12 +4,19 @@
 {{ end }}
 <li>
     <figure>
-        {{ $srcset := slice }}
+        {{ $src := $img.RelPermalink }}
+        <!-- {{ $srcset := slice }} -->
         {{ if ge $img.Width 400 }}
-            {{ $srcset = $srcset | append (print ($img.Resize "400x").RelPermalink " 400w") }}
+            {{ $src = ($img.Resize "400x").RelPermalink }}
+            <!-- { { $srcset = $srcset | append (print ($img.Resize "400x").RelPermalink " 400w") }} -->
         {{ end }}
-        {{ $srcset = $srcset | append (print $img.Permalink " " $img.Width "w") }}
-        <img srcset="{{ delimit $srcset ", " }}" alt="">
+        <!-- {{ if ge $img.Width 800 }} -->
+        <!--     { { $srcset = $srcset | append (print ($img.Resize "800x").RelPermalink " 800w") }} -->
+        <!-- {{ end }} -->
+        <!-- {{ $srcset = $srcset | append (print $img.Permalink " " $img.Width "w") }} -->
+        <!-- <img srcset="{{ delimit $srcset ", " }}" alt=""> -->
+
+        <img src="{{ $src }}" alt="">
         <figcaption class="meta">
             <div class="exif">
             {{ with $img.Exif }}
@@ -23,7 +30,7 @@
                 {{ end }}
             {{ end }}
             </div>
-            <a href="{{ $img.RelPermalink }}">SRC</a>
+            <!-- <a href="{{ $img.RelPermalink }}">SRC</a> -->
         </figcaption>
     </figure>
 </li>
