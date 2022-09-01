@@ -123,8 +123,8 @@ body {
             //padding: 0.5rem 1px; // HACK
             //padding-top: 1rem;
             &.content {
-                // padding: 1rem 0;
-                padding: 0 0 4rem 0;
+                //padding: 0 0 1rem 0;
+                padding: 0;
             }
             header {
                 padding: 1rem 0;
@@ -247,10 +247,14 @@ nav.top {
 
 nav.prev_next {
     display: flex;
-    gap: 1em;
+    justify-content: space-between;
+    gap: 2em;
     // &:hover {
-    //     //transform: scale(1.3);
+    //     transform: scale(1.3);
     // }
+    @media screen and (min-width: breakpoint.$tablet) {
+        justify-content: flex-start;
+    }
     > a {
         font-family: var(--font-mono);
         //font-size: var(--text-sm);
@@ -259,19 +263,20 @@ nav.prev_next {
         i {
             display:inline-block;
             //transform: scale(1.2);
-            margin: 0 0.5em;
+            //margin: 0 0.5em;
             transition: transform 0.12s;
             // &:hover::before {
             //     //transform: scale(2); // TODO ?
             // }
         }
         > span {
-            display: none;
-            margin: 1em;
+            // display: none;
+            // margin: 1em;
         }
         &:hover {
+            // transform: scale(2);
             i {
-                transform: scale(2);
+                transform: scale(1.2);
             }
         }
     }
