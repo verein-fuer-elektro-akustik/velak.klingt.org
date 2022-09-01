@@ -2,13 +2,16 @@
 title: "gala#121"
 date: 2022-09-10
 artists: [
-
+    eugene ignashev,
+    karolina preuschl,
+    PZFTK,
+    seicht dumm
 ]
 collabs: [
+    eva hinterleitner + yvonne kaufmann,
 ]
 location: "symposion_lindabrunn"
-tags: [test]
+tags: [gala]
 ---
-This is just a future test event.  
-
-The truth which prevents conflict, is awareness of a fundamental unity. The lie which creates conflict is unawareness of a fundamental unity. The awareness is blocked by an apparency of divergent interests. And conflict within expresses itself as conflict without. Strife between the soul and the body and between the two sides of the mind within one individual, manifests outwardly as strife between individuals, as strife between groups of individuals, and finally as strife between masses of individuals. And at the root of every conflict is the same lie; unawareness of the fundamental unity. But outwardly every conflict is different, and therefore has its own particular manifestations of the lie. The basic lie is the same for all conflicts; the superficial lies, which stem from it, are different. Consider any controversial subject; any subject on which there is strong and aggressive disagreement.
+Open Doors 17:00  
+Program start 18:00
