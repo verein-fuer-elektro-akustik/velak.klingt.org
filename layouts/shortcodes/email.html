@@ -1,1 +1,4 @@
-<a href="mailto:{{ .Site.Params.email }}">VELAK</a>
+{{ $email := .Get "email" | default .Site.Params.email }}
+{{ $text := .Get "text" | default $email }}
+{{ $subject := .Get "subject" }}
+<a href="mailto:{{ $email }}{{ with $subject }}?subject={{.}}{{ end }}">{{ $text }}</a>
