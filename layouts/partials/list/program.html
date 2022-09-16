@@ -28,15 +28,13 @@ let li, date, lastUpcomingIndex;
 for( let i = 0; i < list.children.length; i++ ) {
     li = list.children[i];
     date = new Date(li.querySelector("time").attributes.datetime.value);
-    if(date.getTime() > now) {
-        li.classList.add("upcoming");
-    } else {
-        if(!lastUpcomingIndex) {
-            lastUpcomingIndex = i;
-        }
+    if(date.getTime() < now){
+        lastUpcomingIndex= i;
+        break;
     }
 }
-console.log(lastUpcomingIndex);
-list.insertBefore(document.createElement("hr"), list.children[lastUpcomingIndex]);
+if(lastUpcomingIndex > 0) {
+    list.insertBefore(document.createElement("hr"), list.children[lastUpcomingIndex]);
+}
 </script>
 
