@@ -19,14 +19,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/disktree/velak.git"
+        "url": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org.git"
     },
     "author": "tong@disktree.net",
     "license": "ISC",
-    "homepage": "https://github.com/disktree/velak/blob/master/README.md",
+    "homepage": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/blob/master/README.md",
     "devDependencies": {
         "csv": "^6.2.0",
-        "csvtojson": "^2.0.10",
-        "sass": "^1.54.4"
+        "csvtojson": "^2.0.2",
+        "sass": "^1.55.0"
     }
 }
