@@ -2,6 +2,11 @@ name: build
 
 on:
   workflow_dispatch:
+    inputs:
+      url:
+        description: 'Site base url'
+        default: 'https://velak.klingt.org'
+        required: true
 
 jobs:
   build:
@@ -29,16 +34,10 @@ jobs:
       - name: Build style
         run: npm run prod:style
       - name: Build site
-        run: npm run prod:hugo -- --baseURL https://verein-fuer-elektro-akustik.github.io/velak.klingt.org
+        run: npm run prod:hugo -- --baseURL ${{ inputs.url }}
       - name: Store
         uses: actions/upload-artifact@v3
         with:
           name: velak.klingt.org
           path: public
-      # - name: Deploy
-      #   uses: JamesIves/github-pages-deploy-action@v4.4.0
-      #   with:
-      #     branch: gh-pages
-      #     folder: public
-      #     clean: true
-      #     single-commit: true
+

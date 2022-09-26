@@ -41,7 +41,7 @@ jobs:
         run: npm run prod:style
       - name: Build site
         run: npm run prod:hugo -- --baseURL https://verein-fuer-elektro-akustik.github.io/velak.klingt.org
-      - name: Deploy
+      - name: Deploy gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
