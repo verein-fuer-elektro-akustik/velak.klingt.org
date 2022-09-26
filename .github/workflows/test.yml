@@ -1,17 +1,15 @@
-name: build
+name: test
 
 on:
-  tags:
-  workflow_dispatch:
-  paths:
-    - assets/**
-    - config/**
-    - content/**
-    - data/**
-    - layouts/**
-    - static/**
-    - style/**
-    - .github/**
+  push:
+    paths:
+      - assets/**
+      - config/**
+      - content/**
+      - data/**
+      - layouts/**
+      - static/**
+      - style/**
 
 jobs:
   build:
@@ -36,19 +34,16 @@ jobs:
           hugo-version: "0.102.3"
       - name: Setup npm
         run: npm install
+      #- name: Test
+        #run: npm test
       - name: Build style
         run: npm run prod:style
       - name: Build site
         run: npm run prod:hugo -- --baseURL https://verein-fuer-elektro-akustik.github.io/velak.klingt.org
-      - name: Store
-        uses: actions/upload-artifact@v3
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
-          name: velak.klingt.org
-          path: public
-      # - name: Deploy
-      #   uses: JamesIves/github-pages-deploy-action@v4.4.0
-      #   with:
-      #     branch: gh-pages
-      #     folder: public
-      #     clean: true
-      #     single-commit: true
+          branch: gh-pages
+          folder: public
+          clean: true
+          single-commit: true
