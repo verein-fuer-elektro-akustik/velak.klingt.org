@@ -3,15 +3,6 @@ name: build
 on:
   tags:
   workflow_dispatch:
-  paths:
-    - assets/**
-    - config/**
-    - content/**
-    - data/**
-    - layouts/**
-    - static/**
-    - style/**
-    - .github/**
 
 jobs:
   build:
