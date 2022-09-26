@@ -1,7 +1,6 @@
 name: build
 
 on:
-  tags:
   workflow_dispatch:
 
 jobs:
