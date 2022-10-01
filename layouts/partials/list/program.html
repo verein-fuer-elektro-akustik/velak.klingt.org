@@ -1,6 +1,5 @@
 {{ $events := .Scratch.Get "events" }}
 {{ $show_artists := .Scratch.Get "show_artists" | default true }}
-<!-- {{ $only_upcoming := .Scratch.Get "only_upcoming" | default true }} -->
 
 {{ if eq $events nil }}
     {{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
@@ -8,9 +7,6 @@
 
 <ol class="data-list program" reversed>
     {{ range $events }}
-    <!-- {{ $upcoming := (time .Date).After now }} -->
-    <!-- { { if (not $upcoming) }} -->
-    <!-- <li class="event{{ if $upcoming }} upcoming{{ end }}" id="{{ .File.ContentBaseName }}"> -->
     <li class="event" id="{{ .File.ContentBaseName }}">
         <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
         {{ partial "meta/date" . }}
@@ -24,10 +20,9 @@
 <script>
 const now = new Date().getTime();
 const list = document.querySelector("ol.program");
-let li, date, lastUpcomingIndex;
-for( let i = 0; i < list.children.length; i++ ) {
-    li = list.children[i];
-    date = new Date(li.querySelector("time").attributes.datetime.value);
+let date, lastUpcomingIndex;
+for(let i = 0; i < list.children.length; i++) {
+    date = new Date(list.children[i].querySelector("time").attributes.datetime.value);
     if(date.getTime() < now){
         lastUpcomingIndex= i;
         break;
