@@ -16,8 +16,16 @@
         <!-- {{ $srcset = $srcset | append (print $img.Permalink " " $img.Width "w") }} -->
         <!-- <img srcset="{{ delimit $srcset ", " }}" alt=""> -->
 
+        {{ if ge $img.Width 400 }}
+        <a href="{{ $img.RelPermalink}}">
+            <img src="{{ $src }}" alt="">
+        </a>
+        {{ else }}
         <img src="{{ $src }}" alt="">
+        {{ end }}
+
         <figcaption class="meta">
+
             <div class="exif">
             {{ with $img.Exif }}
                 {{ with .Tags }}
