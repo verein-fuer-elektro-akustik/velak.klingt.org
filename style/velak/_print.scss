@@ -1,3 +1,9 @@
+@media print {
+    nav {
+        display: none;
+    }
+}
+
 @mixin not {
     @media print {
         display: none;
