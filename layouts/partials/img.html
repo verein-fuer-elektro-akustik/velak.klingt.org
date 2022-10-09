@@ -1,19 +1,25 @@
-{{ $img := . }}
-{{ $tinyw := default "400x" }}
-{{ $smallw := default "800x" }}
-{{ $mediumw := default "1200x" }}
-{{ $largew := default "1600x" }}
-{{ $tiny := $img.Resize $tinyw }}
-{{ $small := $img.Resize $smallw }}
-{{ $medium := $img.Resize $mediumw }}
-{{ $large := $img.Resize $largew }}
+
+{{ $src := .Scratch.Get "src" }}
+{{ $res_orig := resources.Get $src }}
+
+{{ if le $res_orig.Width 300 }}
+    {{ warnf "%s too small (%d) should at least have a width of 300px" $res_orig.RelPermalink $res_orig.Width }}
+{{ end }}
+
+{{ $srcset := slice }}
+{{ if ge $res_orig.Width 400 }}
+    {{ $srcset = $srcset | append (print ($res_orig.Resize "400x").RelPermalink " 400w") }}
+{{ end }}
+{{ if ge $res_orig.Width 800 }}
+    {{ $srcset = $srcset | append (print ($res_orig.Resize "800x").RelPermalink " 800w") }}
+{{ end }}
+{{ if ge $res_orig.Width 1200 }}
+    {{ $srcset = $srcset | append (print ($res_orig.Resize "1200x").RelPermalink " 1200w") }}
+{{ end }}
+{{ $srcset = $srcset | append (print $res_orig.Permalink " " $res_orig.Width "w") }}
 <img
-    alt="{{ .Title }}"
-    sizes="(min-width: 400px) 1200px, 100vw"
-    srcset='
-        {{ if ge $img.Width "400" }}{{ with $tiny.RelPermalink }}{{.}} 400w{{ end }}{{ end }}
-        {{ if ge $img.Width "800" }}{{ with $small.RelPermalink }}, {{.}} 800w{{ end }}{{ end }}
-        {{ if ge $img.Width "1200" }}{{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}{{ end }}
-        {{ if ge $img.Width "1600" }}{{ with $large.RelPermalink }}, {{.}} 1600w {{ end }}{{ end }}'
-    src="{{ $img.RelPermalink }}"
-/>
+    srcset="{{ delimit $srcset ", " }}"
+    {{ with .Get "alt" }}alt="{{- . -}}"{{ end }}
+    {{ with .Get "title" }}title="{{- . -}}"{{ end }}
+    {{ with .Get "style" }}style="{{- . | safeCSS -}}"{{ end }}
+>

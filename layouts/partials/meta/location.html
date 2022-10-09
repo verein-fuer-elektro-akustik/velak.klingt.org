@@ -8,6 +8,13 @@
             {{ else }}
             <span>{{- $loc.name -}}</span>
             {{ end }}
+            
+            {{ if $show_address }}
+                {{ with .address }}
+                <span>, </span><address>{{- . | safeHTML -}}</address>
+                {{ end }}
+            {{ end }}
+
         {{ else }}
         <span>{{- . | markdownify -}}</span>
         {{ end }}
@@ -15,3 +22,4 @@
     <span>TBA</span>
     {{ end }}
 </div>
+

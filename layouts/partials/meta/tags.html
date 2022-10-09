@@ -1,9 +1,9 @@
 {{ with . }}
-<ul class="meta tags nolist">
+<ul class="tags nolist">
     {{ range . }}
     <li class="tag">
-        <a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1">
-            <i class="ic-tag"></i>{{- . -}}
+        <a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" class="meta" tabindex="-1">
+            <i class="ic-tag"></i><span>{{- . -}}</span>
         </a>
     </li>
     {{ end }}

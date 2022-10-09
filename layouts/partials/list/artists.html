@@ -9,7 +9,11 @@
         {{ warnf "ARTIST PAGE NOT FOUND %s" $path }}
     {{ end }}
     <li>
-        <a href="{{ $page.RelPermalink }}">{{ . }}</a>
+        {{ if $page }}
+            <a href="{{ $page.RelPermalink }}">{{ . }}</a>
+        {{ else }}
+            <span>{{ . }}</span>
+        {{ end }}
         <!-- <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a> -->
     </li>
     {{ end }}

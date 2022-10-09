@@ -17,9 +17,9 @@
         <!-- <img srcset="{{ delimit $srcset ", " }}" alt=""> -->
 
         {{ if ge $img.Width 400 }}
-        <a href="{{ $img.RelPermalink}}">
+        <!-- <a href="{{ $img.RelPermalink}}"> -->
+        <!-- </a> -->
             <img src="{{ $src }}" alt="">
-        </a>
         {{ else }}
         <img src="{{ $src }}" alt="">
         {{ end }}
