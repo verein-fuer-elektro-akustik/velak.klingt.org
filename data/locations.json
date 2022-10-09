@@ -114,5 +114,10 @@
         "name": "Venster99",
         "address": "Stadbahnbögen 99, Wien",
         "url": "http://www.venster99.at/"
+    },
+    "wild im west": {
+        "name": "Wild im West",
+        "address": "Mariahilfer Str. 166, 1150 Wien"
     }
+
 }
