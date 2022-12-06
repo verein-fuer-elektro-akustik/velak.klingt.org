@@ -6,6 +6,7 @@
     "type": "module",
     "scripts": {
         "clean": "rm -rf public/ && rm -f static/style.css*",
+        "clean:cache": "rm -rf resources",
         "dev:style": "sass style/main.scss static/style.css --watch",
         "dev:hugo": "hugo server --verbose --buildDrafts --buildFuture --panicOnWarning",
         "start": "npm run dev:hugo",
@@ -27,6 +28,6 @@
     "devDependencies": {
         "csv": "^6.2.0",
         "csvtojson": "^2.0.2",
-        "sass": "^1.55.0"
+        "sass": "^1.56.1"
     }
 }
