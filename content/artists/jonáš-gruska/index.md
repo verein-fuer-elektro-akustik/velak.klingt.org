@@ -1,5 +1,5 @@
 ---
 title: "jonáš gruska"
-links: []
+links: [http://jonasgru.sk/]
 ---
 
