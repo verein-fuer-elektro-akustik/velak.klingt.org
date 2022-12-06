@@ -73,6 +73,11 @@
         "address": "Lendkai 1, 8020 Graz,  Austria",
         "url": "https://www.museum-joanneum.at/kunsthaus-graz"
     },
+    "lot": {
+        "name": "Das LOT",
+        "address": "Absberggasse 31, 1100 Wien",
+        "url": "https://www.lot.wien/lot"
+    },
     "mdw": {
         "name": "Universität für Musik und darstellende Kunst Wien",
         "address": "Anton-von-Webern-Platz 1, 1030 Wien",
