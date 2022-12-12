@@ -23,29 +23,29 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-      - name: Cache resources
-        id: cache-resources
-        uses: actions/cache@v3
-        with:
-          path: resources
-          key: hugo-resources
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        shell: bash
-        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      - name: Cache npm
-        id: npm-cache
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: List state of npm modules
-        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
-        continue-on-error: true
-        run: npm list
+      # - name: Cache resources
+      #   id: cache-resources
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: resources
+      #     key: hugo-resources
+      # - name: Get npm cache directory
+      #   id: npm-cache-dir
+      #   shell: bash
+      #   run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      # - name: Cache npm
+      #   id: npm-cache
+      #   with:
+      #     path: ${{ steps.npm-cache-dir.outputs.dir }}
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
+      # - name: List state of npm modules
+      #   if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+      #   continue-on-error: true
+      #   run: npm list
       - name: Install npm dependencies
-        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        #if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         run: npm install
       - name: Build style
         run: npm run prod:style
