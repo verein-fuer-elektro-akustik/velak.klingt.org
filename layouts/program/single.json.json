@@ -1,0 +1,9 @@
+{
+    "title": "{{- .Title -}}",
+    "date": "{{ .Date.Format "2006/01/02" }}",
+    "location": "{{ .Params.location }}",
+    "artists": {{ .Params.artists | jsonify }},
+    "collabs": {{ .Params.collabs | jsonify }},
+    "tags": {{ .Params.tags | jsonify }}
+    {{ with .Params.photos }}, "photos": "{{.}}"{{ end }}
+}
