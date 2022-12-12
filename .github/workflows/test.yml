@@ -2,8 +2,6 @@ name: test
 
 on:
   push:
-    branches:
-      - 'master'
     paths:
       - assets/**
       - config/**
@@ -31,20 +29,30 @@ jobs:
         with:
           path: resources
           key: hugo-resources
-      - name: Setup hugo
-        uses: peaceiris/actions-hugo@v2.5.0
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      - name: Cache npm
+        id: npm-cache
         with:
-          hugo-version: "0.102.3"
-      - name: Setup npm
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: List state of npm modules
+        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        continue-on-error: true
+        run: npm list
+      - name: Install npm dependencies
+        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         run: npm install
-      #- name: Test
-        #run: npm test
       - name: Build style
         run: npm run prod:style
       - name: Build site
         run: npm run prod:hugo -- --baseURL https://verein-fuer-elektro-akustik.github.io/velak.klingt.org
       - name: Deploy gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
           folder: public

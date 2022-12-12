@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: 'Site base url'
+        description: 'Site baseurl'
         default: 'https://velak.klingt.org'
         required: true
 
@@ -25,10 +25,6 @@ jobs:
         with:
           path: resources
           key: hugo-resources
-      - name: Setup hugo
-        uses: peaceiris/actions-hugo@v2.5.0
-        with:
-          hugo-version: "0.102.3"
       - name: Setup npm
         run: npm install
       - name: Build style
