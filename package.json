@@ -28,6 +28,7 @@
     "devDependencies": {
         "csv": "^6.2.5",
         "csvtojson": "^2.0.2",
-        "sass": "^1.56.2"
+        "sass": "^1.56.2",
+        "hugo-bin": "^0.96.0"
     }
 }
