@@ -1,7 +1,6 @@
 # [VELAK](https://velak.klingt.org/)
 > Verein für Elektro Akustische Musik
 
-[![build](https://github.com/disktree/velak/actions/workflows/build.yml/badge.svg)](https://github.com/disktree/velak/actions/workflows/build.yml)
 
 The velak archive is currently under reconstruction with the goal to be as complete as possible.  
 Check the raw data table of past events for missing data: https://vvv.disktree.net/raw/  
@@ -10,6 +9,8 @@ Help by submitting missing data, create/resolve [issues](https://github.com/vere
 Any change to this repository will rebuild the site and push it to https://verein-fuer-elektro-akustik.github.io/velak.klingt.org/
 
 Test server: https://vvv.disktree.net/  
+
+[![build](https://github.com/disktree/velak/actions/workflows/build.yml/badge.svg)](https://github.com/disktree/velak/actions/workflows/build.yml)
 
 
 ## Develop
@@ -27,8 +28,6 @@ npm run dev:style
 
 ## Build
 
-Build for production
-
 ```sh
 npm run prod
 # or
@@ -36,7 +35,7 @@ npm run prod:style
 npm run prod:hugo
 ```
 
-Build hugo project for production but change base url
+Build hugo project with custom baseurl.
 ```sh
 npm run prod:hugo -- --baseURL https://vvv.disktree.net --buildDrafts
 ```
