@@ -1,7 +1,6 @@
 ---
 title: "gala#20"
 date: 2006-11-13
-publishDate: 2006-11-13
 artists: [
     stefan brunner,
     stefan fraunberger,

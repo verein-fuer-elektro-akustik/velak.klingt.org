@@ -1,7 +1,6 @@
 ---
 title: "Cauliflower Sound Festival"
 date: 2022-04-13
-publishDate: 2022-04-13
 artists: [
     cosma grosser,
     eduardo triviño cely,

@@ -1,7 +1,6 @@
 ---
 title: "donauwellen#2"
 date: 2010-11-21
-publishDate: 2010-11-21
 artists: [
 ]
 collabs: [

@@ -12,5 +12,6 @@ artists: [
 collabs: [
     Roy Culbertson III + Lucas Henao,
 ]
+tags: [gala]
 ---
 open doors 17:00 / [directions](http://www.symposion-lindabrunn.at/?page_id=55)

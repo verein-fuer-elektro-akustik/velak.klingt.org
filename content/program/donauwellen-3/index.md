@@ -1,7 +1,6 @@
 ---
 title: "donauwellen#3"
 date: 2010-12-02
-publishDate: 2010-12-02
 artists: [
     Matthias Erian
 ]
