@@ -1,8 +1,9 @@
 ---
 title: "roland panzer"
-links: []
+links: [https://panzerschokolade.disktree.net]
 aliases: [
-    "panzerschokolade"
+    "panzerschokolade",
+    "schokolade"
 ]
 ---
 

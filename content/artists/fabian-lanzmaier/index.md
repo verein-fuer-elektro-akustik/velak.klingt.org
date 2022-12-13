@@ -12,6 +12,7 @@ theme: {
     b_low: "#2233ff",
     b_inv: "#fff",
 }
+aliases: ["treibgut"]
 ---
 Fabian Lanzmaier works with sound and music, as a solo artist as well as in several formations combining sound with installations, theater, dance, moving image and live performances.
 
