@@ -9,6 +9,5 @@ menu:
 sitemap:
     changefreq: monthly
     priority: 0.9
-rss_ignore: true
 ---
 

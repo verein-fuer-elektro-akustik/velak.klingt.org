@@ -1,13 +1,10 @@
 baseURL = ""
-#title = "VELAK ↯⚡"
-#title = "V´EL:AK"
 title = "velak"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
 paginate = 1000
 rssLimit = 100
-
 buildFuture = true
 disableHugoGeneratorInject = true
 enableGitInfo = true
@@ -15,9 +12,6 @@ enableRobotsTXT = true
 
 [build]
     writeStats = true
-
-#[permalinks]
-    #program = '/:year/:month/:day/'
 
 [imaging]
     quality = 90
@@ -28,8 +22,9 @@ enableRobotsTXT = true
         #includeFields = ''
 
 [outputs]
-    home = ["HTML"]
-    section = ["HTML","RSS","JSON"]
+    home = ["HTML","JSON"]
+    section = ["HTML","JSON"]
+    page = ["HTML","JSON"]
     #taxonomyTerm = ["HTML", "RSS"]
     #taxonomy = ["HTML", "RSS"]
 
