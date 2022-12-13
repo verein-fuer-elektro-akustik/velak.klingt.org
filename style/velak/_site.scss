@@ -32,13 +32,15 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto auto;
     //gap: calc(1rem*var(--spacing));
-    //gap: 0.5rem;
+    gap: 1rem;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0.5rem 0;
     overflow-x: hidden;
     overflow-y: scroll;
+    // max-width: 1400px;
+    // margin: 0 auto;
 
     > header, > footer {
         z-index: 1000;
@@ -49,13 +51,11 @@ body {
         column-gap: 1.5rem;
         //justify-content: space-between;
         // justify-content: flex-start;
-
-        // margin: 0 auto;
-        // width: 100%;
-        // max-with: 1200px;
-        margin: 0 calc(var(--spacing) * 1rem);
+        //margin: 0 calc(var(--spacing) * 1rem);
+        margin: 0 3rem; 
         //margin: 1rem 1rem;
-        padding: calc(var(--spacing)*1rem) 0 calc(var(--spacing)*1rem) 0;
+        //padding: calc(var(--spacing)*1rem) 0 calc(var(--spacing)*1rem) 0;
+        padding: 4rem 0 3rem 0;
         //padding: calc(2rem + var(--spacing)*0.5rem) 0 calc(var(--spacing)*0.5rem) 0;
         text-transform: uppercase;
         * {
@@ -120,7 +120,9 @@ body {
     > main {
         height: 100%;
         max-width: 100vw;
-        padding: 0 calc(var(--spacing)* 1rem);
+        //padding: 0 calc(var(--spacing)* 1rem);
+        //padding: 0 calc(var(--spacing)* 1rem);
+        padding: 0 3rem;
         z-index: 10;
         > article {
             width: 100%;
@@ -162,13 +164,9 @@ body {
     > footer {
         display: flex;
         justify-content: space-between;
-        //margin: 0 calc(var(--spacing) * 1rem);
-        margin: 0 1rem;
-        padding: 1rem 0;
-        //padding: calc(var(--spacing) * 0.5rem)  0 calc(var(--spacing) * 0.5rem) 0;
-        //padding: 0.75rem  0 calc(var(--spacing) * 0.5rem) 0;
-        //padding: 0rem  0 calc(var(--spacing) * 0.5rem) 0;
-        //padding: 4rem 0;
+        padding: 1rem 0 2rem 0;
+        //margin: 0 calc(var(--spacing)* 1rem);
+        margin: 0 3rem;
         white-space: nowrap;
         // overflow-x: hidden;
         font-size: 75%;
@@ -176,15 +174,13 @@ body {
             display: flex;
             overflow-x: hidden;
             text-overflow: ellipsis;
-            //padding: calc(var(--spacing) * 0.5rem)  0 calc(var(--spacing) * 1rem) 0;
-            //> *:first-child {}
-            //> *:last-child {}
             > *:not(:last-child) {
                 margin-right: 1ch;
             }
         }
         @media screen and (min-width: breakpoint.$tablet) {
             justify-content: flex-end;
+            padding: 2rem 0 3rem 0;
         }
     }
     > aside {

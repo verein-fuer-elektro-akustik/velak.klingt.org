@@ -27,7 +27,7 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            height: 2rem;
+            //height: 2rem;
             // overflow-x: hidden;
             white-space: nowrap;
             border-bottom: 1px solid var(--background);
@@ -48,7 +48,7 @@
             > .title {
                 order: 2;
                 padding: 0 0.75ch;
-                font-size: 1.25rem;
+                //font-size: 1.25rem;
                 font-weight: 600;
                 text-transform: uppercase;
                 white-space: nowrap;
@@ -192,7 +192,6 @@ ol.data-list.program {
         > .location {
             order: 4;
             // background: green;
-
              &::after {
                 background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
                 // width: 2rem;
@@ -200,8 +199,10 @@ ol.data-list.program {
 
         }
         &.upcoming {
-            // background: red;
-            // filter: invert(100%);
+            //background: red;
+            //filter: invert(100%);
+            font-size: 200%;
+            margin: 0.5rem 0;
             > .title {
                 // font-size: 150%;
             }
