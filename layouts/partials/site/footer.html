@@ -19,12 +19,11 @@
         aria-label="repository"
     >
         <span>{{- .AbbreviatedHash -}}</span>
-        <!--<span>{{ .AuthorName }}</span>-->
         <!--<span>{{ .AuthorDate.Format "2006-01-02"  }}</span>-->
     </a>
     {{ end }}
     <a
-        href="{{ .Site.BaseURL }}/feed.xml"
+        href="{{ .Site.BaseURL }}/program/index.xml"
         rel="alernate"
         aria-label="RSS"
         title="RSS"

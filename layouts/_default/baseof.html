@@ -60,7 +60,7 @@
         <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2" crossorigin>
         {{ block "prerender" . }}{{ end }}
 
-        <link rel="stylesheet" href="{{ $root }}/style.css" media="screen">
+        <link rel="stylesheet" href="{{ $root }}/style.css">
         <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         <link rel="manifest" href="{{ $root }}/manifest.json">
         {{ partial "site/favicons" . }}
@@ -70,6 +70,9 @@
         
         {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+        {{ range .AlternativeOutputFormats -}}
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
         {{ end -}}
 
         {{ block "schema" . }}{{ end }}
