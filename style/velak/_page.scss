@@ -302,32 +302,37 @@ main[data-section="artists"] {
 //// --- Records ---------------------------------------------------------------
 
 ol.data-list.records {
+    justify-content: space-around;
     > li {
         > .format {
-            order: 1; 
+            //order: 1; 
         }
         > img {
-            order: 100; 
-            width: auto;
+            order: 1;
+            max-height: 2rem;
             height: 100%;
             // border: 1px solid var(--f_low);
             filter: brightness(26%) contrast(90%) grayscale(100%) invert(5%);
-            // transition: filter 0.1s;
+            transition: filter 0.2s;
             &:hover {
                 filter: none;
             }
         }
         > .title {
-            order: 3; 
+            order: 3;
         }
+        //> .format {
+            //order: 2;
+        //}
         > .date {
-            order: 2; 
+            order: 100;
         }
         > .artists {
-            order: 5;
+            order: 3;
         }
         > .label {
             order: 4;
+            //width: 100%;
         }
     }
 }

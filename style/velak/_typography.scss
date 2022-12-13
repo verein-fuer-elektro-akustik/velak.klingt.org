@@ -96,7 +96,7 @@ blockquote {
 }
 
 button {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem;
     background: var(--fg);
     color: var(--bg);
     cursor: pointer;
@@ -200,7 +200,7 @@ img {
 input, select {
     outline: none;
     margin: 0 0.5rem 0.5rem 0;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     font-family: var(--font-mono);
     background: var(--f_low);
     //border: 1px solid var(--b_med);
