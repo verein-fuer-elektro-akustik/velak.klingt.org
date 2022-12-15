@@ -1,0 +1,90 @@
+{{ $width := .Scratch.Get "width" | default 50  }}
+{{ $height := .Scratch.Get "height" | default 50  }}
+<svg xmlns="http://www.w3.org/2000/svg" width="{{ $width }}px" height="{{
+    $height }}px" viewBox="0 0 {{$width}} {{$height}}" class="sinewave">
+    <style>
+        @keyframes move_wave {
+            0% {
+                stroke-dashoffset: 0;
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+        svg.sinewave {
+            background: var(--f_background);
+            border: 1px solid var(--f_med);
+            /*border-radius: 100%;*/
+            align-self: center;
+        }
+        path.sinewave {
+            fill: none;
+            stroke: var(--f_med);
+            stroke-width: 2;
+            animation: move_wave 3000ms linear infinite;
+        }
+    </style>
+    <path class="sinewave">
+    </path>
+    <script>
+        const m = 0.512286623256592433;
+        function buildWave(w, h) {
+            const a = h / 4;
+            const y = h / 2;
+            const pathData = [
+                'M', w * 0, y + a / 2,
+                'c',
+                a * m, 0,
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a,
+                's',
+                -(1 - a) * m, a,
+                a, a,
+                's',
+                -(1 - a) * m, -a,
+                a, -a
+            ].join(' ');
+            const path = document.querySelector('path.sinewave');
+            path.setAttribute('d', pathData);
+        }
+        buildWave({{ $width }}, {{ $height }});
+    </script>
+</svg>
+
