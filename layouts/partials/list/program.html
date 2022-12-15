@@ -12,24 +12,31 @@
         {{ partial "meta/date" . }}
         {{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
         <div class="artists">{{ partial "list/artists" . }}</div>
-        <!-- <canvas data-artists="{{ range .Params.artists }}{{lower .}},{{ end }}" class=""></canvas> -->
     </li>
     {{ end }}
 </ol>
 
 <script>
-const now = new Date().getTime();
+const now = new Date();//.getTime();
 const list = document.querySelector("ol.program");
-let date, lastUpcomingIndex;
-for(let i = 0; i < list.children.length; i++) {
+let date, lastUpcomingIndex, i;
+now.setDate(now.getDate()-1); // hack for event days
+for(i = 0; i < list.children.length; i++) {
     date = new Date(list.children[i].querySelector("time").attributes.datetime.value);
-    if(date.getTime() < now){
+    if(date.getTime() <= now.getTime()){
         lastUpcomingIndex= i;
         break;
     }
 }
 if(lastUpcomingIndex > 0) {
-    list.insertBefore(document.createElement("hr"), list.children[lastUpcomingIndex]);
+    for(i = 0; i < lastUpcomingIndex; i++) {
+        list.children[i].classList.add("upcoming");
+    }
+    //const e = document.createElement("hr");
+    //e.classList.add
+    //const lastUpcoming = list.children[lastUpcomingIndex];
+    //lastUpcoming.style.background = 'red';
+    //list.insertBefore(e, last);
 }
 </script>
 
