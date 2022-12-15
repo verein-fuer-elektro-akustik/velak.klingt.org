@@ -3,7 +3,7 @@
     "short_name": "velak",
 	"description": "Verein für Elektro Akustik",
     "start_url": "/",
-    "display": "browser",
+    "display": "standalone",
     "theme_color": "#000",
     "background_color": "#000",
     "icons": [
