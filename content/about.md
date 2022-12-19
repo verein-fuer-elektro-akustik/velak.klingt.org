@@ -10,14 +10,15 @@ sitemap:
 rss_ignore: true
 hide_title: true
 ---
-verein für elektroakustische musik (gemeinnützig)  
-organisation for electroacoustic music (non-profit)
+velak (Verein für Elektroakustische Musik) is a non-profit organisation and platform for artists who work in fields of experimental music and sound/art. Based in Vienna, the members of velak organise concerts since 2004.
 
-a non-profit organisation and platform for artists who work in fields of experimental music and sound/art.
+Current active members of velak are:
+- Eduardo Trivino Cely
+- Fabian Lanzmaier
+- Frederik Stritter
+- Gabriela Gordillo  
 
-the term _velak_ is a derivative of the course for computermusic and electronic media in vienna,
-where the pool of people who are/were involved in the realization of the v/elak concerts & activities over the past years got together.
+contact: velak@klingt.org <https://klingt.org/>
 
-supported by: BKA, [MA7](https://www.wien.gv.at/kultur/abteilung/), SKE  
-ZVR: 229137709  
-
+Velak is kindly supported by BMKOES, [Ma7](https://www.wien.gv.at/kultur/abteilung/) and SKE  
+zvr-zahl: 229137709
