@@ -27,7 +27,6 @@
         {{ template "_internal/schema.html" . }}
 
         <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
-        
         <style>
             :root {
                 /* muzienca */
@@ -96,6 +95,8 @@
         </footer>
         <aside>{{ block "aside" . }}{{ end }}</aside>
         <!-- {{ partial "dev/page-info" . }} -->
+
+        <!-- <script src="{{ (resources.Get "script/theme.js").RelPermalink }}" async></script> -->
     </body>
 </html>
 
