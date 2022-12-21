@@ -3,7 +3,7 @@ title: "gala#112"
 date: 2020-03-07
 location: "rhiz"
 artists: [
-    simone b,
+    simone borghi,
     paule perrier,
     alan courtis
 ]
