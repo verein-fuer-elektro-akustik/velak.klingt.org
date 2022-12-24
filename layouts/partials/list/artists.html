@@ -2,7 +2,7 @@
 <ul class="artists">
     {{ with .Params.artists }}
     {{ range . }}
-    {{ $id := lower (replace . " " "-" ) }}
+    {{ $id := lower (replace (replace . " " "-" ) "." "-") }}
     {{ $path := print "/artists/" $id  }} 
     {{ $page := $.Site.GetPage $path }}
     {{ if eq $page nil }}
