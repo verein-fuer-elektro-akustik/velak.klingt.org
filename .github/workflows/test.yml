@@ -2,15 +2,10 @@ name: test
 
 on:
   push:
-    paths:
-      - assets/**
-      - config/**
-      - content/**
-      - data/**
-      - layouts/**
-      - static/**
-      - style/**
-      - .github/**
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -29,32 +24,35 @@ jobs:
       #   with:
       #     path: resources
       #     key: hugo-resources
-      # - name: Get npm cache directory
-      #   id: npm-cache-dir
-      #   shell: bash
-      #   run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      # - name: Cache npm
-      #   id: npm-cache
-      #   with:
-      #     path: ${{ steps.npm-cache-dir.outputs.dir }}
-      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-node-
-      # - name: List state of npm modules
-      #   if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
-      #   continue-on-error: true
-      #   run: npm list
+      - name: Get npm cache directory
+        id: get-npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      - name: Cache npm
+        id: npm-cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: List state of npm modules
+        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        continue-on-error: true
+        run: npm list
       - name: Install npm dependencies
-        #if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
-        run: npm install
+        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        run: npm ci
       - name: Build style
         run: npm run prod:style
       - name: Build site
-        run: npm run prod:hugo -- --baseURL https://verein-fuer-elektro-akustik.github.io/velak.klingt.org
-      - name: Deploy gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          branch: gh-pages
-          folder: public
-          clean: true
-          single-commit: true
+        run: npm run prod:hugo
+      - name: Test html
+        run: npm run test:html
+      # - name: Deploy gh-pages
+      #   uses: JamesIves/github-pages-deploy-action@v4.4.1
+      #   with:
+      #     branch: gh-pages
+      #     folder: public
+      #     clean: true
+      #     single-commit: true
