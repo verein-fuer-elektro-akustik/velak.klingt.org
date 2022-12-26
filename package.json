@@ -7,6 +7,8 @@
     "scripts": {
         "clean": "rm -rf public/ && rm -f static/style.css*",
         "clean:cache": "rm -rf resources",
+        "test:html": "for k in $(find public -type f -iname '*.html'); do html-validate --config=./.html_validate.json $k; done",
+        "test": "npm run test:html",
         "dev:style": "sass style/main.scss static/style.css --watch",
         "dev:hugo": "hugo server --verbose --buildDrafts --buildFuture --panicOnWarning",
         "start": "npm run dev:hugo",
@@ -28,6 +30,7 @@
     "devDependencies": {
         "csv": "^6.2.5",
         "csvtojson": "^2.0.2",
+        "html-validate": "^7.11.1",
         "sass": "^1.56.2",
         "hugo-bin": "^0.96.0"
     }
