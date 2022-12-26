@@ -47,8 +47,8 @@ jobs:
         run: npm run prod:style
       - name: Build site
         run: npm run prod:hugo
-      - name: Test html
-        run: npm run test:html
+      - name: Run tests
+        run: npm test
       # - name: Deploy gh-pages
       #   uses: JamesIves/github-pages-deploy-action@v4.4.1
       #   with:
