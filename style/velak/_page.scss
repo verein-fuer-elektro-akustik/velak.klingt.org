@@ -19,88 +19,89 @@
            }
        } 
     }
-    @media not print {
+    width: 100%;
+    overflow-x: hidden;
+    > li {
+        display: flex;
+        align-items: center;
         width: 100%;
-        overflow-x: hidden;
-        > li {
+        height: 100%;
+        //height: 2rem;
+        // overflow-x: hidden;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--background);
+        > *:not(.artists) {
+            // z-index: 10000;
+        }
+        > .meta {
             display: flex;
             align-items: center;
-            width: 100%;
+            gap: 0.5ch;
+            padding: 0.5ch 1ch;
             height: 100%;
-            //height: 2rem;
-            // overflow-x: hidden;
+            @include typography.meta(98%);
+            text-transform: uppercase;
+            background: var(--b_med);
+            color: var(--f_low);
+            user-select: none;
+        }
+        > .title {
+            order: 2;
+            padding: 0 0.75ch;
+            //font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
             white-space: nowrap;
-            border-bottom: 1px solid var(--background);
-            > *:not(.artists) {
-                // z-index: 10000;
+            background: var(--background);
+            // box-shadow: 10px 0 20px rgba(9,9,9,0.8);
+            user-select: none;
+        }
+        > .date {
+            order: 1;
+            user-select: none;
+        }
+        > .artists {
+            display: flex;
+            width: 100%;
+            // height: 100%;
+            color: var(--f_low);
+            // background: var(--b_med);
+            // min-height: 100%;
+            overflow-x: hidden;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                height: 1.5em;
+                width: 2rem; //rem;
+                z-index: 1000;
             }
-            > .meta {
-                display: flex;
-                align-items: center;
-                gap: 0.5ch;
-                padding: 0.5ch 1ch;
-                height: 100%;
-                @include typography.meta(98%);
-                text-transform: uppercase;
-                background: var(--b_med);
-                color: var(--f_low);
+            &::before {
+                background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+                // width: 2rem;
             }
-            > .title {
-                order: 2;
-                padding: 0 0.75ch;
-                //font-size: 1.25rem;
-                font-weight: 600;
-                text-transform: uppercase;
+            // &::after {
+            //     background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
+            //     width: 5vw; //rem;
+            //     right: 0;
+            // }
+            > ul.artists {
+                display: inline-flex;
                 white-space: nowrap;
-                background: var(--background);
-                // box-shadow: 10px 0 20px rgba(9,9,9,0.8);
-            }
-            > .date {
-                order: 1;
-            }
-            > .artists {
-                display: flex;
-                width: 100%;
-                // height: 100%;
-                color: var(--f_low);
-                // background: var(--b_med);
-                // min-height: 100%;
-                overflow-x: hidden;
-                &::before, &::after {
-                    content: "";
-                    position: absolute;
-                    height: 1.5em;
-                    width: 2rem; //rem;
-                    z-index: 1000;
+                text-transform: lowercase;
+                // background: var(--background);
+                user-select: none;
+                > li {
+                    margin: 0 0.125ch;
+                    &::after {
+                        content: ',';
+                        margin-right: 0.5ch;
+                    }
                 }
-                &::before {
-                    background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
-                    // width: 2rem;
-                }
-                // &::after {
-                //     background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
-                //     width: 5vw; //rem;
-                //     right: 0;
-                // }
-                
+            }
+            &.scroll-animation {
                 > ul.artists {
-                    display: inline-flex;
-                    white-space: nowrap;
-                    text-transform: lowercase;
-                    // background: var(--background);
-                    > li {
-                        margin: 0 0.125ch;
-                        &::after {
-                            content: ',';
-                            margin-right: 0.5ch;
-                        }
-                    }
-                }
-                &.scroll-animation {
-                    > ul.artists {
-                        //animation: scroll_artists 50s infinite;
-                        animation: scroll_artists 50s infinite;
-                    }
+                    //animation: scroll_artists 50s infinite;
+                    animation: scroll_artists 50s infinite;
                 }
             }
         }
@@ -108,19 +109,14 @@
 }
 
 ul.artists {
-
     text-transform: lowercase;
     &, ul, li { 
         list-style: none;
-    }
-    li {
-        // line-height: 1em;
     }
     > li {
         display: flex;
         // margin-bottom: 1em;
         // line-height: 1em;
-
         > span.group {
            margin-right: 0.5ch; 
         }
@@ -147,15 +143,13 @@ article {
     &.content {
         display: flex;
         flex-direction: column;
-        //gap: 2rem;
         > .title {
             order: 1;
-            font-weight: 500;
-            // text-transform: uppercase;
-            //text-transform: lowercase;
-            text-transform: unset;
+            padding: 0.5em 0 1em 0;
             position: relative;
             left: -2px; // HACK
+            font-weight: 500;
+            text-transform: unset;
         }
         > .details {
             order: 2;
@@ -191,15 +185,13 @@ ol.data-list.program {
         }
         > .location {
             order: 4;
-            // background: green;
+            //opacity: 0;
              &::after {
-                background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
+                //background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
                 // width: 2rem;
             }
-
         }
         &.upcoming {
-            //background: red;
             //filter: invert(100%);
             font-size: 200%;
             //margin: 0.5rem 0;

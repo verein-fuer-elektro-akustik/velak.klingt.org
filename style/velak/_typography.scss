@@ -173,14 +173,16 @@ h2 {
 h3 {
     font-size: var(--text-xxl);
     text-transform: uppercase;
+    line-height: 3em; // var(--heading-line-height);
 }
 h4 {
     font-size: var(--text-lg);
     text-transform: uppercase;
-    line-height: 3; // var(--heading-line-height);
+    line-height: 3em; // var(--heading-line-height);
 }
 h5 {
     font-size: var(--text-md);
+    line-height: 2em;
     //line-height: calc(var(--heading-line-height)*1.5);
     //text-transform: lowercase;
     text-transform: uppercase;
@@ -249,8 +251,8 @@ label {
     text-transform: uppercase;
 }
 
-// p, ol, ul {
-//      //margin-bottom: calc(var(--space-unit) * 0.9375 * var(--text-space-y-multiplier,1));
+// nav {
+//     user-select: none;
 // }
 
 p, ol, ul {

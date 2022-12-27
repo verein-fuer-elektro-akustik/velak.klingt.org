@@ -55,7 +55,9 @@ body {
         //padding: calc(2rem + var(--spacing)*0.5rem) 0 calc(var(--spacing)*0.5rem) 0;
         padding-top: 4rem;
         padding-bottom: 2rem;
-        text-transform: uppercase;
+        //text-transform: uppercase;
+        text-transform: lowercase;
+        user-select: none;
         * {
             font-size: 1.25rem;
             line-height: 1em;
@@ -66,6 +68,7 @@ body {
             margin: 0.5rem 0;
             white-space: nowrap;
             font-weight: 600;
+            text-transform: lowercase;
             #title-name { display: block; }
             #title-description { display: none; }
             @media screen and (min-width: breakpoint.$laptop) {
@@ -143,7 +146,7 @@ body {
             div.content {
                 max-width: 600px;
                 p, ol, ul {
-                    margin: 0 0 1rem 0;
+                    margin: 0 0 2em 0;
                 }
                 text-transform: lowercase;
                 @include print.url-after-link;
@@ -160,6 +163,7 @@ body {
         padding-bottom: 3rem;
         white-space: nowrap;
         font-size: 75%;
+        user-select: none;
         > * {
             display: flex;
             overflow-x: hidden;
