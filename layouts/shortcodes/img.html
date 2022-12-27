@@ -11,7 +11,7 @@
     {{ $srcset = $srcset | append (print ($res_orig.Resize "1200x").RelPermalink " 1200w") }}
 {{ end }}
 {{ $srcset = $srcset | append (print $res_orig.Permalink " " $res_orig.Width "w") }}
-<img
+<img src="{{$src}}"
     srcset="{{ delimit $srcset ", " }}"
     {{ with .Get "alt" }}alt="{{- . -}}"{{ end }}
     {{ with .Get "title" }}title="{{- . -}}"{{ end }}

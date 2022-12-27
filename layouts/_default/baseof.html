@@ -56,6 +56,8 @@
             }
         </style>
 
+        <script src="{{ (resources.Get "script/theme.js").RelPermalink }}"></script>
+
         <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2" crossorigin>
         {{ block "prerender" . }}{{ end }}
 
@@ -96,7 +98,6 @@
         <aside>{{ block "aside" . }}{{ end }}</aside>
         <!-- {{ partial "dev/page-info" . }} -->
 
-        <!-- <script src="{{ (resources.Get "script/theme.js").RelPermalink }}" async></script> -->
     </body>
 </html>
 
