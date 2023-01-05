@@ -158,7 +158,6 @@ h1, h2, h3, h4, h5, h6 {
     //margin: 0 0 var(--heading-line-height) 0;
     //margin: 1.5em 0 1em 0;
     word-break: break-word;
-    //letter-spacing: -0.05em;
 }
 h1 {
     font-size: var(--text-xxxxl);
@@ -221,14 +220,14 @@ input, select {
     &::placeholder {
         color: var(--f_med);
     }
-    &:invalid {
+    //&:invalid {
         //background: red;
     //     //border: 1px dashed var(--fg);
-    }
-    &:invalid:required {
+    //}
+    //&:invalid:required {
         //background-image: linear-gradient(to right, pink, lightgreen);
         //background-image: linear-gradient(to right, red, var(--background));
-    }
+    //}
     &:valid {
         border: 1px solid var(--fg);
     }
@@ -255,16 +254,13 @@ label {
 //     user-select: none;
 // }
 
-p, ol, ul {
+//p, ol, ul {
     //margin: 0 0 1rem 0;
-}
+//}
 ol, ul {
     list-style-position: inside;
-    //margin: 0 0 2rem 0;
     &, li {
         list-style: none;
-        //margin: 0;
-        //padding: 0;
     }
     // ol, ul {
     //     padding-left: 1em;
@@ -277,11 +273,6 @@ ol, ul {
 //ul {
     //list-style-type: disc;
 //}
-
-// p {
-//     //margin: 0 0 1em 0;
-//     //padding: 0;
-// }
 
 section {
     margin: 0 0 1rem 0;

@@ -30,9 +30,9 @@
         // overflow-x: hidden;
         white-space: nowrap;
         border-bottom: 1px solid var(--background);
-        > *:not(.artists) {
+        //> *:not(.artists) {
             // z-index: 10000;
-        }
+        //}
         > .meta {
             display: flex;
             align-items: center;
@@ -164,9 +164,9 @@ article {
             order: 3;
             font-size: 1.5rem;
         }
-        > .content {
+        //> .content {
             // order: 4;
-        }
+        //}
         > .gallery {
             order: 1000;
         }
@@ -186,18 +186,18 @@ ol.data-list.program {
         > .location {
             order: 4;
             //opacity: 0;
-             &::after {
+            //&::after {
                 //background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
                 // width: 2rem;
-            }
+            //}
         }
         &.upcoming {
             //filter: invert(100%);
             font-size: 200%;
             //margin: 0.5rem 0;
-            > .title {
+            //> .title {
                 // font-size: 150%;
-            }
+            //}
         }
     }
 }
@@ -296,9 +296,9 @@ main[data-section="artists"] {
 ol.data-list.records {
     justify-content: space-around;
     > li {
-        > .format {
+        //> .format {
             //order: 1; 
-        }
+        //}
         > img {
             order: 1;
             max-height: 2rem;

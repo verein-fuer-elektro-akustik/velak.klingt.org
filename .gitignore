@@ -1,11 +1,13 @@
 art/
 audio/
+etc/
 misc/
 node_modules/
 public/
 resources/
 scripts/
 server/
+tmp/
 uploads/
 _income/
 _old/
@@ -23,7 +25,6 @@ static/style.css*
 _*.*[0-9]
 _*.[0-9].*
 hugo_stats.json
-
 #content/program/*/*.JPG
 #content/program/*/*.jpg
 #content/program/*/*.jpeg

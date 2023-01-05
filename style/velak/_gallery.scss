@@ -57,7 +57,6 @@
                     transition: none;
                     //pointer-events: none;
                     //transition: opacity 0.2s;
-
                 }
             }
             &.selected {
@@ -73,14 +72,11 @@
                 //filter: invert(100%;
                 z-index: 10000;
                 > figure {
-
                     > img {
-                        
                         width: 100vw;
                         height: 100vh;
                     }
                 }
-
             }
             &:hover {
                 > figure {

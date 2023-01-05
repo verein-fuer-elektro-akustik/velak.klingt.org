@@ -1,23 +1,16 @@
 @use 'sass:math';
 
 $thick: 1px;
-//$thick: math.div(1rem, 3) !default;
-//$min-thick: 4px !default;
-// $scrollbar-min-thick: 4px;
-// $scrollbar-max-thick: 8px;
 
 *::-webkit-scrollbar {
     border: none;
     &:horizontal {
         display: none;
-        // height: $thick;
     }
     &:vertical {
-        //width: $thick;
         width: 1px;
-        //min-width: $min-thick;
     }
-    }
+}
 ::-webkit-scrollbar-button,
 ::-webkit-scrollbar-corner {
     display: none !important;
@@ -27,10 +20,7 @@ $thick: 1px;
 // }
 ::-webkit-scrollbar-thumb {
     //border-top: 4px solid var(--fg);
-    //border-bott
-    // border: 1px solid var(--f_med);
     background: var(--f_med);
-    //height: 20px;
     //border-left: 1px solid var(--bg);
     // &:hover {
     //     // background: var(--acc);

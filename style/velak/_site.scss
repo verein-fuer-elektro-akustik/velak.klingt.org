@@ -132,9 +132,9 @@ body {
             width: 100%;
             //margin: 0 1rem;
             //padding: 0.5rem 1px; // HACK
-            &.content {
+            //&.content {
                 //padding: 0 0 1rem 0;
-            }
+            //}
             header {
                 padding: 1rem 0;
             }
@@ -150,9 +150,8 @@ body {
                 }
                 text-transform: lowercase;
                 @include print.url-after-link;
-                h1, h2, h2, h4   {
+                //h1, h2, h2, h4   {
                    //margin: 2em 0 0.75em 0;
-                }
             }
         }
     }
@@ -203,12 +202,9 @@ body {
 .meta {
     @include typography.meta();
     cursor: default;
-    //font-family: var(--font-mono);
-    //font-size: var(--text-xs);
-    //text-transform: uppercase;
-    @media screen and (min-width: breakpoint.$tablet) {
+    //@media screen and (min-width: breakpoint.$tablet) {
         //font-size: var(--text-sm);
-    }
+    //}
     > i {
         margin-right: 0.125em;
     }
@@ -230,12 +226,12 @@ dl.tags {
         font-size: var(--text-sm);
         font-style: normal;
         text-transform: uppercase;
-        &:not(:last-child) {
+        //&:not(:last-child) {
             // &::after {
             //     //content: ", ";
             // }
             // margin-right: 0.5ch;
-        }
+        //}
         > a {
             text-decoration: none;
         }
@@ -271,10 +267,10 @@ nav.prev_next {
             //     //transform: scale(2); // TODO ?
             // }
         }
-        > span {
+        //> span {
             // display: none;
             // margin: 1em;
-        }
+        //}
         &:hover {
             // transform: scale(2);
             i {

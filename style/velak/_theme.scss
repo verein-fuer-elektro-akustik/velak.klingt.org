@@ -6,14 +6,6 @@
     --color-dark: rgb(var(--rgb-dark));
     --color-light: rgb(var(--rgb-light));
     --color-accent: #ed2c3e;
-    
-    //--bg: var(--color-dark);
-    //--fg: var(--color-light);
-    //--acc: var(--color-accent);
-
-    // --bg: #000;
-    // --fg: #aaa;
-    // --acc: #fff;
 
     // --background: #101010;
     // --f_high: #f0f0f0;
@@ -34,11 +26,8 @@
 //     color: var(--fg);
 //     -webkit-tap-highlight-color: var(--fg);
 // }
-// *::selection {
-//     background: var(--fg);
-//     color: var(--bg);
-// }
 body {
+    background: var(--background);
     color: var(--f_med);
     -webkit-tap-highlight-color: var(--f_med);
 }
