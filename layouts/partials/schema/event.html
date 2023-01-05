@@ -3,6 +3,7 @@
     "@context": "https://schema.org",
     "@type": "MusicEvent",
     "name": "{{- .Title -}}",
+    "identifier": "{{- .Title -}}",
     "startDate": "{{ .Date.Format "2006-01-02" }}",
     "organizer": "velak",
     "url": "{{ .Site.BaseURL }}/program/{{ .File.ContentBaseName  }}",
@@ -13,9 +14,12 @@
     "location": {
         "@type": "PostalAddress",
         "streetAddress": "{{- . -}}"
-    }
+    },
     {{ end }}
     {{ end }}
     {{ end }}
+    {{ $performer := .Params.artists }}
+    {{ with .Params.collabs }}{{ $performer = union $performer . }}{{ end }}
+   "performer": {{ $performer }} 
 }
 </script>
