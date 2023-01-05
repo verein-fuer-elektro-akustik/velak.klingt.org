@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article data-page="{{ .File.ContentBaseName }}" style="">
+    <ul>
+        {{ range .Site.Sections }}
+        <li>
+            <h3>{{ .Title }}</h3>
+            <ul>
+                {{ range .Pages }}
+                <li>
+                    <a href="{{ .Permalink }}">{{.Title}}</a>
+                </li>
+                {{ end }}
+            </ul>
+            <hr>
+        </li>
+        {{ end }}
+    </ul>
+
+    <h3>Regular Pages</h3>
+    <ul>
+        {{ range where .Site.RegularPages "Section" "" }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</article>
+{{ end }}
