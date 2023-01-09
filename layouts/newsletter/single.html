@@ -1,20 +1,17 @@
 {{ define "main" }}
 {{ $mailman := .Site.Params.mailman }}
 <article class="content">
-    
-    <div class="content">{{- .Content -}}</div>
-    
     <section>
-        <h4>Subscribe</h4>
+        <h3>Subscribe</h3>
         <div class="content">
             <p>
-                Subscribe to the newsletter by filling out the following form.  
-                You will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.
+                subscribe to the newsletter by filling out the following form.  
+                you will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.
             </p>
         </div>
         <form method="POST" action="{{ $mailman }}/subscribe/velak-announce">
             <fieldset>
-                <!--<legend>Subscribe</legend>-->
+                <legend>Subscribe</legend>
                 <div>
                     <label for="email"><span>Email</span></label>
                     <input type="email" name="email" placeholder="Email …" autofocus required>
@@ -26,7 +23,7 @@
 
             </fieldset>
             <fieldset>
-                <!--<legend>Pick a password</legend>-->
+                <legend>Password</legend>
                 <div>
                     <label for="pw"><span>Password</span></label>
                     <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="Password …" required>
@@ -36,37 +33,12 @@
                     <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="Confirm …" required>
                 </div>
             </fieldset>
-            <!--
-               -<fieldset>
-               -    <input name="language" type="hidden" value="en">
-               -    <select name="language">
-               -        <option value="en" selected=""> English (USA) </option>
-               -        <option value="de"> German </option>
-               -        <option value="uk"> Ukrainian </option>
-               -    </select>
-               -</fieldset>
-               -->
             <input name="language" type="hidden" value="en">
             <input type="submit" name="email-button" value="subscribe">
         </form> 
     </section>
-
-       <!-- <form method="POST" action="{{ $mailman }}/subscribe/velak-announce"-->
-            <!--class="ichiro">-->
-           <!--<fieldset>-->
-                <!--[><legend>From</legend><]-->
-                <!--<label for="email"><span>Email</span></label>-->
-                <!--<input type="email" name="email" placeholder="" required-->
-                <!--autocomplete="false">-->
-
-                <!--[> <label for="fullname">Full Name</label> <]-->
-                <!--[> <input type="text" name="fullname" pattern="[a-z0-9_]{2,}" autocomplete="username" placeholder="your name ..."> <]-->
-            <!--</fieldset>-->
-            <!--[> <input type="submit" name="email-button" value="subscribe"> <]-->
-        <!--</form>-->
-
     <section>
-        <h4>Unsubscribe</h4>
+        <h3>Unsubscribe</h3>
         <div class="content">
             <p>
                 To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:
@@ -74,6 +46,7 @@
         </div>
         <form method="POST" action="{{ $mailman }}/options/velak-announce">
             <fieldset>
+                <legend>Unsubscribe</legend>
                 <div>
                     <label for="email"><span>Email</span></label>
                     <input name="email" type="email" placeholder="Email …" required>
@@ -89,30 +62,9 @@
                 <input type="submit" name="login-remind" value="remind">
             </fieldset>
         </form>
-
     </section>
-    <!-- <section>
-        <h5>Unsubscribe</h5>
-        <p>
-            <div>To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:</div>
-        </p>
-        <form method="POST" action="{{ $mailman }}/options/velak-announce">
-            <fieldset>
-                <input name="email" type="email" placeholder="email ..." required>
-                <input name="password" type="password" placeholder="password ..." required>
-            </fieldset>
-            <input name="language" type="hidden" value="en">
-            <fieldset>
-                <input type="submit" name="login-unsub" value="unsubscribe">
-                <input type="submit" name="login-remind" value="remind">
-            </fieldset>
-        </form>
-    </section> -->
-    <!-- <section> -->
-    <!--         <div>To post a message to all the list members, send email to <a href="mailto:velak-announce@klingt.org"><strong>velak-announce@klingt.org</strong></a>.</div> -->
-    <!--         <div>To see the collection of prior postings to the list, visit the <a href="http://klingt.org/pipermail/velak-announce/" rel="external">archives</a>.</div> -->
-    <!--     </p> -->
-    <!-- </section> -->
-
+    <section>
+        <div class="content">{{- .Content -}}</div>
+    </section>
 </article>
 {{ end }}
