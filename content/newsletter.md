@@ -8,7 +8,7 @@ menu:
     weight: 10
 sitemap:
   changefreq: yearly
-  priority: 0.5
+  priority: 0.25
 rss_ignore: true
 ---
 To post a message to all the list members, send email to velak-announce@klingt.org.  
