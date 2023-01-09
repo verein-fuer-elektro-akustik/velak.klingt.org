@@ -1,3 +1,4 @@
+{{ $url := print .Site.BaseURL "/program/" .File.ContentBaseName }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -5,21 +6,41 @@
     "name": "{{- .Title -}}",
     "identifier": "{{- .Title -}}",
     "startDate": "{{ .Date.Format "2006-01-02" }}",
-    "organizer": "velak",
-    "url": "{{ .Site.BaseURL }}/program/{{ .File.ContentBaseName  }}",
-    {{ with .Params.location }}
-    {{ with index $.Site.Data.locations . }}
-    {{ $loc := . }}
-    {{ with $loc.address }}
-    "location": {
-        "@type": "PostalAddress",
-        "streetAddress": "{{- . -}}"
+    "endDate": "{{ .Date.Format "2006-01-02" }}",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "organizer": {
+        "@type": "Organization",
+        "name": "velak",
+        "url": "{{ .Site.Params.contact.web }}"
     },
-    {{ end }}
-    {{ end }}
-    {{ end }}
+    "url": "{{ $url }}",
+    "location": {
+        "@type": "Place",
+        {{ with .Params.location }}
+            {{ with index $.Site.Data.locations . }}
+            "name": "{{- .name -}}",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "{{- .adress -}}"
+            }
+            {{ else }}
+            "name": "{{- . -}}",
+            "address": "unknown"
+            {{ end }}
+        {{ else }}
+        "name": "unknown",
+        "address": "unknown"
+        {{ end }}
+    },
+    {{ with .Params.tags }}"keywords": {{.}},{{ end }}
     {{ $performer := .Params.artists }}
     {{ with .Params.collabs }}{{ $performer = union $performer . }}{{ end }}
-   "performer": {{ $performer }} 
+   "performer": {{ $performer }},
+   "image": [
+        {{ with .Resources.GetMatch "cover.jpg" }}
+        "{{print $url "/" . }}"
+        {{ end }}
+    ]
 }
 </script>
