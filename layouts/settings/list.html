@@ -1,0 +1,45 @@
+{{ define "main" }}
+<style>
+    ul.themes > li.theme {
+        display: inline-block;
+        cursor: pointer;
+    }
+</style>
+<article class="content">
+    {{ with .Title }}<h2>{{- . -}}</h2>{{ end }}
+    {{ with .Content }}<div class="content">{{- .Content -}}</div>{{ end }}
+    <!-- <section data-id="git"> -->
+    <!--     <a href="https://github.com/verein-fuer-elektro-akustik/velak.klingt.org">https://github.com/verein-fuer-elektro-akustik/velak.klingt.org</a> -->
+    <!-- </section> -->
+    <section data-id="theme">
+        <h4>Theme</h4>
+        <!-- <a href="#" onclick="javascript:_selectDefaultTheme()">[DEFAULT]</a> -->
+        <!-- <a href="#" onclick="javascript:Theme.clearLocal()">[CLEAR]</a> -->
+        <ul class="themes">
+        {{ range .Resources.ByType "image" }}
+            {{ $name := replace .Name ".svg" "" }}
+            <li class='theme theme_{{ $name }}' onclick="javascript:_handleThemeSelect(children[0])" title="{{ $name }}">{{- .Content | safeHTML -}}</li>
+        {{ end }}
+        </ul>
+        <script>
+            const _handleThemeSelect = svg => { 
+                applyTheme({
+                    background: svg.getElementById('background').getAttribute('fill'),
+                    f_high: svg.getElementById('f_high').getAttribute('fill'),
+                    f_med: svg.getElementById('f_med').getAttribute('fill'),
+                    f_low: svg.getElementById('f_low').getAttribute('fill'),
+                    f_inv: svg.getElementById('f_inv').getAttribute('fill'),
+                    b_high: svg.getElementById('b_high').getAttribute('fill'),
+                    b_med: svg.getElementById('b_med').getAttribute('fill'),
+                    b_low: svg.getElementById('b_low').getAttribute('fill'),
+                    b_inv: svg.getElementById('b_inv').getAttribute('fill'),
+                }, true);
+            }
+            const _selectDefaultTheme = e => {
+                var svg = document.body.querySelector('li.theme_bw').children[0];
+                _handleThemeSelect( svg );
+            }
+        </script>
+    </section>
+</article>
+{{ end }}

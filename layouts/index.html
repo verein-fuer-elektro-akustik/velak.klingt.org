@@ -2,9 +2,9 @@
 <link rel="prerender" href="{{ .Site.BaseURL }}/program/">
 {{ end }}
 
+{{ define "schema" }}{{ partial "schema/organization" . }}{{ end }}
+
 {{ define "main" }}
-    <!-- {{ partial "svg/fq" . }} -->
-    <!-- {{ partial "svg/fq-animation" . }} -->
     <ol class="data-list program" reversed>
     {{ range where .Site.Pages "Section" "program"}}
         {{ if (time .Date).After now }}

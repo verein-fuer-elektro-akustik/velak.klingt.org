@@ -17,10 +17,10 @@
 </ol>
 
 <script>
-const now = new Date();//.getTime();
+const now = new Date();
 const list = document.querySelector("ol.program");
 let date, lastUpcomingIndex, i;
-now.setDate(now.getDate()-1); // hack for event days
+now.setDate(now.getDate()-1);
 for(i = 0; i < list.children.length; i++) {
     date = new Date(list.children[i].querySelector("time").attributes.datetime.value);
     if(date.getTime() <= now.getTime()){

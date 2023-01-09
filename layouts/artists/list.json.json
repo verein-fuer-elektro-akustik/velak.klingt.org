@@ -1,0 +1,11 @@
+
+[
+    {{ range .Pages }}
+    {
+        "name": "{{ .File.ContentBaseName }}",
+        "links": {{ .Params.links | jsonify }},
+        "aliases":  {{with .Params.aliases }}{{ . | jsonify }}{{ else }}[]{{ end }},
+        "content": {{with .Content}}"{{ . }}"{{else}}null{{ end }}
+    },
+    {{ end }}
+]

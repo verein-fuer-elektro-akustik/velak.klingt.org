@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article>
+	{{ with .Content }}<div class="content">{{- . | safeHTML -}}</div>{{ end }}
+    <table>
+        <tr>
+            <th>name</th>
+            <th>address</th>
+            <th>url</th>
+        </tr>
+        {{ range .Site.Data.locations }}
+        <tr>
+            <td>{{ .name }}</td>
+            <td>{{ .address }}</td>
+            <td>{{ with .url }}<a href="{{- . -}}">{{- . -}}</a>{{ end }}</td>
+        </tr>
+        {{ end }}
+    </table>
+</article>
+{{ end }}
+

@@ -1,7 +1,5 @@
 {{ define "main" }}
 <article>
-	<!-- {{ with .Title }}<h1><i class="ic-tag"></i>{{- . -}}</h1>{{ end }} -->
-	<!-- {{ with .Content }}<div class="content">{{- . -}}</div>{{ end }} -->
     <ul>
         {{ range sort .Pages "Name" "asc" }}
         <li>

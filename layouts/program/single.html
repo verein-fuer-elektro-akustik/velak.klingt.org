@@ -1,12 +1,10 @@
-{{ define "schema" }}
-{{ partial "schema/event" . }}
-{{ end }}
+{{ define "schema" }}{{ partial "schema/event" . }}{{ end }}
 
 {{ define "main" }}
 <article data-page="{{ .File.ContentBaseName }}" class="event content">
 
     <h1 class="title">{{- .Title -}}</h1>
-    
+
     <div class="details">
         {{ partial "meta/date" . }}
         {{ .Scratch.Set "address" true }}
