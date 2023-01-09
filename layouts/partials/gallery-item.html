@@ -2,30 +2,20 @@
 {{ if le $img.Width 300 }}
     {{ warnf "%s too small (%d) should at least have a width of 300px" $img.RelPermalink $img.Width }}
 {{ end }}
+{{ $alt := $img }}
+{{ $src := $img.RelPermalink }}
+{{ if ge $img.Width 400 }}
+    {{ $src = ($img.Resize "400x").RelPermalink }}
+    <!-- { { $srcset = $srcset | append (print ($img.Resize "400x").RelPermalink " 400w") }} -->
+{{ end }}
 <li>
     <figure>
-        {{ $src := $img.RelPermalink }}
-        <!-- {{ $srcset := slice }} -->
         {{ if ge $img.Width 400 }}
-            {{ $src = ($img.Resize "400x").RelPermalink }}
-            <!-- { { $srcset = $srcset | append (print ($img.Resize "400x").RelPermalink " 400w") }} -->
-        {{ end }}
-        <!-- {{ if ge $img.Width 800 }} -->
-        <!--     { { $srcset = $srcset | append (print ($img.Resize "800x").RelPermalink " 800w") }} -->
-        <!-- {{ end }} -->
-        <!-- {{ $srcset = $srcset | append (print $img.Permalink " " $img.Width "w") }} -->
-        <!-- <img srcset="{{ delimit $srcset ", " }}" alt=""> -->
-
-        {{ if ge $img.Width 400 }}
-        <!-- <a href="{{ $img.RelPermalink}}"> -->
-        <!-- </a> -->
-            <img src="{{ $src }}" alt="">
+        <img src="{{ $src }}" alt="{{ $alt }}">
         {{ else }}
-        <img src="{{ $src }}" alt="">
+        <img src="{{ $src }}" alt="{{ $alt }}">
         {{ end }}
-
         <figcaption class="meta">
-
             <div class="exif">
             {{ with $img.Exif }}
                 {{ with .Tags }}
