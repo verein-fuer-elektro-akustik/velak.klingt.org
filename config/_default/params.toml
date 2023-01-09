@@ -9,6 +9,10 @@ mailman = "https://klingt.org/cgi-bin/mailman"
 theme_color = "#000000"
 dev = true
 
+[contact]
+    email = "velak@klingt.org"
+    web = "https://velak.klingt.org"
+
 [github]
     org = "verein-fuer-elektro-akustik"
     repo = "velak.klingt.org"

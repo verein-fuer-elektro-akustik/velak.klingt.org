@@ -1,7 +1,7 @@
 baseURL = ""
 title = "velak"
-languageCode = "en-us"
 defaultContentLanguage = "en"
+languageCode = "en-us"
 
 paginate = 1000
 rssLimit = 100
@@ -15,11 +15,6 @@ enableRobotsTXT = true
 
 [imaging]
     quality = 90
-    #[imaging.exif]
-        #disableDate = false
-        #disableLatLong = false
-        #excludeFields = ''
-        #includeFields = ''
 
 [outputs]
     home = ["HTML","JSON"]
