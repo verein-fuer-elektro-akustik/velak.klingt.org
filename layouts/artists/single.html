@@ -43,6 +43,7 @@
     {{ partial "list/program" . }}
     
     <!-- RECORDS -->
+    <!--
     {{ $records := slice }}
     {{ range where .Site.RegularPages "Section" "records" }}
         {{ if in .Params.artists $id }}
@@ -51,6 +52,7 @@
     {{ end }}
     {{ .Scratch.Set "records" $records }}
     {{ partial "list/records" . }}
+    -->
 
     <!-- GALLERY -->
     {{ partial "gallery" . }}
