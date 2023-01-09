@@ -29,36 +29,38 @@
         //height: 2rem;
         // overflow-x: hidden;
         white-space: nowrap;
-        border-bottom: 1px solid var(--background);
+        //border-bottom: 1px solid var(--background);
         //> *:not(.artists) {
             // z-index: 10000;
         //}
         > .meta {
             display: flex;
-            align-items: center;
-            gap: 0.5ch;
-            padding: 0.5ch 1ch;
+            // align-items: center;
+            // gap: 0.5ch;
+            // padding: 0.5ch 1ch;
             height: 100%;
-            @include typography.meta(98%);
-            text-transform: uppercase;
-            background: var(--b_med);
+            //@include typography.meta(75%);
+            // text-transform: uppercase;
+            //background: var(--b_med);
             color: var(--f_low);
-            user-select: none;
+            //user-select: none;
         }
         > .title {
             order: 2;
-            padding: 0 0.75ch;
+            //padding: 0 0.75ch;
+            margin: 0 0.5ch;
             //font-size: 1.25rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            //font-weight: 600;
+            text-transform: lowercase;
             white-space: nowrap;
-            background: var(--background);
+            //background: var(--background);
             // box-shadow: 10px 0 20px rgba(9,9,9,0.8);
-            user-select: none;
+            ////user-select: none;
         }
         > .date {
+            // display: none;
             order: 1;
-            user-select: none;
+            // user-select: none;
         }
         > .artists {
             display: flex;
@@ -76,7 +78,7 @@
                 z-index: 1000;
             }
             &::before {
-                background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+                //background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
                 // width: 2rem;
             }
             // &::after {
@@ -147,7 +149,7 @@ article {
             order: 1;
             padding: 0.5em 0 1em 0;
             position: relative;
-            left: -2px; // HACK
+            //left: -2px; // HACK
             font-weight: 500;
             text-transform: unset;
         }
@@ -180,11 +182,19 @@ article {
 
 ol.data-list.program {
     > li.event {
+        > .title {
+            //display: none;
+        }
         > .artists {
             order: 3;
         }
         > .location {
+            // display: none;
             order: 4;
+            > [data-id] {
+                display: none;
+                //background: red;
+            }
             //opacity: 0;
             //&::after {
                 //background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));

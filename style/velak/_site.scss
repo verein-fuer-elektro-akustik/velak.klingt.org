@@ -12,7 +12,7 @@ body {
 
     --spacing: 1; //var(--space-sm);
     --site-padding: 2rem;
-    --gap: 1rem;
+    --gap: 0rem;
     
     @media screen and (min-width: breakpoint.$phone) {
         --spacing: 1.5;
@@ -54,7 +54,7 @@ body {
         column-gap: 1.5rem;
         //padding: calc(2rem + var(--spacing)*0.5rem) 0 calc(var(--spacing)*0.5rem) 0;
         padding-top: 4rem;
-        padding-bottom: 2rem;
+        //padding-bottom: 2rem;
         //text-transform: uppercase;
         text-transform: lowercase;
         user-select: none;

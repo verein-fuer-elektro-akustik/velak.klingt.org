@@ -148,12 +148,17 @@ form {
     padding: 1rem 0;
     label {
         display: none;
+        font-size: 75%;
+    }
+    legend {
+        display: none;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-font-weight);
     line-height: 1; // var(--heading-line-height);
+    text-transform: lowercase;
     //line-height: 1em; //var(--heading-line-height);
     //margin: 0 0 var(--heading-line-height) 0;
     //margin: 1.5em 0 1em 0;
@@ -162,21 +167,22 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: var(--text-xxxxl);
     letter-spacing: -0.05em;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 h2 {
     font-size: var(--text-xxxl);
     letter-spacing: -0.055em;
-    text-transform: uppercase;
+    line-height: 3em;
+    //text-transform: uppercase;
 }
 h3 {
     font-size: var(--text-xxl);
-    text-transform: uppercase;
+    //text-transform: uppercase;
     line-height: 3em; // var(--heading-line-height);
 }
 h4 {
     font-size: var(--text-lg);
-    text-transform: uppercase;
+    //text-transform: uppercase;
     line-height: 3em; // var(--heading-line-height);
 }
 h5 {
@@ -211,13 +217,14 @@ input, select {
     background: var(--b_med);
     color: var(--f_med);
     //border: 1px solid var(--b_med);
-    transition: background 0.1s, padding 0.5s;
+    //transition: background 0.1s, padding 0.5s;
     &:focus {
-        padding: 1rem 2rem;
+        //padding: 1rem 2rem;
         background: var(--f_med);
         color: var(--b_low);
     }
     &::placeholder {
+        text-transform: lowercase;
         color: var(--f_med);
     }
     //&:invalid {
@@ -243,11 +250,12 @@ input, select {
 }
 
 label {
-    @include meta;
+    //@include meta;
     display: block;
     //font-family: var(--font-mono);
     //font-size: 11px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 // nav {
