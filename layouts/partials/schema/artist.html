@@ -1,0 +1,9 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{- .Title -}}",
+    {{ with .Params.email }}"email": "{{- . -}}",{{ end }}
+    {{ with .Params.links }}"url": "{{range first 1 .}}{{- . -}}{{end}}",{{ end }}
+}
+</script>
