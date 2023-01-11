@@ -1,3 +1,5 @@
+{{ define "schema" }}{{ partial "schema/artist" . }}{{ end }}
+
 {{ define "main" }}
 {{ $name := lower .Name }}
 {{ $id := replace $name "-" " " }}
@@ -7,9 +9,11 @@
    
     <div class="details meta">
         {{ partial "meta/email" .Params.email }}
-        {{ range .Params.links }}
-            {{ partial "meta/link" . }}
-        {{ end }}
+        <ul>
+            {{ range .Params.links }}
+            <li>{{ partial "meta/link" . }}</li>
+            {{ end }}
+        </ul>
     </div>
 
     <div class="content">{{- .Content -}}</div>
