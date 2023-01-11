@@ -13,14 +13,7 @@
 </div>
 <div class="meta">
     {{ with .GitInfo }}
-    <a
-        href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}/"
-        rel="external"
-        aria-label="repository"
-    >
-        <span>{{- .AbbreviatedHash -}}</span>
-        <!--<span>{{ .AuthorDate.Format "2006-01-02"  }}</span>-->
-    </a>
+    <a href="https://github.com/{{ $.Site.Params.github.org }}/{{ $.Site.Params.github.repo }}/commits/" rel="external" aria-label="repository">{{- .AbbreviatedHash -}}</a>
     {{ end }}
     <a
         href="{{ .Site.BaseURL }}/program/index.xml"
