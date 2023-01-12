@@ -16,10 +16,10 @@
         <meta name="url" content="{{ .Site.Params.url }}">
         <meta name="designer" content="{{ .Site.Params.developer.name }}">
         <meta name="description" content="{{ with .Params.description }}{{- . -}}{{ else }}{{- .Site.Params.description -}}{{ end }}">
-        {{ with .Site.Params.publisher }}<meta name="publisher" content="{{- . -}}">{{ end }}
-        {{ with .Site.Params.theme_color }}<meta name="theme-color" content="{{- . -}}">{{ end }}
         {{ $keywords := .Site.Params.keywords }}{{ with .Params.keywords }}{{ $keywords = union $keywords . }}{{ end }}
         <meta name="keywords" content="{{ delimit $keywords "," }}">
+        {{ with .Site.Params.publisher }}<meta name="publisher" content="{{- . -}}">{{ end }}
+        {{ with .Site.Params.theme_color }}<meta name="theme-color" content="{{- . -}}">{{ end }}
 
         {{ template "_internal/opengraph.html" . }}
         {{ template "_internal/twitter_cards.html" . }}
@@ -57,12 +57,12 @@
 
         <script src="{{ (resources.Get "script/theme.js").RelPermalink }}"></script>
 
-        <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2" crossorigin> -->
         {{ block "prerender" . }}{{ end }}
 
         <link rel="stylesheet" href="{{ $root }}/style.css">
-        <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         <link rel="manifest" href="{{ $root }}/manifest.json">
+        <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         {{ partial "site/favicons" . }}
 
         {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
@@ -77,7 +77,7 @@
 
         {{ block "schema" . }}{{ end }}
 
-        <script src="{{ (resources.Get "script/app.js").RelPermalink }}" async></script>
+        <script src="{{ (resources.Get "script/app.js" | resources.Minify).RelPermalink }}" async></script>
 
 	</head>
     <body>

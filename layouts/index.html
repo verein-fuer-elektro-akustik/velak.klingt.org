@@ -5,6 +5,12 @@
 {{ define "schema" }}{{ partial "schema/organization" . }}{{ end }}
 
 {{ define "main" }}
+
+    {{ .Scratch.Set "host" "http://195.201.41.121:8000" }}
+    {{ .Scratch.Set "stream" "velak" }}
+    {{ partial "livestream" . }}
+
+    <!--
     <ol class="data-list program" reversed>
     {{ range where .Site.Pages "Section" "program"}}
         {{ if (time .Date).After now }}
@@ -12,4 +18,5 @@
         {{ end }}
     {{ end }}
     </ol>
+                      -->
 {{ end }}

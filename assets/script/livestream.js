@@ -1,11 +1,12 @@
 "use strict";
 
-const HOST = 'https://rrr.disktree.net:8443';
-const STREAM = 'schokolade';
+//const HOST = 'https://rrr.disktree.net:8443';
+const HOST = 'http://195.201.41.121:8000';
+const STREAM = 'velak';
 const PI2 = Math.PI / 2;
 
-function fetchStatus() {
-    return window.fetch(HOST + "/status-json.xsl").then(r => {
+function fetchStatus(host) {
+    return window.fetch(host + "/status-json.xsl").then(r => {
         return r.json().then(json => {
             return json.icestats;
         });
@@ -13,12 +14,10 @@ function fetchStatus() {
 }
 
 let theme;
-let toggle;
-let canvas;
+let container, statusElement, canvas;
+let sourceInfo;
+let audio, analyser, freqData, timeData, floatData;
 let graphics;
-let audio;
-let analyser;
-let freqData, timeData, floatData;
 let animationFrameId;
 
 function onAnimationFrame(time) {
@@ -29,55 +28,55 @@ function onAnimationFrame(time) {
     analyser.getByteFrequencyData(freqData);
     analyser.getFloatTimeDomainData(floatData);
 
-    let sumOfSquares = 0;
-    for (let i = 0; i < floatData.length; i++) {
-        sumOfSquares += floatData[i] ** 2;
-    }
-    //const avgPowerDecibels = 10 * Math.log10(sumOfSquares / floatData.length);
-    //console.log(avgPowerDecibels);
-    const RMS = Math.sqrt(sumOfSquares / floatData.length);
+    graphics.fillStyle = theme.background;
+    graphics.fillRect(0, 0, canvas.width, canvas.height);
+    graphics.fillStyle = theme.f_med;
+    graphics.lineWidth = 1;
 
-    /*//let frequencyBinCount = analyser.frequencyBinCount;
-    let hw = canvas.width / 2, hh = canvas.height / 2;
-    let v, x, y;
-    graphics.clearRect(0, 0, canvas.width, canvas.height);
-    graphics.fillStyle = "#fff000";
-    graphics.strokeStyle = theme.fg; //"#000000";
-    graphics.lineWidth = RMS * 1000 * (canvas.width / 1000);
+    drawTimedata(canvas.width, canvas.height);
+    drawFrequencies(0, 0, canvas.width, canvas.heigh);
+
+    updateStatusText(time);
+}
+
+function drawTimedata(width, height) {
     graphics.beginPath();
-    for (let i = 0; i < analyser.fftSize; i++) {
-        v = i * PI2 / 180;
-        x = Math.cos(v) * (0 + timeData[i] * (RMS * 2));
-        y = Math.sin(v) * (0 + timeData[i] * (RMS * 2));
-        graphics.lineTo(hw + x, hh + y);
-    }
-    graphics.stroke();*/
-    
-    // Draw time data
-    graphics.clearRect( 0, 0, canvas.width, canvas.height );
-    graphics.strokeStyle = theme.background; 
-    //graphics.lineWidth = RMS * 10 * (canvas.width / 1000);
-    graphics.lineWidth = RMS * 100;
-    const w = canvas.width;
-    const h = canvas.height;
-    const x = 0;
-    const y = 0;
-	const sliceWidth = w * 1.0 / analyser.frequencyBinCount;
-    const cy = h / 2;
-    var px = 0.0, py = 0.0;
-    graphics.beginPath();
-    for( let i=0; i<analyser.frequencyBinCount; i++) {
-        let v = timeData[i] / 128.0;
+    graphics.strokeStyle = theme.f_med;
+    let sw = width * 1.0 / analyser.frequencyBinCount;
+    let cy = height / 2;
+    let px = 0.0, py = 0.0;
+    for (let i = 0; i < analyser.frequencyBinCount; i++) {
+        var v = timeData[i] / 128.0;
         py = v * cy;
-        if( i === 0 ) {
-            graphics.moveTo(px+x, py+y);
+        if (i == 0) {
+            graphics.moveTo(px, py);
         } else {
-            graphics.lineTo(px+x, py+y);
+            graphics.lineTo(px, py);
         }
-        px += sliceWidth;
+        px += sw;
     }
-    //graphics.lineTo( w, centerY);
     graphics.stroke();
+}
+
+function drawFrequencies(x, y, width, height) {
+    const res = analyser.frequencyBinCount;
+    let bwidth = Math.floor(width / res); // * 2.5;
+    if(bwidth<=0) bwidth = 1;
+    let bheight;
+    let px = 0;
+    for (let i = 0; i < res; i++) {
+        bheight = freqData[i]; // / 2;
+        graphics.fillRect(x + px, height - bheight - y, bwidth, bheight);
+        px += bwidth;
+    }
+}
+
+function updateStatusText(time, extraText) {
+    let str = "";
+    if (sourceInfo) str += sourceInfo.artist + ' ' + sourceInfo.title + ' [' + sourceInfo.audio_channels + 'ch/' + sourceInfo.audio_samplerate + 'hz/' + sourceInfo["ice-bitrate"] + "]";
+    if (time) str += " " + time;
+    if (extraText) str += " " + extraText;
+    statusElement.textContent = str;
 }
 
 function playStream(source) {
@@ -86,7 +85,7 @@ function playStream(source) {
     audio.preload = "none";
     audio.crossOrigin = "anonymous";
     audio.controls = false;
-    audio.onplaying = e => {
+    audio.onplaying = _ => {
 
         const audioContext = new AudioContext();
 
@@ -94,7 +93,7 @@ function playStream(source) {
         //gain.connect( audioContext.destination );
 
         analyser = audioContext.createAnalyser();
-        analyser.fftSize = 2048;
+        analyser.fftSize = 512
         //analyser.smoothingTimeConstant = 0.8;
         //analyser.minDecibels = -140;
         //analyser.maxDecibels = 0;
@@ -128,7 +127,7 @@ function playStream(source) {
 function stopStream() {
     if (audio) {
         audio.pause();
-        audio.onpause = e => {
+        audio.onpause = _ => {
             audio = null;
         }
         graphics.clearRect(0, 0, canvas.width, canvas.height);
@@ -137,26 +136,31 @@ function stopStream() {
             animationFrameId = null;
         }
     }
-    //toggle.style.display = 'block';
-    //toggle.style.pointerEvents = null;
 }
 
 function fitCanvas() {
     if (canvas) {
-        const container = document.body.querySelector("main");
+        const container = canvas.parentElement;
         const r = container.getBoundingClientRect();
-        const s = (r.width < r.height ? r.width : r.height) / 1.6;
-        canvas.width = s;
-        canvas.height = s;
+        const W = Math.round(r.width - r.x);
+        const H = Math.round(r.height - r.y);
+        canvas.width = W;
+        canvas.height = H;
     }
 }
 
-window.onload = e => {
+window.addEventListener('load', _ => {
 
-    console.log("stream");
+    container = document.body.querySelector('div.livestream');
+    if (!container)
+        return;
+    
+    let host = container.getAttribute('data-host');
+    let stream = container.getAttribute('data-stream');
+    console.log(stream,host);
 
-    toggle = document.body.querySelector('main > .toggle');
-    canvas = document.body.querySelector('canvas.spectrum');
+    statusElement = container.querySelector('.status');
+    canvas = container.querySelector('canvas.spectrum');
     graphics = canvas.getContext("2d");
 
     const style = window.getComputedStyle(document.querySelector(':root'));
@@ -167,10 +171,12 @@ window.onload = e => {
 
     fitCanvas();
     window.onresize = _ => { fitCanvas(); }
+    
+    
 
-    fetchStatus().then(status => {
+    fetchStatus(HOST).then(status => {
         let source;
-        if(Array.isArray(status.source)) {
+        if (Array.isArray(status.source)) {
             for (let i = 0; i < status.source.length; i++) {
                 const src = status.source[i];
                 if (src.server_name === STREAM) {
@@ -178,12 +184,15 @@ window.onload = e => {
                     break;
                 }
             }
-        } else if(status.source.server_name=== STREAM) {
+        } else if (status.source.server_name === STREAM) {
             source = status.source;
         }
-        if(source) {
-            console.warn(source);
-            canvas.onclick = e => {
+        if (source) {
+            console.info(source);
+            sourceInfo = source;
+            //statusElement.textContent = source.artist+" PLAY";
+            updateStatusText(null, "CLICK TO PLAY");
+            container.onclick = _ => {
                 if (audio) {
                     stopStream();
                 } else {
@@ -193,7 +202,7 @@ window.onload = e => {
                 }
             }
         } else {
-            console.warn('no stream source found');
+            console.warn('No livestream source found');
         }
     });
-}
+}, false);

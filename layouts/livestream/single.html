@@ -1,0 +1,5 @@
+{{ define "main" }}
+<article data-page="{{ .File.ContentBaseName }}" class="stream">
+    {{ partial "livestream" . }}
+</article>
+{{ end }}

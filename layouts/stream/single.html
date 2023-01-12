@@ -1,6 +1,0 @@
-{{ define "main" }}
-<article data-page="{{ .File.ContentBaseName }}" class="stream">
-    <canvas class="spectrum"></canvas> 
-    <script src="{{ (resources.Get "script/stream.js" ).RelPermalink }}" async></script>
-</article>
-{{ end }}

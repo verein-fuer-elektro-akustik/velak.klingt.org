@@ -94,6 +94,8 @@ body {
         }
         > nav {
             margin: 0;
+            //background:red;
+            padding-bottom: 1rem;
             width: 100%;
             > ul {
                 display: flex;
@@ -205,9 +207,9 @@ body {
     //@media screen and (min-width: breakpoint.$tablet) {
         //font-size: var(--text-sm);
     //}
-    > i {
-        margin-right: 0.125em;
-    }
+    //> i {
+        //margin-right: 0.125em;
+    //}
 }
 
 .warning {

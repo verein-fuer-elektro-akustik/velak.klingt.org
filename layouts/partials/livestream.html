@@ -1,0 +1,7 @@
+{{ $host := .Scratch.Get "host" | default "http://195.201.41.121:8000" }}
+{{ $stream := .Scratch.Get "stream" | default "velak" }}
+<div class="livestream" data-host="{{ $host }}" data-stream="{{ $stream }}">
+    <div class="meta status"></div>
+    <canvas class="spectrum"></canvas> 
+    <script src="{{ (resources.Get "script/livestream.js" | resources.Minify ).RelPermalink }}" async></script>
+</div>

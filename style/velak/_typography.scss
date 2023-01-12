@@ -159,6 +159,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-font-weight);
     line-height: 1; // var(--heading-line-height);
     text-transform: lowercase;
+    //text-transform: uppercase;
     //line-height: 1em; //var(--heading-line-height);
     //margin: 0 0 var(--heading-line-height) 0;
     //margin: 1.5em 0 1em 0;
@@ -167,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: var(--text-xxxxl);
     letter-spacing: -0.05em;
+    line-height: 2em;
     //text-transform: uppercase;
 }
 h2 {
@@ -190,7 +192,7 @@ h5 {
     line-height: 2em;
     //line-height: calc(var(--heading-line-height)*1.5);
     //text-transform: lowercase;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 h6 {
     font-size: var(--text-sm);
