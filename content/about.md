@@ -20,7 +20,7 @@ Current active members of velak are:
 - {{< artist "fabian-lanzmaier" >}}
 - {{< artist "gabriela-gordillo" >}}
 
-contact: [{{<param "contact.email">}}](mailto:{{<param "contact.email">}})
+contact: [{{<param "contact.email">}}](mailto:{{<param "contact.email">}})  
 
 velak is kindly supported by BMKOES, [Ma7](https://www.wien.gv.at/kultur/abteilung/) and SKE  
 zvr-zahl: 229137709
