@@ -1,0 +1,223 @@
+@use 'typography';
+
+// Program/Records data list base style
+
+@keyframes scroll_artists {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.data-list {
+    width: 100%;
+    overflow-x: hidden;
+    > li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        //border-bottom: 1px solid var(--background);
+        //> *:not(.artists) {
+            // z-index: 10000;
+        //}
+        > .meta {
+            display: flex;
+            // align-items: center;
+            // gap: 0.5ch;
+            height: 100%;
+            //@include typography.meta(75%);
+            color: var(--f_low);
+        }
+        > .title {
+            order: 2;
+            //margin: 0 0.5ch;
+            font-weight: 600;
+            text-transform: lowercase;
+            white-space: nowrap;
+            // box-shadow: 10px 0 20px rgba(9,9,9,0.8);
+        }
+        > .date {
+            // display: none;
+            order: 1;
+            // user-select: none;
+        }
+        > .artists {
+            display: flex;
+            width: 100%;
+            // height: 100%;
+            color: var(--f_low);
+            // background: var(--b_med);
+            // min-height: 100%;
+            overflow-x: hidden;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                height: 1.5em;
+                width: 2rem; //rem;
+                z-index: 1000;
+            }
+            //&::before {
+                //background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
+                // width: 2rem;
+            //}
+            // &::after {
+            //     background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
+            //     width: 5vw; //rem;
+            //     right: 0;
+            // }
+            > ul.artists {
+                display: inline-flex;
+                white-space: nowrap;
+                text-transform: lowercase;
+                // background: var(--background);
+                user-select: none;
+                > li {
+                    margin: 0 0.125ch;
+                    &::after {
+                        content: ',';
+                        margin-right: 0.5ch;
+                    }
+                }
+            }
+            &.scroll-animation {
+                > ul.artists {
+                    //animation: scroll_artists 50s infinite;
+                    animation: scroll_artists 50s infinite;
+                }
+            }
+        }
+    }
+    @media print {
+       > li {
+           > .artists {
+               display: none;
+           }
+       } 
+    }
+}
+
+ul.artists {
+    text-transform: lowercase;
+    &, ul, li { 
+        list-style: none;
+    }
+    > li {
+        display: flex;
+        // margin-bottom: 1em;
+        // line-height: 1em;
+        > span.group {
+           margin-right: 0.5ch; 
+        }
+        > ul.collab {
+            display: flex;
+            //flex-wrap: wrap;
+            > li {
+                display: flex;
+                white-space: nowrap;
+                &:not(:last-child) {
+                    &::after {
+                        content: "+";
+                        margin: 0 0.5ch;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//// --- Program ---------------------------------------------------------------
+
+ol.data-list.program {
+    > li.event {
+        > .title {
+            margin: 0 0.5ch;
+        }
+        > .artists {
+            order: 3;
+        }
+        > .location {
+            // display: none;
+            order: 4;
+            > [data-id] {
+                display: none;
+                //display: none;
+                //transform: translateX(100%);
+                //transition: width 1s;
+                //width: 0px;
+                //background: red;
+            }
+            &:hover {
+                > [data-id] {
+                    display: block;
+                    //transform: translateX(0);
+                    //width: unset;
+                    //display: block;
+                }
+            }
+            //opacity: 0;
+            //&::after {
+                //background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
+                // width: 2rem;
+            //}
+        }
+        &.upcoming {
+            //filter: invert(100%);
+            font-size: 200%;
+            //margin: 0.5rem 0;
+            //> .title {
+                // font-size: 150%;
+            //}
+        }
+    }
+}
+
+
+//// --- Records ---------------------------------------------------------------
+
+ol.data-list.records {
+    //justify-content: space-around;
+    > li {
+        //> .format {
+            //order: 1; 
+        //}
+        > img {
+            display: none;
+            order: 2;
+            max-height: 2rem;
+            height: 100%;
+            // border: 1px solid var(--f_low);
+            filter: brightness(26%) contrast(90%) grayscale(100%) invert(5%);
+            transition: filter 0.2s;
+            &:hover {
+                filter: none;
+            }
+        }
+        > .title {
+            order: 3;
+        }
+        > .format {
+            margin: 0 0.5ch;
+            order: 2;
+        }
+        > .date {
+            order: 1;
+            //order: 100;
+        }
+        > .artists {
+            order: 3;
+        }
+        > .label {
+            order: 4;
+            display: flex;
+            background: red;
+
+            //width: 100%;
+        }
+    }
+}
+
