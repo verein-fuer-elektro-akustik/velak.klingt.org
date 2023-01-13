@@ -84,15 +84,14 @@
         <header>
             {{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}
             <nav class="site">{{ block "nav-site" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
-            <!--<nav class="page">{{ block "nav-page" . }}{{ end }}</nav>-->
         </header>
         <main {{ with .Section }}data-section="{{.}}"{{ end }} data-kind="{{ .Kind }}">
             {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
         </main>
 		<footer>
-            {{ block "footer-left" . }}{{ end }}
-            {{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}
-            {{ block "footer-right" . }}{{ end }}
+            {{ block "footer-left" . }}{{- partial "site/footer-left.html" . -}}{{ end }}
+            {{ block "footer-center" . }}{{ end }}
+            {{ block "footer-right" . }}{{- partial "site/footer-right.html" . -}}{{ end }}
         </footer>
         <aside>{{ block "aside" . }}{{ end }}</aside>
     </body>

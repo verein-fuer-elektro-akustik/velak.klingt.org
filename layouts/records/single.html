@@ -1,10 +1,8 @@
-{{ define "schema" }}
-{{ partial "schema/record" . }}
-{{ end }}
+{{ define "schema" }}{{ partial "schema/record" . }}{{ end }}
 
 {{ define "main" }}
 <article class="record content">
-   
+
     <h1 class="title">{{- .Title -}}</h1>
 
     <div class="details">
@@ -13,16 +11,17 @@
         {{ partial "meta/label" . }}
         {{ partial "meta/tags" .Params.tags }}
     </div>
-    
+
     <div class="artists">{{ partial "list/artists" . }}</div>
 
     <div class="content">{{- .Content -}}</div>
 
     {{ partial "gallery" . }}
 
-    <nav class="meta">{{ partial "nav_prev_next" . }}</nav>
-
 </article>
 {{ end }}
 
+{{ define "footer-center" }}
+<nav class="meta">{{ partial "nav_prev_next" . }}</nav>
+{{ end }}
 

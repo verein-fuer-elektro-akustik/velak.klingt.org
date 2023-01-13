@@ -6,18 +6,18 @@
 <article class="content artist">
 
     <h1 class="title">{{- .Title -}}</h1>
-   
+
     <div class="details meta">
-        {{ partial "meta/email" .Params.email }}
         <ul>
             {{ range .Params.links }}
             <li>{{ partial "meta/link" . }}</li>
             {{ end }}
         </ul>
+        {{ partial "meta/email" .Params.email }}
     </div>
 
     <div class="content">{{- .Content -}}</div>
-    
+
     <!-- EVENTS -->
     {{ $events_solo := slice }}
     {{ $events_collab := slice }}
@@ -45,7 +45,26 @@
     {{ $events := sort ($events_solo | append $events_collab | uniq) "Date" "desc" }}
     {{ .Scratch.Set "events" $events }}
     {{ partial "list/program" . }}
-    
+
+    <!-- COLLABS -->
+    <!--
+    <div>
+    {{ range $events_collab }}
+        {{range .Params.collabs }}
+            <div>
+                {{ $artists := split . "+" }}
+                {{ range $artists }}
+                    {{.}}
+                    {{ if eq . $id }}{{ else }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+    {{ end }}
+    </div>
+    -->
+
     <!-- RECORDS -->
     <!--
     {{ $records := slice }}
@@ -58,10 +77,13 @@
     {{ partial "list/records" . }}
     -->
 
-    <!-- GALLERY -->
     {{ partial "gallery" . }}
 
 </article>
 <script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script>
+{{ end }}
+
+{{ define "footer-center" }}
+<nav class="meta">{{ partial "nav_prev_next" . }}</nav>
 {{ end }}
 

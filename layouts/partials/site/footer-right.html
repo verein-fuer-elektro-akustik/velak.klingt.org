@@ -1,17 +1,4 @@
 <div class="meta">
-    <i class="ic-copyright" aria-hidden="true"></i>
-    <span class="nodisplay">©</span>
-    <a href="{{ .Site.BaseURL }}/imprint/">
-        <span>{{ now.Format "2006" }}&nbsp;VELAK Vienna/AT</span>
-    </a>
-    <a
-        href="{{ .Site.Params.developer.url }}"
-        class="nodisplay"
-        aria-hidden="true"
-        >{{ .Site.Params.developer.name }}</a
-    >
-</div>
-<div class="meta">
     {{ with .GitInfo }}
     <a href="https://github.com/{{ $.Site.Params.github.org }}/{{ $.Site.Params.github.repo }}/commits/" rel="external" aria-label="repository">{{- .AbbreviatedHash -}}</a>
     {{ end }}
