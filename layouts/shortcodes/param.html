@@ -1,8 +1,1 @@
-{{ $param := .Get 0 }}
-{{ with $param }}
-{{ with $.Site.Param . }}
-{{- . -}}
-{{ else }}
-{{ warnf "Param [%s] not found" $param }}
-{{ end }}
-{{ end }}
+{{ $param := .Get 0 }}{{ with $.Site.Param $param }}{{- . -}}{{ else }}{{ warnf "Param [%s] not found" $param }}{{ end }}
