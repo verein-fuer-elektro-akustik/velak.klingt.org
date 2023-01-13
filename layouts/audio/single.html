@@ -1,0 +1,22 @@
+{{ define "main" }}
+<ol class="playlist">
+{{ range ((where .Site.Pages "Section" "program") | append (where .Site.Pages "Section" "records")) }}
+    {{ $dir := .File.Dir }}
+    {{ $files := .Resources.ByType "audio" }}
+    {{ if gt (len $files) 0 }}
+    <li>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <ol>
+            {{ range $files }}
+            <li class="item">
+                {{ $stat := os.Stat (print $dir .Name) }}
+                <a class="meta" href="{{ .RelPermalink }}">{{ .Name }}</a>
+                <!-- <span class="meta">{{ div $stat.Size 1024 }}bytes</span> -->
+            </li>
+            {{ end }}
+        </ol>
+    </li>
+    {{ end }}
+{{ end }}
+</ol>
+{{ end }}
