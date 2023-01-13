@@ -26,8 +26,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        //height: 2rem;
-        // overflow-x: hidden;
         white-space: nowrap;
         //border-bottom: 1px solid var(--background);
         //> *:not(.artists) {
@@ -37,25 +35,17 @@
             display: flex;
             // align-items: center;
             // gap: 0.5ch;
-            // padding: 0.5ch 1ch;
             height: 100%;
             //@include typography.meta(75%);
-            // text-transform: uppercase;
-            //background: var(--b_med);
             color: var(--f_low);
-            //user-select: none;
         }
         > .title {
             order: 2;
-            //padding: 0 0.75ch;
             margin: 0 0.5ch;
-            //font-size: 1.25rem;
-            //font-weight: 600;
+            font-weight: 600;
             text-transform: lowercase;
             white-space: nowrap;
-            //background: var(--background);
             // box-shadow: 10px 0 20px rgba(9,9,9,0.8);
-            ////user-select: none;
         }
         > .date {
             // display: none;
@@ -140,7 +130,7 @@ ul.artists {
 }
 
 article {
-    padding: 1rem 0 2rem 0;
+    padding: 1rem 0 4rem 0;
     gap: 2rem;
     &.content {
         display: flex;
@@ -151,7 +141,6 @@ article {
             position: relative;
             //left: -2px; // HACK
             font-weight: 500;
-            text-transform: unset;
         }
         > .details {
             order: 2;
@@ -410,7 +399,7 @@ main[data-section="records"] {
         //left: 1rem;
         margin: 1rem;
         // writing-mode:vertical-lr;
-        //font-size: 65%;
+        font-size: 75%;
     }
     canvas.spectrum {
         width: 100%;

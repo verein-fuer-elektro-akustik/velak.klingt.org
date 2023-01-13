@@ -165,13 +165,37 @@ body {
         white-space: nowrap;
         font-size: 75%;
         user-select: none;
+        position: relative;
         > * {
             display: flex;
-            overflow-x: hidden;
-            text-overflow: ellipsis;
+            //overflow-x: hidden;
+            //text-overflow: ellipsis;
+
+            //white-space: nowrap;
             > *:not(:last-child) {
                 margin-right: 1ch;
             }
+        }
+        >:nth-child(1) {
+            white-space: nowrap;
+        }
+        >:nth-child(2) {
+            margin: 0 1ch;
+            //width: auto;
+            // width: 100%;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        }
+        >:nth-child(3) {
+        }
+
+        @media screen and (max-width: breakpoint.$phone) {
+            flex-wrap: wrap;
+            >:nth-child(2) {
+                margin: 0;
+            }
+            // background: yellow;
         }
         @media screen and (min-width: breakpoint.$tablet) {
             justify-content: flex-end;
@@ -247,24 +271,26 @@ nav.top {
 nav.prev_next {
     display: flex;
     justify-content: space-between;
-    gap: 2em;
-    font-size: 75%;
-    // &:hover {
-    //     transform: scale(1.3);
-    // }
+    gap: 1.5em;
     @media screen and (min-width: breakpoint.$tablet) {
         justify-content: flex-start;
     }
     > a {
         font-family: var(--font-mono);
-        //font-size: var(--text-sm);
         text-transform: uppercase;
         text-decoration: none;
+        /*
+        &:not(:first-child) {
+            // margin-left: 0.5ch;
+        }
+        &:not(:last-child) {
+            // margin-right: 0.5ch;
+        }
         i {
-            display:inline-block;
+            display: inline-block;
             //transform: scale(1.2);
             //margin: 0 0.5em;
-            transition: transform 0.12s;
+            //transition: transform 0.12s;
             // &:hover::before {
             //     //transform: scale(2); // TODO ?
             // }
@@ -276,24 +302,12 @@ nav.prev_next {
         &:hover {
             // transform: scale(2);
             i {
-                transform: scale(1.2);
+                // transform: scale(1.2);
             }
         }
+        */
     }
 }
-
- //nav {
-        ////font-size: 2em;
-        //display: flex;
-        //align-items: flex-end;
-    //}
-
-/*nav.top_prev_next {*/
-    /*//font-size: 2rem;*/
-    /*@media screen and (min-width: breakpoint.$laptop) {*/
-        /*font-size: 1rem;*/
-    /*}*/
-/*}*/
 
 // #vignette {
 // 	position: fixed;

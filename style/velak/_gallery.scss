@@ -23,7 +23,7 @@
         @media (max-width:800px) { column-count: 2; } 
         @media (max-width:600px) { column-count: 1; } 
         > li {
-            transition: widht 1s;
+            // transition: width 1s;
             > figure {
                 position: relative;
                 width: 100%;
