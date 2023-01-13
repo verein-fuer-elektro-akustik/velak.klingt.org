@@ -1,24 +1,20 @@
 "use strict";
 
-//const HOST = 'https://rrr.disktree.net:8443';
-//const HOST = 'http://195.201.41.121:8000';
-//const STREAM = 'velak';
-//const PI2 = Math.PI / 2;
+
+
+let theme;
+let container, statusElement, canvas, graphics;
+let sourceInfo, host, stream;
+let audio, gain, analyser, freqData, timeData;
+let animationFrameId;
 
 function fetchStatus(host) {
-    return window.fetch(host + "/status-json.xsl").then(r => {
+    return window.fetch(`${host}/status-json.xsl`).then(r => {
         return r.json().then(json => {
             return json.icestats;
         });
     });
 }
-
-let theme;
-let container, statusElement, canvas;
-let sourceInfo, host, stream;
-let audio, gain, analyser, freqData, timeData, floatData;
-let graphics;
-let animationFrameId;
 
 function onAnimationFrame(time) {
 
@@ -26,32 +22,31 @@ function onAnimationFrame(time) {
 
     analyser.getByteTimeDomainData(timeData);
     analyser.getByteFrequencyData(freqData);
-    analyser.getFloatTimeDomainData(floatData);
+    //analyser.getFloatTimeDomainData(floatData);
 
     graphics.fillStyle = theme.background;
     graphics.fillRect(0, 0, canvas.width, canvas.height);
     graphics.fillStyle = theme.f_med;
     graphics.lineWidth = 1;
 
-    drawTimedata(canvas.width, canvas.height);
-    drawFrequencies(0, 0, canvas.width, canvas.heigh);
+    drawTimedata(0, 0, canvas.width, canvas.height);
+    //drawFrequencies(0, 0, canvas.width, canvas.height);
 
     updateStatusText(time);
 }
 
-function drawTimedata(width, height) {
+function drawTimedata(x, y, width, height) {
     graphics.beginPath();
     graphics.strokeStyle = theme.f_med;
-    let sw = width * 1.0 / analyser.frequencyBinCount;
-    let cy = height / 2;
+    const sw = width * 1.0 / analyser.frequencyBinCount;
+    const cy = height / 2;
     let px = 0.0, py = 0.0;
     for (let i = 0; i < analyser.frequencyBinCount; i++) {
-        var v = timeData[i] / 128.0;
-        py = v * cy;
+        py = (timeData[i] / 128.0) * cy;
         if (i == 0) {
-            graphics.moveTo(px, py);
+            graphics.moveTo(x + px, y + py);
         } else {
-            graphics.lineTo(px, py);
+            graphics.lineTo(x + px, y + py);
         }
         px += sw;
     }
@@ -59,61 +54,50 @@ function drawTimedata(width, height) {
 }
 
 function drawFrequencies(x, y, width, height) {
+    graphics.fillStyle = theme.f_med;
     const res = analyser.frequencyBinCount;
-    let bwidth = Math.floor(width / res); // * 2.5;
-    if(bwidth<=0) bwidth = 1;
+    let bwidth = Math.floor(width / res);
+    if (bwidth <= 0) bwidth = 1;
     let bheight;
     let px = 0;
     for (let i = 0; i < res; i++) {
-        bheight = freqData[i]; // / 2;
-        graphics.fillRect(x + px, height - bheight - y, bwidth, bheight);
+        bheight = freqData[i] * 2; // / 2;
+        graphics.fillRect(x + px, height - bheight - y, bwidth, 1);
         px += bwidth;
     }
 }
 
 function updateStatusText(time, extraText) {
     let str = "";
-    if (sourceInfo) str += sourceInfo.artist + ' ' + sourceInfo.title + ' [' + sourceInfo.audio_channels + 'ch/' + sourceInfo.audio_samplerate + 'hz/' + sourceInfo["ice-bitrate"] + "]";
-    if (time) str += " " + time;
+    if (sourceInfo) str += sourceInfo.artist + ' ' + sourceInfo.title + ' [' + sourceInfo.listeners + '][' + sourceInfo.audio_channels + 'ch/' + sourceInfo.audio_samplerate + 'hz/' + sourceInfo["ice-bitrate"] + "]";
+    if (time) str += " <br>" + time;
     if (extraText) str += " " + extraText;
-    statusElement.textContent = str;
+    statusElement.innerHTML = str;
 }
 
 function playStream(source) {
-
     audio = document.createElement('audio');
     audio.preload = "none";
     audio.crossOrigin = "anonymous";
     audio.controls = false;
     audio.onplaying = _ => {
-
         const audioContext = new AudioContext();
-
         gain = audioContext.createGain();
         //gain.gain.value = 0.9;
-        gain.connect( audioContext.destination );
-
+        gain.connect(audioContext.destination);
         analyser = audioContext.createAnalyser();
-        analyser.fftSize = 512
+        analyser.fftSize = 1024;
         //analyser.smoothingTimeConstant = 0.8;
         //analyser.minDecibels = -140;
         //analyser.maxDecibels = 0;
-        //analyser.connect(audioContext.destination);
-        analyser.connect( gain );
-
+        analyser.connect(gain);
         freqData = new Uint8Array(analyser.frequencyBinCount);
         timeData = new Uint8Array(analyser.frequencyBinCount);
-        floatData = new Float32Array(analyser.fftSize);
-
+        //floatData = new Float32Array(analyser.fftSize);
         const media = audioContext.createMediaElementSource(audio);
         media.connect(analyser);
-
         animationFrameId = window.requestAnimationFrame(onAnimationFrame);
-
-        //toggle.style.display = 'none';
-        //toggle.textContent = 'LÄERM';
     }
-
     const sourceElement = document.createElement('source');
     sourceElement.type = source.server_type;
     //sourceElement.src = source.listenurl;
@@ -155,7 +139,6 @@ window.addEventListener('load', _ => {
 
     host = container.getAttribute('data-host');
     stream = container.getAttribute('data-stream');
-    console.log(host, stream);
 
     statusElement = container.querySelector('.status');
     canvas = container.querySelector('canvas.spectrum');
@@ -164,7 +147,14 @@ window.addEventListener('load', _ => {
     const style = window.getComputedStyle(document.querySelector(':root'));
     theme = {
         background: style.getPropertyValue("--background"),
-        f_med: style.getPropertyValue("--f_med")
+        f_high: style.getPropertyValue("--f_high"),
+        f_med: style.getPropertyValue("--f_med"),
+        f_low: style.getPropertyValue("--f_low"),
+        f_inv: style.getPropertyValue("--f_inv"),
+        b_high: style.getPropertyValue("--b_high"),
+        b_med: style.getPropertyValue("--b_med"),
+        b_low: style.getPropertyValue("--b_low"),
+        b_inv: style.getPropertyValue("--b_inv"),
     };
 
     fitCanvas();
@@ -184,10 +174,8 @@ window.addEventListener('load', _ => {
             source = status.source;
         }
         if (source) {
-            console.info(source);
             sourceInfo = source;
-            //statusElement.textContent = source.artist+" PLAY";
-            updateStatusText(null, "CLICK TO PLAY");
+            updateStatusText(null, "<br>CLICK TO PLAY");
             container.onclick = _ => {
                 if (audio) {
                     stopStream();
