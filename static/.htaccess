@@ -1,0 +1,5 @@
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTPS} off
+	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
