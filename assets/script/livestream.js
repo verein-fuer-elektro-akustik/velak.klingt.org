@@ -1,9 +1,9 @@
 "use strict";
 
 //const HOST = 'https://rrr.disktree.net:8443';
-const HOST = 'http://195.201.41.121:8000';
-const STREAM = 'velak';
-const PI2 = Math.PI / 2;
+//const HOST = 'http://195.201.41.121:8000';
+//const STREAM = 'velak';
+//const PI2 = Math.PI / 2;
 
 function fetchStatus(host) {
     return window.fetch(host + "/status-json.xsl").then(r => {
@@ -15,8 +15,8 @@ function fetchStatus(host) {
 
 let theme;
 let container, statusElement, canvas;
-let sourceInfo;
-let audio, analyser, freqData, timeData, floatData;
+let sourceInfo, host, stream;
+let audio, gain, analyser, freqData, timeData, floatData;
 let graphics;
 let animationFrameId;
 
@@ -89,16 +89,17 @@ function playStream(source) {
 
         const audioContext = new AudioContext();
 
-        //gain = audioContext.createGain();
-        //gain.connect( audioContext.destination );
+        gain = audioContext.createGain();
+        //gain.gain.value = 0.9;
+        gain.connect( audioContext.destination );
 
         analyser = audioContext.createAnalyser();
         analyser.fftSize = 512
         //analyser.smoothingTimeConstant = 0.8;
         //analyser.minDecibels = -140;
         //analyser.maxDecibels = 0;
-        analyser.connect(audioContext.destination);
-        //analyser.connect( gain );
+        //analyser.connect(audioContext.destination);
+        analyser.connect( gain );
 
         freqData = new Uint8Array(analyser.frequencyBinCount);
         timeData = new Uint8Array(analyser.frequencyBinCount);
@@ -116,12 +117,9 @@ function playStream(source) {
     const sourceElement = document.createElement('source');
     sourceElement.type = source.server_type;
     //sourceElement.src = source.listenurl;
-    sourceElement.src = HOST + '/' + source.server_name;
+    sourceElement.src = host + '/' + source.server_name;
     audio.append(sourceElement);
     audio.play();
-
-    //toggle.textContent = '///';
-    //toggle.style.pointerEvents = 'none';
 }
 
 function stopStream() {
@@ -154,10 +152,10 @@ window.addEventListener('load', _ => {
     container = document.body.querySelector('div.livestream');
     if (!container)
         return;
-    
-    let host = container.getAttribute('data-host');
-    let stream = container.getAttribute('data-stream');
-    console.log(stream,host);
+
+    host = container.getAttribute('data-host');
+    stream = container.getAttribute('data-stream');
+    console.log(host, stream);
 
     statusElement = container.querySelector('.status');
     canvas = container.querySelector('canvas.spectrum');
@@ -171,20 +169,18 @@ window.addEventListener('load', _ => {
 
     fitCanvas();
     window.onresize = _ => { fitCanvas(); }
-    
-    
 
-    fetchStatus(HOST).then(status => {
+    fetchStatus(host).then(status => {
         let source;
         if (Array.isArray(status.source)) {
             for (let i = 0; i < status.source.length; i++) {
                 const src = status.source[i];
-                if (src.server_name === STREAM) {
+                if (src.server_name === stream) {
                     source = src;
                     break;
                 }
             }
-        } else if (status.source.server_name === STREAM) {
+        } else if (status.source.server_name === stream) {
             source = status.source;
         }
         if (source) {
