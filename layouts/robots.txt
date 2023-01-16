@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /changelog/
 Disallow: /font/
-Disallow: /syleguide/
+Disallow: /styleguide/
 
 Sitemap: https://velak.klingt.org/sitemap.xml
 
