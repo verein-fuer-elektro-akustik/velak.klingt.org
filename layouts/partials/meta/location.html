@@ -5,7 +5,7 @@
     {{ with .Params.location }}
         {{ with $loc := index $.Site.Data.locations . }}
             {{ with $loc.url }}
-            <a href="{{- $loc.url -}}" data-id="name" rel="external">{{- $loc.name -}}</a>
+                <a href="{{- . -}}" data-id="name" rel="external" title="{{- . -}}">{{- $loc.name -}}</a>
             {{ else }}
             <span data-id="name">{{- $loc.name -}}</span>
             {{ end }}
@@ -18,7 +18,7 @@
         <span data-id="name">{{- . | markdownify -}}</span>
         {{ end }}
     {{ else }}
-    <span data-id="name">TBA</span>
+    <span></span>
     {{ end }}
 </div>
 
