@@ -2,12 +2,12 @@
 title: "gala#86"
 date: 2015-02-24
 artists: [
-    Peter Ravel Seher,
-    Trans Human,
-    Ulrich Rois
+    peter seher,
+    trans human,
+    ulrich rois
 ]
 collabs: [
-    Billy Roisz + Marta Zapparoli,
+    billy roisz + marta zapparoli,
 ]
 location: "brut"
 tags: [gala]
