@@ -4,7 +4,7 @@ defaultContentLanguage = "en"
 languageCode = "en-us"
 
 paginate = 1000
-rssLimit = 100
+rssLimit = 1000
 buildFuture = true
 disableHugoGeneratorInject = true
 enableGitInfo = true
