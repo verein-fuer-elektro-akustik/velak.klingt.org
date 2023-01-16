@@ -3,5 +3,5 @@ Allow: /
 Disallow: /font/
 Disallow: /syleguide/
 
-Sitemap: {{ .Site.BaseURL }}/sitemap.xml
+Sitemap: https://velak.klingt.org/sitemap.xml
 
