@@ -1,14 +1,15 @@
 @use 'typography';
 
 main > article {
-    padding: 1rem 0 4rem 0;
+    width: 100%;
+    //padding: 1rem 0 4rem 0;
     gap: 2rem;
     &.content {
         display: flex;
         flex-direction: column;
         > .title {
             order: 1;
-            padding: 0.5em 0;
+            //padding: 0.5em 0;
             position: relative;
             //left: -2px; // HACK
             font-weight: 500;
@@ -18,9 +19,8 @@ main > article {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            margin-bottom: 1rem;
             column-gap: 1em;
-            align-items: baseline;
+            //align-items: baseline;
         }
         > .artists {
             order: 3;
@@ -182,7 +182,18 @@ main[data-section="records"] {
         }
     }
 }
+//////
 
+.meta {
+    @include typography.meta();
+    cursor: default;
+    //@media screen and (min-width: breakpoint.$tablet) {
+        //font-size: var(--text-sm);
+    //}
+    //> i {
+        //margin-right: 0.125em;
+    //}
+}
 
 //// --- Livestream -----------------------------------------------------------
 
