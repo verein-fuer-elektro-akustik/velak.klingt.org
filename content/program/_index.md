@@ -1,6 +1,5 @@
 ---
 title: "Program"
-description:
 highlight_upcoming_events: true
 menu:
     nav:
@@ -8,6 +7,9 @@ menu:
         weight: 2
 sitemap:
     changefreq: monthly
-    priority: 0.9
+    priority: 1.0
+outputs:
+- html
+- rss
 ---
 
