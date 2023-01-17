@@ -1,6 +1,6 @@
 {
     "name": "velak",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "https://velak.klingt.org",
     "private": true,
     "type": "module",
@@ -30,7 +30,7 @@
     "devDependencies": {
         "csv": "^6.2.5",
         "csvtojson": "^2.0.2",
-        "html-validate": "^7.11.1",
+        "html-validate": "^7.13.1",
         "sass": "^1.57.1",
         "hugo-bin": "^0.97.0"
     }
