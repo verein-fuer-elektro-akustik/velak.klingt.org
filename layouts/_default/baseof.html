@@ -26,12 +26,12 @@
         {{ template "_internal/schema.html" . }}
 
         <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
+
         <style>
             :root {
-                /* muzienca */
-                --background: #090909;
-                --f_high: #818181;
-                --f_med: #707070;
+                --background: #0c0c0c;
+                --f_high: #9c9c9c;
+                --f_med: #808080;
                 --f_low: #595959;
                 --f_inv: #272727;
                 --b_high: #272727;
@@ -55,9 +55,6 @@
             }
         </style>
 
-        <script src="{{ (resources.Get "script/theme.js").RelPermalink }}"></script>
-
-        <!-- <link rel="preload" href="{{ $root }}/font/icons.woff2" as="font" type="font/woff2" crossorigin> -->
         {{ block "prerender" . }}{{ end }}
 
         <link rel="stylesheet" href="{{ $root }}/style.css">
