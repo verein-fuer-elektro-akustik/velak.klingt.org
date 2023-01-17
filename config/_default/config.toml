@@ -17,7 +17,7 @@ enableRobotsTXT = true
     quality = 90
 
 [outputs]
-    home = ["HTML","JSON"]
+    home = ["HTML"]
     section = ["HTML","JSON"]
     page = ["HTML","JSON"]
     #taxonomyTerm = ["HTML", "RSS"]
