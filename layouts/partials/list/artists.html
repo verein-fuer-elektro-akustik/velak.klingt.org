@@ -6,24 +6,22 @@
     {{ $path := print "/artists/" $id  }} 
     {{ $page := $.Site.GetPage $path }}
     {{ if eq $page nil }}
-        {{ warnf "ARTIST PAGE NOT FOUND %s" $path }}
+        {{ errorf "ARTIST PAGE NOT FOUND %s" $path }}
     {{ end }}
     <li>
-        {{ if $page }}
-            <a href="{{ $page.RelPermalink }}">{{ . }}</a>
+        {{ with $page }}
+        <a class="artist" href="{{ .RelPermalink }}">{{- .Title -}}</a>
         {{ else }}
-            <span>{{ . }}</span>
+        <span class="artist">{{- . -}}</span>
         {{ end }}
-        <!-- <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a> -->
     </li>
     {{ end }}
     {{ end }}
-    
+
     {{ with .Params.collabs }}
     {{ range . }}
     {{ $artists := split . "+" }}
     <li>
-        {{ $artists := split . "+" }}
         <ul class="collab">
             {{ range $artists }}
             {{ $artist := trim . " " }}
@@ -32,9 +30,9 @@
             {{ $page := $.Site.GetPage $path }}
             <li>
                 {{ with $page }}
-                    <a href="{{ .RelPermalink }}">{{ $artist }}</a>
+                <a class="artist" href="{{ .RelPermalink }}">{{- $artist -}}</a>
                 {{ else }}
-                    <a href="{{ $path }}">{{ $artist }}</a>
+                <a class="artist" href="{{ $path }}">{{- $artist -}}</a>
                 {{ end }}
             </li>
             {{ end }}
