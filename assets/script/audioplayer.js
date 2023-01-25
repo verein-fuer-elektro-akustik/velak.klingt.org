@@ -2,17 +2,9 @@
 
 let theme;
 let container, statusElement, canvas, graphics;
-let sourceInfo, host, stream;
+let url;
 let audio, gain, analyser, freqData, timeData;
 let animationFrameId;
-
-function fetchStatus(host) {
-    return window.fetch(`${host}/status-json.xsl`).then(r => {
-        return r.json().then(json => {
-            return json.icestats;
-        });
-    });
-}
 
 function onAnimationFrame(time) {
 
@@ -67,13 +59,13 @@ function drawFrequencies(x, y, width, height) {
 
 function updateStatusText(time, extraText) {
     let str = "";
-    if (sourceInfo) str += sourceInfo.artist + ' ' + sourceInfo.title + ' [' + sourceInfo.listeners + '][' + sourceInfo.audio_channels + 'ch/' + sourceInfo.audio_samplerate + 'hz/' + sourceInfo["ice-bitrate"] + "]";
-    if (time) str += " <br>" + time;
+    if (time) str += time;
+    str += "<br>" + url;
     if (extraText) str += " " + extraText;
     statusElement.innerHTML = str;
 }
 
-function playStream(source) {
+function play(url) {
     audio = document.createElement('audio');
     audio.preload = "none";
     audio.crossOrigin = "anonymous";
@@ -97,9 +89,7 @@ function playStream(source) {
         animationFrameId = window.requestAnimationFrame(onAnimationFrame);
     }
     const sourceElement = document.createElement('source');
-    sourceElement.type = source.server_type;
-    //sourceElement.src = source.listenurl;
-    sourceElement.src = host + '/' + source.server_name;
+    sourceElement.src = url;
     audio.append(sourceElement);
     audio.play();
 }
@@ -131,12 +121,11 @@ function fitCanvas() {
 
 window.addEventListener('load', _ => {
 
-    container = document.body.querySelector('div.livestream');
+    container = document.body.querySelector('div.audioplayer');
     if (!container)
         return;
 
-    host = container.getAttribute('data-host');
-    stream = container.getAttribute('data-stream');
+    url = container.getAttribute('data-url');
 
     statusElement = container.querySelector('.status');
     canvas = container.querySelector('canvas.spectrum');
@@ -158,33 +147,7 @@ window.addEventListener('load', _ => {
     fitCanvas();
     window.onresize = _ => { fitCanvas(); }
 
-    fetchStatus(host).then(status => {
-        let source;
-        if (Array.isArray(status.source)) {
-            for (let i = 0; i < status.source.length; i++) {
-                const src = status.source[i];
-                if (src.server_name === stream) {
-                    source = src;
-                    break;
-                }
-            }
-        } else if (status.source.server_name === stream) {
-            source = status.source;
-        }
-        if (source) {
-            sourceInfo = source;
-            updateStatusText(null, "<br>CLICK TO PLAY");
-            container.onclick = _ => {
-                if (audio) {
-                    stopStream();
-                } else {
-                    if (source) {
-                        playStream(source);
-                    }
-                }
-            }
-        } else {
-            console.warn('No livestream source found');
-        }
-    });
+    container.onclick = _ => {
+        play(url);
+    };
 }, false);

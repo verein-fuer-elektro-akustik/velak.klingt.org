@@ -6,9 +6,16 @@
 
 {{ define "main" }}
 
-    {{ .Scratch.Set "host" "https://rrr.disktree.net:8443" }}
-    {{ .Scratch.Set "stream" "velak" }}
-    {{ partial "livestream" . }}
+    <!-- {{ .Scratch.Set "host" "https://rrr.disktree.net:8443" }} -->
+    <!-- {{ .Scratch.Set "stream" "velak" }} -->
+    <!-- {{ partial "livestream" . }} -->
+
+
+<div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3">
+    <div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div>
+    <canvas class="spectrum"></canvas> 
+</div>
+    <script src="{{ (resources.Get "script/audioplayer.js" ).RelPermalink }}" async></script>
 
     <!--
     <ol class="data-list program" reversed>
