@@ -1,7 +1,7 @@
 ---
 title: "gabriela gordillo"
 links: [
-    "https://gabrielagordillo.net/s-o-u-n-d",
+    "https://gabrielagordillo.net",
     "https://soundcloud.com/gabrie1a"
 ]
 ---
