@@ -9,8 +9,12 @@
 
     <div class="details meta">
         <ul>
-            {{ range .Params.links }}
-            <li>{{ partial "meta/link" . }}</li>
+            {{ range .Params.links }}<li>{{ partial "meta/link" . }}</li>{{ end }}
+            {{ with .Params.youtube }}
+            <li>{{ partial "meta/link" (print "https://www.youtube.com/@" .) }}</li>
+            {{ end }}
+            {{ with .Params.twitter }}
+            <li>{{ partial "meta/link" (print "https://twitter.com/" .) }}</li>
             {{ end }}
         </ul>
         {{ partial "meta/email" .Params.email }}
