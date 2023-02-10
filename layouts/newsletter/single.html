@@ -1,14 +1,20 @@
 {{ define "main" }}
 {{ $mailman := .Site.Params.mailman }}
 <article class="content">
+    <h1>Newsletter</h1>
+    <section>
+        <div class="content">{{- .Content -}}</div>
+    </section>
     <section>
         <h3>Subscribe</h3>
+        <!--
         <div class="content">
             <p>
-                subscribe to the newsletter by filling out the following form.  
+                subscribe to the newsletter by filling out the following form.<br> 
                 you will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.
             </p>
         </div>
+        -->
         <form method="POST" action="{{ $mailman }}/subscribe/velak-announce">
             <fieldset>
                 <legend>Subscribe</legend>
@@ -39,11 +45,13 @@
     </section>
     <section>
         <h3>Unsubscribe</h3>
+        <!--
         <div class="content">
             <p>
-                To unsubscribe, get a password reminder, or change your subscription options enter your subscription email address:
+                to unsubscribe or get a password reminder:
             </p>
         </div>
+        -->
         <form method="POST" action="{{ $mailman }}/options/velak-announce">
             <fieldset>
                 <legend>Unsubscribe</legend>
@@ -62,9 +70,6 @@
                 <input type="submit" name="login-remind" value="remind">
             </fieldset>
         </form>
-    </section>
-    <section>
-        <div class="content">{{- .Content -}}</div>
     </section>
 </article>
 {{ end }}
