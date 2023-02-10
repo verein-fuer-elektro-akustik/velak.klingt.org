@@ -1,15 +1,11 @@
-# [VELAK](https://velak.klingt.org/)
+# [v´el:ak](https://velak.klingt.org/)
 
-> Verein für Elektro Akustische Musik
-
-[![test](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/test.yml/badge.svg)](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/test.yml)
-[![build](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/build.yml/badge.svg)](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/build.yml)
-
+Verein für Elektro Akustische Musik
 
 ## Develop
 
 ```sh
-# Install dependencies
+# Install development dependencies
 npm install
 
 # Start hugo development server (http://localhost:1313/)
@@ -23,24 +19,16 @@ npm run dev:style
 ## Build
 
 ```sh
-npm run prod
-# or
 npm run prod:style
 npm run prod:hugo
+# or
+npm run prod
 
-# Build hugo project with custom baseurl.
-npm run prod:hugo -- --baseURL https://vvv.disktree.net --buildDrafts
+# Build with custom baseurl
+npm run prod:hugo -- --baseURL https://example.com
 ```
 
-## Content
+---
 
-Create new program/event:
-```sh
-hugo new content/program/<name>/index.md
-```
-
-Create new artist:
-```sh
-hugo new content/artist/<name>/index.md
-```
-
+[![test](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/test.yml/badge.svg)](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/test.yml)
+[![build](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/build.yml/badge.svg)](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/build.yml)
