@@ -3,7 +3,12 @@ Allow: /
 Disallow: /assets/
 Disallow: /changelog/
 Disallow: /font/
+Disallow: /help/
+Disallow: /raw/
+Disallow: /settings/
+Disallow: /sitemap/
 Disallow: /styleguide/
+Disallow: /test/
 
 Sitemap: https://velak.klingt.org/sitemap.xml
 
