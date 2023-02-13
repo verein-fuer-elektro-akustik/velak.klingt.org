@@ -42,6 +42,10 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
 
+    > * {
+        //margin: 0 auto;
+    }
+
     > header, > footer {
         z-index: 1000;
     }
@@ -56,7 +60,7 @@ body {
         text-transform: lowercase;
         user-select: none;
         * {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             line-height: 1em;
         }
         > h1 {
@@ -65,7 +69,7 @@ body {
             margin: 0.5rem 0;
             white-space: nowrap;
             font-weight: 600;
-            text-transform: lowercase;
+            letter-spacing: 0;
             #title-name { display: block; }
             #title-description { display: none; }
             @media screen and (min-width: breakpoint.$laptop) {
@@ -78,15 +82,20 @@ body {
             #title-name { display: block; }
             #title-description { display: block; }
             * {
+                font-size: 2rem;
                 line-height: 1.5em;
+            }
+            > h1 * {
+                font-size: 4rem;
             }
         }
         @media screen and (max-width: breakpoint.$tablet) {
             justify-items: flex-start;
             flex-wrap: wrap;
+            //font-size: 1.75rem;
         }
         @media screen and (max-width: breakpoint.$laptop) {
-            font-size: 1.5rem;
+            //font-size: 1.5rem;
             //flex-wrap: wrap;
         }
         > nav {

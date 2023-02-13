@@ -2,11 +2,13 @@
 
 main > article {
     width: 100%;
-    //padding: 1rem 0 4rem 0;
+    //margin: 0 auto;
+    //max-width: 1200px;
     gap: 2rem;
     &.content {
         display: flex;
         flex-direction: column;
+        text-transform: lowercase;
         > .title {
             order: 1;
             //padding: 0.5em 0;
@@ -26,9 +28,6 @@ main > article {
             order: 3;
             font-size: 1.5rem;
         }
-        //> .content {
-            // order: 4;
-        //}
         > .gallery {
             order: 1000;
         }

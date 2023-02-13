@@ -14,7 +14,7 @@
 
 	--heading-line-height: 1.5;
 	//--heading-line-height: 1;//.5;
-	--heading-font-weight: 400;
+	--heading-font-weight: 500;
 	
     --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
     --text-space-y-multiplier: 1;
@@ -158,47 +158,35 @@ form {
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-font-weight);
     line-height: 1; // var(--heading-line-height);
+    letter-spacing: -0.03em;
     text-transform: lowercase;
-    //text-transform: uppercase;
-    //line-height: 1em; //var(--heading-line-height);
-    //margin: 0 0 var(--heading-line-height) 0;
-    //margin: 1.5em 0 1em 0;
     word-break: break-word;
 }
 h1 {
     font-size: var(--text-xxxxl);
-    letter-spacing: -0.05em;
     line-height: 2em;
-    //text-transform: uppercase;
 }
 h2 {
     font-size: var(--text-xxxl);
-    letter-spacing: -0.055em;
     line-height: 3em;
-    //text-transform: uppercase;
 }
 h3 {
     font-size: var(--text-xxl);
-    //text-transform: uppercase;
     line-height: 3em; // var(--heading-line-height);
 }
 h4 {
     font-size: var(--text-lg);
-    //text-transform: uppercase;
     line-height: 3em; // var(--heading-line-height);
 }
 h5 {
     font-size: var(--text-md);
     line-height: 2em;
-    //line-height: calc(var(--heading-line-height)*1.5);
-    //text-transform: lowercase;
-    //text-transform: uppercase;
 }
 h6 {
-    font-size: var(--text-sm);
-    //line-height: calc(var(--heading-line-height)*1.5);
-    //text-transform: lowercase;
+    font-family: monospace;
+    font-size: 0.6rem;
     text-transform: uppercase;
+    margin: 1em 0;
 }
 
 hr {
@@ -215,11 +203,8 @@ input, select {
     outline: none;
     margin: 0 0.5rem 0.5rem 0;
     padding: 1rem 1.5rem;
-    //font-family: var(--font-mono);
     background: var(--b_med);
     color: var(--f_med);
-    //border: 1px solid var(--b_med);
-    //transition: background 0.1s, padding 0.5s;
     &:focus {
         //padding: 1rem 2rem;
         background: var(--f_med);

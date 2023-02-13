@@ -14,6 +14,7 @@
 ol.data-list, ul.data-list {
     width: 100%;
     overflow-x: hidden;
+	text-rendering: optimizeSpeed;
     > li {
         display: flex;
         //align-items: center;
