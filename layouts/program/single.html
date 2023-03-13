@@ -7,7 +7,7 @@
 
     <div class="details">
         {{ partial "meta/date" . }}
-        {{ .Scratch.Set "address" true }}
+        {{ .Scratch.Set "show_address" true }}
         {{ partial "meta/location" . }}
         {{ partial "meta/tags" .Params.tags }}
     </div>
