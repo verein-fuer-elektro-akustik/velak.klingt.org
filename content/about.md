@@ -24,3 +24,7 @@ contact: [{{<param "contact.email">}}](mailto:{{<param "contact.email">}})
 
 velak is kindly supported by BMKOES, [Ma7](https://www.wien.gv.at/kultur/abteilung/) and SKE  
 zvr-zahl: 229137709
+
+- hosting: https://klingt.org
+- developer: https://disktree.net
+- source: https://github.com/verein-fuer-elektro-akustik/velak.klingt.org
