@@ -1,10 +1,10 @@
 {{ $type := .Type }}
-<ul>
+<menu>
     {{ range .Site.Menus.nav }}
     {{ $active := eq .Name $type }}
     <li{{if $active}} class="active"{{end}}>
         <a href="{{ .URL }}"{{if $active}} class="active"{{end}}>{{- .Name -}}</a>
     </li>
     {{ end }}
-</ul>
+</menu>
 
