@@ -5,13 +5,13 @@
     {{ with .Params.location }}
         {{ with $loc := index $.Site.Data.locations . }}
             {{ with $loc.url }}
-                <a href="{{- . -}}" data-id="name" rel="external" title="{{- . -}}">{{- $loc.name -}}</a>
+            <a href="{{- . -}}" data-id="name" rel="external" title="{{- . -}}">{{- $loc.name -}}</a>
             {{ else }}
-            <span data-id="name">{{- $loc.name -}}</span>
+            <span data-id="name">{{- $loc.name -}}&nbsp;</span>
             {{ end }}
             {{ if $show_address }}
                 {{ with .address }}
-                <span>,&nbsp;</span><address>{{- . | safeHTML -}}</address>
+                <address>{{- . | safeHTML -}}</address>
                 {{ end }}
             {{ end }}
         {{ else }}
