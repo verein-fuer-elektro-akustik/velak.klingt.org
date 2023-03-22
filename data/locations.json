@@ -38,6 +38,11 @@
         "address": "Spittelauer Lände 12, Stadtbahnbogen 331, 1090 Wien",
         "url": "https://www.daswerk.org/"
     },
+    "echoraum": {
+        "name": "Echoraum",
+        "address": "Sechshauser Straße 66, 1150 Wien",
+        "url": "https://echoraum.at"
+    },
     "echoraeume": {
         "name": "Echoraeume",
         "url": "https://echoraeume.klingt.org/"
