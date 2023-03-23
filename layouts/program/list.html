@@ -1,6 +1,8 @@
 {{ define "main" }}
 <article data-page="{{ .File.ContentBaseName }}" class="program content">
     {{ partial "list/program" . }}
+    {{/* <script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script> */}}
+
     <!-- <i class="ic-rss_feed" style="font-size:400%;"></i> -->
     <!--
     <a
@@ -13,7 +15,6 @@
         <span class="nodisplay">RSS</span>
     </a>
     -->
-    <script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script>
 </article>
 {{ end }}
 
