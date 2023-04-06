@@ -11,7 +11,7 @@
             {{ end }}
             {{ if $show_address }}
                 {{ with .address }}
-                <address>{{- . | safeHTML -}}</address>
+                <address>&nbsp;{{- . | safeHTML -}}</address>
                 {{ end }}
             {{ end }}
         {{ else }}
