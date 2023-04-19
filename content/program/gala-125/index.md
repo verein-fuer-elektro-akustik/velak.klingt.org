@@ -9,7 +9,8 @@ artists: [
 collabs: [
     Kasho Chualan + Marcin Morga
 ]
-location: "rrr"
+location: "chateau rouge"
 tags: [gala]
 ---
-
+Open doors: 19:00  
+Program start: 19:30
