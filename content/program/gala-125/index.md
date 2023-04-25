@@ -11,6 +11,7 @@ collabs: [
 ]
 location: "chateau rouge"
 tags: [gala]
+photos: Leo Haas
 ---
 Open doors: 19:00  
 Program start: 19:30
