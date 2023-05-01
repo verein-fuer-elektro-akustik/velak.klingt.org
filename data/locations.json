@@ -116,6 +116,11 @@
         "address": "U-bahnbogen 37, A-1080 vienna",
         "url": "https://rhiz.wien/"
     },
+    "rrr": {
+        "name": "RRR",
+        "address": "Brunnengasse 76, 1170 Wien",
+        "url": "https://rrr.social/"
+    },
     "steinergasse8": {
         "name": "Steiner8",
         "address": "Steinergasse 8, 1170 vienna"
