@@ -1,5 +1,7 @@
 {{ define "main" }}
 <article data-page="{{ .File.ContentBaseName }}" class="stream">
-    {{ partial "livestream" . }}
+    {{/* {{ .Scratch.Set "host" "https://rrr.disktree.net:8443" }} */}}
+    {{/* {{ .Scratch.Set "stream" "velak" }} */}}
+    {{ .Render "widget" }}
 </article>
 {{ end }}
