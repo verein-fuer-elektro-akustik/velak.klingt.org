@@ -30,6 +30,10 @@ body {
     background: var(--background);
     color: var(--f_med);
     -webkit-tap-highlight-color: var(--f_med);
+    @media print {
+        background: white;
+        color: var(--b_med);
+    }
 }
 
 *::selection {

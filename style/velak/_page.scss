@@ -36,7 +36,15 @@ main > article {
             order: 10000;
         }
     }
+    > section {
+    }
 }
+
+//// --- Home ---------------------------------------------------------------
+
+// article.home {
+//     //display: flex;
+// }
 
 //// --- Program ---------------------------------------------------------------
 
@@ -207,17 +215,21 @@ main[data-section="records"] {
         left: 0.5rem;
         //transform: translate(-50%, -50%);
         margin: 0.5rem 0.75rem;
-        writing-mode:vertical-lr;
-        font-size: 70%;
+        // writing-mode:vertical-lr;
+        font-size: 75%;
     }
 }
 
 .audioplayer {
     position: relative;
     width: 100%;
-    height: 90%;
+    height: 80%;
+    max-height: 600px;
     margin-bottom: 2rem;
     border: 1px solid var(--f_med);
+    > canvas {
+        max-height: 600px;
+    }
     > .status {
         position: absolute;
         bottom: 1rem;
