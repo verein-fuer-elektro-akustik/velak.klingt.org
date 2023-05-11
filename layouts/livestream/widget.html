@@ -1,3 +1,5 @@
-{{ .Scratch.Set "host" "https://rrr.disktree.net:8443" }}
-{{ .Scratch.Set "stream" "velak" }}
-{{ partial "livestream" . }}
+<div class="livestream" data-host="{{ .Site.Params.livestream.host }}" data-stream="{{ .Site.Params.livestream.stream }}">
+    <div class="meta status">livestream</div>
+    <canvas class="spectrum"></canvas> 
+    <script src="{{ (resources.Get "script/livestream.js" | resources.Minify ).RelPermalink }}" async></script>
+</div>

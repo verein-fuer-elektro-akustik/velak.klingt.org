@@ -4,17 +4,13 @@
 {{ end }}
 {{ $alt := $img }}
 {{ $src := $img.RelPermalink }}
-{{ if ge $img.Width 400 }}
-    {{ $src = ($img.Resize "400x").RelPermalink }}
+{{ if ge $img.Width 500 }}
+    {{ $src = ($img.Resize "500x").RelPermalink }}
     <!-- { { $srcset = $srcset | append (print ($img.Resize "400x").RelPermalink " 400w") }} -->
 {{ end }}
 <li>
     <figure>
-        {{ if ge $img.Width 400 }}
         <img src="{{ $src }}" alt="{{ $alt }}">
-        {{ else }}
-        <img src="{{ $src }}" alt="{{ $alt }}">
-        {{ end }}
         <figcaption class="meta">
             <div class="exif">
             {{ with $img.Exif }}

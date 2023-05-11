@@ -1,32 +1,21 @@
 {{ define "prerender" }}<link rel="prerender" href="{{ .Site.BaseURL }}/program/">{{ end }}
 {{ define "schema" }}{{ partial "schema/organization" . }}{{ end }}
 {{ define "main" }}
-    <article>
+    <article class="home">
 
-        <!-- {{ .Scratch.Set "host" "https://rrr.disktree.net:8443" }} -->
-        <!-- {{ .Scratch.Set "stream" "velak" }} -->
-        <!-- {{ partial "livestream" . }} -->
-
-        {{ $events_upcoming := slice }}
-        {{ range where .Site.RegularPages "Type" "program" }}
-            {{ if (time .Date).After now }}
-                {{ $events_upcoming = $events_upcoming | append . }}
-            {{ end }}
+        {{ with .Site.GetPage "/program" }}
+            {{ .Render "upcoming" }}
         {{ end }}
-        {{ .Scratch.Set "events" $events_upcoming }}
-        {{ .Scratch.Set "class" "highlight" }}
-        {{ partial "list/program" . }}
 
         <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3">
-        {{/* <div class="audioplayer" data-url="http://music.disktree.net/setrat.ogg"> */}}
             <div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div>
             <canvas class="spectrum"></canvas> 
+            <script src="{{ (resources.Get "script/audioplayer.js" ).RelPermalink }}" async></script>
         </div>
-        <script src="{{ (resources.Get "script/audioplayer.js" ).RelPermalink }}" async></script>
 
-        {{/* {{ with .Site.GetPage "/livestream" }} */}}
-        {{/*     {{ .Render "widget" }}  */}}
-        {{/* {{ end }} */}}
+        {{/* {{ with .Site.GetPage "/livestream" }}{{ .Render "widget" }}{{ end }} */}}
+
+        <audio src="https://disktree.net/music/12000bees.mp3" autoplay></audio>
 
     </article>
 {{ end }}
