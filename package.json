@@ -10,14 +10,14 @@
         "test:html": "for k in $(find public -type f -iname '*.html'); do html-validate --config=./.html_validate.json $k; done",
         "test": "npm run test:html",
         "dev:style": "sass style/main.scss static/style.css --watch",
-        "dev:hugo": "hugo server --verbose --buildDrafts --buildFuture --panicOnWarning",
+        "dev:hugo": "hugo server --logLevel info --buildDrafts --buildFuture --panicOnWarning",
         "start": "npm run dev:hugo",
         "csv2json": "node_modules/csvtojson/bin/csvtojson artists.csv > data/artists.json",
         "build:style": "sass style/main.scss static/style.css",
         "build:hugo": "hugo --buildFuture",
         "build": "npm run build:style && npm run build:hugo",
         "prod:style": "sass style/main.scss static/style.css --no-source-map --style compressed",
-        "prod:hugo": "hugo --environment production --buildFuture --verbose",
+        "prod:hugo": "hugo --environment production --buildFuture --logLevel info",
         "prod": "npm run prod:style && npm run prod:hugo"
     },
     "repository": {
@@ -28,10 +28,10 @@
     "license": "ISC",
     "homepage": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/blob/master/README.md",
     "devDependencies": {
-        "csv": "^6.2.5",
-        "csvtojson": "^2.0.2",
-        "html-validate": "^7.14.0",
-        "sass": "^1.60.0",
-        "hugo-bin": "^0.101.5"
+        "csv": "^6.3.1",
+        "csvtojson": "^2.0.10",
+        "html-validate": "^8.0.5",
+        "sass": "^1.63.6",
+        "hugo-bin": "^0.111.1"
     }
 }
