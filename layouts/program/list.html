@@ -1,7 +1,6 @@
 {{ define "main" }}
 <article data-page="{{ .File.ContentBaseName }}" class="program content">
     {{ partial "list/program" . }}
-    {{/* <script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script> */}}
 </article>
 {{ end }}
 

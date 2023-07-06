@@ -2,22 +2,16 @@
 
 {{ define "main" }}
 <article class="record content">
-
     <h1 class="title">{{- .Title -}}</h1>
-
     <div class="details">
         {{ partial "meta/record" . }}
         {{ partial "meta/date" . }}
         {{ partial "meta/label" . }}
         {{ partial "meta/tags" .Params.tags }}
     </div>
-
     <div class="artists">{{ partial "list/artists" . }}</div>
-
     <div class="content">{{- .Content -}}</div>
-
     {{ partial "gallery" . }}
-
 </article>
 {{ end }}
 

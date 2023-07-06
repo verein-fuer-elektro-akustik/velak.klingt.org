@@ -1,7 +1,7 @@
 {{ $img := . }}
-{{ if le $img.Width 300 }}
-    {{ warnf "%s too small (%d) should at least have a width of 300px" $img.RelPermalink $img.Width }}
-{{ end }}
+{{/* {{ if le $img.Width 300 }} */}}
+    {{/* {{ warnf "%s too small (%d) should at least have a width of 300px" $img.RelPermalink $img.Width }} */}}
+{{/* {{ end }} */}}
 {{ $alt := $img }}
 {{ $src := $img.RelPermalink }}
 {{ if ge $img.Width 500 }}

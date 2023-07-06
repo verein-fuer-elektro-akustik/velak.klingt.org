@@ -1,17 +1,25 @@
 {{ define "main" }}
-<ol class="playlist">
-{{ range ((where .Site.Pages "Section" "program") | append (where .Site.Pages "Section" "records")) }}
-    {{ $dir := .File.Dir }}
+
+{{/* {{ $pages := where .Site.Pages "Section" "program" }} */}}
+{{/* {{ $pages := $pages | append (where .Site.Pages "Section" "artists") }} */}}
+{{/* {{ $pages := $pages | append (where .Site.Pages "Section" "records") }} */}}
+{{ $pages := .Site.Pages }}
+
+<ol data-playlist class="playlist">
+{{ range $pages }}
+    {{ with .File }}
+      {{ $dir := .Dir }}
+    {{ end }}
     {{ $files := .Resources.ByType "audio" }}
     {{ if gt (len $files) 0 }}
     <li>
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <ol>
             {{ range $files }}
-            <li class="item">
-                {{ $stat := os.Stat (print $dir .Name) }}
-                <a class="meta" href="{{ .RelPermalink }}">{{ .Name }}</a>
-                <!-- <span class="meta">{{ div $stat.Size 1024 }}bytes</span> -->
+            <li class="item" data-item="{{ .Permalink }}">
+               {{/* {{ $stat := os.Stat (print $dir .Name) }} */}}
+                <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+                {{/* <span>{{ div $stat.Size 1024 }}bytes</span> */}}
             </li>
             {{ end }}
         </ol>
@@ -19,4 +27,23 @@
     {{ end }}
 {{ end }}
 </ol>
+
+<!--
+<script src="{{ (resources.Get "script/audioplayer.js").Permalink }}"></script>
+<script>
+document.body.querySelectorAll("[data-playlist]").forEach(list =>{
+    let player = new Audioplayer();
+    let items = list.querySelectorAll('[data-item]');
+    items.forEach(item=> {
+        //console.log(item.getAttribute("data-item"));
+        item.querySelector('a').onclick = e => {
+            player.play(e.target.getAttribute('href'));
+            return false;
+        }
+    });
+    //player.play(items[2].getAttribute("data-item"));
+});
+</script>
+-->
+
 {{ end }}

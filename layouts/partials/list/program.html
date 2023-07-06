@@ -3,6 +3,10 @@
 
 {{ if eq $events nil }}
     {{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
+{{ else }}
+  {{ if eq ($events | len) 0 }}
+    {{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
+  {{ end }}
 {{ end }}
 
 <ol class="data-list program" reversed>
@@ -17,7 +21,6 @@
 </ol>
 
 <script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script>
-
 <script>
 const list = document.querySelector("ol.data-list.program");
 const now = new Date();
@@ -39,4 +42,3 @@ if(lastUpcomingIndex > 0) {
     }
 }
 </script>
-

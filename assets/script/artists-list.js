@@ -9,7 +9,7 @@ let events;
 let artistsLists;
 
 function init() {
-    
+
     initialized = false;
     artistsLists = [];
 
@@ -201,8 +201,8 @@ function initArtistList(li) {
 
 window.addEventListener('load', _ => {
 
-    events = document.body.querySelectorAll('article > .data-list > li');
-    
+    events = document.body.querySelectorAll('.data-list > li');
+
     console.time();
     init();
     console.timeEnd();
