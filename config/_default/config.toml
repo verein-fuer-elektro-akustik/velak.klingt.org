@@ -11,27 +11,32 @@ enableGitInfo = true
 enableRobotsTXT = true
 
 [build]
-    writeStats = true
+  writeStats = true
 
 [imaging]
-    quality = 90
+  quality = 90
+
+[minify]
+  minifyOutput = false
 
 [outputs]
-    home = ["HTML"]
-    section = ["HTML","JSON"]
-    page = ["HTML","JSON"]
-    #taxonomyTerm = ["HTML", "RSS"]
-    #taxonomy = ["HTML", "RSS"]
+  home = ["HTML"]
+  page = ["HTML","JSON"]
+  #section = ["HTML","JSON"]
+  #taxonomy = ["HTML", "RSS"]
+  #term = ["HTML", "RSS"]
 
+[outputFormats]
+  [outputFormats.txt]
+    mediaType = "text/plain"
 # [permalinks]
 #     program = '/:section/:year/:month/:filename/'
 
 [sitemap]
-    changefreq = 'monthly'
-    filename = 'sitemap.xml'
-    priority = 0.5
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 [taxonomies]
-    tag = "tags"
-    # artist = "artists"
-
+  tag = "tags"
+  # artist = "artists"
