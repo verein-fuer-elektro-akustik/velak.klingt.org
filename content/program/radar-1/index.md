@@ -10,4 +10,5 @@ artists: [
 ]
 location: "radar"
 tags: [radar]
+online: true
 ---

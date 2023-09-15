@@ -26,6 +26,7 @@ collabs: [
     betancurth + neumann,
 ]
 location: "radar"
+online: true
 recordings: [
    https://disktree.net/music/VELAKRADAR/velakradar2-vvv1.ogg,
    https://disktree.net/music/VELAKRADAR/velakradar2-vvv2.ogg,
