@@ -1,5 +1,5 @@
 ---
 title: "stefan voglsinger"
-links: []
+links: [https://voglsinger.klingt.org]
 ---
 

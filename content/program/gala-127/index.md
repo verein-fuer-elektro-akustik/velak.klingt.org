@@ -4,12 +4,12 @@ date: 2023-09-21
 artists: [
 	carrageenan,
 	libramar,
-	ulla rauter,
-	stefan voglsinger
 ]
 collabs: [
+	ulla rauter + stefan voglsinger
 ]
 location: "vekks"
 tags: [gala]
 ---
-open doors: 20:00
+open doors: 19:30  
+start: 20:00
