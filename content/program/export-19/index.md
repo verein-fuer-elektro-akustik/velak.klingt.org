@@ -1,7 +1,7 @@
 ---
 title: "export#19"
 date: 2019-02-26
-location: "venter99"
+location: "venster99"
 artists: [
     maia koenig,
     kisling,
@@ -12,5 +12,5 @@ artists: [
 tags: [export]
 photos: "Doris Pollhammer"
 ---
-doors: 7pm / begin: 8pm (sharp!)  
+doors: 7pm / begin: 8pm (sharp!)
 entry: 3eur
