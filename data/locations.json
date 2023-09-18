@@ -1,143 +1,147 @@
 {
-    "akbild": {
-        "name": "Akademie der bildenden Künste Wien",
-        "address": "1010 Wien, Schillerplatz 3",
-        "url": "https://www.akbild.ac.at"
-    },
-    "ateliertheater": {
-        "name": "Ateliertheater",
-        "address": "Burggasse 71 1070 Wien",
-        "url": "https://www.ateliertheater.wien/"
-    },
-    "b5": {
-        "name": "B5",
-        "address": "Herklotzgasse 21, 1150 vienna"
-    },
-    "brut": {
-        "name": "Brut",
-        "address": "Lothringerstrasse 20, 1030 vienna",
-        "url": "https://brut-wien.at/"
-    },
-    "chateau rouge": {
-        "name": "Chateau Rouge",
-        "address": "Schönbrunner Schloßstraße 17, 1130 Wien",
-        "url": "http://www.chateaurouge.at/"
-    },
-    "celeste": {
-        "name": "Celeste",
-        "address": "Hamburgerstraße 18, 1050 Wien",
-        "url": "http://www.celeste.co.at/"
-    },
-    "centralgarden": {
-        "name": "Central Garden",
-        "address": "Untere Donaustraße 41, 1020 Wien",
-        "url": "https://www.centralgarden.at/"
-    },
-    "das_werk": {
-        "name": "Das Werk",
-        "address": "Spittelauer Lände 12, Stadtbahnbogen 331, 1090 Wien",
-        "url": "https://www.daswerk.org/"
-    },
-    "echoraum": {
-        "name": "Echoraum",
-        "address": "Sechshauser Straße 66, 1150 Wien",
-        "url": "https://echoraum.at"
-    },
-    "echoraeume": {
-        "name": "Echoraeume",
-        "url": "https://echoraeume.klingt.org/"
-    },
-    "erbsenfabrik": {
-        "name": "Erbsenfabrik",
-        "address": "Herklotzgasse 21, 1150 vienna"
-    },
-    "fluc": {
-        "name": "Fluc",
-        "address": "Praterstern, 1020 Vienna/AT",
-        "url": "https://www.fluc.at/"
-    },
-    "forum_stadtpark": {
-        "name": "Forum Stadtpark",
-        "address": "Forum Stadtpark 1, 8010 Graz",
-        "url": "https://forumstadtpark.at/"
-    },
-    "fuga": {
-        "name": "Fuga",
-        "address": "Námestie snp 24, 81101 bratislava, slovakia",
-        "country": "sk"
-    },
-    "garnison": {
-        "name": "Garnison",
-        "address": "Garnisonsgasse 7, 1090 vienna",
-        "url": "https://www.discogs.com/label/334280-Garnison7"
-    },
-    "gudrunkino": {
-        "name": "Gudrunkino",
-        "address": "Gudrunstraße 151, 1010 Vienna"
-    },
-    "kuenstlerhauspassage": {
-        "name": "Künstlerhauspassage"
-    },
-    "kunsthause_graz": {
-        "name": "Kunsthause Graz",
-        "address": "Lendkai 1, 8020 Graz,  Austria",
-        "url": "https://www.museum-joanneum.at/kunsthaus-graz"
-    },
-    "lot": {
-        "name": "Das LOT",
-        "address": "Absberggasse 31, 1100 Wien",
-        "url": "https://www.lot.wien/lot"
-    },
-    "mdw": {
-        "name": "Universität für Musik und darstellende Kunst Wien",
-        "address": "Anton-von-Webern-Platz 1, 1030 Wien",
-        "url": "https://www.mdw.ac.at/"
-    },
-    "moe": {
-        "name": "Moe",
-        "address": "thelemangasse 4, 1170 wien",
-        "url": "https://www.moe-vienna.org/"
-    },
-    "mq": {
-        "name": "MuseumsQuartier",
-         "address": "Museumsplatz 1, 1070 Vienna",
-        "url": "https://www.mqw.at/"
-    },
-    "prospekthof": {
-        "name": "Prospekthof",
-        "address": "Lehargasse 8, 1060 Wien"
-    },
-    "radar": {
-        "name": "Velakradar",
-        "url": "https://velakradar.klingt.org"
-    },
-    "rhiz": {
-        "name": "Rhiz",
-        "address": "U-bahnbogen 37, A-1080 vienna",
-        "url": "https://rhiz.wien/"
-    },
-    "rrr": {
-        "name": "RRR",
-        "address": "Brunnengasse 76, 1170 Wien",
-        "url": "https://rrr.social/"
-    },
-    "steinergasse8": {
-        "name": "Steiner8",
-        "address": "Steinergasse 8, 1170 vienna"
-    },
-    "symposion_lindabrunn": {
-        "name": "Symposion Lindabrunn",
-        "address": "Steinbruchstraße 25, 2551 Enzesfeld-Lindabrunn",
-        "url": "https://www.symposion-lindabrunn.at/"
-    },
-    "venster99": {
-        "name": "Venster99",
-        "address": "Stadbahnbögen 99, Wien",
-        "url": "https://www.venster99.at/"
-    },
-    "wild im west": {
-        "name": "Wild im West",
-        "address": "Mariahilfer Str. 166, 1150 Wien"
-    }
-
+	"akbild": {
+		"name": "Akademie der bildenden Künste Wien",
+		"address": "1010 Wien, Schillerplatz 3",
+		"url": "https://www.akbild.ac.at"
+	},
+	"ateliertheater": {
+		"name": "Ateliertheater",
+		"address": "Burggasse 71 1070 Wien",
+		"url": "https://www.ateliertheater.wien/"
+	},
+	"b5": {
+		"name": "B5",
+		"address": "Herklotzgasse 21, 1150 vienna"
+	},
+	"brut": {
+		"name": "Brut",
+		"address": "Lothringerstrasse 20, 1030 vienna",
+		"url": "https://brut-wien.at/"
+	},
+	"chateau rouge": {
+		"name": "Chateau Rouge",
+		"address": "Schönbrunner Schloßstraße 17, 1130 Wien",
+		"url": "http://www.chateaurouge.at/"
+	},
+	"celeste": {
+		"name": "Celeste",
+		"address": "Hamburgerstraße 18, 1050 Wien",
+		"url": "http://www.celeste.co.at/"
+	},
+	"centralgarden": {
+		"name": "Central Garden",
+		"address": "Untere Donaustraße 41, 1020 Wien",
+		"url": "https://www.centralgarden.at/"
+	},
+	"das_werk": {
+		"name": "Das Werk",
+		"address": "Spittelauer Lände 12, Stadtbahnbogen 331, 1090 Wien",
+		"url": "https://www.daswerk.org/"
+	},
+	"echoraum": {
+		"name": "Echoraum",
+		"address": "Sechshauser Straße 66, 1150 Wien",
+		"url": "https://echoraum.at"
+	},
+	"echoraeume": {
+		"name": "Echoraeume",
+		"url": "https://echoraeume.klingt.org/"
+	},
+	"erbsenfabrik": {
+		"name": "Erbsenfabrik",
+		"address": "Herklotzgasse 21, 1150 vienna"
+	},
+	"fluc": {
+		"name": "Fluc",
+		"address": "Praterstern, 1020 Vienna/AT",
+		"url": "https://www.fluc.at/"
+	},
+	"forum_stadtpark": {
+		"name": "Forum Stadtpark",
+		"address": "Forum Stadtpark 1, 8010 Graz",
+		"url": "https://forumstadtpark.at/"
+	},
+	"fuga": {
+		"name": "Fuga",
+		"address": "Námestie snp 24, 81101 bratislava, slovakia",
+		"country": "sk"
+	},
+	"garnison": {
+		"name": "Garnison",
+		"address": "Garnisonsgasse 7, 1090 vienna",
+		"url": "https://www.discogs.com/label/334280-Garnison7"
+	},
+	"gudrunkino": {
+		"name": "Gudrunkino",
+		"address": "Gudrunstraße 151, 1010 Vienna"
+	},
+	"kuenstlerhauspassage": {
+		"name": "Künstlerhauspassage"
+	},
+	"kunsthause_graz": {
+		"name": "Kunsthause Graz",
+		"address": "Lendkai 1, 8020 Graz,  Austria",
+		"url": "https://www.museum-joanneum.at/kunsthaus-graz"
+	},
+	"lot": {
+		"name": "Das LOT",
+		"address": "Absberggasse 31, 1100 Wien",
+		"url": "https://www.lot.wien/lot"
+	},
+	"mdw": {
+		"name": "Universität für Musik und darstellende Kunst Wien",
+		"address": "Anton-von-Webern-Platz 1, 1030 Wien",
+		"url": "https://www.mdw.ac.at/"
+	},
+	"moe": {
+		"name": "Moe",
+		"address": "thelemangasse 4, 1170 wien",
+		"url": "https://www.moe-vienna.org/"
+	},
+	"mq": {
+		"name": "MuseumsQuartier",
+		"address": "Museumsplatz 1, 1070 Vienna",
+		"url": "https://www.mqw.at/"
+	},
+	"prospekthof": {
+		"name": "Prospekthof",
+		"address": "Lehargasse 8, 1060 Wien"
+	},
+	"radar": {
+		"name": "Velakradar",
+		"url": "https://velakradar.klingt.org"
+	},
+	"rhiz": {
+		"name": "Rhiz",
+		"address": "U-bahnbogen 37, A-1080 vienna",
+		"url": "https://rhiz.wien/"
+	},
+	"rrr": {
+		"name": "RRR",
+		"address": "Brunnengasse 76, 1170 Wien",
+		"url": "https://rrr.social/"
+	},
+	"steinergasse8": {
+		"name": "Steiner8",
+		"address": "Steinergasse 8, 1170 vienna"
+	},
+	"symposion_lindabrunn": {
+		"name": "Symposion Lindabrunn",
+		"address": "Steinbruchstraße 25, 2551 Enzesfeld-Lindabrunn",
+		"url": "https://www.symposion-lindabrunn.at/"
+	},
+	"venster99": {
+		"name": "Venster99",
+		"address": "Stadbahnbögen 99, Wien",
+		"url": "https://www.venster99.at/"
+	},
+	"vekks": {
+		"name": "Vekks",
+		"address": "Erlgasse 27, 1120 Wien",
+		"url": "https://www.vekks.com"
+	},
+	"wild im west": {
+		"name": "Wild im West",
+		"address": "Mariahilfer Str. 166, 1150 Wien"
+	}
 }
