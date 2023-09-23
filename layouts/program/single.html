@@ -5,11 +5,12 @@
 
     <h1 class="title">{{- .Title -}}</h1>
 
+
     <div class="details">
         {{ partial "meta/date" . }}
         {{ .Scratch.Set "show_address" true }}
         {{ partial "meta/location" . }}
-        {{ partial "meta/tags" .Params.tags }}
+        {{/* {{ partial "meta/tags" .Params.tags }} */}}
     </div>
 
     <div class="artists">{{ partial "list/artists" . }}</div>
@@ -28,8 +29,6 @@
     </div>
 
     {{ partial "gallery" . }}
-
-    <!-- <nav class="meta">{{ partial "nav_prev_next" . }}</nav> -->
 
 </article>
 {{ end }}
