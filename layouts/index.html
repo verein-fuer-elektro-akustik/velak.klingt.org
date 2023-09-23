@@ -1,20 +1,20 @@
 {{ define "prerender" }}<link rel="prerender" href="{{ .Site.BaseURL }}/program/">{{ end }}
 {{ define "schema" }}{{ partial "schema/organization" . }}{{ end }}
 {{ define "main" }}
-    <article class="home">
+	<article class="home">
 
-        {{ with .Site.GetPage "/program" }}
-            {{ .Render "upcoming" }}
-        {{ end }}
+		{{ with .Site.GetPage "/program" }}
+		{{ .Render "upcoming" }}
+		{{ end }}
 
-        <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3">
-            <div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div>
-            <canvas class="spectrum"></canvas> 
-            <script src="{{ (resources.Get "script/audioplayer.js" ).RelPermalink }}" async></script>
-        </div>
+		<div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3">
+			<div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div>
+			<canvas class="spectrum"></canvas>
+			<script src="{{ (resources.Get "script/audioplayer.js").RelPermalink }}" async></script>
+		</div>
 
-        {{/* {{ with .Site.GetPage "/livestream" }}{{ .Render "widget" }}{{ end }} */}}
-        {{/* <audio src="https://disktree.net/music/12000bees.mp3" autoplay></audio> */}}
+		{{/* {{ with .Site.GetPage "/livestream" }}{{ .Render "widget" }}{{ end }} */}}
+		{{/* <audio src="https://disktree.net/music/12000bees.mp3" autoplay></audio> */}}
 
-    </article>
+	</article>
 {{ end }}
