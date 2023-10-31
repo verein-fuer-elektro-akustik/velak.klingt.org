@@ -11,6 +11,6 @@ collabs: [
 location: "tresor_linz"
 tags: [gala]
 ---
-open doors: 19:30
-start: 20:00
+open doors: 19:30  
+start: 19:45
 
