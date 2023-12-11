@@ -107,6 +107,11 @@
 		"name": "Prospekthof",
 		"address": "Lehargasse 8, 1060 Wien"
 	},
+	"sptizer": {
+		"name": "Spitzer",
+		"address": "Taborstraße 10, Innenhof links, 1020 Wien",
+		"url": "https://im-spitzer.net/"
+	},
 	"radar": {
 		"name": "Velakradar",
 		"url": "https://velakradar.klingt.org"

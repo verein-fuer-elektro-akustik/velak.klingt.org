@@ -1,5 +1,5 @@
 ---
 title: "christof kurzmann"
-links: []
+links: [https://www.discogs.com/artist/422-Christof-Kurzmann]
 ---
 
