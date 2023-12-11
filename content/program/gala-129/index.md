@@ -12,6 +12,6 @@ collabs: [
 location: "spitzer"
 tags: [gala]
 ---
-Open doors 20:00
+Open doors 20:00  
 Start 20:30
 
