@@ -10,6 +10,7 @@ sitemap:
     priority: 1.0
 outputs:
 - html
+- json
 - rss
 ---
 
