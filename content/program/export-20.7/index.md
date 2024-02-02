@@ -7,7 +7,7 @@ artists: [
     Howard Huang,
     Martina Moro,
     Stella Kyan,
-    Eduardo Trvino Cely
+	Eduardo Triviño Cely
 ]
 collabs: [
 ]
