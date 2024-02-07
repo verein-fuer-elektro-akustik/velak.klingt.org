@@ -52,4 +52,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        artifact_name: velak.klingt.org
+        with:
+          artifact_name: velak.klingt.org
