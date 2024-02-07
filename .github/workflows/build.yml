@@ -5,7 +5,8 @@ on:
     inputs:
       url:
         description: 'Site baseurl'
-        default: 'https://velak.klingt.org'
+        #default: 'https://velak.klingt.org' # TODO
+        default: 'https://verein-fuer-elektro-akustik.github.io/velak.klingt.org/'
         required: true
 
 concurrency:
@@ -38,4 +39,17 @@ jobs:
         with:
           name: velak.klingt.org
           path: public
-
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        artifact_name: velak.klingt.org
