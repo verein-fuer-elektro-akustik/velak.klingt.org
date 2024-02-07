@@ -12,34 +12,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          lfs: true
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           cache: 'npm'
-      # - name: Cache resources
-      #   id: cache-resources
+      # - name: Get npm cache directory
+      #   id: get-npm-cache-dir
+      #   shell: bash
+      #   run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      # - name: Cache npm
+      #   id: npm-cache
       #   uses: actions/cache@v3
       #   with:
-      #     path: resources
-      #     key: hugo-resources
-      - name: Get npm cache directory
-        id: get-npm-cache-dir
-        shell: bash
-        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      - name: Cache npm
-        id: npm-cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.get-npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: List state of npm modules
-        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
-        continue-on-error: true
-        run: npm list
+      #     path: ${{ steps.get-npm-cache-dir.outputs.dir }}
+      #     key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
+      #- name: List state of npm modules
+        #if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        #  continue-on-error: true
+        #  run: npm list
       - name: Setup npm
         run: npm ci
       - name: Build style

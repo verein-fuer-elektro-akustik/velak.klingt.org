@@ -64,7 +64,7 @@
 
         {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
         {{ with .NextInSection }}<link rel="next" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
- 
+
         {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
         {{ end -}}
