@@ -1,36 +1,35 @@
 <!-- https://www.cgfootman.com/2020/06/06/add-responsive-images-to-a-hugo-site/ -->
 <div class="gallery">
-    <!--{{ $images := where (.Resources.ByType "image") "Name" "!=" "cover.jpg" }}-->
-    {{ $images := (.Resources.ByType "image") }}
-    {{ $images := where $images "Name" "!=" "cover.jpg" }}
-    {{ $images := where $images "Name" "!=" "cover.png" }}
-    <!-- {{ len $images }} -->
-    {{ $images_landscape := slice }}
-    {{ $images_portrait := slice }}
-    {{ range $img := $images }}
-        {{ if ge $img.Width $img.Height }}
-            {{ $images_landscape = $images_landscape | append $img }}
-        {{ else }}
-            {{ $images_portrait = $images_portrait | append $img }}
-        {{ end }}
-    {{ end }}
-    <!-- {{ mod (len $images) 2 }} -->
-    <ul>
-        {{ range $img := $images_landscape }}
-            {{ partial "gallery-item" . }}
-        {{ end }}
-        {{ range $img := $images_portrait }}
-            {{ partial "gallery-item" . }}
-        {{ end }}
-    </ul>
-    {{ with .Params.photos }}
-    <div class="photographer">
-        <i class="ic-copyright"></i>
-        <span>Photos by</span>
-        <span>{{- . -}}</span>
-    </div>
-    {{ end }}
-    <script src="{{ (resources.Get "script/gallery.js").RelPermalink }}" async></script>
+	<!--{{ $images := where (.Resources.ByType "image") "Name" "!=" "cover.jpg" }}-->
+	{{ $images := (.Resources.ByType "image") }}
+	{{ $images := where $images "Name" "!=" "cover.jpg" }}
+	{{ $images := where $images "Name" "!=" "cover.png" }}
+	<!-- {{ len $images }} -->
+	{{ $images_landscape := slice }}
+	{{ $images_portrait := slice }}
+	{{ range $img := $images }}
+	{{ if ge $img.Width $img.Height }}
+	{{ $images_landscape = $images_landscape | append $img }}
+	{{ else }}
+	{{ $images_portrait = $images_portrait | append $img }}
+	{{ end }}
+	{{ end }}
+	<!-- {{ mod (len $images) 2 }} -->
+	<ul>
+		{{ range $img := $images_landscape }}
+		{{ partial "gallery-item" . }}
+		{{ end }}
+		{{ range $img := $images_portrait }}
+		{{ partial "gallery-item" . }}
+		{{ end }}
+	</ul>
+	{{ with .Params.photos }}
+	<div class="photographer">
+		<i class="ic-copyright"></i>
+		<span>Photos by</span>
+		<span>{{- . -}}</span>
+	</div>
+	{{ end }}
+	{{/*
+	<script src="{{ (resources.Get " script/gallery.js").RelPermalink }}" async></script> */}}
 </div>
-
-
