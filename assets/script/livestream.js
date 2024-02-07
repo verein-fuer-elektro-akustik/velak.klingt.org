@@ -1,6 +1,6 @@
 "use strict";
 
-let theme;
+//let theme;
 let container, statusElement, canvas, graphics;
 let sourceInfo, host, stream;
 let audio, gain, analyser, freqData, timeData;
@@ -142,18 +142,18 @@ window.addEventListener('load', _ => {
     canvas = container.querySelector('canvas.spectrum');
     graphics = canvas.getContext("2d");
 
-    const style = window.getComputedStyle(document.querySelector(':root'));
-    theme = {
-        background: style.getPropertyValue("--background"),
-        f_high: style.getPropertyValue("--f_high"),
-        f_med: style.getPropertyValue("--f_med"),
-        f_low: style.getPropertyValue("--f_low"),
-        f_inv: style.getPropertyValue("--f_inv"),
-        b_high: style.getPropertyValue("--b_high"),
-        b_med: style.getPropertyValue("--b_med"),
-        b_low: style.getPropertyValue("--b_low"),
-        b_inv: style.getPropertyValue("--b_inv"),
-    };
+    // const style = window.getComputedStyle(document.querySelector(':root'));
+    // theme = {
+    //     background: style.getPropertyValue("--background"),
+    //     f_high: style.getPropertyValue("--f_high"),
+    //     f_med: style.getPropertyValue("--f_med"),
+    //     f_low: style.getPropertyValue("--f_low"),
+    //     f_inv: style.getPropertyValue("--f_inv"),
+    //     b_high: style.getPropertyValue("--b_high"),
+    //     b_med: style.getPropertyValue("--b_med"),
+    //     b_low: style.getPropertyValue("--b_low"),
+    //     b_inv: style.getPropertyValue("--b_inv"),
+    // };
 
     fitCanvas();
     window.onresize = _ => { fitCanvas(); }

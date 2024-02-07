@@ -2,7 +2,11 @@
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
+	{{/* {{ if .Params.online }} */}}
+	{{/*    "@type": "BroadcastEvent", */}}
+	{{/* {{ else }} */}}
     "@type": "MusicEvent",
+	{{/* {{ end }} */}}
     "name": "{{- .Title -}}",
     "identifier": "{{- .Title -}}",
     "startDate": "{{ .Date.Format "2006-01-02" }}",

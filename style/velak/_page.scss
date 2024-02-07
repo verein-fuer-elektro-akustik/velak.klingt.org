@@ -98,12 +98,7 @@ main[data-section="artists"] {
     &[data-kind="section"] {
         > article {
             > ul.artists {
-                // columns: 4;
-                // display: flex;
-                // flex-direction: column;
-                // flex-wrap: wrap;
-                // column-count: auto;
-                column-width: 200px;
+                column-width: 240px;
                 font-size: 1.25rem;
             }
         }
