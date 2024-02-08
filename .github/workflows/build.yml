@@ -34,11 +34,18 @@ jobs:
         run: npm run prod:style
       - name: Build site
         run: npm run prod:hugo -- --baseURL ${{ inputs.url }}
-      - name: Store
+      - name: Store artifact
         uses: actions/upload-artifact@v4
         with:
           name: velak.klingt.org
           path: public
+      - name: Deploy gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: gh-pages
+          folder: public
+          clean: true
+          single-commit: true
   # deploy:
   #   needs: build
   #   permissions:
