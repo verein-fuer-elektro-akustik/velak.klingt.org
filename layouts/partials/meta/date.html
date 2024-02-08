@@ -1,8 +1,8 @@
 {{ $show_icon := .Scratch.Get "show_icon" | default false }}
-{{ $date_format := .Scratch.Get "date_format" | default "2006/01/02" }}
+{{ $date_format := .Scratch.Get "date_format" | default "06/01/02" }}
 {{ with .Params.date }}
 <time datetime="{{.}}" class="meta date">
-    {{ if $show_icon }}<i class="ic-insert_invitation"></i>{{ end }}
-    <span>{{ . | time.Format $date_format }}</span>
+	{{ if $show_icon }}<i class="ic-insert_invitation"></i>{{ end }}
+	<span>{{ . | time.Format $date_format }}</span>
 </time>
 {{ end }}
