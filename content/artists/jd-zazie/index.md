@@ -1,5 +1,5 @@
 ---
 title: "jd zazie"
-links: [http://jdzazie.tumblr.com/billyroiszjdzazie]
+links: [http://jdzazie.tumblr.com/]
 ---
 
