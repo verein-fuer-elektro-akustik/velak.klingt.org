@@ -2,7 +2,6 @@
 title: "VELAK & das Wiener Akusmonium"
 date: 2021-09-30
 artists: [
-    ã…ke parmerud,
     armando balice,
     nana dahlin,
     thomas gorbach,
