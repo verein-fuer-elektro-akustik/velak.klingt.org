@@ -3,7 +3,8 @@ title: "gala#130"
 date: 2024-03-15
 artists: [
 	Sholto Dobie,
-	Valentina Vuksic
+	Valentina Vuksic, 
+ Eduardo Triviño-Cely
 ]
 collabs: [
 	Billy Roisz + JD Zazie,
