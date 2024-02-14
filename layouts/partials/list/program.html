@@ -2,26 +2,22 @@
 {{ $show_artists := .Scratch.Get "show_artists" | default true }}
 
 {{ if eq $events nil }}
-{{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
+	{{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
 {{ else }}
-{{ if eq ($events | len) 0 }}
-{{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
-{{ end }}
+	{{ if eq ($events | len) 0 }}
+		{{ $events = where .RegularPagesRecursive.ByDate.Reverse "Section" "program" }}
+	{{ end }}
 {{ end }}
 
 <ol class="data-list program" reversed>
 	{{ range $events }}
-	<li class="event" id="{{ .File.ContentBaseName }}">
-		<a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
-		{{ partial "meta/date" . }}
-		{{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
-		<div class="artists">{{ partial "list/artists" . }}</div>
-	</li>
+	{{ .Render "li" }}
 	{{ end }}
 </ol>
 
-<script src="{{ (resources.Get "/script/artists-list.js").RelPermalink }}" async></script>
+<script src="{{ (resources.Get "script/artists-list.js").RelPermalink }}" async></script>
 <script>
+window.addEventListener('load', _ => {
 	const list = document.querySelector("ol.data-list.program");
 	const now = new Date();
 	let date, lastUpcomingIndex, i;
@@ -41,4 +37,5 @@
 			e.classList.add('upcoming');
 		}
 	}
+});
 </script>

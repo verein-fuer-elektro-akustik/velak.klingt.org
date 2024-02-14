@@ -1,0 +1,6 @@
+<li class="event" id="{{ .File.ContentBaseName }}">
+	<a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+	{{ partial "meta/date" . }}
+	{{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
+	<div class="artists">{{ partial "list/artists" . }}</div>
+</li>

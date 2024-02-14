@@ -5,7 +5,18 @@
 <article class="home">
 
 	{{ with .Site.GetPage "/program" }}
-	{{ .Render "upcoming" }}
+	{{ $events_upcoming := slice }}
+	{{ range .RegularPages }}
+		{{ if .Date.After now }}
+		{{ $events_upcoming = $events_upcoming | append . }}
+		{{ end }}
+	{{ end }}
+	<ol class="data-list program" reversed>
+	{{ range $events_upcoming }}
+		{{ .Render "li" }}
+	{{ end }}
+	</ol>
+	<script src="{{ (resources.Get "script/artists-list.js").RelPermalink }}" async></script>
 	{{ end }}
 
 	<div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3">
@@ -15,7 +26,6 @@
 	</div>
 
 	{{/* {{ with .Site.GetPage "/livestream" }}{{ .Render "widget" }}{{ end }} */}}
-	{{/* <audio src="https://disktree.net/music/12000bees.mp3" autoplay></audio> */}}
 
 </article>
 {{ end }}
