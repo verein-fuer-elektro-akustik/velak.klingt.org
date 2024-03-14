@@ -1,4 +1,5 @@
 art/
+assets/script/*.[0-9].js
 etc/
 misc/
 node_modules/

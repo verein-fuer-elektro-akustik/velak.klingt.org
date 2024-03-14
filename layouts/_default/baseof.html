@@ -27,33 +27,38 @@
 
         <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
 
-        <style>
-            :root {
-                --background: #0c0c0c;
-                --f_high: #9c9c9c;
-                --f_med: #808080;
-                --f_low: #595959;
-                --f_inv: #272727;
-                --b_high: #272727;
-                --b_med: #181818;
-                --b_low: #111111;
-                --b_inv: #818181;
-                {{ with .Page.Params.theme }}
-                {{ with .background }}--background: {{- . -}};{{ end }}
-                {{ with .f_high }}--f_high: {{- . -}};{{ end }}
-                {{ with .f_med }}--f_med: {{- . -}};{{ end }}
-                {{ with .f_low }}--f_low: {{- . -}};{{ end }}
-                {{ with .f_inv }}--f_inv: {{- . -}};{{ end }}
-                {{ with .b_high }}--b_high: {{- . -}};{{ end }}
-                {{ with .b_med }}--b_med: {{- . -}};{{ end }}
-                {{ with .b_low }}--b_low: {{- . -}};{{ end }}
-                {{ with .b_inv }}--b_inv: {{- . -}};{{ end }}
-                {{ end }}
-            }
-            body {
-                background: var(--background); color: var(--f_med);
-            }
-        </style>
+        {{/* <style> */}}
+        {{/*     :root { */}}
+        {{/*         --background: #0c0c0c; */}}
+        {{/*         --f_high: #9c9c9c; */}}
+        {{/*         --f_med: #808080; */}}
+        {{/*         --f_low: #595959; */}}
+        {{/*         --f_inv: #272727; */}}
+        {{/*         --b_high: #272727; */}}
+        {{/*         --b_med: #181818; */}}
+        {{/*         --b_low: #111111; */}}
+        {{/*         --b_inv: #818181; */}}
+        {{/*         {{ with .Page.Params.theme }} */}}
+        {{/*         {{ with .background }}--background: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .f_high }}--f_high: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .f_med }}--f_med: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .f_low }}--f_low: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .f_inv }}--f_inv: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .b_high }}--b_high: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .b_med }}--b_med: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .b_low }}--b_low: {{- . -}};{{ end }} */}}
+        {{/*         {{ with .b_inv }}--b_inv: {{- . -}};{{ end }} */}}
+        {{/*         {{ end }} */}}
+        {{/*     } */}}
+        {{/*     body { */}}
+        {{/*         background: var(--background); color: var(--f_med); */}}
+        {{/*     } */}}
+        {{/* </style> */}}
+
+		{{ $theme := .Site.Params.theme }}
+		{{ if .Params.theme }}{{ $theme = .Params.theme }}{{ end }}
+		{{ $theme_path := printf "theme/%s.html" $theme }}
+		<script src="{{ (resources.Get "script/theme.js" | resources.Minify).RelPermalink }}"></script>
 
         {{ block "prerender" . }}{{ end }}
 
@@ -75,6 +80,7 @@
         {{ block "schema" . }}{{ end }}
 
         <script src="{{ (resources.Get "script/app.js" | resources.Minify).RelPermalink }}" defer></script>
+
 
 	</head>
     <body>

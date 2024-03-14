@@ -1,7 +1,6 @@
-'use strict';
+'use strict'
 
 const STORAGE_ID = 'theme.velak.klingt.org';
-
 let style;
 
 function loadTheme() {
@@ -23,24 +22,6 @@ function readSVG(file, callback) {
     reader.readAsText(file,'UTF-8');
 }
 
-function parseSVG(str) {
-    console.log(str);
-	const svg = new DOMParser().parseFromString(str, 'text/xml');
-    console.log(svg);
-    console.log(svg.querySelector("background"));
-    return {
-        background: svg.getElementById('background').getAttribute('fill'),
-        f_high: svg.getElementById('f_high').getAttribute('fill'),
-        f_med: svg.getElementById('f_med').getAttribute('fill'),
-        f_low: svg.getElementById('f_low').getAttribute('fill'),
-        f_inv: svg.getElementById('f_inv').getAttribute('fill'),
-        b_high: svg.getElementById('b_high').getAttribute('fill'),
-        b_med: svg.getElementById('b_med').getAttribute('fill'),
-        b_low: svg.getElementById('b_low').getAttribute('fill'),
-        b_inv: svg.getElementById('b_inv').getAttribute('fill')
-    }
-}
-
 function applyTheme(theme,save) {
 	var s = document.documentElement.style;
 	s.setProperty("--background",theme.background);
@@ -55,8 +36,7 @@ function applyTheme(theme,save) {
 	if(save) saveTheme(theme);
 }
 
-window.addEventListener('load', event => {
-    document.body.style.visibility = "hidden";
+document.addEventListener('DOMContentLoaded', event => {
 	style = window.getComputedStyle(document.querySelector(':root'));
 	if( style ) {
 		var theme = loadTheme();
@@ -77,16 +57,15 @@ window.addEventListener('load', event => {
 			saveTheme(theme);
 		}
 	}
-	document.body.style.visibility = "visible";
+	if(document.body)
+		document.body.style.visibility = "visible";
 
 	window.addEventListener('dragover', e => {
-		e.stopPropagation();
-		e.preventDefault();
-		e.dataTransfer.dropEffect = 'copy';
-        //document.body.style.background = "black";
-        //document.body.style.color = "white";
-	}, false);
-    /*
+		e.stopPropagation()
+		e.preventDefault()
+		e.dataTransfer.dropEffect = 'copy'
+	});
+
 	window.addEventListener('drop', e => {
 		e.preventDefault();
 		const file = e.dataTransfer.files[0];
@@ -109,7 +88,6 @@ window.addEventListener('load', event => {
 			});
 		}
 		e.stopPropagation();
-	}, false);
-    */
-}, false);
+	});
+});
 
