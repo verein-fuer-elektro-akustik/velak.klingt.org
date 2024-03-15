@@ -6,15 +6,6 @@
 	--color-light: rgb(var(--rgb-light));
 	--color-accent: #ed2c3e;
 
-	// --background: #101010;
-	// --f_high: #f0f0f0;
-	// --f_med: #aaa;
-	// --f_low: #777;
-	// --f_inv: #050505;
-	// --b_high: #030303;
-	// --b_med: #111;
-	// --b_low: #222;
-	// --b_inv: #fff;
 	--background: #0c0c0c;
 	--f_high: #9c9c9c;
 	--f_med: #808080;
@@ -30,7 +21,6 @@ body {
 	background: var(--background);
 	color: var(--f_med);
 	-webkit-tap-highlight-color: var(--f_med);
-	// transition: color 1s, background 1s;
 
 	@media print {
 		background: white;

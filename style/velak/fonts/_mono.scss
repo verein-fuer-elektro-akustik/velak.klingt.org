@@ -4,8 +4,7 @@ $path: "font" !default;
 @font-face {
 	font-family: $name;
 	font-display: block;
-	src:
-        url("#{$path}/RobotoMono-Regular.woff2") format("woff2"),
-        url("#{$path}/RobotoMono-Regular.woff") format("woff"),
-        url("#{$path}/RobotoMono-Regular.ttf") format("truetype");
+	src: url("#{$path}/RobotoMono-Regular.woff2") format("woff2"),
+	url("#{$path}/RobotoMono-Regular.woff") format("woff"),
+	url("#{$path}/RobotoMono-Regular.ttf") format("truetype");
 }

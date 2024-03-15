@@ -3,246 +3,281 @@
 
 :root {
 
-    --font: "Inter";
-    --font-mono: "Mono";
-    --font-primary: var(--font);
+	--font: "Inter";
+	--font-mono: "Mono";
+	--font-primary: var(--font);
 
-    --text-base-size: 13px;
-    --text-scale-ratio: 1.2;
-    --body-font-weight: 400;
-    --text-line-height: 1.5;
+	--text-base-size: 13px;
+	--text-scale-ratio: 1.2;
+	--body-font-weight: 400;
+	--text-line-height: 1.5;
 
 	--heading-line-height: 1.5;
 	//--heading-line-height: 1;//.5;
 	--heading-font-weight: 500;
-	
-    --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
-    --text-space-y-multiplier: 1;
 
-    --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
-    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
-    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
-    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
-    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
-    --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+	--text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
+	--text-space-y-multiplier: 1;
 
-    @media screen and (min-width: breakpoint.$phone) {
-        --text-base-size: 14px; 
-    }
-    @media screen and (min-width: breakpoint.$tablet) {
-        --text-base-size: 14px; 
-    }
-    @media screen and (min-width: breakpoint.$laptop) {
-        --text-base-size: 16px; 
-        // --text-scale-ratio: 1.3;
-    }
-    @media screen and (min-width: breakpoint.$desktop) {
-        //--text-base-size: 18px; 
-        // --text-scale-ratio: 1.35;
-    }
+	--text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+	--text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+	--text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+	--text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+	--text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+
+	@media screen and (min-width: breakpoint.$phone) {
+		--text-base-size: 14px;
+	}
+
+	@media screen and (min-width: breakpoint.$tablet) {
+		--text-base-size: 14px;
+	}
+
+	@media screen and (min-width: breakpoint.$laptop) {
+		--text-base-size: 16px;
+		// --text-scale-ratio: 1.3;
+	}
+
+	@media screen and (min-width: breakpoint.$desktop) {
+		//--text-base-size: 18px;
+		// --text-scale-ratio: 1.35;
+	}
 }
 
 @mixin meta($size: 100%) {
-    font-family: var(--font-mono);
-    font-size: $size;
-    text-transform: uppercase;
+	font-family: var(--font-mono);
+	font-size: $size;
+	text-transform: uppercase;
 }
 
 [hidden] {
-    display: none;
+	display: none;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
+html,
+body {
+	width: 100%;
+	height: 100%;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 html {
-    font-size: var(--text-base-size);
-    font-family: var(--font-primary), sans;
-    font-weight: var(--body-font-weight, normal);
-    font-optical-sizing: auto;
-    line-height: var(--text-line-height);
+	font-size: var(--text-base-size);
+	font-family: var(--font-primary), sans;
+	font-weight: var(--body-font-weight, normal);
+	font-optical-sizing: auto;
+	line-height: var(--text-line-height);
 	letter-spacing: normal;
 	text-rendering: optimizelegibility;
 }
 
 a {
-    background: transparent;
-    text-decoration: none;
-    outline: none;
-    &:hover, &:focus {
-        outline: none;
-    }
-    &:active {
-        outline: none;
-    }
+	background: transparent;
+	text-decoration: none;
+	outline: none;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&:active {
+		outline: none;
+	}
 }
 
 address {
-    display: inline-block;
-    font-style: normal;
+	display: inline-block;
+	font-style: normal;
 }
 
 blockquote {
-    padding-left: 1em;
-    font-style: italic;
-    border-left: 0.25rem solid var(--fg);
+	padding-left: 1em;
+	font-style: italic;
+	border-left: 0.25rem solid var(--fg);
 }
 
 button {
-    padding: 0.5rem 0.5rem;
-    background: var(--fg);
-    color: var(--bg);
-    cursor: pointer;
-    &.disabled {
+	padding: 0.5rem 0.5rem;
+	background: var(--fg);
+	color: var(--bg);
+	cursor: pointer;
+
+	&.disabled {
 		cursor: default;
 	}
 }
 
-code,kbd,pre,samp{
-    font-family: var(--font-mono), monospace;
-    font-size:1em;
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--font-mono), monospace;
+	font-size: 1em;
 }
-code, pre {
-    font-family: var(--font-mono);
+
+code,
+pre {
+	font-family: var(--font-mono);
 }
 
 dl {
-    &, * {
-        margin: 0;
-        padding: 0;
-    }
-    // > dt {
-    //     //font-weight: 200;
-    //     //font-style: italic;
-    // }
-    // > dd {
-    //     //margin-left: 1.5rem;
-    // }
+
+	&,
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	// > dt {
+	//     //font-weight: 200;
+	//     //font-style: italic;
+	// }
+	// > dd {
+	//     //margin-left: 1.5rem;
+	// }
 }
 
 em {
-  font-style: italic;
+	font-style: italic;
 }
 
 fieldset {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 figure {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 form {
-    @include print.not;
-    padding: 1rem 0;
-    label {
-        display: none;
-        font-size: 75%;
-    }
-    legend {
-        display: none;
-    }
+	@include print.not;
+	padding: 1rem 0;
+
+	label {
+		display: none;
+		font-size: 75%;
+	}
+
+	legend {
+		display: none;
+	}
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--heading-font-weight);
-    line-height: 1; // var(--heading-line-height);
-    letter-spacing: -0.03em;
-    text-transform: lowercase;
-    word-break: break-word;
-}
-h1 {
-    font-size: var(--text-xxxxl);
-    line-height: 2em;
-}
-h2 {
-    font-size: var(--text-xxxl);
-    line-height: 3em;
-}
-h3 {
-    font-size: var(--text-xxl);
-    line-height: 3em; // var(--heading-line-height);
-}
-h4 {
-    font-size: var(--text-lg);
-    line-height: 3em; // var(--heading-line-height);
-}
-h5 {
-    font-size: var(--text-md);
-    line-height: 2em;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-    font-family: monospace;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    margin: 1em 0;
+	font-weight: var(--heading-font-weight);
+	line-height: 1; // var(--heading-line-height);
+	letter-spacing: -0.03em;
+	text-transform: lowercase;
+	word-break: break-word;
+}
+
+h1 {
+	font-size: var(--text-xxxxl);
+	line-height: 2em;
+}
+
+h2 {
+	font-size: var(--text-xxxl);
+	line-height: 3em;
+}
+
+h3 {
+	font-size: var(--text-xxl);
+	line-height: 3em; // var(--heading-line-height);
+}
+
+h4 {
+	font-size: var(--text-lg);
+	line-height: 3em; // var(--heading-line-height);
+}
+
+h5 {
+	font-size: var(--text-md);
+	line-height: 2em;
+}
+
+h6 {
+	font-family: monospace;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+	margin: 1em 0;
 }
 
 hr {
-    height: 1px;
-    margin: 1rem 0;
-    background: var(--f_low);
+	height: 1px;
+	margin: 1rem 0;
+	background: var(--f_low);
 }
 
 img {
-    display: block;
+	display: block;
 }
 
-input, select {
-    outline: none;
-    margin: 0 0.5rem 0.5rem 0;
-    padding: 1rem 1.5rem;
-    background: var(--b_med);
-    color: var(--f_med);
-    &:focus {
-        //padding: 1rem 2rem;
-        background: var(--f_med);
-        color: var(--b_low);
-    }
-    &::placeholder {
-        text-transform: lowercase;
-        color: var(--f_med);
-    }
-    //&:invalid {
-        //background: red;
-    //     //border: 1px dashed var(--fg);
-    //}
-    //&:invalid:required {
-        //background-image: linear-gradient(to right, pink, lightgreen);
-        //background-image: linear-gradient(to right, red, var(--background));
-    //}
-    &:valid {
-        border: 1px solid var(--fg);
-    }
-    &[type="submit"] {
-        // text-transform: uppercase;
-        //font-weight: bold;
-        cursor: pointer;
-        &:hover {
-            background: var(--f_high);
-            color: var(--b_low);
-        }
-    }
+input,
+select {
+	outline: none;
+	margin: 0 0.5rem 0.5rem 0;
+	padding: 1rem 1.5rem;
+	background: var(--b_med);
+	color: var(--f_med);
+
+	&:focus {
+		//padding: 1rem 2rem;
+		background: var(--f_med);
+		color: var(--b_low);
+	}
+
+	&::placeholder {
+		text-transform: lowercase;
+		color: var(--f_med);
+	}
+
+	//&:invalid {
+	//background: red;
+	//     //border: 1px dashed var(--fg);
+	//}
+	//&:invalid:required {
+	//background-image: linear-gradient(to right, pink, lightgreen);
+	//background-image: linear-gradient(to right, red, var(--background));
+	//}
+	&:valid {
+		border: 1px solid var(--fg);
+	}
+
+	&[type="submit"] {
+		// text-transform: uppercase;
+		//font-weight: bold;
+		cursor: pointer;
+
+		&:hover {
+			background: var(--f_high);
+			color: var(--b_low);
+		}
+	}
 }
 
 label {
-    //@include meta;
-    display: block;
-    //font-family: var(--font-mono);
-    //font-size: 11px;
-    //text-transform: uppercase;
-    text-transform: lowercase;
+	//@include meta;
+	display: block;
+	//font-family: var(--font-mono);
+	//font-size: 11px;
+	//text-transform: uppercase;
+	text-transform: lowercase;
 }
 
 // nav {
@@ -250,86 +285,108 @@ label {
 // }
 
 //p, ol, ul {
-    //margin: 0 0 1rem 0;
+//margin: 0 0 1rem 0;
 //}
-ol, ul {
-    list-style-position: inside;
-    &, li {
-        list-style: none;
-    }
-    // ol, ul {
-    //     padding-left: 1em;
-    //     margin-bottom: 0;
-    // }
+ol,
+ul {
+	list-style-position: inside;
+
+	&,
+	li {
+		list-style: none;
+	}
+
+	// ol, ul {
+	//     padding-left: 1em;
+	//     margin-bottom: 0;
+	// }
 }
 
-p, ol, ul {
-    margin: 0 0 2em 0;
+p,
+ol,
+ul {
+	margin: 0 0 2em 0;
 }
 
 section {
-    margin: 0 0 1rem 0;
-    padding: 0;
+	margin: 0 0 1rem 0;
+	padding: 0;
 }
 
 strong {
 	font-weight: bold;
 }
 
-sub, sup {
-    font-size: 50%;
+sub,
+sup {
+	font-size: 50%;
 }
 
 svg {
-    display: block;
+	display: block;
 }
 
 table {
-    &, td, th {
-        //border: 1px solid var(--fg);
-        border-collapse: collapse;
-    }
-    th, td {
-        //padding: 0.25rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    th {
-        text-align: left;
-    }    &.raw {
-        th {
-            font-weight: bold;
-            text-transform: uppercase;
-            background: var(--fg);
-            color: var(--bg);
-            border: 1px solid var(--bg);
-        }
-        font-family: var(--font-mono);
-    }
-    &.raw {
-        &, tr, td {
-            border: 1px solid var(--fg);
-            padding: 2px;
-        }
-        td {
-            max-width: 300px;
-        }
-    }
+
+	&,
+	td,
+	th {
+		//border: 1px solid var(--fg);
+		border-collapse: collapse;
+	}
+
+	th,
+	td {
+		//padding: 0.25rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	th {
+		text-align: left;
+	}
+
+	&.raw {
+		th {
+			font-weight: bold;
+			text-transform: uppercase;
+			background: var(--fg);
+			color: var(--bg);
+			border: 1px solid var(--bg);
+		}
+
+		font-family: var(--font-mono);
+	}
+
+	&.raw {
+
+		&,
+		tr,
+		td {
+			border: 1px solid var(--fg);
+			padding: 2px;
+		}
+
+		td {
+			max-width: 300px;
+		}
+	}
 }
 
 time {
-    display: inline-block;
+	display: inline-block;
 }
 
 div.footnotes {
-    font-size: 75%;
-    ol {
-        > li {
-            p {
-                display: inline;
-                margin: 0;
-            }
-        }
-    }
+	font-size: 75%;
+
+	ol {
+		>li {
+			p {
+				display: inline;
+				margin: 0;
+			}
+		}
+	}
 }

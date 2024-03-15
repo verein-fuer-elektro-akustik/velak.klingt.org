@@ -1,22 +1,23 @@
 @media print {
-    nav {
-        display: none;
-    }
+	nav {
+		display: none;
+	}
 }
 
 @mixin not {
-    @media print {
-        display: none;
-    }
+	@media print {
+		display: none;
+	}
 }
 
 @mixin url-after-link() {
-    @media print {
-        a[href^="http"]::after {
-            content: " ["attr(href)"]";
-        }
-    }
+	@media print {
+		a[href^="http"]::after {
+			content: " [" attr(href)"]";
+		}
+	}
 }
+
 /*
 @mixin remove-shadows() {
     @media print {
