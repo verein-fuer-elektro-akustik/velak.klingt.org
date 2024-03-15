@@ -10,14 +10,14 @@
 		"test:html": "for k in $(find public -type f -iname '*.html'); do html-validate --config=./.html_validate.json $k; done",
 		"test": "npm run test:html",
 		"dev:style": "sass style/main.scss static/style.css --watch",
-		"dev:hugo": "hugo server --logLevel info --buildDrafts --buildFuture --panicOnWarning",
+		"dev:hugo": "hugo server --logLevel info --buildDrafts --buildFuture",
 		"start": "npm run dev:hugo",
 		"csv2json": "node_modules/csvtojson/bin/csvtojson artists.csv > data/artists.json",
 		"build:style": "sass style/main.scss static/style.css",
 		"build:hugo": "hugo --buildFuture",
 		"build": "npm run build:style && npm run build:hugo",
 		"prod:style": "sass style/main.scss static/style.css --no-source-map --style compressed",
-		"prod:hugo": "hugo --environment production --buildFuture --logLevel info",
+		"prod:hugo": "hugo --environment production --buildFuture --cleanDestinationDir",
 		"prod": "npm run prod:style && npm run prod:hugo"
 	},
 	"repository": {
