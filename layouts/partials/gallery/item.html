@@ -1,0 +1,27 @@
+{{ $img := . }}
+{{ $src := $img.RelPermalink }}
+{{ if ge $img.Width 1920 }}
+{{ $src = ($img.Resize "1920x").RelPermalink }}
+{{ end }}
+{{ $thumb := $img.Resize "200x" }}
+<li>
+	<a href="{{ $src }}" target="_blank" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}">
+		<figure>
+			<img src="{{ $thumb.RelPermalink }}">
+			<figcaption class="meta">
+				<div class="exif">
+					{{ with $img.Exif }}
+					{{ with .Tags }}
+					{{ with .DateTimeOriginal }}
+					{{ if hasPrefix . "0000:00:00" }}
+					{{ else }}
+					{{ (time .).Format "15:04" }}
+					{{ end }}
+					{{ end }}
+					{{ end }}
+					{{ end }}
+				</div>
+			</figcaption>
+		</figure>
+	</a>
+</li>
