@@ -1,6 +1,11 @@
 {{ define "prerender" }}
-<link rel="prerender" href="{{ .Site.BaseURL }}/program/">{{ end }}
-{{ define "schema" }}{{ partial "schema/organization" . }}{{ end }}
+<link rel="prerender" href="{{ .Site.BaseURL }}/program/">
+{{ end }}
+
+{{ define "schema" }}
+{{ partial "schema/organization" . }}
+{{ end }}
+
 {{ define "main" }}
 <article class="home">
 
@@ -11,6 +16,7 @@
 		{{ $events_upcoming = $events_upcoming | append . }}
 		{{ end }}
 	{{ end }}
+
 	<ol class="data-list program" reversed>
 	{{ range $events_upcoming }}
 		{{ .Render "li" }}

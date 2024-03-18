@@ -1,43 +1,42 @@
-{{ $cur_page := . }}
 <ul class="artists">
-    {{ with .Params.artists }}
-    {{ range . }}
-    {{ $id := lower (replace (replace . " " "-" ) "." "-") }}
-    {{ $path := print "/artists/" $id  }} 
-    {{ $page := $.Site.GetPage $path }}
-    {{ if eq $page nil }}
-        {{ errorf "ARTIST PAGE NOT FOUND %s" $path }}
-    {{ end }}
-    <li>
-        {{ with $page }}
-        <a class="artist" href="{{ .RelPermalink }}">{{- .Title -}}</a>
-        {{ else }}
-        <span class="artist">{{- . -}}</span>
-        {{ end }}
-    </li>
-    {{ end }}
-    {{ end }}
+	{{ with .Params.artists }}
+	{{ range . }}
+	{{ $id := lower (replace (replace . " " "-" ) "." "-") }}
+	{{ $path := print "/artists/" $id }}
+	{{ $page := $.Site.GetPage $path }}
+	{{/* {{ if eq $page nil }} */}}
+	{{/* {{ errorf "ARTIST PAGE NOT FOUND %s" $path }} */}}
+	{{/* {{ end }} */}}
+	<li>
+		{{ with $page }}
+		<a class="artist" href="{{ .RelPermalink }}">{{- .Title -}}</a>
+		{{ else }}
+		<span class="artist">{{- . -}}</span>
+		{{ end }}
+	</li>
+	{{ end }}
+	{{ end }}
 
-    {{ with .Params.collabs }}
-    {{ range . }}
-    {{ $artists := split . "+" }}
-    <li>
-        <ul class="collab">
-            {{ range $artists }}
-            {{ $artist := trim . " " }}
-            {{ $id := lower (replace $artist " " "-") }}
-            {{ $path := print "/artists/" $id }}
-            {{ $page := $.Site.GetPage $path }}
-            <li>
-                {{ with $page }}
-                <a class="artist" href="{{ .RelPermalink }}">{{- $artist -}}</a>
-                {{ else }}
-                <a class="artist" href="{{ $path }}">{{- $artist -}}</a>
-                {{ end }}
-            </li>
-            {{ end }}
-        </ul>
-    </li>
-    {{ end }}
-    {{ end }}
+	{{ with .Params.collabs }}
+	{{ range . }}
+	{{ $artists := split . "+" }}
+	<li>
+		<ul class="collab">
+			{{ range $artists }}
+			{{ $artist := trim . " " }}
+			{{ $id := lower (replace $artist " " "-") }}
+			{{ $path := print "/artists/" $id }}
+			{{ $page := $.Site.GetPage $path }}
+			<li>
+				{{ with $page }}
+				<a class="artist" href="{{ .RelPermalink }}">{{- $artist -}}</a>
+				{{ else }}
+				<a class="artist" href="{{ $path }}">{{- $artist -}}</a>
+				{{ end }}
+			</li>
+			{{ end }}
+		</ul>
+	</li>
+	{{ end }}
+	{{ end }}
 </ul>

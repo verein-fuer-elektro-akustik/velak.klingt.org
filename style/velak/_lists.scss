@@ -41,7 +41,8 @@ ul.data-list {
 		}
 
 		>.artists {
-			display: flex;
+			// display: flex;
+			// flex-wrap: wrap;
 			width: 100%;
 			color: var(--f_low);
 			min-height: 100%;

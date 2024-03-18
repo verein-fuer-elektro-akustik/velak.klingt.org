@@ -64,7 +64,6 @@
 
         <link rel="stylesheet" href="{{ $root }}/style.css">
         <link rel="manifest" href="{{ $root }}/manifest.json">
-        <!--<link rel="alternate" href="feed" type="application/atom+xml" title="{{ .Site.Title }}"/>-->
         {{ partial "site/favicons" . }}
 
         {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
@@ -80,7 +79,6 @@
         {{ block "schema" . }}{{ end }}
 
         <script src="{{ (resources.Get "script/app.js" | resources.Minify).RelPermalink }}" defer></script>
-
 
 	</head>
     <body>
