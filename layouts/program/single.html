@@ -5,6 +5,8 @@
 
 	<h1 class="title">{{- .Title -}}</h1>
 
+	{{/* <nav class="meta">{{ partial "nav_prev_next" . }}</nav> */}}
+
 	<div class="details">
 		{{ partial "meta/date" . }}
 		{{ .Scratch.Set "show_address" true }}
@@ -27,11 +29,11 @@
 		</ol>
 	</div>
 
-	{{ partial "gallery" . }}
+	{{ partial "gallery/gallery" . }}
 
 </article>
 {{ end }}
 
-{{ define "footer-center" }}
+{{ define "footer-right" }}
 <nav class="meta">{{ partial "nav_prev_next" . }}</nav>
 {{ end }}

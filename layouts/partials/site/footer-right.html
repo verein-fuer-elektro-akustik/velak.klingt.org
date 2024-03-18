@@ -1,14 +1,12 @@
 <div class="meta">
-    {{ with .GitInfo }}
-    <a href="https://github.com/{{ $.Site.Params.github.org }}/{{ $.Site.Params.github.repo }}/commits/" rel="external" aria-label="repository">{{- .AbbreviatedHash -}}</a>
-    {{ end }}
-    <a
-        href="{{ .Site.BaseURL }}/program/index.xml"
-        rel="alternate"
-        aria-label="RSS"
-        title="RSS"
-    >
-        <i class="ic-rss_feed" aria-hidden="true"></i>
-        <span class="nodisplay">RSS</span>
-    </a>
+	{{/* {{ with .GitInfo }} */}}
+	{{/* <a href="https://github.com/{{ $.Site.Params.github.org }}/{{ $.Site.Params.github.repo }}/commits/"
+		rel="external" aria-label="repository">{{- .AbbreviatedHash -}}</a> */}}
+	{{/* {{ end }} */}}
+	<!--
+	<a href="{{ .Site.BaseURL }}/program/index.xml" rel="alternate" aria-label="RSS" title="RSS">
+		<i class="ic-rss_feed" aria-hidden="true"></i>
+		<span class="nodisplay">RSS</span>
+	</a>
+	-->
 </div>
