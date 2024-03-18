@@ -7,6 +7,7 @@ email = "velak@klingt.org"
 mailannounce = "velak-announce@klingt.org"
 mailman = "https://klingt.org/cgi-bin/mailman"
 theme_color = "#000000"
+theme = "polivoks"
 dev = true
 
 [contact]

@@ -8,7 +8,7 @@ paginate = 1000
 rssLimit = 1000
 buildFuture = true
 disableHugoGeneratorInject = true
-enableGitInfo = true
+#enableGitInfo = true
 enableRobotsTXT = true
 
 [build]
@@ -22,16 +22,17 @@ enableRobotsTXT = true
   # keepComments = true
   # keepConditionalComments = true
 
-[outputs]
-  home = ["HTML"]
-  page = ["HTML","JSON"]
+# [outputs]
+#   home = ["HTML"]
+#   page = ["HTML"]
+  #page = ["HTML","JSON"]
   #section = ["HTML","JSON"]
   #taxonomy = ["HTML", "RSS"]
   #term = ["HTML", "RSS"]
 
-[outputFormats]
-  [outputFormats.txt]
-    mediaType = "text/plain"
+# [outputFormats]
+#   [outputFormats.txt]
+#     mediaType = "text/plain"
 # [permalinks]
 #     program = '/:section/:year/:month/:filename/'
 
