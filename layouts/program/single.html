@@ -16,7 +16,10 @@
 
 	<div class="artists">{{ partial "list/artists" . }}</div>
 
-	{{ with .Content }}<div class="content">{{- . -}}</div>{{ end }}
+	<div class="content">
+		{{ with .Content }}<div>{{- . -}}</div>{{ end }}
+		<div class="meta">supported by bmkoes</div>
+	</div>
 
 	<div class="audiofiles">
 		<ol>
