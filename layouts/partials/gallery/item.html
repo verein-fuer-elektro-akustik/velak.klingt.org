@@ -3,7 +3,7 @@
 {{ if ge $img.Width 1920 }}
 {{ $src = ($img.Resize "1920x").RelPermalink }}
 {{ end }}
-{{ $thumb := $img.Resize "200x" }}
+{{ $thumb := $img.Resize "400x" }}
 <li>
 	<a href="{{ $src }}" target="_blank" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}">
 		<figure>

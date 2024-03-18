@@ -1,42 +1,44 @@
-<link href="{{ .Site.BaseURL }}/photoswipe/photoswipe.css" rel="stylesheet">
-<script type="module">
-	import PhotoSwipeLightbox from '{{ .Site.BaseURL }}/photoswipe/photoswipe-lightbox.esm.js';
-	const lightbox = new PhotoSwipeLightbox({
-		gallery: '#gallery',
-		children: 'a',
-		pswpModule: () => import('{{ .Site.BaseURL }}/photoswipe/photoswipe.esm.js')
-	});
-	lightbox.init();
-</script>
+<div id="gallery">
+	<link href="{{ .Site.BaseURL }}/photoswipe/photoswipe.css" rel="stylesheet">
+	<script type="module">
+		import PhotoSwipeLightbox from '{{ .Site.BaseURL }}/photoswipe/photoswipe-lightbox.esm.js';
+		const lightbox = new PhotoSwipeLightbox({
+			gallery: '#pswp--gallery',
+			children: 'a',
+			pswpModule: () => import('{{ .Site.BaseURL }}/photoswipe/photoswipe.esm.js')
+		});
+		lightbox.init();
+	</script>
 
-{{ $images := (.Resources.ByType "image") }}
-{{ $images := where $images "Name" "!=" "cover.jpg" }}
-{{ $images := where $images "Name" "!=" "cover.png" }}
+	{{ $images := (.Resources.ByType "image") }}
+	{{ $images := where $images "Name" "!=" "cover.jpg" }}
+	{{ $images := where $images "Name" "!=" "cover.png" }}
 
-
-{{ $images_landscape := slice }}
-{{ $images_portrait := slice }}
-{{ range $img := $images }}
+	{{ $images_landscape := slice }}
+	{{ $images_portrait := slice }}
+	{{ range $img := $images }}
 	{{ if ge $img.Width $img.Height }}
-		{{ $images_landscape = $images_landscape | append $img }}
+	{{ $images_landscape = $images_landscape | append $img }}
 	{{ else }}
-		{{ $images_portrait = $images_portrait | append $img }}
+	{{ $images_portrait = $images_portrait | append $img }}
 	{{ end }}
-{{ end }}
+	{{ end }}
 
-<ul id="gallery">
-	{{ range $img := $images_landscape }}
+	<ul id="pswp--gallery" class="pswp--custom-icon-colors pswp--fuck">
+		{{ range $img := $images_landscape }}
 		{{ partial "gallery/item" .}}
-	{{ end }}
-	{{ range $img := $images_portrait }}
+		{{ end }}
+		{{ range $img := $images_portrait }}
 		{{ partial "gallery/item" .}}
-	{{ end }}
-</ul>
+		{{ end }}
 
-{{ with .Params.photos }}
-<div class="photographer">
-	<i class="ic-copyright"></i>
-	<span>Photos by</span>
-	<span>{{- . -}}</span>
+	</ul>
+
+	{{ with .Params.photos }}
+	<div class="photographer">
+		<i class="ic-copyright"></i>
+		<span>Photos by</span>
+		<span>{{- . -}}</span>
+	</div>
+	{{ end }}
 </div>
-{{ end }}
