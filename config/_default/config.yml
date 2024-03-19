@@ -26,6 +26,20 @@ outputs:
   page: ["HTML"]
   section: ["HTML"]
 
+mediaTypes:
+  application/xml:
+    suffixes:
+    - xspf
+
+outputFormats:
+  xspf:
+    baseName: velak
+    isPlainText: true
+    mediaType: application/xml
+  m3u:
+    baseName: velak.m3u
+    isPlainText: true
+
 sitemap:
   changefreq: 'monthly'
   filename: 'sitemap.xml'
