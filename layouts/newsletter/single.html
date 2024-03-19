@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{ $mailman := .Site.Params.mailman }}
 <article class="content">
-    {{/* <h1>Newsletter</h1> */}}
     <section>
         <div class="content">{{- .Content -}}</div>
     </section>
@@ -15,7 +14,7 @@
             </p>
         </div>
         -->
-        <form method="POST" action="{{ $mailman }}/subscribe/velak-announce">
+        <form method="POST" action="{{ $mailman }}/alternativesubscribe/velak-announce">
             <fieldset>
                 <legend>Subscribe</legend>
                 <div>
@@ -24,7 +23,7 @@
                 </div>
                 <div>
                     <label for="email"><span>Name</span></label>
-                    <input type="text" name="fullname" pattern="[a-z0-9_ ]{2,}" autocomplete="username" placeholder="Name …">
+                    <input type="text" name="fullname" pattern="[A-Za-z0-9_ ]{2,}" autocomplete="username" placeholder="Name …">
                 </div>
 
             </fieldset>
@@ -32,11 +31,11 @@
                 <legend>Password</legend>
                 <div>
                     <label for="pw"><span>Password</span></label>
-                    <input type="password" name="pw" pattern="[a-z0-9_]{5,}" autocomplete="new-password" placeholder="Password …" required>
+                    <input type="password" name="pw" pattern="[A-Za-z0-9_]{5,}" autocomplete="new-password" placeholder="Password …" required>
                 </div>
                 <div>
                     <label for="pw-conf"><span>Confirm</span></label>
-                    <input type="password" name="pw-conf" pattern="[a-z0-9_]{5,}" placeholder="Confirm …" required>
+                    <input type="password" name="pw-conf" pattern="[A-Za-z0-9_]{5,}" placeholder="Confirm …" required>
                 </div>
             </fieldset>
             <input name="language" type="hidden" value="en">
