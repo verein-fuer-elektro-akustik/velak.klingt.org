@@ -3,7 +3,7 @@ title: "gala#61"
 date: 2011-06-14
 artists: [
     Lale Rodgarkia-Dara,
-    Meaghan Burke
+    Meaghan Burke,
     Bernd Klug,
     David Schweighart
 ]

@@ -1,6 +1,6 @@
 ---
 title: "gala#88"
-date: 2016-03-16 
+date: 2016-03-16
 artists: [
     lale rodgarkia-dara,
     robert gruber,
@@ -13,12 +13,12 @@ doors: 22pm
 entry: 6€
 
 #### Musci
-_TEXTURSEDIMENTATIONA_  
+_TEXTURSEDIMENTATIONA_
 https://soundcloud.com/musci
 
 #### Robert Gruber
 
-_PRINT!_  
+_PRINT!_
 
 construct with printer and CD changer
 

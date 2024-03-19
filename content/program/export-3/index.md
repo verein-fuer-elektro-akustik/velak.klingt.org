@@ -20,5 +20,5 @@ collabs: [
 location: "Arteliers Claus, bruxelles"
 tags: [export]
 ---
-doors: 20.00h / begin: 21.00h (sharp!)  
+doors: 20.00h / begin: 21.00h (sharp!)
 entry: 3€
