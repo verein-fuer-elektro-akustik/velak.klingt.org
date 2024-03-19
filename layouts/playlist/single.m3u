@@ -1,0 +1,5 @@
+#EXTM3U
+{{ range .Site.Pages }}{{ range .Resources.ByType "audio" }}
+#EXTINF:{{ path.BaseName .Title }}
+{{ .Permalink }}
+{{ end }}{{ end }}
