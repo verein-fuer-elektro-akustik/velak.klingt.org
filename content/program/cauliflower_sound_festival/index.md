@@ -35,7 +35,7 @@ Velak, [The Acousmatic Project](https://theacousmaticproject.at/1912/) and [öH 
 - Angela Lau interpretiert Philippe Mion Hope
 - Kisling
 - Mad Lane
-- Andreas Zißler & Fabian Lanzmaier  
+- Andreas Zißler & Fabian Lanzmaier
 
 ##### 14.04.2022
 - Vinzenz Schwab

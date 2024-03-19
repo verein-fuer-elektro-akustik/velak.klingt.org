@@ -3,8 +3,8 @@ title: "gala#31"
 date: 2008-03-08
 artists: [
     elektronischer wildschweinschutz,
-    guenther rabl,
-    myr 
+    günther rabl,
+    myr
 ]
 collabs: [
     tim blechmann + manuel knapp,
