@@ -22,10 +22,9 @@
                     <input type="email" name="email" placeholder="Email …" autofocus required>
                 </div>
                 <div>
-                    <label for="email"><span>Name</span></label>
-                    <input type="text" name="fullname" pattern="[A-Za-z0-9_ ]{2,}" autocomplete="username" placeholder="Name …">
+                    <label for="fullname"><span>Name</span></label>
+                    <input type="text" name="fullname" pattern="[A-Za-z0-9_ ]{2,}" autocomplete="name" placeholder="Name …" required>
                 </div>
-
             </fieldset>
             <fieldset>
                 <legend>Password</legend>
@@ -35,7 +34,7 @@
                 </div>
                 <div>
                     <label for="pw-conf"><span>Confirm</span></label>
-                    <input type="password" name="pw-conf" pattern="[A-Za-z0-9_]{5,}" placeholder="Confirm …" required>
+                    <input type="password" name="pw-conf" pattern="[A-Za-z0-9_]{5,}" autocomplete="new-password" placeholder="Confirm …" required>
                 </div>
             </fieldset>
             <input name="language" type="hidden" value="en">
@@ -44,23 +43,16 @@
     </section>
     <section>
         <h3>Unsubscribe</h3>
-        <!--
-        <div class="content">
-            <p>
-                to unsubscribe or get a password reminder:
-            </p>
-        </div>
-        -->
         <form method="POST" action="{{ $mailman }}/options/velak-announce">
             <fieldset>
                 <legend>Unsubscribe</legend>
                 <div>
                     <label for="email"><span>Email</span></label>
-                    <input name="email" type="email" placeholder="Email …" required>
+                    <input name="email" type="email" autocomplete="username" placeholder="Email …" required>
                 </div>
                 <div>
-                    <label for="email"><span>Password</span></label>
-                    <input name="password" type="password" placeholder="Password …" required>
+                    <label for="password"><span>Password</span></label>
+                    <input name="password" type="password" autocomplete="current-password" placeholder="Password …" required>
                 </div>
             </fieldset>
             <input name="language" type="hidden" value="en">
