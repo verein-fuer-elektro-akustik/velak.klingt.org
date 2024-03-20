@@ -5,8 +5,6 @@
 
 	<h1 class="title">{{- .Title -}}</h1>
 
-	{{/* <nav class="meta">{{ partial "nav_prev_next" . }}</nav> */}}
-
 	<div class="details">
 		{{ partial "meta/date" . }}
 		{{ .Scratch.Set "show_address" true }}
@@ -18,7 +16,7 @@
 
 	<div class="content">
 		{{ with .Content }}<div>{{- . -}}</div>{{ end }}
-		<div class="meta">supported by bmkoes</div>
+		<div class="">supported by bmkoes</div>
 	</div>
 
 	<div class="audiofiles">
@@ -34,9 +32,11 @@
 
 	{{ partial "gallery/gallery" . }}
 
+	{{ partial "nav_prev_next" . }}
+
 </article>
 {{ end }}
 
-{{ define "footer-right" }}
-<nav class="meta">{{ partial "nav_prev_next" . }}</nav>
-{{ end }}
+{{/* {{ define "footer-center" }} */}}
+{{/* <nav class="meta">{{ partial "nav_prev_next" . }}</nav> */}}
+{{/* {{ end }} */}}
