@@ -11,7 +11,7 @@ function updateScrollTopButtom() {
     }
 }
 window.addEventListener("load", _ => {
-
+/*
     const style = window.getComputedStyle(document.querySelector(':root'));
     theme = {
         background: style.getPropertyValue("--background"),
@@ -24,6 +24,7 @@ window.addEventListener("load", _ => {
         b_low: style.getPropertyValue("--b_low"),
         b_inv: style.getPropertyValue("--b_inv"),
     };
+	*/
 
     updateScrollTopButtom();
 

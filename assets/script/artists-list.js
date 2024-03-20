@@ -123,7 +123,6 @@ function initArtistList(li) {
 	if (ulRect.width == 0) {
 		return;
 	}
-	// console.log(containerRect);
 	// if(containerRect.top > window.innerHeight-200) {
 	//     return;
 	// }
