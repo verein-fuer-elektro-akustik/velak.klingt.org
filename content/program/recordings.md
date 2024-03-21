@@ -1,10 +1,10 @@
 ---
-title: Playlist
-type: playlist
+title: Event Recordings
+type: recordings
 minify:
     minifyoutput: false
 outputs:
 - html
-- xspf
 - m3u
+#- xspf
 ---

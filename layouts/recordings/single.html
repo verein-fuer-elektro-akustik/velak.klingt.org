@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{- .Title -}}</h1>
+
+<ol>
+{{ range .Site.Pages }}
+	{{ $page := .Name}}
+	{{ range .Resources.ByType "audio" }}
+	<li>
+		<a href="{{ .Permalink }}">{{ $page }} - {{ .Title }}</a>
+	</li>
+	{{ end }}
+{{ end }}
+</ol>
+
+<hr>
+
+<div>
+	<a href="{{ .Site.BaseURL }}/velak.m3u">velak.m3u</a>
+</div>
+
+{{ end }}
