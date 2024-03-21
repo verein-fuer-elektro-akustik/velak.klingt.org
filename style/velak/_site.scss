@@ -42,7 +42,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0.5rem 0;
-	overflow-x: hidden;
+	//overflow-x: hidden;
 	overflow-y: scroll;
 
 	//>* {
@@ -277,6 +277,17 @@ dl.tags {
 			text-decoration: none;
 		}
 	}
+}
+
+.meta {
+	@include typography.meta();
+	cursor: default;
+	//@media screen and (min-width: breakpoint.$tablet) {
+	//font-size: var(--text-sm);
+	//}
+	//> i {
+	//margin-right: 0.125em;
+	//}
 }
 
 nav.top {

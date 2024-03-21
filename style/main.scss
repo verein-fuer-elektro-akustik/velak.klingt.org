@@ -10,4 +10,9 @@
 @use 'velak/gallery';
 @use 'velak/github';
 @use 'velak/print';
+
 @use 'velak/dev';
+
+@use 'velak/page/home';
+@use 'velak/page/program';
+@use 'velak/page/artists';

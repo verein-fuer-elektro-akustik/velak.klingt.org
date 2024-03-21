@@ -1,3 +1,4 @@
+@use 'breakpoint';
 @use 'typography';
 
 // Program/Records data list base style
@@ -102,29 +103,50 @@ ul.data-list {
 	&.program {
 		>li.event {
 			>.title {
+				position: relative;
 				margin: 0 0.5ch;
+				color: var(--f_high);
+				box-shadow: 0.5rem 0 1rem var(--background);
+				z-index: 1000;
 			}
+
+			// >.date {
+			// 	color: var(--f_high);
+			// }
 
 			>.artists {
 				order: 3;
+				color: var(--f_low);
+
+				a {
+					color: var(--f_low);
+
+					&:hover {
+						color: var(--f_high);
+					}
+				}
 			}
 
 			>.location {
-				// display: none;
+				position: relative;
 				order: 4;
+				box-shadow: -0.5rem 0 1rem var(--background);
 
-				>[data-id] {
+				@media screen and (max-width: breakpoint.$tablet) {
 					display: none;
-					//display: none;
-					//transform: translateX(100%);
-					//transition: width 1s;
-					//width: 0px;
-					//background: red;
 				}
+
+				//>[data-id] {
+				//display: none;
+				//transform: translateX(100%);
+				//transition: width 1s;
+				//width: 0px;
+				//background: red;
+				//}
 
 				&:hover {
 					>[data-id] {
-						display: block;
+						// display: block;
 						//transform: translateX(0);
 						//width: unset;
 						//display: block;

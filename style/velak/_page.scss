@@ -11,9 +11,10 @@ main>article {
 		display: flex;
 		flex-direction: column;
 		text-transform: lowercase;
+		width: 100%;
 
 		>.title {
-			order: 1;
+			//order: 1;
 			//padding: 0.5em 0;
 			position: relative;
 			//left: -2px; // HACK
@@ -21,7 +22,7 @@ main>article {
 		}
 
 		>.details {
-			order: 2;
+			//order: 2;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -30,33 +31,41 @@ main>article {
 		}
 
 		>.artists {
-			order: 3;
+			//order: 3;
 			font-size: 1.5rem;
 		}
 
-		>.gallery {
-			order: 1000;
-		}
+		// >.gallery {
+		//order: 1000;
+		// }
 
-		>nav {
-			order: 10000;
-		}
+		// >nav {
+		//order: 10000;
+		// }
 	}
-
-	>section {}
 }
 
 //// --- Home ---------------------------------------------------------------
+/*
+article.home {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	gap: 0rem;
+	width: 100%;
+	height: 100%;
 
-// article.home {
-//     //display: flex;
-// }
+	.fq {
+		height: 100%;
+	}
+}
+*/
 
 //// --- Program ---------------------------------------------------------------
-
+/*
 article.event {
 	>.details {
-		order: 1;
+		//order: 1;
 		align-items: baseline;
 
 		//padding: 1rem 0;
@@ -80,33 +89,41 @@ article.event {
 	}
 
 	>.title {
-		order: 2;
+		//order: 2;
 	}
 
-	// > .artists {
-	//     order: 3;
-	// }
+	>.artists {
+
+		//     order: 3;
+		>ul {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+	}
+
 	>.content {
-		order: 4;
+		//order: 4;
 	}
 
 	>*.audiofiles {
-		order: 5;
+		//order: 5;
 	}
 
 	>.gallery {
-		order: 6;
+		//order: 6;
 	}
 
-	nav.prev_next {
-		background: red;
-		justify-self: flex-end;
+	>nav.prev_next {
+		margin-top: 2rem;
 	}
 }
+*/
 
 
 //// --- Artists ----------------------------------------------------------------
-
+/*
 main[data-section="artists"] {
 
 	// list
@@ -123,27 +140,27 @@ main[data-section="artists"] {
 	&[data-kind="page"] {
 		>article.artist {
 			>.title {
-				order: 1;
+				//order: 1;
 			}
 
 			>.details {
-				order: 2;
+				//order: 2;
 			}
 
 			>.content {
-				order: 3;
+				//order: 3;
 			}
 
 			>.program {
-				order: 4;
+				//order: 4;
 			}
 
 			>.records {
-				order: 5;
+				//order: 5;
 			}
 
 			>.gallery {
-				order: 6;
+				//order: 6;
 			}
 
 			nav.prev_next {
@@ -152,16 +169,18 @@ main[data-section="artists"] {
 		}
 	}
 }
+*/
 
 //// --- Records --------------------------------------------------------------
 
+/*
 main[data-section="records"] {
 	&[data-kind="section"] {
 
 		// list
 		>article {
 			>.artists {
-				order: 3;
+				// order: 3;
 			}
 
 			/*
@@ -186,12 +205,11 @@ main[data-section="records"] {
                     // }
                 }
             }
-            */
+            * /
 		}
 	}
 
 	&[data-kind="page"] {
-
 		// single
 		>article {
 			>.title {
@@ -216,9 +234,9 @@ main[data-section="records"] {
 		}
 	}
 }
-
+*/
 //////
-
+/*
 .meta {
 	@include typography.meta();
 	cursor: default;
@@ -229,9 +247,9 @@ main[data-section="records"] {
 	//margin-right: 0.125em;
 	//}
 }
-
+*/
 //// --- Livestream -----------------------------------------------------------
-
+/*
 .livestream {
 	position: relative;
 	width: 100%;
@@ -276,3 +294,4 @@ canvas.spectrum {
 	width: 100%;
 	height: 100%;
 }
+*/

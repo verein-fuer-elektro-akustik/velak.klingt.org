@@ -1,0 +1,45 @@
+main[data-section="artists"] {
+
+	// list
+	&[data-kind="section"] {
+		>article {
+			>ul.artists {
+				column-width: 240px;
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	// single
+	&[data-kind="page"] {
+		>article.artist {
+			>.title {
+				//order: 1;
+			}
+
+			>.details {
+				//order: 2;
+			}
+
+			>.content {
+				//order: 3;
+			}
+
+			>.program {
+				//order: 4;
+			}
+
+			>.records {
+				//order: 5;
+			}
+
+			>.gallery {
+				//order: 6;
+			}
+
+			nav.prev_next {
+				// justify-self: flex-end;
+			}
+		}
+	}
+}

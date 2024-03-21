@@ -1,0 +1,56 @@
+article.event {
+	>.details {
+		//order: 1;
+		align-items: baseline;
+
+		//padding: 1rem 0;
+		>* {
+			//display: flex;
+			// i {
+			//     // margin-right: 0.25ch;
+			// }
+			// &:not(:last-child) {
+			//     //margin-right: 1ch;
+			// }
+		}
+
+		// .date {
+		//     //display: inline-flex;
+		//     //flex-wrap: wrap;
+		//     //flex-direction: row;
+		// }
+		// .location {
+		// }
+	}
+
+	>.title {
+		//order: 2;
+	}
+
+	>.artists {
+
+		//     order: 3;
+		>ul {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+	}
+
+	>.content {
+		//order: 4;
+	}
+
+	>*.audiofiles {
+		//order: 5;
+	}
+
+	>.gallery {
+		//order: 6;
+	}
+
+	>nav.prev_next {
+		margin-top: 2rem;
+	}
+}
