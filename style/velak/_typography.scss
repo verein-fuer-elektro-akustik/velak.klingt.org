@@ -29,15 +29,15 @@
 	--text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
 
 	@media screen and (min-width: breakpoint.$phone) {
-		--text-base-size: 14px;
+		--text-base-size: 15px;
 	}
 
 	@media screen and (min-width: breakpoint.$tablet) {
-		--text-base-size: 14px;
+		--text-base-size: 16px;
 	}
 
 	@media screen and (min-width: breakpoint.$laptop) {
-		--text-base-size: 16px;
+		--text-base-size: 18px;
 		// --text-scale-ratio: 1.3;
 	}
 
