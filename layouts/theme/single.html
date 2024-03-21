@@ -1,6 +1,10 @@
 {{ define "main" }}
 {{ if .Content }}<article>{{- .Content -}}</article>{{ end }}
 <style>
+	body {
+		transition: background 0.5s, color 0.5s;
+	}
+
 	.themes>.theme {
 		cursor: pointer;
 		display: inline-block;
@@ -30,6 +34,6 @@
 	<span class="theme" id="theme_{{ .Name  }}" title="{{.Name}}"
 		onclick="javascript:_handleThemeSelect(children[0])">{{ .Content | safeHTML }}</span>
 	{{ end }}
-	<div title="Set default theme" onclick="javascript:_selectDefaultTheme()">[DEFAULT]</div>
+	<div title="Set default theme" onclick="javascript:_selectDefaultTheme()" style="cursor: pointer;">[DEFAULT]</div>
 </div>
 {{ end }}

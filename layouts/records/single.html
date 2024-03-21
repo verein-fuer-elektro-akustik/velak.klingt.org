@@ -12,9 +12,6 @@
 	<div class="artists">{{ partial "list/artists" . }}</div>
 	<div class="content">{{- .Content -}}</div>
 	{{ partial "gallery/gallery" . }}
+	{{ partial "nav_prev_next" . }}
 </article>
-{{ end }}
-
-{{ define "footer-center" }}
-<nav class="meta">{{ partial "nav_prev_next" . }}</nav>
 {{ end }}

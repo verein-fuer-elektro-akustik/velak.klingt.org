@@ -5,72 +5,70 @@
 {{ $id := replace $name "-" " " }}
 <article class="content artist">
 
-    <h1 class="title">{{- .Title -}}</h1>
+	<h1 class="title">{{- .Title -}}</h1>
 
-    <div class="details meta">
-        <ul>
-            {{ range .Params.links }}<li>{{ partial "meta/link" . }}</li>{{ end }}
-            {{ with .Params.youtube }}
-            <li>{{ partial "meta/link" (print "https://www.youtube.com/@" .) }}</li>
-            {{ end }}
-            {{ with .Params.twitter }}
-            <li>{{ partial "meta/link" (print "https://twitter.com/" .) }}</li>
-            {{ end }}
-        </ul>
-        {{ partial "meta/email" .Params.email }}
-    </div>
-
-    <div class="content">{{- .Content -}}</div>
+	<div class="details meta">
+		<ul>
+			{{ range .Params.links }}<li>{{ partial "meta/link" . }}</li>{{ end }}
+			{{ with .Params.youtube }}
+			<li>{{ partial "meta/link" (print "https://www.youtube.com/@" .) }}</li>
+			{{ end }}
+			{{ with .Params.twitter }}
+			<li>{{ partial "meta/link" (print "https://twitter.com/" .) }}</li>
+			{{ end }}
+		</ul>
+		{{ partial "meta/email" .Params.email }}
+	</div>
 
-    <!-- EVENTS -->
-    {{ $events_solo := slice }}
-    {{ $events_collab := slice }}
-    {{ $events_all := where .Site.RegularPages "Type" "program" }}
-    {{ range $event := $events_all }}
-        {{ with .Params.artists }}
-            {{ range . }}
-                {{ $artist := (trim (lower .) " ") }}
-                {{ if eq $artist $name }}
-                    {{ $events_solo = $events_solo | append $event }}
-                {{ end }}
-            {{ end }}
-        {{ end }}
-        {{ with .Params.collabs }}
-            {{ range . }}
-                {{ $artists := split . "+" }}
-                {{ range $artists }}
-                    {{ if eq (trim (lower .) " ") $name }}
-                        {{ $events_collab = $events_collab | append $event }}
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-        {{ end }}
-    {{ end }}
-    {{ $events := sort ($events_solo | append $events_collab | uniq) "Date" "desc" }}
-    {{ .Scratch.Set "events" $events }}
-    {{ partial "list/program" . }}
+	<div class="content">{{- .Content -}}</div>
 
-    <!-- COLLABS -->
-    <!--
-    <div>
-    {{ range $events_collab }}
-        {{range .Params.collabs }}
-            <div>
-                {{ $artists := split . "+" }}
-                {{ range $artists }}
-                    {{.}}
-                    {{ if eq . $id }}{{ else }}
-                    {{ end }}
-                {{ end }}
-            </div>
-        {{ end }}
+	<!-- EVENTS -->
+	{{ $events_solo := slice }}
+	{{ $events_collab := slice }}
+	{{ $events_all := where .Site.RegularPages "Type" "program" }}
+	{{ range $event := $events_all }}
+	{{ with .Params.artists }}
+	{{ range . }}
+	{{ $artist := (trim (lower .) " ") }}
+	{{ if eq $artist $name }}
+	{{ $events_solo = $events_solo | append $event }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ with .Params.collabs }}
+	{{ range . }}
+	{{ $artists := split . "+" }}
+	{{ range $artists }}
+	{{ if eq (trim (lower .) " ") $name }}
+	{{ $events_collab = $events_collab | append $event }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ $events := sort ($events_solo | append $events_collab | uniq) "Date" "desc" }}
+	{{ .Scratch.Set "events" $events }}
+	{{ partial "list/program" . }}
 
-    {{ end }}
-    </div>
-    -->
+	<!-- COLLABS -->
+	{{/* <div> */}}
+		{{/* {{ range $events_collab }} */}}
+		{{/* {{range .Params.collabs }} */}}
+		{{/* <div> */}}
+			{{/* {{ $artists := split . "+" }} */}}
+			{{/* {{ range $artists }} */}}
+			{{/* {{.}} */}}
+			{{/* {{ if eq . $id }}{{ else }} */}}
+			{{/* {{ end }} */}}
+			{{/* {{ end }} */}}
+			{{/* </div> */}}
+		{{/* {{ end }} */}}
+		{{/**/}}
+		{{/* {{ end }} */}}
+		{{/* </div> */}}
 
-    <!-- RECORDS -->
-    <!--
+	<!-- RECORDS -->
+	<!--
     {{ $records := slice }}
     {{ range where .Site.RegularPages "Section" "records" }}
         {{ if in .Params.artists $id }}
@@ -81,12 +79,12 @@
     {{ partial "list/records" . }}
     -->
 
-    {{ partial "gallery" . }}
+	{{ partial "gallery/gallery" . }}
+	{{ partial "nav_prev_next" . }}
 
 </article>
 {{ end }}
 
 {{ define "footer-center" }}
-<nav class="meta">{{ partial "nav_prev_next" . }}</nav>
+{{/* <nav class="meta">{{ partial "nav_prev_next" . }}</nav> */}}
 {{ end }}
-

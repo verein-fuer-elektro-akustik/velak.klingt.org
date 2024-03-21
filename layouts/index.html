@@ -7,31 +7,46 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="home">
+<article class="home content">
 
-	{{ with .Site.GetPage "/program" }}
-	{{ $events_upcoming := slice }}
-	{{ range .RegularPages }}
+	<div class="events">
+		{{ with .Site.GetPage "/program" }}
+		{{ $events := slice }}
+		{{ range .RegularPages }}
 		{{ if .Date.After now }}
-		{{ $events_upcoming = $events_upcoming | append . }}
+		{{ $events = $events | append . }}
 		{{ end }}
-	{{ end }}
+		{{ end }}
 
-	<ol class="data-list program" reversed>
-	{{ range $events_upcoming }}
-		{{ .Render "li" }}
-	{{ end }}
-	</ol>
-	<script src="{{ (resources.Get "script/artists-list.js").RelPermalink }}" async></script>
-	{{ end }}
-
-	<div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3">
-		<div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div>
-		<canvas class="spectrum"></canvas>
-		<script src="{{ (resources.Get "script/audioplayer.js").RelPermalink }}" async></script>
+		{{ if gt (len $events) 0}}
+		<ol class="events">
+			{{ range $events }}
+			{{ .Render "summary" }}
+			{{ end }}
+		</ol>
+		<script src="{{ (resources.Get "script/artists-list.js" | resources.Minify).RelPermalink }}" async></script>
+		{{ else }}
+		<p>
+			<div>No upcoming events.</div>
+			<div>Subscribe to the <a href="newsletter">newsletter</a> to get updates.</div>
+		</p>
+		{{ end}}
+		{{ end }}
 	</div>
 
-	{{/* {{ with .Site.GetPage "/livestream" }}{{ .Render "widget" }}{{ end }} */}}
+	<div class="fq">
+		{{ partial "svg/fq" . }}
+		{{/* <script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}" async></script> */}}
+	</div>
+
+	{{/* <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3"> */}}
+		{{/* <div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div> */}}
+		{{/* <canvas class="spectrum"></canvas> */}}
+		{{/*
+		<script src="{{ (resources.Get " script/audioplayer.js").RelPermalink }}" async></script> */}}
+		{{/*
+	</div> */}}
 
 </article>
+
 {{ end }}

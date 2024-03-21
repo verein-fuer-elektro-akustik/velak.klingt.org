@@ -1,0 +1,9 @@
+<li class="event summary">
+	<h3>
+		<a href="{{.RelPermalink}}">{{- .Title -}}</a>
+	</h3>
+	<div class="details">
+		{{ partial "meta/date" . }}
+		{{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
+	</div>
+</li>
