@@ -1,5 +1,0 @@
----
-title: "victor halbnarr"
-links: []
----
-

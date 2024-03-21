@@ -7,8 +7,8 @@ artists: [
     gabriela gordillo
 ]
 collabs: [
-    Fabian Lanzmaier + Martina Moro,
-	Stephanie Castonguay + Anne F. Jacques
+    fabian lanzmaier + martina moro,
+	stephanie castonguay + anne f jacques
 ]
 tags: [export]
 ---

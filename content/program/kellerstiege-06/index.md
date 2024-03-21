@@ -5,8 +5,8 @@ location: "garnison"
 artists: [
     manuel knapp,
     michael fischer,
-    Alice Hui-Sheng Chang,
-    Nigel Brown 
+    Alice Hui Sheng Chang,
+    Nigel Brown
 ]
 tags: [kellerstiege]
 ---

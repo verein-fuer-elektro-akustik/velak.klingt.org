@@ -1,5 +1,0 @@
----
-title: "kazuhisa uchihashi"
-links: []
----
-

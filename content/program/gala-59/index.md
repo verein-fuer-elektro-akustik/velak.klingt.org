@@ -2,7 +2,7 @@
 title: "gala#59"
 date: 2011-04-19
 artists: [
-    alejandro del valle-lattanzio,
+    alejandro del valle lattanzio,
     angélica castelló,
     klaus filip,
     reinhard dundler,

@@ -9,7 +9,7 @@ artists: [
     fabian lanzmaier,
 ]
 collabs: [
-    anne-f jacques + makoto oshiro,
+    anne f jacques + makoto oshiro,
     doris pollhammer + nina bauer,
 ]
 tags: [ayumu]

@@ -1,5 +1,0 @@
----
-title: "radu malfatt"
-links: []
----
-
