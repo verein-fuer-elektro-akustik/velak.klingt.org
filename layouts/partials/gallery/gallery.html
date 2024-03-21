@@ -1,11 +1,12 @@
 <div id="gallery">
-	<link href="{{ .Site.BaseURL }}/photoswipe/photoswipe.css" rel="stylesheet">
+	<link href="{{ (resources.Get "photoswipe/photoswipe.css" | resources.Minify).RelPermalink }}" rel="stylesheet">
+
 	<script type="module">
-		import PhotoSwipeLightbox from '{{ .Site.BaseURL }}/photoswipe/photoswipe-lightbox.esm.js';
+		import PhotoSwipeLightbox from '{{ (resources.Get "photoswipe/photoswipe-lightbox.esm.js" | resources.Minify).RelPermalink }}';
 		const lightbox = new PhotoSwipeLightbox({
 			gallery: '#pswp--gallery',
 			children: 'a',
-			pswpModule: () => import('{{ .Site.BaseURL }}/photoswipe/photoswipe.esm.js')
+			pswpModule: () => import('{{ (resources.Get "photoswipe/photoswipe.esm.js" | resources.Minify).RelPermalink }}')
 		});
 		lightbox.init();
 	</script>
@@ -31,7 +32,6 @@
 		{{ range $img := $images_portrait }}
 		{{ partial "gallery/item" .}}
 		{{ end }}
-
 	</ul>
 
 	{{ with .Params.photos }}
