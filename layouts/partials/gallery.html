@@ -8,6 +8,32 @@
 			children: 'a',
 			pswpModule: () => import('{{ (resources.Get "photoswipe/photoswipe.esm.js" | resources.Minify).RelPermalink }}')
 		});
+		lightbox.on('uiRegister', function() {
+			lightbox.pswp.ui.registerElement({
+				name: 'custom-caption',
+				order: 9,
+				isButton: false,
+				appendTo: 'root',
+				html: 'Caption text',
+				onInit: (el, pswp) => {
+					lightbox.pswp.on('change', () => {
+						const currSlideElement = lightbox.pswp.currSlide.data.element;
+						let captionHTML = '';
+						if (currSlideElement) {
+							const hiddenCaption = currSlideElement.querySelector('.hidden-caption-content');
+							if (hiddenCaption) {
+								// get caption from element with class hidden-caption-content
+								captionHTML = hiddenCaption.innerHTML;
+							} else {
+								// get caption from alt attribute
+								captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+							}
+						}
+						el.innerHTML = captionHTML || '';
+					});
+				}
+			});
+		});
 		lightbox.init();
 	</script>
 
@@ -27,11 +53,9 @@
 
 	<ul id="pswp--gallery" class="pswp--custom-icon-colors">
 		{{ range $img := $images_landscape }}
-		{{/* {{ partial "gallery/item" .}} */}}
 		{{ partial "gallery-item.html" .}}
 		{{ end }}
 		{{ range $img := $images_portrait }}
-		{{/* {{ partial "gallery/item" .}} */}}
 		{{ partial "gallery-item.html" .}}
 		{{ end }}
 	</ul>
@@ -46,30 +70,32 @@
 </div>
 
 {{ define "partials/gallery-item.html" }}
-	{{ $img := . }}
-	{{ $src := $img.RelPermalink }}
-	{{ if ge $img.Width 1920 }}
-	{{ $src = ($img.Resize "1920x").RelPermalink }}
+	{{ $img_orig := . }}
+	{{ $img_resized := $img_orig }}
+	{{ $src := $img_orig.RelPermalink }}
+	{{ if ge $img_orig.Width 1920 }}
+		{{ $img_resized = ($img_orig.Resize "1920x") }}
+		{{ $src = $img_resized.RelPermalink }}
 	{{ end }}
-	{{ $thumb := $img.Resize "400x" }}
-	<li>
-		<a href="{{ $src }}" target="_blank" data-pswp-width="{{ $img.Width }}" data-pswp-height="{{ $img.Height }}">
+	{{ $thumb := $img_orig.Resize "400x" }}
+
+	{{ $photo_time := "" }}
+	{{ with $img_orig.Exif }}
+		{{ with .Tags }}
+			{{ with .DateTimeOriginal }}
+				{{ if hasPrefix . "0000:00:00" }}
+				{{ else }}
+					{{ $photo_time = (time .).Format "15:04" }}
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+
+	<li class="pswp-gallery__item">
+		<a href="{{ $src }}" target="_blank" data-pswp-width="{{ $img_resized.Width }}" data-pswp-height="{{ $img_resized.Height }}">
 			<figure>
-				<img src="{{ $thumb.RelPermalink }}">
-				<figcaption class="meta">
-					<div class="exif">
-						{{ with $img.Exif }}
-						{{ with .Tags }}
-						{{ with .DateTimeOriginal }}
-						{{ if hasPrefix . "0000:00:00" }}
-						{{ else }}
-						{{ (time .).Format "15:04" }}
-						{{ end }}
-						{{ end }}
-						{{ end }}
-						{{ end }}
-					</div>
-				</figcaption>
+				<img src="{{ $thumb.RelPermalink }}" alt="{{ $photo_time }}">
+				<figcaption class="meta">{{ $photo_time }}</figcaption>
 			</figure>
 		</a>
 	</li>
