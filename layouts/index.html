@@ -28,7 +28,7 @@
 		{{ else }}
 		<p>
 			<div>No upcoming events.</div>
-			<div>Subscribe to the <a href="newsletter">newsletter</a> to get updates.</div>
+			<div><a href="newsletter">Subscribe to the newsletter</a> to get updates or <a href="{{.Site.BaseURL}}program">browse past events</a>.</div>
 		</p>
 		{{ end}}
 		{{ end }}
@@ -36,7 +36,7 @@
 
 	<div class="fq">
 		{{ partial "svg/fq" . }}
-		{{/* <script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}" async></script> */}}
+		<script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}" async></script>
 	</div>
 
 	{{/* <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3"> */}}
