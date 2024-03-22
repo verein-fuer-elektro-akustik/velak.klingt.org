@@ -10,6 +10,8 @@ disableHugoGeneratorInject: true
 #enableGitInfo: true
 enableRobotsTXT: true
 
+timeout: "60s"
+
 build:
   writeStats: true
 
