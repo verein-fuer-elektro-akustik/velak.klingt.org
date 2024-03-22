@@ -41,7 +41,7 @@
 
 				&:hover {
 					>figcaption {
-						opacity: 1;
+						opacity: 0.9;
 					}
 				}
 			}
@@ -72,29 +72,27 @@ div.photographer {
 	color: var(--f_med) !important;
 }
 
-.pswp__bg {
-	// background: red;
-}
+// .pswp__bg {
 
 .pswp__custom-caption {
-	background: rgba(75, 150, 75, 0.75);
-	font-size: 16px;
-	color: #fff;
-	width: calc(100% - 32px);
-	max-width: 400px;
-	padding: 2px 8px;
-	border-radius: 4px;
 	position: absolute;
 	left: 50%;
-	bottom: 16px;
+	bottom: 1rem;
 	transform: translateX(-50%);
-}
-
-.pswp__custom-caption a {
-	color: #fff;
-	text-decoration: underline;
+	padding: 3px 6px;
+	font-family: var(--font-mono);
+	font-size: 75%;
+	background: var(--background);
+	color: var(--f_med);
+	max-width: 50vw;
+	user-select: none;
 }
 
 .hidden-caption-content {
 	display: none;
 }
+
+// .pswp__custom-caption a {
+// 	color: #fff;
+// 	text-decoration: underline;
+// }
