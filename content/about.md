@@ -11,7 +11,7 @@ sitemap:
 rss_ignore: true
 hide_title: true
 ---
-velak (verein für elektroakustische musik) is a non-profit organisation and platform for artists who work in fields of experimental music and sound/art.
+velak (verein für elektroakustische musik) is a non-profit organisation and platform for artists who work in fields of experimental music and sound/art.  
 Based in Vienna, the members of velak organise concerts since 2004.
 
 contact: [{{<param "contact.email">}}](mailto:{{<param "contact.email">}})  
