@@ -1,25 +1,22 @@
 {{ $show_icon := .Scratch.Get "show_icon" | default true }}
 {{ $show_address := .Scratch.Get "show_address" | default true }}
 <div class="meta location">
-    {{ if $show_icon }}<i class="ic-location_on"></i>{{ end }}
     {{ with .Params.location }}
+		{{ if $show_icon }}<i class="ic-location_on"></i>{{ end }}
         {{ with $loc := index $.Site.Data.locations . }}
             {{ with $loc.url }}
             <a href="{{- . -}}" data-id="name" rel="external" title="{{- . -}}">{{- $loc.name -}}</a>
             {{ else }}
-            {{/* <span data-id="name">{{- $loc.name -}}&nbsp;</span> */}}
             <span data-id="name">{{- $loc.name -}}</span>
             {{ end }}
             {{ if $show_address }}
                 {{ with .address }}
-                <address>&nbsp;{{- . | safeHTML -}}</address>
+                <address>-&nbsp;{{- . | safeHTML -}}</address>
                 {{ end }}
             {{ end }}
         {{ else }}
         <span data-id="name">{{- . | markdownify -}}</span>
         {{ end }}
-    {{ else }}
-    <span></span>
     {{ end }}
 </div>
 
