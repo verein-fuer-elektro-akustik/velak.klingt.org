@@ -2,7 +2,7 @@
 
 console.info('%chttps://github.com/verein-fuer-elektro-akustik/velak.klingt.org', 'background:#000;color:#fff;padding:1rem;');
 
-let theme;
+//let theme;
 
 function updateScrollTopButtom() {
     const btn = document.body.querySelector('i.ic-arrow_upward');
