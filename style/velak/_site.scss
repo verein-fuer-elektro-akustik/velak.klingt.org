@@ -186,7 +186,6 @@ body {
 			display: flex;
 			//overflow-x: hidden;
 			//text-overflow: ellipsis;
-
 			//white-space: nowrap;
 			>*:not(:last-child) {
 				margin-right: 1ch;
@@ -290,14 +289,15 @@ dl.tags {
 	//}
 }
 
-nav.top {
-	display: flex;
-}
+// nav.top {
+// 	display: flex;
+// }
 
 nav.prev_next {
 	display: flex;
 	justify-content: space-between;
 	gap: 1.5em;
+	user-select: none;
 
 	@media screen and (min-width: breakpoint.$tablet) {
 		justify-content: flex-start;
@@ -307,46 +307,10 @@ nav.prev_next {
 		font-family: var(--font-mono);
 		text-transform: uppercase;
 		text-decoration: none;
-		/*
-        &:not(:first-child) {
-            // margin-left: 0.5ch;
-        }
-        &:not(:last-child) {
-            // margin-right: 0.5ch;
-        }
-        i {
-            display: inline-block;
-            //transform: scale(1.2);
-            //margin: 0 0.5em;
-            //transition: transform 0.12s;
-            // &:hover::before {
-            //     //transform: scale(2); // TODO ?
-            // }
-        }
-        //> span {
-            // display: none;
-            // margin: 1em;
-        //}
-        &:hover {
-            // transform: scale(2);
-            i {
-                // transform: scale(1.2);
-            }
-        }
-        */
 	}
+	i.ic-arrow_upward {
+		cursor: pointer;
+	}
+
 }
 
-// #vignette {
-// 	position: fixed;
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	pointer-events: none;
-//     z-index: 1000000;
-//     //@media screen and (min-width: breakpoint.$medium) {
-//     box-shadow:
-//         1vw 1vh 10vmax rgba(0,0,0,0.15) inset,
-//         -1vw -1vh 10vmax rgba(0,0,0,0.15) inset;
-// }
