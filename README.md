@@ -30,5 +30,4 @@ npm run prod:hugo -- --baseURL https://example.com
 
 ---
 
-[![test](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/test.yml/badge.svg)](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/test.yml)
 [![build](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/build.yml/badge.svg)](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/build.yml)

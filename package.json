@@ -1,6 +1,6 @@
 {
 	"name": "velak",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "https://velak.klingt.org",
 	"private": true,
 	"type": "module",
