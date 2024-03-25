@@ -2,13 +2,16 @@ name: deploy
 
 on:
   push:
+    branches:
+      - 'master'
+      - 'test-deploy-ssh'
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
