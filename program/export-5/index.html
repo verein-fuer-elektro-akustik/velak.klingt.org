@@ -1,0 +1,50 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=title content="velak"><meta name=url content="https://velak.klingt.org"><meta name=designer content="disktree"><meta name=description content="Verein für Elektro Akustische Musik"><meta name=keywords content="velak,verein,akustik,musik,events,party,electronic,vienna"><meta name=publisher content="velak"><meta name=theme-color content="#000000"><meta property="og:title" content="export#5"><meta property="og:description" content="doors: 20h / begin: 21h (sharp!)
+entry: 3€"><meta property="og:type" content="article"><meta property="og:url" content="https://v.disktree.net/program/export-5/"><meta property="article:section" content="program"><meta property="article:published_time" content="2014-11-11T00:00:00+00:00"><meta property="article:modified_time" content="2014-11-11T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="export#5"><meta name=twitter:description content="doors: 20h / begin: 21h (sharp!)
+entry: 3€"><meta itemprop=name content="export#5"><meta itemprop=description content="doors: 20h / begin: 21h (sharp!)
+entry: 3€"><meta itemprop=datePublished content="2014-11-11T00:00:00+00:00"><meta itemprop=dateModified content="2014-11-11T00:00:00+00:00"><meta itemprop=wordCount content="8"><meta itemprop=keywords content="export,"><title>velak - export#5</title>
+<script src=/script/theme.min.js></script><link rel=stylesheet href=https://v.disktree.net//style.css><link rel=manifest href=https://v.disktree.net//manifest.json><link rel=icon href=https://v.disktree.net//favicon.svg type=image/svg+xml><link rel='alternate icon' href=https://v.disktree.net//favicon.ico><link rel=apple-touch-icon href=https://v.disktree.net//favicon.svg><link rel=prev title=gala#84 href=/program/gala-84/><link rel=next title=gala#85 href=/program/gala-85/><script type=application/ld+json>{"@context":"https://schema.org","@type":"MusicEvent","name":"export#5","identifier":"export#5","startDate":"2014-11-11","endDate":"2014-11-11","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","organizer":{"@type":"Organization","name":"velak","url":"https:\/\/velak.klingt.org"},"url":"https:\/\/v.disktree.net\/\/program\/export-5","location":{"@type":"Place","name":"Garnison","address":{"@type":"PostalAddress","streetAddress":""}},"keywords":["export"],"performer":["Jonáš Gruska","Luis Conde + Fabiana Galante + Vinzenz Schwab","Katharina Ernst + Florian Nastorg","Christof Kurzmann + Isabelle Duthoit"],"image":[]}</script><script src=/script/app.min.js defer></script></head><body><header><h1><a id=title-name href=https://v.disktree.net/>VELAK</a>
+<a id=title-description href=https://v.disktree.net/>Verein für Elektro Akustische Musik</a></h1><nav class=site><menu><li class=active><a href=/program/ class=active>program</a></li><li><a href=/artists/>artists</a></li><li><a href=/newsletter/>newsletter</a></li><li><a href=/about/>about</a></li></menu></nav></header><main data-section=program data-kind=page><article data-page=export-5 class="event content"><h1 class=title>export#5</h1><div class=details><time datetime="2014-11-11 00:00:00 +0000 UTC" class="meta date"><span>2014/11/11</span></time><div class="meta location"><i class=ic-location_on></i>
+<a href=https://www.discogs.com/label/334280-Garnison7 data-id=name rel=external title=https://www.discogs.com/label/334280-Garnison7>Garnison</a><address>-&nbsp;Garnisonsgasse 7, 1090 vienna</address></div></div><div class=artists><ul class=artists><li><a class=artist href=/artists/jon%C3%A1%C5%A1-gruska/>jonáš gruska</a></li><li><ul class=collab><li><a class=artist href=/artists/luis-conde/>Luis Conde</a></li><li><a class=artist href=/artists/fabiana-galante/>Fabiana Galante</a></li><li><a class=artist href=/artists/vinzenz-schwab/>Vinzenz Schwab</a></li></ul></li><li><ul class=collab><li><a class=artist href=/artists/katharina-ernst/>Katharina Ernst</a></li><li><a class=artist href=/artists/florian-nastorg/>Florian Nastorg</a></li></ul></li><li><ul class=collab><li><a class=artist href=/artists/christof-kurzmann/>Christof Kurzmann</a></li><li><a class=artist href=/artists/isabelle-duthoit/>Isabelle Duthoit</a></li></ul></li></ul></div><div class=content><div><p>doors: 20h / begin: 21h (sharp!)<br>entry: 3€</p></div><div>supported by bmkoes</div></div><div class=audiofiles><ol></ol></div><div id=gallery><link href=/photoswipe/photoswipe.min.css rel=stylesheet><script type=module>
+		import PhotoSwipeLightbox from '\/photoswipe\/photoswipe-lightbox.esm.min.js';
+		const lightbox = new PhotoSwipeLightbox({
+			gallery: '#pswp--gallery',
+			children: 'a',
+			pswpModule: () => import('\/photoswipe\/photoswipe.esm.min.js')
+		});
+		lightbox.on('uiRegister', function() {
+			lightbox.pswp.ui.registerElement({
+				name: 'custom-caption',
+				order: 9,
+				isButton: false,
+				appendTo: 'root',
+				html: 'Caption text',
+				onInit: (el, pswp) => {
+					lightbox.pswp.on('change', () => {
+						const currSlideElement = lightbox.pswp.currSlide.data.element;
+						let captionHTML = '';
+						if (currSlideElement) {
+							const hiddenCaption = currSlideElement.querySelector('.hidden-caption-content');
+							if (hiddenCaption) {
+								
+								captionHTML = hiddenCaption.innerHTML;
+							} else {
+								
+								captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+							}
+						}
+						el.innerHTML = captionHTML || '';
+					});
+				}
+			});
+		});
+		lightbox.init();
+	</script><ul id=pswp--gallery class=pswp--custom-icon-colors><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8433_hub90df6805b0c339df3291ba0b23f6cd6_1717240_1920x0_resize_q90_box.jpg target=_blank data-pswp-width=1920 data-pswp-height=1280><figure><img src=/program/export-5/VelakExport5-8433_hub90df6805b0c339df3291ba0b23f6cd6_1717240_400x0_resize_q90_box.jpg alt=22:11><figcaption class=meta>22:11</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8450_hu7d119095817ba45e9fcfd06002dbaa17_1715568_1920x0_resize_q90_box.jpg target=_blank data-pswp-width=1920 data-pswp-height=1280><figure><img src=/program/export-5/VelakExport5-8450_hu7d119095817ba45e9fcfd06002dbaa17_1715568_400x0_resize_q90_box.jpg alt=22:50><figcaption class=meta>22:50</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8507_hu19b6cf615b6f44f7f9466536609ff07f_2021286_1920x0_resize_q90_box.jpg target=_blank data-pswp-width=1920 data-pswp-height=1280><figure><img src=/program/export-5/VelakExport5-8507_hu19b6cf615b6f44f7f9466536609ff07f_2021286_400x0_resize_q90_box.jpg alt=23:27><figcaption class=meta>23:27</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8513_hu6e9d1689f0c0f1890ac620ca10265c5d_2039737_1920x0_resize_q90_box.jpg target=_blank data-pswp-width=1920 data-pswp-height=1280><figure><img src=/program/export-5/VelakExport5-8513_hu6e9d1689f0c0f1890ac620ca10265c5d_2039737_400x0_resize_q90_box.jpg alt=23:29><figcaption class=meta>23:29</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8399.jpg target=_blank data-pswp-width=1667 data-pswp-height=2500><figure><img src=/program/export-5/VelakExport5-8399_huda8a4d6b9c3d97088287a9c6d6e3d75e_1755373_400x0_resize_q90_box.jpg alt=21:37><figcaption class=meta>21:37</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8414.jpg target=_blank data-pswp-width=1667 data-pswp-height=2500><figure><img src=/program/export-5/VelakExport5-8414_hu56d71eebd3c4a854db656d81959570c2_1842250_400x0_resize_q90_box.jpg alt=21:57><figcaption class=meta>21:57</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8471.jpg target=_blank data-pswp-width=1667 data-pswp-height=2500><figure><img src=/program/export-5/VelakExport5-8471_hu0eb865e8ce09dd0dab5a2a49370ddaa6_1505676_400x0_resize_q90_box.jpg alt=23:00><figcaption class=meta>23:00</figcaption></figure></a></li><li class=pswp-gallery__item><a href=/program/export-5/VelakExport5-8497.jpg target=_blank data-pswp-width=1667 data-pswp-height=2500><figure><img src=/program/export-5/VelakExport5-8497_hue27bf936052b93931d0ff1b3025a62de_2254690_400x0_resize_q90_box.jpg alt=23:24><figcaption class=meta>23:24</figcaption></figure></a></li></ul></div><nav class=prev_next><a rel=prev href=/program/gala-84/ title=gala#84><i class=ic-arrow_back></i>
+<span>gala#84</span>
+</a><i class=ic-arrow_upward onclick=window.scrollTo(0,0)></i>
+<a rel=next href=/program/gala-85/ title=gala#85><span>gala#85</span>
+<i class=ic-arrow_forward></i></a></nav></article></main><footer><div class=meta><i class=ic-copyright aria-hidden=true></i>
+<span class=nodisplay>©</span>
+<a href=https://v.disktree.net//about/><span>2024&nbsp;VELAK Vienna/AT</span>
+</a><a href=https://v.disktree.net//program/index.xml rel=alternate aria-label=RSS title=RSS><i class=ic-rss_feed aria-hidden=true></i>
+<span class=nodisplay>RSS</span>
+</a><a href=https://disktree.net/ class=nodisplay aria-hidden=true>disktree</a></div></footer><aside></aside></body></html>
