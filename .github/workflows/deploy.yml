@@ -1,0 +1,38 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'test-deploy-ssh'
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache resources
+        id: cache-resources
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: hugo-resources
+      - name: Setup npm
+        run: npm install
+      - name: Build style
+        run: npm run prod:style
+      - name: Build site
+        run: npm run prod:hugo -- -v --baseURL https://vvv.disktree.net/
+      - name: Deploy to server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "public/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
