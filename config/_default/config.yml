@@ -7,7 +7,7 @@ paginate: 1000
 rssLimit: 1000
 buildFuture: true
 disableHugoGeneratorInject: true
-#enableGitInfo: true
+enableGitInfo: true
 enableRobotsTXT: true
 
 timeout: "60s"
