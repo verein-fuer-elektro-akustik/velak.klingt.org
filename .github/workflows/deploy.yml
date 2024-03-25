@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - 'master'
-      - 'test-deploy-ssh'
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
