@@ -2,8 +2,8 @@ name: deploy
 
 on:
   push:
-    branches:
-      - 'master'
+    tags:
+      - v**
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
