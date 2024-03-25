@@ -1,7 +1,7 @@
 name: deploy
 
 on:
-  workflow_dispatch:
+  push:
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
