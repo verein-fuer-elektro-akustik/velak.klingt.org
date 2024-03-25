@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     tags:
-      - v**
+      - r**
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
