@@ -1,5 +1,5 @@
 ---
-title: Help
+title: help
 rss_ignore: true
 ---
 - ## API

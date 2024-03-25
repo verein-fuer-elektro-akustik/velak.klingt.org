@@ -1,5 +1,5 @@
 ---
-title: Styleguide
+title: styleguide
 rss_ignore: true
 ---
 ###### Typography

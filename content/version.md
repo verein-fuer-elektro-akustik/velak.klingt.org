@@ -1,5 +1,5 @@
 ---
-title: Version
+title: version
 type: version
 rss_ignore: true
 ---

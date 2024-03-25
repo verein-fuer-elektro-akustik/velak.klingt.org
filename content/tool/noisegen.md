@@ -1,5 +1,5 @@
 ---
-title: Noisegen
+title: noisegen
 hide_title: true
 ---
 {{< html >}}

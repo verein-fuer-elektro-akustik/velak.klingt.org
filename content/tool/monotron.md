@@ -1,4 +1,4 @@
 ---
-title: Monotron
+title: monotron
 type: "tool/monotron"
 ---

@@ -1,5 +1,5 @@
 ---
-title: Event Recordings
+title: recordings
 type: recordings
 minify:
     minifyoutput: false
