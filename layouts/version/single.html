@@ -1,3 +1,19 @@
 {{ define "main" }}
-{{ time.Now | time.Format "2006-01-02 15:04:05" }}
+
+<h3>Build</h3>
+<section>
+	{{ time.Now | time.Format "2006-01-02 15:04:05" }}
+</section>
+
+{{ with .GitInfo }}
+<h3>Commit</h3>
+<section>
+	<div>{{ .CommitDate }}</div>
+	<div><a href="https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/commit/{{.Hash}}">{{ .AbbreviatedHash
+			}}</a></div>
+	<div><a href="https://github.com/{{.AuthorName}}">github.com/{{ .AuthorName }}</a></div>
+	<div>{{ .Subject }}</div>
+</section>
+{{ end }}
+
 {{ end }}
