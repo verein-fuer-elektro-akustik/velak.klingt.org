@@ -55,11 +55,6 @@
         {{/*     } */}}
         {{/* </style> */}}
 
-		{{ $theme := .Site.Params.theme }}
-		{{ if .Params.theme }}{{ $theme = .Params.theme }}{{ end }}
-		{{ $theme_path := printf "theme/%s.html" $theme }}
-		<script src="{{ (resources.Get "script/theme.js" | resources.Minify).RelPermalink }}"></script>
-
         {{ block "prerender" . }}{{ end }}
 
         <link rel="stylesheet" href="{{ $root }}/style.css">
@@ -76,9 +71,10 @@
         <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
         {{ end -}}
 
-        {{ block "schema" . }}{{ end }}
-
         <script src="{{ (resources.Get "script/app.js" | resources.Minify).RelPermalink }}" defer></script>
+		<script src="{{ (resources.Get "script/theme.js" | resources.Minify).RelPermalink }}" defer></script>
+
+		{{ block "schema" . }}{{ end }}
 
 	</head>
     <body>
