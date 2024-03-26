@@ -184,6 +184,7 @@ body {
 
 		>* {
 			display: flex;
+
 			//overflow-x: hidden;
 			//text-overflow: ellipsis;
 			//white-space: nowrap;
@@ -295,22 +296,26 @@ dl.tags {
 
 nav.prev_next {
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
+	justify-content: flex-start;
 	gap: 1.5em;
 	user-select: none;
+	white-space: nowrap;
+	overflow: hidden;
 
 	@media screen and (min-width: breakpoint.$tablet) {
 		justify-content: flex-start;
 	}
 
 	>a {
+		text-overflow: ellipsis;
 		font-family: var(--font-mono);
 		text-transform: uppercase;
 		text-decoration: none;
 	}
+
 	i.ic-arrow_upward {
 		cursor: pointer;
 	}
 
 }
-
