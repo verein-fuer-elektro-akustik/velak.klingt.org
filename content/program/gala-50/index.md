@@ -28,3 +28,6 @@ photos: "tabitha"
 tags: [gala,special]
 ---
 oratorium aus strom holz metal
+
+<!-- {{< video "velak-gala-50.mp4" >}} -->
+<!-- {{< video "velak-gala-50.2.mp4" >}} -->

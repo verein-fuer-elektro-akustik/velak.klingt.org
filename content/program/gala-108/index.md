@@ -13,9 +13,10 @@ collabs: [
     frederic stritter + marcin morga + eugene ignashev
 ]
 location: "fluc"
-photos: "Doris Pollhammer & Nina Bauer" 
+photos: "Doris Pollhammer & Nina Bauer"
 ---
 ### velak & ventil
-doors: 18.00pm / start: 18.30pm (sharp!)  
+doors: 18.00pm / start: 18.30pm (sharp!)
 oben velak + unten ventil
 
+<!-- {{< video "IDKLANG-velak_gala.mp4" >}} -->

@@ -24,4 +24,4 @@ installationen:
 - heike kaltenbrunner
 - ono ennoson
 
-{{< video "gala-35.mp4" >}}
+<!-- {{< video "velak-gala-35.mp4" >}} -->
