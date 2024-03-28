@@ -1,5 +1,5 @@
 ---
 title: "mauro diciocia"
-links: [https://t-o-r-b-a.tumblr.com/]
+links: [https://maurodiciocia.bandcamp.com/]
 ---
 
