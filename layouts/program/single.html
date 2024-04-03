@@ -31,7 +31,11 @@
 	</div>
 
 	{{ partial "gallery" . }}
-	{{ partial "nav_prev_next" . }}
+	<!-- {{ partial "nav_prev_next" . }} -->
 
 </article>
+{{ end }}
+
+{{ define "footer-center" }}
+{{ partial "nav_prev_next" . }}
 {{ end }}

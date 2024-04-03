@@ -175,13 +175,33 @@ body {
 	>footer {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 3rem;
+		padding-top: 4rem;
 		padding-bottom: 3rem;
 		white-space: nowrap;
-		font-size: 75%;
+		//font-size: 75%;
 		user-select: none;
 		position: relative;
 
+		>*:last-child {
+			font-size: 75%;
+		}
+
+		@media screen and (max-width: breakpoint.$tablet) {
+			display: block;
+
+			>*:first-child {
+				display: flex;
+				justify-content: space-between;
+				padding: 1rem 0 4rem 0;
+				font-size: 100%;
+			}
+
+			>*:last-child {
+				text-align: center;
+			}
+		}
+
+		/*
 		>* {
 			display: flex;
 
@@ -214,13 +234,12 @@ body {
 			>:nth-child(2) {
 				margin: 0;
 			}
-
-			// background: yellow;
 		}
 
 		@media screen and (min-width: breakpoint.$tablet) {
 			justify-content: flex-end;
 		}
+		*/
 	}
 
 	>aside {
