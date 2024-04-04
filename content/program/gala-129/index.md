@@ -11,9 +11,7 @@ collabs: [
 ]
 location: "spitzer"
 tags: [gala]
+photos: Sara Piñeros
 ---
 Open doors 20:00  
 Start 20:30
-
-Photos: Sara Piñeros, 2023
-
