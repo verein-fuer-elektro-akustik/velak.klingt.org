@@ -16,4 +16,4 @@ tags: [gala]
 Open doors 19:00  
 Start 19:30
 
-Photos: Bon Alog, 2024
+photos: Bon Alog
