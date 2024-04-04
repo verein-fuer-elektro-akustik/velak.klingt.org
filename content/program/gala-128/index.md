@@ -14,3 +14,4 @@ tags: [gala]
 open doors: 19:30  
 start: 19:45
 
+fotos: Verena Mayrhofer, 2023
