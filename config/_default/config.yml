@@ -31,7 +31,7 @@ outputs:
 mediaTypes:
   application/xml:
     suffixes:
-    - xspf
+      - xspf
 
 outputFormats:
   xspf:
@@ -43,8 +43,8 @@ outputFormats:
     isPlainText: true
 
 sitemap:
-  changefreq: 'monthly'
-  filename: 'sitemap.xml'
+  changefreq: "monthly"
+  filename: "sitemap.xml"
   priority: 0.5
 
 taxonomies:

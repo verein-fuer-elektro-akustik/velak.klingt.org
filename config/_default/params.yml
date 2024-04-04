@@ -1,6 +1,16 @@
 name: "VELAK"
 description: "Verein für Elektro Akustische Musik"
-keywords: ["velak","verein","akustik","musik","events","party","electronic","vienna"]
+keywords:
+    [
+        "velak",
+        "verein",
+        "akustik",
+        "musik",
+        "events",
+        "party",
+        "electronic",
+        "vienna",
+    ]
 publisher: "velak"
 url: "https://velak.klingt.org"
 email: "velak@klingt.org"
@@ -11,19 +21,18 @@ theme: "polivoks"
 dev: true
 
 contact:
-  email: "velak@klingt.org"
-  web: "https://velak.klingt.org"
+    email: "velak@klingt.org"
+    web: "https://velak.klingt.org"
 
 github:
-  org: "verein-fuer-elektro-akustik"
-  repo: "velak.klingt.org"
+    org: "verein-fuer-elektro-akustik"
+    repo: "velak.klingt.org"
 
 # livestream:
 #   host: "https://rrr.disktree.net:8443"
 #   stream: "velak"
 
 developer:
-  name: "disktree"
-  email: "admin@disktree.net"
-  url: "https://disktree.net/"
-
+    name: "disktree"
+    email: "admin@disktree.net"
+    url: "https://disktree.net/"

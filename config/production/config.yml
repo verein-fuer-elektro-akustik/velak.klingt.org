@@ -2,6 +2,6 @@ baseURL: "https://velak.klingt.org"
 cleandestinationdir: true
 
 minify:
-  minifyOutput: true
-  keepComments: false
-  keepConditionalComments: false
+    minifyOutput: true
+    keepComments: false
+    keepConditionalComments: false
