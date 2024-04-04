@@ -12,8 +12,9 @@ collabs: [
 ]
 location: "echoraum"
 tags: [gala]
+photos: Bon Alog
 ---
 Open doors 19:00  
 Start 19:30
 
-photos: Bon Alog
+
