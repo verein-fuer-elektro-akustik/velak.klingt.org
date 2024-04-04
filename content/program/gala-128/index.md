@@ -10,8 +10,9 @@ collabs: [
 ]
 location: "tresor_linz"
 tags: [gala]
+photos: Verena Mayrhofer
 ---
 open doors: 19:30  
 start: 19:45
 
-photos: Verena Mayrhofer, 2023
+
