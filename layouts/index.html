@@ -7,46 +7,52 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="home content">
+{{/* <article class="home content"> */}}
+	<article class="home">
 
-	<div class="events">
-		{{ with .Site.GetPage "/program" }}
-		{{ $events := slice }}
-		{{ range .RegularPages }}
-		{{ if .Date.After now }}
-		{{ $events = $events | append . }}
-		{{ end }}
-		{{ end }}
-
-		{{ if gt (len $events) 0}}
-		<ol class="events">
-			{{ range $events }}
-			{{ .Render "summary" }}
+		<div class="events">
+			{{ with .Site.GetPage "/program" }}
+			{{ $events := slice }}
+			{{ range .RegularPages }}
+			{{ if .Date.After now }}
+			{{ $events = $events | append . }}
 			{{ end }}
-		</ol>
-		<script src="{{ (resources.Get "script/artists-list.js" | resources.Minify).RelPermalink }}" async></script>
-		{{ else }}
-		<p>
+			{{ end }}
+
+			{{ if gt (len $events) 0}}
+
+			<div>upcoming events</div>
+			<ol class="events">
+				{{ range $events }}
+				{{ .Render "summary" }}
+				{{ end }}
+			</ol>
+			<script src="{{ (resources.Get "script/artists-list.js" | resources.Minify).RelPermalink }}"
+				async></script>
+			{{ else }}
+			<p>
 			<div>No upcoming events.</div>
-			<div><a href="{{.Site.BaseURL}}newsletter">Subscribe to the newsletter</a> to get updates or <a href="{{.Site.BaseURL}}program">browse past events</a>.</div>
-		</p>
-		{{ end}}
-		{{ end }}
-	</div>
+			<div><a href="{{.Site.BaseURL}}newsletter">Subscribe to the newsletter</a> to get updates or <a
+					href="{{.Site.BaseURL}}program">browse past events</a>.</div>
+			</p>
+			{{ end}}
+			{{ end }}
+		</div>
 
-	<div class="fq">
-		{{ partial "svg/fq" . }}
-		<script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}" async></script>
-	</div>
+		<div class="fq">
+			{{ partial "svg/fq" . }}
+			<script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}"
+				async></script>
+		</div>
 
-	{{/* <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3"> */}}
-		{{/* <div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div> */}}
-		{{/* <canvas class="spectrum"></canvas> */}}
-		{{/*
-		<script src="{{ (resources.Get " script/audioplayer.js").RelPermalink }}" async></script> */}}
-		{{/*
-	</div> */}}
+		{{/* <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3"> */}}
+			{{/* <div class="meta status">23jahre.klingt.org-teamvelak.mp3 - click to play</div> */}}
+			{{/* <canvas class="spectrum"></canvas> */}}
+			{{/*
+			<script src="{{ (resources.Get " script/audioplayer.js").RelPermalink }}" async></script> */}}
+			{{/*
+		</div> */}}
 
-</article>
+	</article>
 
-{{ end }}
+	{{ end }}
