@@ -57,8 +57,8 @@
 
         {{ block "prerender" . }}{{ end }}
 
-        <link rel="stylesheet" href="{{ $root }}/style.css">
-        <link rel="manifest" href="{{ $root }}/manifest.json">
+        <link rel="stylesheet" href="{{ $root }}style.css">
+        <link rel="manifest" href="{{ $root }}manifest.json">
         {{ partial "site/favicons" . }}
 
         {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}
@@ -86,9 +86,12 @@
             {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
         </main>
 		<footer>
-            {{ block "footer-left" . }}{{- partial "site/footer-left.html" . -}}{{ end }}
-            {{ block "footer-center" . }}{{ end }}
-            {{ block "footer-right" . }}{{- partial "site/footer-right.html" . -}}{{ end }}
+			<div class="footer-left">
+				{{ block "footer-left" . }}{{- partial "site/footer-left.html" . -}}{{ end }}
+			</div>
+			<div class="footer-right">
+				{{ block "footer-right" . }}{{- partial "site/footer-right.html" . -}}{{ end }}
+			</div>
         </footer>
         <aside>{{ block "aside" . }}{{ end }}</aside>
     </body>
