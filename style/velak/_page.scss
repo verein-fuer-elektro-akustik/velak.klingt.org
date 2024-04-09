@@ -2,7 +2,6 @@ main>article {
 	width: 100%;
 	height: 100%;
 	//margin: 0 auto;
-	//max-width: 1200px;
 	gap: 2rem;
 
 	&.content {
@@ -10,6 +9,7 @@ main>article {
 		flex-direction: column;
 		text-transform: lowercase;
 		width: 100%;
+		padding-bottom: 8rem;
 
 		>.title {
 			//order: 1;
@@ -17,6 +17,7 @@ main>article {
 			position: relative;
 			//left: -2px; // HACK
 			font-weight: 500;
+			line-height: 1.2em;
 		}
 
 		>.details {
