@@ -8,11 +8,13 @@
 @use 'velak/page';
 @use 'velak/lists';
 @use 'velak/gallery';
-@use 'velak/github';
+//@use 'velak/github';
 @use 'velak/print';
+@use 'velak/syntax';
 
 @use 'velak/dev';
 
 @use 'velak/page/home';
 @use 'velak/page/program';
 @use 'velak/page/artists';
+

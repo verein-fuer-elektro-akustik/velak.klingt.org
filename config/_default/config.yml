@@ -13,39 +13,44 @@ enableRobotsTXT: true
 timeout: "300s"
 
 build:
-    writeStats: true
+  writeStats: true
 
 imaging:
-    quality: 90
+  quality: 90
 
 minify:
-    minifyOutput: false
-    keepComments: true
-    keepConditionalComments: true
+  minifyOutput: false
+  keepComments: true
+  keepConditionalComments: true
 
 outputs:
-    home: ["HTML"]
-    page: ["HTML"]
-    section: ["HTML"]
+  home: ["HTML"]
+  page: ["HTML"]
+  section: ["HTML"]
 
 mediaTypes:
-    application/xml:
-        suffixes:
-            - xspf
+  application/xml:
+    suffixes:
+      - xspf
 
 outputFormats:
-    xspf:
-        baseName: velak
-        isPlainText: true
-        mediaType: application/xml
-    m3u:
-        baseName: velak.m3u
-        isPlainText: true
+  xspf:
+    baseName: velak
+    isPlainText: true
+    mediaType: application/xml
+  m3u:
+    baseName: velak.m3u
+    isPlainText: true
 
 sitemap:
-    changefreq: "monthly"
-    filename: "sitemap.xml"
-    priority: 0.5
+  changefreq: "monthly"
+  filename: "sitemap.xml"
+  priority: 0.5
 
 taxonomies:
-    tag: "tags"
+  tag: "tags"
+
+markup:
+  highlight:
+    # noClasses: true
+    style: github-dark
