@@ -1,0 +1,25 @@
+{{ define "main" }}
+<video id="video" controls></video>
+<style>
+video {
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+</style>
+<script src="{{ (resources.Get "script/hls.js" | resources.Minify).RelPermalink }}"></script>
+<script>
+	const params = new URLSearchParams(window.location.search);
+	let streamName = params.get('stream');
+	if(!streamName) streamName = "stream";
+	const video = document.getElementById('video');
+	const src = 'https://velak.klingt.org/hls/'+streamName+'.m3u8';
+	if (video.canPlayType('application/vnd.apple.mpegurl')) {
+		video.src = src;
+	} else if (Hls.isSupported()) {
+		const hls = new Hls();
+		hls.loadSource(src);
+		hls.attachMedia(video);
+	}
+</script>
+{{ end }}
