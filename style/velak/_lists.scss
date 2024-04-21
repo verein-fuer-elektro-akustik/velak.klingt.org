@@ -18,7 +18,9 @@ ul.data-list {
 	width: 100%;
 	overflow-x: hidden;
 	text-rendering: optimizeSpeed;
-
+	a {
+		text-decoration: none;
+	}
 	>li {
 		display: flex;
 		//align-items: center;

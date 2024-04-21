@@ -51,6 +51,10 @@
 	font-family: var(--font-mono);
 	font-size: $size;
 	text-transform: uppercase;
+
+	a {
+		text-decoration: none;
+	}
 }
 
 [hidden] {
@@ -78,12 +82,19 @@ html {
 
 a {
 	background: transparent;
-	text-decoration: none;
+	text-decoration: underline dotted;
+	text-underline-offset: 0.25em;
+	//text-underline-offset: 4px;
+	text-decoration-thickness: 0.1em;
 	outline: none;
+	//border-bottom: 1px solid;
 
 	&:hover,
 	&:focus {
 		outline: none;
+		text-decoration: underline;
+		// text-decoration-thickness: 0.2em;
+		// text-underline-offset: 0.1em;
 	}
 
 	&:active {

@@ -1,7 +1,6 @@
 main>article {
 	width: 100%;
 	height: 100%;
-	//margin: 0 auto;
 	gap: 2rem;
 	text-transform: lowercase;
 
@@ -13,34 +12,24 @@ main>article {
 		padding-bottom: 8rem;
 
 		>.title {
-			//order: 1;
-			//padding: 0.5em 0;
 			position: relative;
 			//left: -2px; // HACK
-			font-weight: 500;
 			line-height: 1.2em;
+			font-weight: 500;
 		}
 
 		>.details {
-			//order: 2;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			column-gap: 1em;
 			//align-items: baseline;
 		}
+	}
 
+	&.event {
 		>.artists {
-			//order: 3;
 			font-size: 1.5rem;
 		}
-
-		// >.gallery {
-		//order: 1000;
-		// }
-
-		// >nav {
-		//order: 10000;
-		// }
 	}
 }

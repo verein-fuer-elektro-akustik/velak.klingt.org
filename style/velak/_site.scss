@@ -74,6 +74,14 @@ body {
 			line-height: 1em;
 		}
 
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		>h1 {
 			display: inline-block;
 			line-height: 1em;
@@ -143,6 +151,10 @@ body {
 			margin: 0;
 			padding-bottom: 1rem;
 			width: 100%;
+
+			a {
+				text-decoration: none;
+			}
 
 			>menu {
 				display: flex;
