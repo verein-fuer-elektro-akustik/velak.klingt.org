@@ -53,7 +53,7 @@ To add an artist create a `content/artist/<artist-name>/index.md` markdown file.
 ```yml
 ---
 title: "archibald düsenberg"
-links: [https://düsenberg.at]
+links: [https://düsenberg.at, https://soundcloud.com/duesenberg]
 email: [archibald@düsenberg.at]
 aliases: [düsenberg]
 ---
@@ -62,7 +62,7 @@ Some extra text for this artist.
 
 * `title`: Full name of the artist
 * `links`: List of links to artists website(s)
-* `aliases`: List of aliases this artists will be available too
+* `aliases`: List of aliases this artists will aslo be available
 * `email`: Email address of the artist
 
 ---
@@ -85,4 +85,5 @@ With an locations entry you can just use the id of the location for the program/
 ## Deploy
 
 Updates to the master branch of the repository gets automatically build and deployed once a day (00:00).  
-To manually deploy go to the [actions tab](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/deploy.yml) and hit the __Run workflow__ button.
+To manually deploy go to the [actions tab](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/deploy.yml) and hit the __Run workflow__ button.  
+Visit [velak.klingt.org/version](https://velak.klingt.org/version/) to check the currently deployed version.
