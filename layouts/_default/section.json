@@ -1,0 +1,5 @@
+[
+	{{ $items := slice }}
+	{{ range .Pages }}{{ $items = $items | append (.Params | jsonify) }}{{ end }}
+	{{ delimit $items ", "}}
+]

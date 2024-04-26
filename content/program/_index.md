@@ -11,5 +11,6 @@ sitemap:
 outputs:
 - html
 - rss
+- json
 ---
 
