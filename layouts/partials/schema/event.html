@@ -13,38 +13,54 @@
     "endDate": "{{ .Date.Format "2006-01-02" }}",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+	"description": "Velak event",
     "organizer": {
         "@type": "Organization",
         "name": "velak",
         "url": "{{ .Site.Params.contact.web }}"
     },
     "url": "{{ $url }}",
+
+
+    {{ with .Params.location }}
     "location": {
         "@type": "Place",
-        {{ with .Params.location }}
-            {{ with index $.Site.Data.locations . }}
-            "name": "{{- .name -}}",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "{{- .adress -}}"
-            }
-            {{ else }}
-            "name": "{{- . -}}",
-            "address": "unknown"
-            {{ end }}
-        {{ else }}
-        "name": "unknown",
-        "address": "unknown"
-        {{ end }}
+		{{ with index $.Site.Data.locations . }}
+		"name": "{{- .name -}}",
+		{{ with .address }}
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "{{- . -}}"
+		},
+		{{ end }}
+		{{ with .url }}"url": "{{.}}"{{ end }}
+		{{ else }}
+		"name": "{{- . -}}",
+		"address": "unknown"
+		{{ end }}
     },
+	{{ end }}
+
     {{ with .Params.tags }}"keywords": {{.}},{{ end }}
-    {{ $performer := .Params.artists }}
-    {{ with .Params.collabs }}{{ $performer = union $performer . }}{{ end }}
-   "performer": {{ $performer }},
+   {{/*  {{ $performer := .Params.artists }} */}}
+   {{/*  {{ with .Params.collabs }}{{ $performer = union $performer . }}{{ end }} */}}
+   {{/* "performer": {{ $performer }}, */}}
+   "performer": [
+	{{ with .Params.artists }}{{ range . }}
+	{
+		"@type": "Person",
+		"name": "{{ . }}"
+	},{{ end }}{{ end }}
+	{{ with .Params.collabs }}{{ range . }}
+	{
+		"@type": "MusicGroup",
+		"name": "{{ . }}"
+	},{{ end }}{{ end }}
+   ],
    "image": [
         {{ with .Resources.GetMatch "cover.jpg" }}
         "{{print $url "/" . }}"
         {{ end }}
-    ]
+	]
 }
 </script>
