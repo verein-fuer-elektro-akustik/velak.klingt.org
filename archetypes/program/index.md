@@ -1,17 +1,13 @@
 ---
 title: "{{ replace .Name "-" "#" | title }}"
-date: {{ .Date }}
+date: "{{ time.Now.Format "2006-01-02" }}"
 publishDate: {{ .Date }}
-artists: [
-    
-]
-location: {
-    name: "",
-    url: "",
-    address: ""
-}
-image:
+location: ""
+artists: []
+collabs: []
 photos:
 tags: []
 recordings: []
+image:
 ---
+
