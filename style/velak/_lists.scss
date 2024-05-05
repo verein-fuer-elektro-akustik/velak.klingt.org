@@ -18,9 +18,11 @@ ul.data-list {
 	width: 100%;
 	overflow-x: hidden;
 	text-rendering: optimizeSpeed;
+
 	a {
 		text-decoration: none;
 	}
+
 	>li {
 		display: flex;
 		//align-items: center;
@@ -109,17 +111,14 @@ ul.data-list {
 				margin: 0 0.5ch;
 				color: var(--f_high);
 				box-shadow: 0.5rem 0 1rem var(--background);
+				// background: var(--background);
+				// border-radius: 1em;
 				z-index: 1000;
 			}
-
-			// >.date {
-			// 	color: var(--f_high);
-			// }
 
 			>.artists {
 				order: 3;
 				color: var(--f_low);
-				// box-shadow: 0.5rem 0 1rem var(--background);
 
 				a {
 					color: var(--f_low);
@@ -131,21 +130,13 @@ ul.data-list {
 			}
 
 			>.location {
-				position: relative;
 				order: 4;
+				position: relative;
 				box-shadow: -0.5rem 0 1rem var(--background);
 
 				@media screen and (max-width: breakpoint.$tablet) {
 					display: none;
 				}
-
-				//>[data-id] {
-				//display: none;
-				//transform: translateX(100%);
-				//transition: width 1s;
-				//width: 0px;
-				//background: red;
-				//}
 
 				&:hover {
 					>[data-id] {
@@ -179,6 +170,13 @@ ul.data-list {
 
 		//justify-content: space-around;
 		>li {
+			>.title {
+				position: relative;
+				// margin: 0 0.5ch;
+				color: var(--f_high);
+				box-shadow: 0.5rem 0 1rem var(--background);
+				z-index: 1000;
+			}
 
 			//> .format {
 			//order: 1;
@@ -188,10 +186,10 @@ ul.data-list {
 				order: 2;
 				max-height: 2rem;
 				height: 100%;
-				// border: 1px solid var(--f_low);
-				filter: brightness(26%) contrast(90%) grayscale(100%) invert(5%);
-				transition: filter 0.2s;
 
+				// border: 1px solid var(--f_low);
+				//filter: brightness(26%) contrast(90%) grayscale(100%) invert(5%);
+				// transition: filter 0.2s;
 				&:hover {
 					filter: none;
 				}
@@ -218,9 +216,8 @@ ul.data-list {
 			>.label {
 				order: 4;
 				display: flex;
-				background: red;
-
-				//width: 100%;
+				position: relative;
+				box-shadow: -0.5rem 0 1rem var(--background);
 			}
 		}
 	}
