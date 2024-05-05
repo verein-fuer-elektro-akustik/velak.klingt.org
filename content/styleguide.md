@@ -3,14 +3,23 @@ title: styleguide
 rss_ignore: true
 ---
 ###### Typography
+
 # VELAK H1
+
 # VELAK H1
+
 # VELAK H1
+
 ## VELAK H2
+
 ## VELAK H2
+
 ## VELAK H2
+
 ### VELAK H3
+
 ### VELAK H3
+
 ### VELAK H3
 #### VELAK H4
 #### VELAK H4
@@ -30,11 +39,11 @@ Many non-authoritarian organizations have foundered on the dubious principle of 
 
 This [link](https://disktree.net) is a link.
 
-https://velak.klingt.org/
-https://velak.disktree.net
-https://disktree.net
+* https://velak.klingt.org/
+* https://velak.disktree.net
+* https://disktree.net
 
-**Some bold text**
+**Some bold txt**
 *Some italic text*
 ~~Some strikethrough text~~
 
@@ -58,12 +67,10 @@ And another footnote. [^2]
 [^1]: This is the footnote.
 [^2]: This is the 2nd footnote.
 
-
 | Syntax      | Description | Test Text     |
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
-
 
 - [x] Write the press release
 - [ ] Update the website
@@ -121,7 +128,6 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n 
 ##### Powerline
 
       
-
 
 ```goat
                 ________                            o        *          *   .--------------.
@@ -225,3 +231,13 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n 
 <!-- <!-- ![alt text](image.jpg) --> -->
 <!-- ![](/assets/sinewave.svg) -->
 
+---
+
+
+```
+    _/\/\____/\/\__/\/\/\/\/\/\__/\/\____________/\/\______/\/\____/\/\_
+   _/\/\____/\/\__/\____________/\/\__________/\/\/\/\____/\/\__/\/\___
+  _/\/\____/\/\__/\/\/\/\/\____/\/\________/\/\____/\/\__/\/\/\/\_____
+ ___/\/\/\/\____/\/\__________/\/\________/\/\/\/\/\/\__/\/\__/\/\___
+_____/\/\______/\/\/\/\/\/\__/\/\/\/\/\__/\/\____/\/\__/\/\____/\/\_
+```
