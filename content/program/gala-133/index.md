@@ -1,10 +1,9 @@
 ---
-title: "gala#133"
+title: "gala#132"
 date: 2024-04-13
 artists: [
-	dario sanfilippo,
-	ita raskin,
-	mauro diciocia
+	laura mello,
+	d'incise
 ]
 collabs: [
 ]
