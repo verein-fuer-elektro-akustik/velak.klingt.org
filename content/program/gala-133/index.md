@@ -4,7 +4,7 @@ date: 2024-04-13
 artists: [
 	laura mello,
 	d'incise,
- 	Zeynep Sarıkartal,
+ 	zeynep sarıkartal,
   	cheerful calamity
 ]
 collabs: [
