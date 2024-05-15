@@ -3,12 +3,14 @@ title: "gala#132"
 date: 2024-04-13
 artists: [
 	laura mello,
-	d'incise
+	d'incise,
+ 	Zeynep Sarıkartal,
+  	cheerful calamity
 ]
 collabs: [
 ]
-location: "rosaliagasse 11, 1120 wien"
+location: "Central Garden"
 tags: [gala]
 ---
-Open doors 19:00  
-Start 19:30
+Open doors 18:00  
+Start 19:00
