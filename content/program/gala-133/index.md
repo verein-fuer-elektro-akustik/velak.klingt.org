@@ -1,14 +1,15 @@
-title: "gala#133"
-date: 2024-06-11
+---
+title: "gala#131"
+date: 2024-04-13
 artists: [
-	d'incise,
-	und,
-	und
+	dario sanfilippo,
+	ita raskin,
+	mauro diciocia
 ]
 collabs: [
 ]
-location: "central garden"
+location: "rosaliagasse 11, 1120 wien"
 tags: [gala]
 ---
-Open doors 19:00
+Open doors 19:00  
 Start 19:30
