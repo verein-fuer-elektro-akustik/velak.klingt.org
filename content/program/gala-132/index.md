@@ -12,5 +12,5 @@ collabs: [
 location: "Central Garden"
 tags: [gala]
 ---
-Open doors 18:00
+Open doors 18:00  
 Start 19:00
