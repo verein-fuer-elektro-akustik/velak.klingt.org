@@ -4,7 +4,7 @@ date: 2024-04-13
 artists: [
 	laura mello,
 	d'incise,
- 	zeynep sarıkartal,
+	zs zs zeynep sarikartal,
   	cheerful calamity
 ]
 collabs: [
@@ -12,5 +12,5 @@ collabs: [
 location: "Central Garden"
 tags: [gala]
 ---
-Open doors 18:00  
+Open doors 18:00
 Start 19:00
