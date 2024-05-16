@@ -9,7 +9,7 @@ artists: [
 ]
 collabs: [
 ]
-location: "Central Garden"
+location: "centralgarden"
 tags: [gala]
 ---
 Open doors 18:00  
