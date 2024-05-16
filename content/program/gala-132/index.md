@@ -1,6 +1,6 @@
 ---
 title: "gala#132"
-date: 2024-04-13
+date: 2024-06-11
 artists: [
 	laura mello,
 	d'incise,
