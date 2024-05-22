@@ -3,12 +3,14 @@ title: "export#21"
 date: 2024-05-23
 location: "TV Control Center"
 artists: [
-	Eduardo Triviño Cely,
+	agar agar,
+ 	Eduardo Triviño Cely,
+  	Frederic Stritter, 
 	pzftk,
-	Agar agar,
-	Frederic Stritter
 ]
 collabs: [
+Stella Markidi + Gabriela Gordillo,
+Fabian Lanzmeier + Martina Moro
 ]
 tags: [export]
 ---
