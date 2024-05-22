@@ -1,6 +1,6 @@
 ---
 title: "agar agar"
-links: [https://adinacamhy.at/ 
+links: [https://martinamoro.com 
 https://www.fabianlanzmaier.com/]
 ---
 
