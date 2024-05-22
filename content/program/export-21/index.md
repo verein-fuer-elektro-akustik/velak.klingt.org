@@ -1,7 +1,7 @@
 ---
 title: "export#21"
 date: 2024-05-23
-location: "TV_Control_Center"
+location: "tv_control_center"
 artists: [
 	agar agar,
  	Eduardo Triviño Cely,
