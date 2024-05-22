@@ -1,7 +1,7 @@
 ---
 title: "export#21"
 date: 2024-05-23
-location: "TV Control Center"
+location: "TV_Control_Center"
 artists: [
 	agar agar,
  	Eduardo Triviño Cely,
@@ -9,8 +9,6 @@ artists: [
 	pzftk,
 ]
 collabs: [
-Stella Markidi + Gabriela Gordillo,
-Fabian Lanzmeier + Martina Moro
 ]
 tags: [export]
 ---
