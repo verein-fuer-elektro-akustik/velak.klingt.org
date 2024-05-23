@@ -12,14 +12,18 @@
 
 		<div class="events">
 			{{ with .Site.GetPage "/program" }}
+			{{ $now := time.Now }}
+			{{ $tomorrow_duration := time.ParseDuration "24h00m00s" }}
 			{{ $events := slice }}
 			{{ range .RegularPages }}
-			{{ if .Date.After now }}
-			{{ $events = $events | append . }}
-			{{ end }}
+				{{ $date := .Date.Add $tomorrow_duration }}
+				{{ if $date.After now }}
+					{{ $events = $events | append . }}
+				{{ end }}
 			{{ end }}
 
 			{{ if gt (len $events) 0}}
+			{{ $events = $events.Reverse }}
 
 			<div>upcoming events</div>
 			<ol class="events">
