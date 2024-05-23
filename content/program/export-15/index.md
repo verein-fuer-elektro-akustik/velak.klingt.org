@@ -8,8 +8,8 @@ artists: [
     zo-on slows,
 ]
 tags: [export]
-photos: "Edward Chapon"
 ---
-#### **Stream of Illusion**   
-XY Records European Tour 2016  
-live sets of 3 artists from the electronic music label XY Records from China
+#### **Stream of Illusion**
+
+XY Records European Tour 2016.  
+live sets of 3 artists from the electronic music label XY Records from China.
