@@ -65,6 +65,8 @@ Some extra text for this artist.
 * `aliases`: List of aliases this artists will aslo be available
 * `email`: Email address of the artist
 
+Be aware that changing an artists name removes the relationship to events.
+
 ---
 
 ### Locations
