@@ -1,5 +1,5 @@
 ---
-title: 20th Birthday Festival - Day 1
+title: 20th Birthday Festival - Day 2
 date: '2024-08-31'
 artists: [tbc]
 collabs: []
