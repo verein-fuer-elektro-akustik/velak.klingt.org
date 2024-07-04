@@ -5,10 +5,10 @@ artists: [
 	TBC
 ]
 collabs: [
-
+	TBC
 ]
 location: "zacherlfabrik"
-tags: [festival]
+tags: [20th birthday festival]
 
 ---
 SAVE THE DATE
