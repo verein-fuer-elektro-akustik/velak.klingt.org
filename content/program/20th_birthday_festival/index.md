@@ -1,6 +1,6 @@
 ---
 title: "20th birthday festival"
-date: 2024-08-30/31
+date: 2024-08-30
 artists: [
 	TBC
 ]
