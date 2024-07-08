@@ -1,6 +1,6 @@
 ---
 title: 20th Birthday Gala - Aug 30. & 31.
-date: 24-08-30
+date: 2024-08-30
 artists: []
 collabs: []
 location: zacherlfabrik
