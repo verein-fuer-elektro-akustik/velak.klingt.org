@@ -17,9 +17,9 @@ vinzenz schwab + daniel lercher
 
 location: zacherlfabrik
 ---
-#### Dates
-30. & 31.08.24
-
-save the date.
 more artists tbc.
+
+#### Dates
+August 30th and 31st
+
 
