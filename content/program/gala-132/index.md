@@ -14,3 +14,5 @@ tags: [gala]
 ---
 Open doors 18:00  
 Start 19:00
+
+photos by Anna Weisser
