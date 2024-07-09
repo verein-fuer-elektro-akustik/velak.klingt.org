@@ -1,5 +1,5 @@
 ---
-title: 20th Birthday Gala ~ Aug 30. & 31.
+title: 20th Birthday Gala, Aug 30.-31.
 date: 2024-08-30
 artists: [
 caroline profanter,
