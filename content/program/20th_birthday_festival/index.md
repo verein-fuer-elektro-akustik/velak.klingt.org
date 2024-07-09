@@ -12,7 +12,7 @@ stefan fraunberger
 
 collabs: [
 vinzenz schwab + daniel lercher,
-Tamara Wilhelm + Philip Leitner + Christian Reiner (RHEUMA 3000),
+Tamara Wilhelm + Philip Leitner + Christian Reiner, (RHEUMA 3000)
 ]
 
 location: zacherlfabrik
