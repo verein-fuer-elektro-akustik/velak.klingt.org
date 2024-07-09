@@ -1,5 +1,5 @@
 ---
-title: 20th Birthday Gala - Aug 30. & 31.
+title: 20th Birthday Gala ~ Aug 30. & 31.
 date: 2024-08-30
 artists: [
 caroline profanter,
@@ -11,16 +11,15 @@ stefan fraunberger
 ]
 
 collabs: [
-Tamara Wilhelm + Philip Leitner + Christian Reiner, (RHEUMA 3000),
+Tamara Wilhelm + Philip Leitner + Christian Reiner,
 vinzenz schwab + daniel lercher
 ]
 
 location: zacherlfabrik
 ---
 #### Dates
-30/08/24
-31/08/24
+30. & 31.08.24
 
-## save the date.
-## more artists tbc.
+save the date.
+more artists tbc.
 
