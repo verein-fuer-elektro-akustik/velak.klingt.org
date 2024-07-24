@@ -14,7 +14,7 @@ hide_title: true
 velak (verein für elektroakustische musik) is a non-profit organisation and platform for artists who work in fields of experimental music and sound/art.
 Based in Vienna, the members of velak organise concerts since 2004.
 
-contact: [{{<param "contact.email">}}](mailto:{{<param "contact.email">}})
+contact: [{{<param "contact.email">}}](mailto:{{<param "contact.email">}})  
 instagram: [@v_ela_k](https://instagram.com/v_ela_k)
 
 #### active members
@@ -42,7 +42,7 @@ instagram: [@v_ela_k](https://instagram.com/v_ela_k)
 - {{< artist "tamara-wilhelm" >}}
 - {{< artist "vinzenz-schwab" >}}
 
-zvr-zahl: 229137709  
+zvr-zahl: 229137709
 velak is kindly supported by [BMKOES](https://www.bmkoes.gv.at/), [Ma7](https://www.wien.gv.at/kultur/abteilung/) and SKE
 
 
