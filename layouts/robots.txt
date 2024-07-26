@@ -1,14 +1,18 @@
 User-agent: *
 Allow: /
 Disallow: /assets/
+Disallow: /audio/
 Disallow: /changelog/
 Disallow: /font/
 Disallow: /help/
+Disallow: /live/
+Disallow: /locations/
 Disallow: /raw/
 Disallow: /settings/
 Disallow: /sitemap/
 Disallow: /styleguide/
 Disallow: /test/
+Disallow: /version/
 
 Sitemap: https://velak.klingt.org/sitemap.xml
 
