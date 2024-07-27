@@ -1,6 +1,8 @@
 ---
 title: help
 rss_ignore: true
+sitemap:
+  disable: true
 ---
 ## Content
 
@@ -71,7 +73,7 @@ Be aware that changing an artists name removes the relationship to events.
 
 ### Locations
 
-List of locations reside in a json data file [data/locations.json](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/blob/master/data/locations.json).  
+List of locations reside in a json data file [data/locations.json](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/blob/master/data/locations.json).
 With an locations entry you can just use the id of the location for the program/location field which inserts the address and url automatically.
 
 ```json
@@ -86,6 +88,6 @@ With an locations entry you can just use the id of the location for the program/
 
 ## Deploy
 
-Updates to the master branch of the repository gets automatically build and deployed once a day (00:00).  
-To manually deploy go to the [actions tab](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/deploy.yml) and hit the __Run workflow__ button.  
+Updates to the master branch of the repository gets automatically build and deployed once a day (00:00).
+To manually deploy go to the [actions tab](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/actions/workflows/deploy.yml) and hit the __Run workflow__ button.
 Visit [velak.klingt.org/version](https://velak.klingt.org/version/) to check the currently deployed version.

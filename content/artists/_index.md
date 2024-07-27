@@ -9,4 +9,7 @@ rss_ignore: true
 outputs:
 - html
 - json
+sitemap:
+    changefreq: monthly
+    priority: 1.0
 ---

@@ -7,4 +7,6 @@ outputs:
 - html
 - m3u
 #- xspf
+sitemap:
+  disable: true
 ---
