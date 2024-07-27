@@ -29,7 +29,7 @@
 	"devDependencies": {
 		"html-validate": "^8.0.5",
 		"sass": "^1.72.0",
-		"hugo-bin": "^0.121.0"
+		"hugo-bin": "^0.126.0"
 	},
 	"hugo-bin": {
 		"buildTags": "extended"
