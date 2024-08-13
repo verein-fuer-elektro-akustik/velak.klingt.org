@@ -28,18 +28,22 @@
 	{{ $events_all := where .Site.RegularPages "Type" "program" }}
 	{{ range $event := $events_all }}
 	{{ with .Params.artists }}
-	{{ range . }}
-	{{ $artist := (trim (lower .) " ") }}
-	{{ if eq $artist $name }}
-	{{ $events_solo = $events_solo | append $event }}
-	{{ end }}
-	{{ end }}
+		{{ range . }}
+			{{ $artist := (trim (lower .) " ") }}
+			{{ $artist := replace $artist "_" "." }}
+			{{ $artist := replace $artist "-" " " }}
+			{{ if eq $artist $name }}
+				{{ $events_solo = $events_solo | append $event }}
+			{{ end }}
+		{{ end }}
 	{{ end }}
 	{{ with .Params.collabs }}
 	{{ range . }}
 	{{ $artists := split . "+" }}
-	{{ range $artists }}
-	{{ if eq (trim (lower .) " ") $name }}
+	{{ range $artist := $artists }}
+	{{ $artist := replace $artist "_" "." }}
+	{{ $artist := replace $artist "-" " " }}
+	{{ if eq (trim (lower $artist) " ") $name }}
 	{{ $events_collab = $events_collab | append $event }}
 	{{ end }}
 	{{ end }}

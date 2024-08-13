@@ -4,7 +4,7 @@ date: 2011-01-01
 format: cd
 label: { name: "audition records" }
 artists: [
-    a.d. martinz,
+    a_d_ martinz,
     caroline profanter,
     kaltraum vollmondt,
     matthias makowsky,

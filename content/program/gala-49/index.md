@@ -6,7 +6,7 @@ artists: [
     philip leitner,
 ]
 collabs: [
-    z.b. + elffriede,
+    z_b_ + elffriede,
     klaus filip + seijiro murayama
 ]
 location: "brut"

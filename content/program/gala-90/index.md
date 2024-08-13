@@ -7,11 +7,11 @@ artists: [
 ]
 collabs: [
     petra dubach + mario van horrik,
-    torùn. grisi weikinger + joki oberhuber + roy culbertson III
+    torùn_ grisi weikinger + joki oberhuber + roy culbertson III
 ]
 location: "garnison"
 tags: [gala]
 photos: "lisbeth kovacic"
 ---
-doors: 7pm / begin: 8pm (sharp!)  
+doors: 7pm / begin: 8pm (sharp!)
 entry: 3€

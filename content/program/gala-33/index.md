@@ -10,8 +10,7 @@ artists: [
     helmut kleinfercher,
     aerom,
     wolfgang fuchs,
-    maex decker
-    bah vs. Liii superviced,
+    maex decker bah vs_ liii superviced,
     veronika mayer,
     florian fennes,
     christine schröckhuber,

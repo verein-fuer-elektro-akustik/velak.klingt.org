@@ -30,7 +30,8 @@
 			{{ $page := $.Site.GetPage $path }}
 			<li>
 				{{ with $page }}
-				<a class="artist" href="{{ .RelPermalink }}">{{- $artist -}}</a>
+				{{/*<a class="artist" href="{{ .RelPermalink }}">{{- $artist -}}</a>*/}}
+				<a class="artist" href="{{ .RelPermalink }}">{{- $page.Title -}}</a>
 				{{ else }}
 				<a class="artist" href="{{ $path }}">{{- $artist -}}</a>
 				{{ end }}
