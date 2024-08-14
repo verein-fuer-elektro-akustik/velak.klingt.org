@@ -2,24 +2,35 @@
 title: 20th Birthday Gala, Aug 30.-31.
 date: 2024-08-30
 artists: [
+andina,
 caroline profanter,
+dieb 13,
+elsie lappoh,
+luciana rizzo,
 manuel knapp,
 milena georgieva,
 nina bauer,
+ogdl,
 peter kutin,
-stefan fraunberger
+philip sollmann,
+rheuma 3000,
+stefan fraunberger,
+stefan Brunner,
+vinzenz + daniel lercher,
+
 ]
 
 collabs: [
-Tamara Wilhelm + Philip Leitner + Christian Reiner,
-vinzenz schwab + daniel lercher
+richard bruzek + velharmonisches orchester,
+vinzenz schwab + daniel lercher,
 ]
 
 location: zacherlfabrik
 ---
-more artists tbc.
+
+open doors 15h
+concerts 16 - 22h
 
 #### Dates
-August 30th and 31st
-
-
+August 30. and 31. 
+2024
