@@ -1,5 +1,4 @@
 ---
 title: "daniel lercher"
-links: []
+links: [https://lercher.klingt.org/]
 ---
-
