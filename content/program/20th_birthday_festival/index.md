@@ -16,8 +16,6 @@ philip sollmann,
 rheuma 3000,
 stefan fraunberger,
 stefan Brunner,
-vinzenz + daniel lercher,
-
 ]
 
 collabs: [
