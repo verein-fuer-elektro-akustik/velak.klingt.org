@@ -4,7 +4,7 @@ date: 2024-08-30
 artists: [
 andina,
 caroline profanter,
-dieb 13,
+dieb13,
 elsie lappoh,
 luciana rizzo,
 manuel knapp,
