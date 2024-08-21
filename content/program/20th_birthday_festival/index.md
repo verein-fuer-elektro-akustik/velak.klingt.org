@@ -8,7 +8,6 @@ dieb13,
 elsie lappoh,
 luciana rizzo,
 manuel knapp,
-milena georgieva w/nchoir,
 nina bauer,
 ogdl,
 peter kutin,
@@ -21,6 +20,7 @@ velharmonisches quintett,
 ]
 
 collabs: [
+milena georgieva + nchoir,
 vinzenz schwab + daniel lercher,
 ]
 
