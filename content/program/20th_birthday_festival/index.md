@@ -8,7 +8,7 @@ dieb13,
 elsie lappoh,
 luciana rizzo,
 manuel knapp,
-milena georgieva,
+milena georgieva w/nchoir,
 nina bauer,
 ogdl,
 peter kutin,
@@ -16,10 +16,11 @@ philip sollmann,
 rheuma 3000,
 stefan fraunberger,
 stefan Brunner,
+velak-team,
+velharmonisches quintett,
 ]
 
 collabs: [
-richard bruzek + velharmonisches orchester,
 vinzenz schwab + daniel lercher,
 ]
 
