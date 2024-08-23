@@ -1,6 +1,7 @@
 ---
 title: 20th Birthday Gala, Aug 30.-31.
 date: 2024-08-30
+date: 2024-08-31
 artists: [
 andina,
 caroline profanter,
@@ -12,25 +13,21 @@ milena georgieva,
 nina bauer,
 ogdl,
 peter kutin,
-philip sollmann,
 rheuma 3000,
-stefan fraunberger,
 stefan Brunner,
-vinzenz + daniel lercher,
-
+stefan fraunberger,
+velak team,
+velharmonisches quintett,
 ]
 
 collabs: [
-richard bruzek + velharmonisches orchester,
 vinzenz schwab + daniel lercher,
 ]
 
 location: zacherlfabrik
 ---
 
+### Dates
+August 30. and 31. 2024
 open doors 15h
 concerts 16 - 22h
-
-#### Dates
-August 30. and 31. 
-2024
