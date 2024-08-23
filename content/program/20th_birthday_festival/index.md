@@ -26,8 +26,8 @@ vinzenz schwab + daniel lercher,
 
 location: zacherlfabrik
 ---
-
 ### Dates
 August 30. and 31. 2024
+
 open doors 15h
 concerts 16 - 22h
