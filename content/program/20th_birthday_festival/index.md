@@ -5,11 +5,10 @@ date: 2024-08-31
 artists: [
 andina,
 caroline profanter,
-dieb 13,
+dieb13,
 elsie lappoh,
 luciana rizzo,
 manuel knapp,
-milena georgieva,
 nina bauer,
 ogdl,
 peter kutin,
@@ -21,6 +20,7 @@ velharmonisches quintett,
 ]
 
 collabs: [
+milena georgieva + nchoir,
 vinzenz schwab + daniel lercher,
 ]
 
