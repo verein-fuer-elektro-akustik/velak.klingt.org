@@ -34,15 +34,15 @@ concerts 16 - 22h
 {{<html>}}
 <style>
 :root {
-	--background: #FBFBF2;
-	--f_high: #3a3738;
-	--f_med: #847577;
-	--f_low: #bdb8b8;
-	--f_inv: #A6A2A2;
-	--b_high: #676164;
-	--b_med: #A6A2A2;
-	--b_low: #CFD2CD;
-	--b_inv: #676164;
+	--background: #EDEAEA;
+	--f_high: #393B3F;
+	--f_med: #808790;
+	--f_low: #A3A3A4;
+	--f_inv: #000000;
+	--b_high: #333333;
+	--b_med: #777777;
+	--b_low: #DDDDDD;
+	--b_inv: #ffffff;
 }
 </style>
 {{</html>}}

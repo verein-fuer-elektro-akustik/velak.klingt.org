@@ -5,43 +5,43 @@ let style;
 
 function loadTheme() {
 	var _theme = window.localStorage.getItem(STORAGE_ID);
-	if(!_theme)
+	if (!_theme)
 		return null;
 	return JSON.parse(_theme);
 }
 
 function saveTheme(theme) {
-	window.localStorage.setItem(STORAGE_ID,JSON.stringify(theme));
+	window.localStorage.setItem(STORAGE_ID, JSON.stringify(theme));
 }
 
 function readSVG(file, callback) {
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      callback(e.target.result);
-    }
-    reader.readAsText(file,'UTF-8');
+	const reader = new FileReader()
+	reader.onload = (e) => {
+		callback(e.target.result);
+	}
+	reader.readAsText(file, 'UTF-8');
 }
 
-function applyTheme(theme,save) {
+function applyTheme(theme, save) {
 	var s = document.documentElement.style;
-	s.setProperty("--background",theme.background);
-	s.setProperty("--f_high",theme.f_high);
-	s.setProperty("--f_med",theme.f_med);
-	s.setProperty("--f_low",theme.f_low);
-	s.setProperty("--f_inv",theme.f_inv);
-	s.setProperty("--b_high",theme.b_high);
-	s.setProperty("--b_med",theme.b_med);
-	s.setProperty("--b_low",theme.b_low);
-	s.setProperty("--b_inv",theme.b_inv);
-	if(save) saveTheme(theme);
+	s.setProperty("--background", theme.background);
+	s.setProperty("--f_high", theme.f_high);
+	s.setProperty("--f_med", theme.f_med);
+	s.setProperty("--f_low", theme.f_low);
+	s.setProperty("--f_inv", theme.f_inv);
+	s.setProperty("--b_high", theme.b_high);
+	s.setProperty("--b_med", theme.b_med);
+	s.setProperty("--b_low", theme.b_low);
+	s.setProperty("--b_inv", theme.b_inv);
+	if (save) saveTheme(theme);
 }
 
 document.addEventListener('DOMContentLoaded', _ => {
 	style = window.getComputedStyle(document.querySelector(':root'));
-	if( style ) {
+	if (style) {
 		var theme = loadTheme();
-		if( theme ) {
-			applyTheme( theme );
+		if (theme) {
+			applyTheme(theme);
 		} else {
 			theme = {
 				background: style.getPropertyValue('--background'),
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', _ => {
 			saveTheme(theme);
 		}
 	}
-	if(document.body)
+	if (document.body)
 		document.body.style.visibility = "visible";
 
 	window.addEventListener('dragover', e => {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', _ => {
 	window.addEventListener('drop', e => {
 		e.preventDefault();
 		const file = e.dataTransfer.files[0];
-		if(file && file.name.indexOf('.svg') > -1) {
+		if (file && file.name.indexOf('.svg') > -1) {
 			this.readSVG(file, (data) => {
 				const svg = new DOMParser().parseFromString(data, 'text/xml');
 				var theme = {

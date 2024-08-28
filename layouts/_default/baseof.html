@@ -49,25 +49,25 @@
         {{ range .AlternativeOutputFormats -}}
         <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
         {{ end -}}
+		
+		{{/*<style>*/}}
+		{{/*           :root {*/}}
+		{{/*               {{ with .Page.Params.theme }}*/}}
+		{{/*               {{ with .background }}--background: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .f_high }}--f_high: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .f_med }}--f_med: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .f_low }}--f_low: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .f_inv }}--f_inv: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .b_high }}--b_high: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .b_med }}--b_med: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .b_low }}--b_low: {{- . -}};{{ end }}*/}}
+		{{/*               {{ with .b_inv }}--b_inv: {{- . -}};{{ end }}*/}}
+		{{/*               {{ end }}*/}}
+		{{/*           }*/}}
+		{{/*       </style>*/}}
 
         <script src="{{ (resources.Get "script/app.js" | resources.Minify).RelPermalink }}" defer></script>
 		{{/*<script src="{{ (resources.Get "script/theme.js" | resources.Minify).RelPermalink }}" defer></script>*/}}
-
-		<style>
-             :root {
-                 {{/*{{ with .Page.Params.theme }}*/}}
-                 {{/*{{ with .background }}--background: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .f_high }}--f_high: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .f_med }}--f_med: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .f_low }}--f_low: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .f_inv }}--f_inv: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .b_high }}--b_high: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .b_med }}--b_med: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .b_low }}--b_low: {{- . -}};{{ end }}*/}}
-                 {{/*{{ with .b_inv }}--b_inv: {{- . -}};{{ end }}*/}}
-                 {{/*{{ end }}*/}}
-             }
-         </style>
 
 		{{ block "schema" . }}{{ end }}
 
