@@ -19,7 +19,6 @@ artists: [
 ]
 
 collabs: [
-	milena georgieva + nchoir,
 	vinzenz schwab + daniel lercher,
 ]
 
@@ -35,14 +34,14 @@ concerts 16 - 22h
 - 17:20 nina bauer
 - 19:00 Stefan Brunner + dieb13
 - 19:40 ogdl
-- 20:20 vinzenz + daniel
+- 20:20 vinzenz schwab + daniel lercher
 - 21:00 manuel knapp
 - 21:30 dieb13
 
 ### Saturday 31st
 
 - 16:00 andina
-- 17:00 caroline profanter + rodrigo
+- 17:00 caroline profanter (live stream)
 - 17:40 stefan fraunberger
 - 19:00 elsie lappoh
 - 19:40 peter kutin
