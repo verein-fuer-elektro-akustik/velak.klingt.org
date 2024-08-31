@@ -3,7 +3,6 @@ title: 20th Birthday Gala, Aug 30.-31.
 date: 2024-08-31
 artists: [
 	andina,
-	caroline profanter,
 	dieb13,
 	elsie lappoh,
 	luciana rizzo,
@@ -19,6 +18,7 @@ artists: [
 ]
 
 collabs: [
+ 	caroline profanter + Rodrigo Ríos Zunino,
 	vinzenz schwab + daniel lercher,
 ]
 
@@ -40,9 +40,10 @@ concerts 16 - 22h
 
 ### Saturday 31st
 
-- 16:00 andina
-- 17:00 caroline profanter (live stream)
+- 16:00 velak team
+- 17:00 caroline profanter + Rodrigo Ríos Zunino (live stream)
 - 17:40 stefan fraunberger
+- 18:30 andina
 - 19:00 elsie lappoh
 - 19:40 peter kutin
 - 20:20 luciana rizzo
