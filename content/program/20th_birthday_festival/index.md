@@ -49,6 +49,8 @@ concerts 16 - 22h
 - 20:20 luciana rizzo
 - 21:00 rheuma 3000
 
+Photo documentation: Bon Alog
+
 {{<html>}}
 
 <style>
