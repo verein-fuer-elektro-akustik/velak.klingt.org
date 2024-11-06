@@ -6,9 +6,7 @@ artists: [
  	Markus Sepperer, 
 ]
 collabs: [
-	gabriela areal,
-	klaus filip,
-	radu malfatti,
+	
 ]
 location: "klangtheater"
 tags: [gala]
