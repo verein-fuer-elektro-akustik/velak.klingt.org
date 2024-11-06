@@ -6,9 +6,9 @@ artists: [
  	Markus Sepperer, 
 ]
 collabs: [
-	gabriela areal - cello,
-	klaus filip - sinewaves,
-	radu malfatti - bass harmonica,
+	gabriela areal,
+	klaus filip,
+	radu malfatti,
 ]
 location: "klangtheater"
 tags: [gala]
