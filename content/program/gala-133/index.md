@@ -1,1 +1,17 @@
-
+---
+title: "gala#133"
+date: 2024-22-11
+artists: [
+  	Stellka, 
+ 	Markus Sepperer, 
+]
+collabs: [
+	gabriela areal - cello
+	klaus filip - sinewaves
+	radu malfatti - bass harmonica
+]
+location: "klangtheater"
+tags: [gala]
+---
+Open doors 18:00  
+Start 19:00
