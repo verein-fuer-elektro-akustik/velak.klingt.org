@@ -13,5 +13,5 @@ collabs: [
 location: "klangtheater"
 tags: [gala]
 ---
-Open doors 18:00  
-Start 19:00
+Open doors 19:00  
+Start 19:30
