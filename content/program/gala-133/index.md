@@ -1,6 +1,6 @@
 ---
 title: "gala#133"
-date: 2024-22-11
+date: 2024-11-22
 artists: [
   	Stellka, 
  	Markus Sepperer, 
