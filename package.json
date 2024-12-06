@@ -28,7 +28,7 @@
 	"homepage": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/blob/master/README.md",
 	"devDependencies": {
 		"html-validate": "^8.0.5",
-		"sass": "^1.72.0",
+		"sass": "^1.82.0",
 		"hugo-bin": "^0.126.0"
 	},
 	"hugo-bin": {
