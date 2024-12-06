@@ -138,6 +138,11 @@ pre {
 	font-family: var(--font-mono);
 }
 
+
+pre {
+	margin-bottom: 2rem;
+}
+
 dl {
 
 	&,
@@ -172,7 +177,6 @@ figure {
 }
 
 form {
-	@include print.not;
 	padding: 1rem 0;
 
 	label {
@@ -183,6 +187,8 @@ form {
 	legend {
 		display: none;
 	}
+
+	@include print.not;
 }
 
 h1,
