@@ -1,6 +1,6 @@
 ---
-title: "gala#132"
-date: 2024-06-11
+title: "gala#137"
+date: 2025-10-30
 artists: [
 	laura mello,
 	d'incise,
@@ -15,5 +15,5 @@ tags: [gala]
 Open doors 18:00  
 Start 19:00
 
-photos by Anna Weisser
+photos by XXX
 
