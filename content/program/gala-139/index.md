@@ -1,6 +1,6 @@
 ---
 title: "gala#139"
-date: 2024-11-22
+date: 2025-1-22
 artists: [
   	Martina Moro, 
  	Gabriela Gordillo, 
