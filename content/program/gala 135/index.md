@@ -1,7 +1,7 @@
 ---
 title: "gala#109"
 date: 2019-07-16
-location: "steinergasse8"
+location: "Breitenseer Lichtspiele"
 artists: [
     julian klien
 ]
@@ -10,7 +10,7 @@ collabs: [
     gabriela areal + radu malfatti
 ]
 tags: [gala]
-photos: "Nina Bauer"
+photos: "Franz Auge"
 ---
 doors: 19:00 / begin: 8pm (sharp!)  
 
