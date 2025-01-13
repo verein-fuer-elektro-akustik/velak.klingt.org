@@ -4,6 +4,7 @@
 		"address": "1010 Wien, Schillerplatz 3",
 		"url": "https://www.akbild.ac.at"
 	},
+	
 	"ateliertheater": {
 		"name": "Ateliertheater",
 		"address": "Burggasse 71 1070 Wien",
@@ -13,6 +14,11 @@
 		"name": "B5",
 		"address": "Herklotzgasse 21, 1150 vienna"
 	},
+	"breitenseer lichtspiele": {
+		"name": "Breitenseer Lichtspiele",
+		"address": "Breitenseer Str. 21, 1140 Wien"
+	},
+	
 	"brut": {
 		"name": "Brut",
 		"address": "Lothringerstrasse 20, 1030 vienna",
