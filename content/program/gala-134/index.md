@@ -5,10 +5,8 @@ artists: [
  	Stefan Nussbaumer, 
 ]
 collabs: [
-	Bon Alog,
-	Bernhard Rasinger,
- 	Joanna Coleman, 
-	Martina Moro,
+	Bon Alog + Bernhard Rasinger,
+ 	Joanna Coleman + Martina Moro,
 ]
 location: "Breitenseer Lichtspiele"
 tags: [gala]
