@@ -2,7 +2,8 @@
 title: "gala#134"
 date: 2025-03-04
 artists: [
- 	Stefan Nussbaumer, 
+ 	Stefan Nussbaumer,
+  pablo sanz,
 ]
 collabs: [
 	Bon Alog + Bernhard Rasinger,
