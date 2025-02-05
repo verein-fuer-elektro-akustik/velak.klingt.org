@@ -8,9 +8,8 @@ collabs: [
 	Bon Alog + Bernhard Rasinger,
  	Joanna Coleman + Martina Moro,
 ]
-location: "Breitenseer Lichtspiele"
+location: "breitenseer lichtspiele"
 tags: [gala]
 ---
 Open doors 19:00  
 Start 19:30
-
