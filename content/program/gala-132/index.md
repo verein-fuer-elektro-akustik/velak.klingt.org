@@ -11,8 +11,7 @@ collabs: [
 ]
 location: "centralgarden"
 tags: [gala]
+photos: "Anna Weisser"
 ---
 Open doors 18:00  
 Start 19:00
-
-photos by Anna Weisser
