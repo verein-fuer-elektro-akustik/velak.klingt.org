@@ -10,8 +10,8 @@ collabs: [
 ]
 location: "breitenseer_lichtspiele"
 tags: [gala]
+photos: Ronnie Danaher
 ---
+
 Open doors 19:00  
 Start 19:30
-
-photos: Ronnie Danaher
