@@ -1,5 +1,4 @@
 ---
-title: "igor lintz-maues"
+title: "igor lintz maues"
 links: []
 ---
-

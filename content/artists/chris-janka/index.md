@@ -1,5 +1,4 @@
 ---
 title: "chris janka"
-links: [http://www.chrisjanka.at/]
+links: [https://www.chrisjanka.at/]
 ---
-

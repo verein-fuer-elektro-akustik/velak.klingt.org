@@ -1,5 +1,4 @@
 ---
 title: "barbara togander"
-links: [http://barbaratogander.bandcamp.com/]
+links: [https://barbaratogander.bandcamp.com/]
 ---
-
