@@ -8,4 +8,5 @@ tags: [gala]
 photos: 
 ---
 
+Open doors 18:30
 Start 19:00
