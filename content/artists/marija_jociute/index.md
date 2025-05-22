@@ -1,5 +1,5 @@
 ---
-title: "marija jociūtė"
+title: "marija jociute"
 links: [https://marijajociute.bandcamp.com]
 ---
 
