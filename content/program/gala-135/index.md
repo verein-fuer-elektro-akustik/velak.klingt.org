@@ -5,7 +5,7 @@ artists: [ Lorenzo Abattoir, Andreas Sahl Andersen, Bassano Bonelli Bassano,Conn
 collabs: [Kjell Bjørgeengen + Aimée Theriot + Ingar Zach]
 location: "echoraum"
 tags: [gala]
-photos: 
+photos: Michael Rausch
 ---
 
 Open doors 18:30
