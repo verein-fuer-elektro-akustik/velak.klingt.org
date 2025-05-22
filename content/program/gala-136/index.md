@@ -1,7 +1,7 @@
 ---
 title: "gala#136"
 date: 2025-06-07
-artists: [marija jociute, polymorphic engine, the concept horse]
+artists: [Marija Jociūtė, polymorphic engine, the concept horse]
 collabs: [ellen preuss + kasho chualan + miriam jochmann]
 location: "schlor"
 tags: [gala]
