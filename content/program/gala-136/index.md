@@ -7,7 +7,7 @@ ellen preuss + kasho chualan + miriam jochmann
 ]
 location: "schlor"
 tags: [gala]
- 
+photos: Marie-Andrée Pellerin
 ---
 
 Open doors 20:00
