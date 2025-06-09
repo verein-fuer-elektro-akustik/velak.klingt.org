@@ -6,7 +6,7 @@ artists: [
 collabs: [
   
 ]
-location: "akademie"
+location: "akbild"
 tags: [gala]
 ---
 Open doors tbc
