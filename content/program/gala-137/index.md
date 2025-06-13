@@ -2,7 +2,9 @@
 title: "gala#137"
 date: 2025-06-28
 artists: [
-  tbc
+Mara Schwerdtfeger,
+Seretan,
+Julia Just
 ]
 collabs: [
 ]
