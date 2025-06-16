@@ -11,5 +11,5 @@ collabs: [
 location: "akbild"
 tags: [gala]
 ---
-Open doors tbc
-Start tbc
+Open doors 19:00
+Start 19:30
