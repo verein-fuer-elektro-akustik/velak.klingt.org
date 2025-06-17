@@ -8,7 +8,7 @@ Seretan
 ]
 collabs: [
 ]
-location: "akbild"
+location: "akbild bildhauereiateliers"
 tags: [gala]
 ---
 Open doors 19:00
