@@ -1,18 +1,27 @@
 {
 	"akbild": {
 		"name": "Akademie der bildenden Künste Wien",
-		"address": "1010 Wien, Schillerplatz 3",
+		"address": "Schillerplatz 3, 1010 Wien",
 		"url": "https://www.akbild.ac.at"
 	},
+	
+	"akbild bildhauereiateliers": {
+		"name": "Akademie der bildenden Künste Wien - Bildhauereiateliers",
+		"address": "Kurzbauergasse 9, 1020 Wien",
+		"url": "https://www.akbild.ac.at"		
+	},
+		
 	"ateliertheater": {
 		"name": "Ateliertheater",
 		"address": "Burggasse 71 1070 Wien",
 		"url": "https://www.ateliertheater.wien/"
 	},
+		
 	"b5": {
 		"name": "B5",
 		"address": "Herklotzgasse 21, 1150 vienna"
 	},
+		
 	"breitenseer_lichtspiele": {
 		"name": "Breitenseer Lichtspiele",
 		"address": "Breitenseer Str. 21, 1140 Wien",
