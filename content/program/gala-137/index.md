@@ -6,8 +6,7 @@ Julia Just,
 Mara Schwerdtfeger,
 Seretan
 ]
-collabs: [
-]
+
 location: "Wien Station"
 tags: [gala]
 ---
