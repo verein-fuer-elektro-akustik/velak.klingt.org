@@ -8,7 +8,7 @@ Seretan
 ]
 collabs: [
 ]
-location: "akbild bildhauereiateliers"
+location: "wien station"
 tags: [gala]
 ---
 Open doors 19:00
