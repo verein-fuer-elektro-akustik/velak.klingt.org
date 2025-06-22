@@ -7,7 +7,7 @@ Mara Schwerdtfeger,
 Seretan
 ]
 
-location: "Wien Station"
+location: "wienstation"
 tags: [gala]
 ---
 Open doors 19:00
