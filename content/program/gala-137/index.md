@@ -8,7 +8,7 @@ Seretan
 ]
 collabs: [
 ]
-location: "wien station"
+location: "Wien Station"
 tags: [gala]
 ---
 Open doors 19:00
