@@ -179,6 +179,11 @@
 		"address": "Erlgasse 27, 1120 Wien",
 		"url": "https://www.vekks.com"
 	},
+	"wien station": {
+		"name": "Wien Station, 1200 Wien",
+		"address": "Vorgartenstraße 58/42"
+		"url": "https://wienstation.at"
+	},
 	"wild im west": {
 		"name": "Wild im West",
 		"address": "Mariahilfer Str. 166, 1150 Wien"
