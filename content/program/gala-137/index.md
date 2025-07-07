@@ -9,6 +9,7 @@ Seretan
 
 location: "wienstation"
 tags: [gala]
+photo: Ronnie Danaher
 ---
 Open doors 19:00
 Start 19:30
