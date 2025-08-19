@@ -1,5 +1,5 @@
 ---
-title: "sec_"
+title: "sec"
 links: [www.toxorecords.com/sec_]
 ---
 
