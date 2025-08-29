@@ -4,6 +4,9 @@ date: 2025-09-13
 artists: [
 sandra muciño
 ]
+artists: [
+akhet platform:
+]
 collabs: [
 dario sanfilippo + sec,
 eks + eraclio
