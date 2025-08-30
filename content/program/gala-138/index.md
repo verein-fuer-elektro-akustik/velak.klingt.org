@@ -13,6 +13,6 @@ location: "westbahnstudios"
 tags: [gala]
 ---
 Open doors 19:30
-Start 20:00
+Start 20:00		
 
 supported by WBS Tonräume gGmbH
