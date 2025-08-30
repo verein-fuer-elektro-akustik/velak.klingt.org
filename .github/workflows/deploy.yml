@@ -6,7 +6,7 @@ on:
     - cron: "0 0 * * *"
 
 concurrency:
-  group: ${{ github.head_ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -14,19 +14,45 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Cache resources
-        id: cache-resources
+
+      # Cache npm dependencies
+      - name: Cache npm
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+          key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            npm-${{ runner.os }}-
+
+      # Cache hugo resources
+      - name: Cache Hugo resources
         uses: actions/cache@v4
         with:
           path: resources
-          key: hugo-resources
+          key: hugo-resources-${{ github.ref }}-${{ hashFiles('**/*.scss', '**/*.css', '**/*.js', 'config.*') }}
+          restore-keys: |
+            hugo-resources-
+      
       - name: Setup npm
-        run: npm install
+        run: npm ci
+    
       - name: Build style
         run: npm run prod:style
+     
       - name: Build site
         run: npm run prod:hugo -- --baseURL ${{ secrets.BASE_URL }}
+
+      # Cache built site (optional, helps skip deploy if unchanged)
+      - name: Cache built site
+        id: site-cache
+        uses: actions/cache@v4
+        with:
+          path: public
+          key: site-${{ runner.os }}-${{ hashFiles('package.json', 'package-lock.json', 'archetypes/**', 'assets/**', 'config/**', 'content/**', 'data/**', 'layouts/**', 'static/**', 'style/**') }}
+
       - name: Deploy to server
+        if: steps.site-cache.outputs.cache-hit != 'true'
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
