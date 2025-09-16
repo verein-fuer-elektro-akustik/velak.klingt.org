@@ -10,6 +10,3 @@ location: "es49"
 tags: [gala]
 
 ---
-
-Open doors 19:00
-Start 19:30
