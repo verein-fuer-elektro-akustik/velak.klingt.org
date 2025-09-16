@@ -3,11 +3,11 @@ title: "gala#138"
 date: 2025-09-13
 artists: [
 	sandra muciño,
-	akhet platform
 ]
 collabs: [
 	dario sanfilippo + sec,
 	eks + eraclio
+ 	akhet platform
 ]
 location: "westbahnstudios"
 tags: [gala]
