@@ -11,6 +11,6 @@ tags: [gala]
 Open doors 20:00
 Start 20:30
 
-collaboration w/ rat rights, friends and fun + ES49!!
+collaboration w/ rat rights, friends & fun + ES49!!
 additional lineup announced soon
 
