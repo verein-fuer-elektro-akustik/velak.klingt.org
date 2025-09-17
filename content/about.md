@@ -43,7 +43,7 @@ instagram: [@v_ela_k](https://instagram.com/v_ela_k)
 - {{< artist "vinzenz-schwab" >}}
 
 zvr-zahl: 229137709  
-velak is kindly supported by [BMKOES](https://www.bmkoes.gv.at/), [Ma7](https://www.wien.gv.at/kultur/abteilung/) and SKE
+velak is kindly supported by [BMWKMS](https://www.bmwkms.gv.at/), [Ma7](https://www.wien.gv.at/kultur/abteilung/) and SKE
 
 
 - source: [github.com](https://github.com/verein-fuer-elektro-akustik/velak.klingt.org)
