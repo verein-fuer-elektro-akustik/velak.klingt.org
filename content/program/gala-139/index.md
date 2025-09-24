@@ -8,9 +8,11 @@ collabs: [
 location: "es49"
 tags: [gala]
 ---
-Open doors 20:00
+Open doors 20:00</br>
 Start 20:30
 
-collaboration w/ rat rights, friends & fun + ES49!!
-additional lineup announced soon
-
+collaboration w/ friends & fun + rat rights:</br>
+Apocalypso Mike</br>
+Dominik Szereday</br>
+jkmn</br>
+Tag 11</br>
