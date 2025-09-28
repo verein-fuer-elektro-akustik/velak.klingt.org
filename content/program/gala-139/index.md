@@ -1,7 +1,7 @@
 ---
 title: "gala#139"
 date: 2025-09-27
-artists: [anton lapov, birgit uhler, sebastian six
+artists: [anton lapov, birgit ulher, sebastian six
 ]
 collabs: [
 ]
