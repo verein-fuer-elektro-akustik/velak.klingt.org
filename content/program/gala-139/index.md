@@ -7,6 +7,7 @@ collabs: [
 ]
 location: "es49"
 tags: [gala]
+photos: Ronnie Danaher
 ---
 Open doors 20:00</br>
 Start 20:30
