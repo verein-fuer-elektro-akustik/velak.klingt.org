@@ -2,7 +2,7 @@
 title: "gala#140"
 date: 2025-11-08
 artists: [
-Augustė Vickunaite,
+Augustė Vickunaitė,
 eric arn,
 Nava Hemyari,
 stefan tiefengraber,
