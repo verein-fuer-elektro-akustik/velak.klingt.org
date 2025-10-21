@@ -2,7 +2,10 @@
 title: "gala#140"
 date: 2025-11-08
 artists: [
-  tbc
+Augustė Vickunaite,
+eric arn,
+Nava Hemyari,
+stefan tiefengraber,
 ]
 collabs: [
   ]
