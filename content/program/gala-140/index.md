@@ -12,5 +12,5 @@ collabs: [
 location: "gekko"
 tags: [gala]
 ---
-Open doors 19:00
-Start 19:30
+Open doors 19:30
+Start 20:30
