@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+if [ -f ./.env ]; then
+	set -o allexport
+	source ./.env
+	set +o allexport
+fi
+
+REQUIRED_VARS=(REMOTE_USER REMOTE_HOST REMOTE_PATH)
+
+for var in "${REQUIRED_VARS[@]}"; do
+	if [ -z "${!var}" ]; then
+		echo "Error: $var is not set. Check your .env file."
+		exit 1
+	fi
+done
+
+rsync -avz public/** "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}"

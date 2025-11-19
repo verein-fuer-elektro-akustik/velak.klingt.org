@@ -17,7 +17,8 @@
 		"build": "npm run build:style && npm run build:hugo",
 		"prod:style": "sass style/main.scss static/style.css --no-source-map --style compressed",
 		"prod:hugo": "hugo --environment production --buildFuture --cleanDestinationDir",
-		"prod": "npm run prod:style && npm run prod:hugo"
+		"prod": "npm run prod:style && npm run prod:hugo",
+		"deploy": "./scripts/deploy"
 	},
 	"repository": {
 		"type": "git",

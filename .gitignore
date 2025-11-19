@@ -29,8 +29,5 @@ _*.[0-9].*
 *.[0-9]/
 *-old.*
 hugo_stats.json
-#content/program/*/*.JPG
-#content/program/*/*.jpg
-#content/program/*/*.jpeg
-#content/program/*/*.png
-
+vvv.txt
+.env
