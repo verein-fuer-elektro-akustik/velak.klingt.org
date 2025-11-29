@@ -4,24 +4,20 @@
 		"address": "Schillerplatz 3, 1010 Wien",
 		"url": "https://www.akbild.ac.at"
 	},
-	
 	"akbild bildhauereiateliers": {
 		"name": "Akademie der bildenden Künste Wien",
 		"address": "Kurzbauergasse 9, 1020 Wien",
-		"url": "https://www.akbild.ac.at"		
+		"url": "https://www.akbild.ac.at"
 	},
-		
 	"ateliertheater": {
 		"name": "Ateliertheater",
 		"address": "Burggasse 71 1070 Wien",
 		"url": "https://www.ateliertheater.wien/"
 	},
-		
 	"b5": {
 		"name": "B5",
 		"address": "Herklotzgasse 21, 1150 vienna"
 	},
-		
 	"breitenseer_lichtspiele": {
 		"name": "Breitenseer Lichtspiele",
 		"address": "Breitenseer Str. 21, 1140 Wien",
@@ -32,10 +28,10 @@
 		"address": "Lothringerstrasse 20, 1030 vienna",
 		"url": "https://brut-wien.at/"
 	},
-	"chateau rouge": {
+	"chateau_rouge": {
 		"name": "Chateau Rouge",
 		"address": "Schönbrunner Schloßstraße 17, 1130 Wien",
-		"url": "http://www.chateaurouge.at/"
+		"url": "https://www.chateaurouge.at/"
 	},
 	"celeste": {
 		"name": "Celeste",
@@ -66,7 +62,6 @@
 		"address": "Erdbergstrasse 49, 1030, Wien",
 		"url": "https://www.instagram.com/__es_49/"
 	},
-	
 	"erbsenfabrik": {
 		"name": "Erbsenfabrik",
 		"address": "Herklotzgasse 21, 1150 vienna"
@@ -189,12 +184,11 @@
 		"address": "Erlgasse 27, 1120 Wien",
 		"url": "https://www.vekks.com"
 	},
-		"westbahnstudios": {
+	"westbahnstudios": {
 		"name": "Westbahnstudios",
 		"address": "Preysinggasse 5, 1150 Wien",
 		"url": "https://westbahnstudios.at/"
 	},
-	
 	"wienstation": {
 		"name": "Wienstation",
 		"address": "U-Bahn-Bogen 28, 1080 Wien",
