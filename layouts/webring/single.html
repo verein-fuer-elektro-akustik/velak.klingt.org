@@ -1,19 +1,18 @@
 {{ define "main" }}
 <ul>
-{{ range (where .Site.Pages "Section" "artists") }}
-    {{ with .Params.links }}
-    {{ if gt (len .) 0 }}
-    <li>
-        <ul>
-            {{ range . }}
-            <li>
-                <a href="{{.}}">{{ . }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    {{ end }}
-    </li>
-    {{ end }}
-{{ end }}
+	{{ range (where .Site.Pages "Section" "artists") }}
+	{{ with .Params.links }}
+	{{ range . }}
+	<li><a href="{{.}}" rel="external">{{ . }}</a></li>
+	{{ end }}
+	{{ end }}
+	{{ end }}
+</ul>
+<ul>
+	{{ range .Site.Data.locations }}
+	{{ with .url }}
+	<li><a href="{{.}}" rel="external">{{ . }}</a></li>
+	{{ end }}
+	{{ end }}
 </ul>
 {{ end }}
