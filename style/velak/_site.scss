@@ -1,6 +1,6 @@
-@use 'breakpoint';
-@use 'print';
-@use 'typography';
+@use "breakpoint";
+@use "print";
+@use "typography";
 
 html {
 	width: 100%;
@@ -44,24 +44,23 @@ body {
 		--site-padding: 20vw;
 	}
 
-
 	//>* {
 	//margin: 0 auto;
 	//}
 
-	>header,
-	>footer {
+	> header,
+	> footer {
 		z-index: 1000;
 	}
 
-	>header,
-	>main,
-	>footer {
+	> header,
+	> main,
+	> footer {
 		padding-left: var(--site-padding);
 		padding-right: var(--site-padding);
 	}
 
-	>header {
+	> header {
 		display: flex;
 		column-gap: 1.5rem;
 		padding-top: 4rem;
@@ -82,7 +81,7 @@ body {
 			}
 		}
 
-		>h1 {
+		> h1 {
 			display: inline-block;
 			line-height: 1em;
 			margin: 0.5rem 0;
@@ -131,9 +130,9 @@ body {
 			// 	font-size: 8rem;
 			// 	background: red;
 			// }
-			>h1 * {
-				// font-size: 8rem;
-			}
+			// > h1 * {
+			// font-size: 8rem;
+			// }
 		}
 
 		@media screen and (max-width: breakpoint.$tablet) {
@@ -147,7 +146,7 @@ body {
 			//flex-wrap: wrap;
 		}
 
-		>nav {
+		> nav {
 			margin: 0;
 			padding-bottom: 1rem;
 			width: 100%;
@@ -156,7 +155,7 @@ body {
 				text-decoration: none;
 			}
 
-			>menu {
+			> menu {
 				display: flex;
 				flex-wrap: wrap;
 				width: 100%;
@@ -164,7 +163,7 @@ body {
 				column-gap: 0.75em;
 				list-style: none;
 
-				>li {
+				> li {
 					padding: 0.5rem 0;
 
 					&.active {
@@ -189,13 +188,13 @@ body {
 		}
 	}
 
-	>main {
+	> main {
 		height: 100%;
 		max-width: 100vw;
 		z-index: 10;
 	}
 
-	>footer {
+	> footer {
 		display: flex;
 		flex-wrap: wrap;
 		// flex-wrap: wrap;
@@ -206,7 +205,7 @@ body {
 		// font-size: 75%;
 		user-select: none;
 
-		>* {
+		> * {
 			// padding:2rem 0;
 			white-space: nowrap;
 			font-size: 75%;
@@ -225,7 +224,6 @@ body {
 		}
 
 		@media screen and (max-width: breakpoint.$tablet) {
-
 			// padding: 0 var(--site-padding);
 			//gap: 2rem 2rem;
 			// gap: 4rem 2rem;
@@ -269,7 +267,7 @@ body {
 		*/
 	}
 
-	>aside {
+	> aside {
 		margin: 0 calc(var(--spacing) * 1rem);
 	}
 }
@@ -293,7 +291,6 @@ body {
 	border: 0;
 }
 
-
 .warning {
 	color: magenta;
 }
@@ -306,7 +303,7 @@ body {
 dl.tags {
 	display: flex;
 
-	>dd.tag {
+	> dd.tag {
 		margin: 0;
 		font-family: var(--font-mono);
 		font-size: var(--text-sm);
@@ -319,7 +316,7 @@ dl.tags {
 		// }
 		// margin-right: 0.5ch;
 		//}
-		>a {
+		> a {
 			text-decoration: none;
 		}
 	}
@@ -341,32 +338,27 @@ dl.tags {
 // }
 
 nav.prev_next {
-	// display: block;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 1.5em;
 	width: 100%;
 	user-select: none;
-	white-space: nowrap;
-	overflow: hidden;
-
+	overflow-wrap: break-word;
+	word-break: break-word;
 	@media screen and (max-width: breakpoint.$tablet) {
 		// font-size: 1.25rem;
 	}
-
 	@media screen and (min-width: breakpoint.$tablet) {
 		justify-content: flex-start;
 	}
-
-	>a {
-		text-overflow: ellipsis;
+	> a {
 		font-family: var(--font-mono);
 		text-transform: uppercase;
 		text-decoration: none;
+		white-space: normal;
 	}
-
 	i.ic-arrow_upward {
 		cursor: pointer;
 	}
-
 }
