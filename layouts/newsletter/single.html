@@ -18,12 +18,12 @@
 			<fieldset>
 				<legend>Subscribe</legend>
 				<div>
-					<label for="email"><span>Email</span></label>
-					<input type="email" name="email" placeholder="Email …" autofocus required>
+					<label for="sub-email"><span>Email</span></label>
+					<input type="email" id="sub-email" name="email" placeholder="Email …" autocomplete="username" required>
 				</div>
 				<div>
 					<label for="fullname"><span>Name</span></label>
-					<input type="text" name="fullname" pattern="[A-Za-z0-9_ ]{2,}" autocomplete="name"
+					<input type="text" id="fullname" name="fullname" minlength="3" autocomplete="name"
 						placeholder="Name …" required>
 				</div>
 			</fieldset>
@@ -31,12 +31,12 @@
 				<legend>Password</legend>
 				<div>
 					<label for="pw"><span>Password</span></label>
-					<input type="password" name="pw" pattern="[A-Za-z0-9_]{5,}" autocomplete="new-password"
+					<input type="password" id="pw" name="pw" minlength="5" autocomplete="new-password"
 						placeholder="Password …" required>
 				</div>
 				<div>
 					<label for="pw-conf"><span>Confirm</span></label>
-					<input type="password" name="pw-conf" pattern="[A-Za-z0-9_]{5,}" autocomplete="new-password"
+					<input type="password" id="pw-conf" name="pw-conf" minlength="5" autocomplete="new-password"
 						placeholder="Confirm …" required>
 				</div>
 			</fieldset>
@@ -50,8 +50,8 @@
 			<fieldset>
 				<legend>Unsubscribe</legend>
 				<div>
-					<label for="email"><span>Email</span></label>
-					<input name="email" type="email" autocomplete="username" placeholder="Email …" required>
+					<label for="unsub-email"><span>Email</span></label>
+					<input id="unsub-email" name="email" type="email" autocomplete="username" placeholder="Email …" required>
 				</div>
 				<div>
 					<label for="password"><span>Password</span></label>
