@@ -7,7 +7,6 @@ misc/
 node_modules/
 public/
 resources/
-scripts/
 server/
 tmp/
 uploads/

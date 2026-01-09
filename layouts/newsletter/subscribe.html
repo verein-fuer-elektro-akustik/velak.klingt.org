@@ -6,14 +6,6 @@
 	</section>
 	<section>
 		<h3>Subscribe</h3>
-		<!--
-        <div class="content">
-            <p>
-                subscribe to the newsletter by filling out the following form.<br>
-                you will be sent email requesting confirmation, to prevent others from gratuitously subscribing you.
-            </p>
-        </div>
-        -->
 		<form method="POST" action="{{ $mailman }}/alternativesubscribe/velak-announce">
 			<fieldset>
 				<legend>Subscribe</legend>
@@ -42,29 +34,6 @@
 			</fieldset>
 			<input name="language" type="hidden" value="en">
 			<input type="submit" name="email-button" value="subscribe">
-		</form>
-	</section>
-	<section>
-		<h3>Unsubscribe</h3>
-		<form method="POST" action="{{ $mailman }}/options/velak-announce">
-			<fieldset>
-				<legend>Unsubscribe</legend>
-				<div>
-					<label for="unsub-email"><span>Email</span></label>
-					<input id="unsub-email" name="email" type="email" autocomplete="username" placeholder="Email …" required>
-				</div>
-				<div>
-					<label for="password"><span>Password</span></label>
-					<input name="password" type="password" autocomplete="current-password" placeholder="Password …"
-						required>
-				</div>
-			</fieldset>
-			<input name="language" type="hidden" value="en">
-			<fieldset>
-				<input type="submit" name="login-unsub" value="unsubscribe" title="Unsubscribe from newsletter">
-				<input type="submit" name="login-remind" value="remind"
-					title="Send password reminder to your email address">
-			</fieldset>
 		</form>
 	</section>
 </article>
