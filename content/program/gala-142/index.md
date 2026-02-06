@@ -7,7 +7,7 @@ artists: [
   Verdachtsfälle,
 ]
 
-location: "einbaumoebel"
+location: "einbaumöbel"
 tags: [gala]
 
 ---
