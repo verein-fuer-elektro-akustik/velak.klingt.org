@@ -12,6 +12,7 @@ collabs: [
 ]
 location: "symposion_lindabrunn"
 tags: [gala]
+photos: Sophie Dvořák
 ---
 Open Doors 17:00  
 Program start 18:00
