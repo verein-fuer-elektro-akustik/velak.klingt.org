@@ -28,8 +28,8 @@
 	"license": "ISC",
 	"homepage": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/blob/master/README.md",
 	"devDependencies": {
-		"html-validate": "^8.0.5",
-		"sass": "^1.82.0",
+		"html-validate": "^10.11.1",
+		"sass": "^1.98.0",
 		"hugo-bin": "^0.126.0"
 	},
 	"hugo-bin": {
