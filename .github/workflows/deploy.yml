@@ -13,11 +13,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Cache npm dependencies
       - name: Cache npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ~/.npm
@@ -27,26 +27,26 @@ jobs:
 
       # Cache hugo resources
       - name: Cache Hugo resources
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: resources
           key: hugo-resources-${{ github.ref }}-${{ hashFiles('**/*.scss', '**/*.css', '**/*.js', 'config.*') }}
           restore-keys: |
             hugo-resources-
-      
+
       - name: Setup npm
         run: npm ci
-    
+
       - name: Build style
         run: npm run prod:style
-     
+
       - name: Build site
         run: npm run prod:hugo -- --baseURL ${{ secrets.BASE_URL }}
 
       # Cache built site (optional, helps skip deploy if unchanged)
       - name: Cache built site
         id: site-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: public
           key: site-${{ runner.os }}-${{ hashFiles('package.json', 'package-lock.json', 'archetypes/**', 'assets/**', 'config/**', 'content/**', 'data/**', 'layouts/**', 'static/**', 'style/**') }}
