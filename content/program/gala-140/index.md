@@ -14,3 +14,5 @@ tags: [gala]
 ---
 Open doors 19:30
 Start 20:30
+
+photo: Nemanja Popadic
