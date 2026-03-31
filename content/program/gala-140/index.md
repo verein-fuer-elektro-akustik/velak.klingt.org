@@ -11,7 +11,7 @@ collabs: [
   ]
 location: "gekko"
 tags: [gala]
-photos: Nemanja Popadic
+photos: Klemens Kohlweis
 ---
 Open doors 19:30
 Start 20:30
