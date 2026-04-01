@@ -8,7 +8,7 @@ klemens kohlweis,
 lissie rettenwander,
 ]
 
-location: "Medienwerkstatt"
+location: "medienwerkstatt"
 tags: [gala]
 photos:
 
