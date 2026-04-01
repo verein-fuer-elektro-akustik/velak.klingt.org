@@ -2,10 +2,10 @@
 title: "gala#143"
 date: 2026-04-18
 artists: [
-anti newton
-dawid liftinger
-klemens kohlweis
-lissie rettenwander
+anti newton,
+dawid liftinger,
+klemens kohlweis,
+lissie rettenwander,
 ]
 
 location: "Medienwerkstatt"
