@@ -9,6 +9,7 @@ artists: [
 collabs: []
 location: "chateau_rouge"
 tags: [gala]
+photos: Nemanja Popadic
 ---
 
 Open doors 19:00  
