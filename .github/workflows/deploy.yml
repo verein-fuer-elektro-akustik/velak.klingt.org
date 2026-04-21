@@ -43,16 +43,7 @@ jobs:
       - name: Build site
         run: npm run prod:hugo -- --baseURL ${{ secrets.BASE_URL }}
 
-      # Cache built site (optional, helps skip deploy if unchanged)
-      - name: Cache built site
-        id: site-cache
-        uses: actions/cache@v5
-        with:
-          path: public
-          key: site-${{ runner.os }}-${{ hashFiles('package.json', 'package-lock.json', 'archetypes/**', 'assets/**', 'config/**', 'content/**', 'data/**', 'layouts/**', 'static/**', 'style/**') }}
-
       - name: Deploy to server
-        if: steps.site-cache.outputs.cache-hit != 'true'
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
