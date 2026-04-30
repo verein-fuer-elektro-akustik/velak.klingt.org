@@ -2,7 +2,7 @@
 title: "gala#144"
 date: 2026-05-18
 artists: [
- 
+ TBC
 ]
 collabs: [
 
