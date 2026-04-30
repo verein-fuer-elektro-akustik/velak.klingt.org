@@ -10,7 +10,7 @@ lissie rettenwander,
 
 location: "medienwerkstatt"
 tags: [gala]
-photos:
+photos: Danny Nedkova
 
 ---
 
