@@ -77,25 +77,25 @@ And another footnote. [^2]
 
 `{{< artist "a_d_-martinz" >}}` -> {{< artist "a_d_-martinz" >}}
 
-### Audio
-
-`{{< audio src="/audio/test.mp3" >}}`
-{{< audio src="/audio/test.mp3" >}}
-
-### Email
-
-`{{< email email="office@velak.klingt.org" text="Contact Us" subject="Inquiry" >}}`
-{{< email email="<office@velak.klingt.org>" text="Contact Us" subject="Inquiry" >}}
-
-### Image
-
-`{{< img src="feature.png" alt="Feature Image" >}}`
-{{< img src="feature.png" alt="Feature Image" >}}
-
-### Video
-
-`{{< video src="/video/test.mp4" >}}`
-{{< video src="/video/test.mp4" >}}
+<!-- ### Audio -->
+<!---->
+<!-- `{{< audio src="/audio/test.mp3" >}}` -->
+<!-- {{< audio src="/audio/test.mp3" >}} -->
+<!---->
+<!-- ### Email -->
+<!---->
+<!-- `{{< email email="office@velak.klingt.org" text="Contact Us" subject="Inquiry" >}}` -->
+<!-- {{< email email="<office@velak.klingt.org>" text="Contact Us" subject="Inquiry" >}} -->
+<!---->
+<!-- ### Image -->
+<!---->
+<!-- `{{< img src="feature.png" alt="Feature Image" >}}` -->
+<!-- {{< img src="feature.png" alt="Feature Image" >}} -->
+<!---->
+<!-- ### Video -->
+<!---->
+<!-- `{{< video src="/video/test.mp4" >}}` -->
+<!-- {{< video src="/video/test.mp4" >}} -->
 
 ### Year
 
