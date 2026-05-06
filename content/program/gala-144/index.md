@@ -4,11 +4,10 @@ date: 2026-05-18
 artists: [
 Isabelle Duthoit,
 Daniel Lercher,
-Roy F Culbertson III,
+Roy Culbertson III,
 Magdalena Forster,
 ]
 collabs: [
-
 ]
 location: "FOX"
 tags: [gala]
