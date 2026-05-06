@@ -9,7 +9,7 @@ Magdalena Forster,
 ]
 collabs: [
 ]
-location: "FOX"
+location: "fox"
 tags: [gala]
 photos: Danny Nedkova
 ---
