@@ -7,7 +7,7 @@ artists: [
   victor badillo,
 ]
 
-location: "Kollektiv Kaorle"
+location: "kollektiv kaorle"
 tags: [gala]
 
 ---
