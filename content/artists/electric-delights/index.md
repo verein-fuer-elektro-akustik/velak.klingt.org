@@ -1,4 +1,4 @@
 ---
 title: "electric delights"
-links: []
+links: [https://billyroisz.klingt.org/, https://soundcloud.com/karo-preuschlisa, https://isabella.klingt.org/]
 ---
