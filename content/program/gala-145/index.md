@@ -4,7 +4,7 @@ date: 2026-07-21
 artists: [
   electric delights,
   morast,
-  victor badillo,
+  víctor badillo,
 ]
 
 location: "Kaorle Kollektiv"
