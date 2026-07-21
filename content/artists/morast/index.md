@@ -1,4 +1,4 @@
 ---
 title: "morast"
-links: [https://mmmorast.bandcamp.com/]
+links: [https://www.morast.at/, https://mmmorast.bandcamp.com/]
 ---
