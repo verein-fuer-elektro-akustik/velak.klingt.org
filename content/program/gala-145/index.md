@@ -9,7 +9,7 @@ artists: [
 
 location: "kollektiv kaorle"
 tags: [gala]
-
+photos: Bon Alog
 ---
 
 Open doors 19:00
