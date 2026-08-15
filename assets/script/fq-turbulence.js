@@ -1,43 +1,48 @@
-const svg = document.getElementsByTagNameNS(
-	"http://www.w3.org/2000/svg",
-	"svg"
-)[0];
-const turb = document.getElementById("turbulence");
-let a, b;
-function randomize() {
-	a = 0.005 + Math.random() * 0.04;
-	b = 0.004 + Math.random() * 0.005;
-	turb.setAttribute("baseFrequency", a + " " + b);
-	//turb.setAttribute("numOctaves",1+Math.round(Math.random()*2));
-	//console.log(a,b);
-	// HACK force chrome redraw
-	// root.remove();
-	// document.querySelector("main").append(root);
-}
-// let b = 0.008;
-let va = 0.000001 + Math.random() * 0.000005;
-let vb = 0.000001 + Math.random() * 0.000005;
-// // let vb = 0.00001;
-function onFrame() {
-	window.requestAnimationFrame(onFrame);
-	// if(va>0) {
-	//     if(a>0.01) va = -0.00001;
-	// } else {
-	//     if(a<0.00001) va = 0.00001;
-	// }
-	// a += va;
-	// a += 0.00001;
-	if (vb > 0) {
-		if (b > 0.007) vb = -0.000001;
-	} else {
-		if (b < 0.001) vb = 0.000001;
+(() => {
+	const turb = document.getElementById("turbulence");
+	if (!turb) return;
+
+	// Check for reduced motion preference
+	const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+	if (prefersReducedMotion) {
+		turb.setAttribute("baseFrequency", "0.02 0.005");
+		return;
 	}
-	b += vb;
-	//b += 0.00001;
-	turb.setAttribute("baseFrequency", a + " " + b);
-	//turb.setAttribute("numOctaves",octaves);
-}
-window.requestAnimationFrame(onFrame);
-//document.querySelector("svg").onclick = randomize;
-//window.setInterval(randomize, 2000);
-randomize();
+
+	let phaseX = Math.random() * Math.PI * 2;
+	let phaseY = Math.random() * Math.PI * 2;
+	let targetPhaseX = phaseX;
+	let targetPhaseY = phaseY;
+
+	function onFrame(timestamp) {
+		if (document.hidden) {
+			window.requestAnimationFrame(onFrame);
+			return;
+		}
+
+		// Smoothly ease phase shifts if randomized by interaction
+		phaseX += (targetPhaseX - phaseX) * 0.05;
+		phaseY += (targetPhaseY - phaseY) * 0.05;
+
+		const t = timestamp * 0.00035;
+
+		// Harmonic wave superposition for smooth, endless, non-repeating acoustic ripples
+		const freqX = 0.02 + 0.006 * Math.sin(t * 0.7 + phaseX) + 0.002 * Math.cos(t * 1.3);
+		const freqY = 0.0045 + 0.0025 * Math.sin(t * 1.1 + phaseY) + 0.001 * Math.cos(t * 0.5);
+
+		turb.setAttribute("baseFrequency", `${freqX.toFixed(6)} ${freqY.toFixed(6)}`);
+
+		window.requestAnimationFrame(onFrame);
+	}
+
+	const svg = turb.ownerSVGElement || document.querySelector("svg[name='fq']");
+	if (svg) {
+		svg.style.cursor = "pointer";
+		svg.addEventListener("click", () => {
+			targetPhaseX += (Math.random() - 0.5) * Math.PI * 2;
+			targetPhaseY += (Math.random() - 0.5) * Math.PI * 2;
+		});
+	}
+
+	window.requestAnimationFrame(onFrame);
+})();
