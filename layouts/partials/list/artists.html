@@ -5,9 +5,9 @@
 	{{ $id := lower (replace (trim . " ") " " "-" ) }}
 	{{ $path := print "/artists/" $id }}
 	{{ $page := $.Site.GetPage $path }}
-	{{/* {{ if eq $page nil }} */}}
-	{{/* {{ errorf "ARTIST PAGE NOT FOUND %s" $path }} */}}
-	{{/* {{ end }} */}}
+	 {{ if eq $page nil }} 
+	 {{ errorf "ARTIST PAGE NOT FOUND %s" $path }} 
+	 {{ end }} 
 	<li>
 		{{ with $page }}
 		<a class="artist" href="{{ .RelPermalink }}">{{- .Title -}}</a>

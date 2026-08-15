@@ -1,12 +1,8 @@
-{{ $url := print .Site.BaseURL "/program/" .File.ContentBaseName }}
+{{ $url := .Permalink }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-	{{/* {{ if .Params.online }} */}}
-	{{/*    "@type": "BroadcastEvent", */}}
-	{{/* {{ else }} */}}
     "@type": "MusicEvent",
-	{{/* {{ end }} */}}
     "name": "{{- .Title -}}",
     "identifier": "{{- .Title -}}",
     "startDate": "{{ .Date.Format "2006-01-02" }}",
@@ -42,9 +38,6 @@
 	{{ end }}
 
     {{ with .Params.tags }}"keywords": {{.}},{{ end }}
-   {{/*  {{ $performer := .Params.artists }} */}}
-   {{/*  {{ with .Params.collabs }}{{ $performer = union $performer . }}{{ end }} */}}
-   {{/* "performer": {{ $performer }}, */}}
    "performer": [
 	{{ with .Params.artists }}{{ range . }}
 	{
@@ -59,7 +52,7 @@
    ],
    "image": [
         {{ with .Resources.GetMatch "cover.jpg" }}
-        "{{print $url "/" . }}"
+        "{{ .Permalink }}"
         {{ end }}
 	]
 }

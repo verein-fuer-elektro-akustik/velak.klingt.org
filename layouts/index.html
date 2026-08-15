@@ -1,5 +1,5 @@
 {{ define "prerender" }}
-<link rel="prerender" href="{{ .Site.BaseURL }}/program/">
+<link rel="prerender" href="{{ "program/" | relURL }}">
 {{ end }}
 
 {{ define "schema" }}
@@ -36,8 +36,8 @@
 			{{ else }}
 			<p>
 			<div>No upcoming events.</div>
-			<div><a href="{{.Site.BaseURL}}newsletter/subscribe">Subscribe to the newsletter</a> to get updates or <a
-					href="{{.Site.BaseURL}}program">browse past events</a>.</div>
+			<div><a href="{{ "newsletter/subscribe" | relURL }}">Subscribe to the newsletter</a> to get updates or <a
+					href="{{ "program" | relURL }}">browse past events</a>.</div>
 			</p>
 			{{ end}}
 			{{ end }}
