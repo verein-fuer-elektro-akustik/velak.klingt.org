@@ -23,61 +23,39 @@ ul.data-list {
 		text-decoration: none;
 	}
 
-	>li {
+	> li {
 		display: flex;
-		//align-items: center;
 		width: 100%;
 		white-space: nowrap;
 
-		>.meta {
+		> .meta {
 			display: flex;
 		}
 
-		>.title {
+		> .title {
 			order: 2;
 			white-space: nowrap;
 			font-weight: 600;
 			text-transform: lowercase;
-			//box-shadow: 1rem 0 2rem rgba(0,0,0,1);
 		}
 
-		>.date {
+		> .date {
 			order: 1;
 		}
 
-		>.artists {
-			// display: flex;
-			// flex-wrap: wrap;
+		> .artists {
 			width: 100%;
 			color: var(--f_low);
 			min-height: 100%;
 			overflow-x: hidden;
 
-			/*
-            &::before, &::after {
-                content: "";
-                position: absolute;
-                height: 1.5em;
-                width: 2rem;
-                z-index: 1000;
-            }
-            &::before {
-                background: linear-gradient(90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
-                width: 1rem;
-            }
-            &::after {
-                background: linear-gradient(-90deg, rgba(9,9,9,0.8), rgba(9,9,9,0.0));
-                width: 2vw; //rem;
-                right: 7vw;
-            }
-            */
 			&.scroll-animation {
-				>ul.artists {
+				> ul.artists {
 					animation: scroll_artists 50s infinite;
 				}
 			}
 
-			>ul.artists {
+			> ul.artists {
 				display: inline-flex;
 				margin: 0;
 				padding: 0;
@@ -85,7 +63,7 @@ ul.data-list {
 				text-transform: lowercase;
 				user-select: none;
 
-				>li {
+				> li {
 					margin: 0 0.125ch;
 
 					&::after {
@@ -98,25 +76,23 @@ ul.data-list {
 	}
 
 	@media print {
-		>li .artists {
+		> li .artists {
 			display: none;
 		}
 	}
 
-	//// --- Program ----------------------------------------------------------
+	// --- Program -------------------------------------------------------------
 	&.program {
-		>li.event {
-			>.title {
+		> li.event {
+			> .title {
 				position: relative;
 				margin: 0 0.5ch;
 				color: var(--f_high);
 				box-shadow: 0.5rem 0 1rem var(--background);
-				// background: var(--background);
-				// border-radius: 1em;
 				z-index: 1000;
 			}
 
-			>.artists {
+			> .artists {
 				order: 3;
 				color: var(--f_low);
 
@@ -129,7 +105,7 @@ ul.data-list {
 				}
 			}
 
-			>.location {
+			> .location {
 				order: 4;
 				position: relative;
 				box-shadow: -0.5rem 0 1rem var(--background);
@@ -137,83 +113,51 @@ ul.data-list {
 				@media screen and (max-width: breakpoint.$tablet) {
 					display: none;
 				}
-
-				&:hover {
-					>[data-id] {
-						// display: block;
-						//transform: translateX(0);
-						//width: unset;
-						//display: block;
-					}
-				}
-
-				//opacity: 0;
-				//&::after {
-				//background: linear-gradient(-90deg, rgba(255,9,9,0.8), rgba(9,9,9,0.0));
-				// width: 2rem;
-				//}
 			}
 
 			&.upcoming {
 				font-size: 1.5em;
 				margin: 0 0 0.25rem 0;
-				// filter: invert(100%);
-				//> .title {
-				// font-size: 150%;
-				//}
 			}
 		}
 	}
 
-	//// --- Records ----------------------------------------------------------
+	// --- Records -------------------------------------------------------------
 	&.records {
-
-		//justify-content: space-around;
-		>li {
-			>.title {
+		> li {
+			> .title {
 				position: relative;
-				// margin: 0 0.5ch;
 				color: var(--f_high);
 				box-shadow: 0.5rem 0 1rem var(--background);
 				z-index: 1000;
+				order: 3;
 			}
 
-			//> .format {
-			//order: 1;
-			//}
-			>img {
+			> img {
 				display: none;
 				order: 2;
 				max-height: 2rem;
 				height: 100%;
 
-				// border: 1px solid var(--f_low);
-				//filter: brightness(26%) contrast(90%) grayscale(100%) invert(5%);
-				// transition: filter 0.2s;
 				&:hover {
 					filter: none;
 				}
 			}
 
-			>.title {
-				order: 3;
-			}
-
-			>.format {
+			> .format {
 				margin: 0 0.5ch;
 				order: 2;
 			}
 
-			>.date {
+			> .date {
 				order: 1;
-				//order: 100;
 			}
 
-			>.artists {
+			> .artists {
 				order: 3;
 			}
 
-			>.label {
+			> .label {
 				order: 4;
 				display: flex;
 				position: relative;
@@ -233,25 +177,23 @@ ul.artists {
 		margin: 0;
 	}
 
-	>li {
+	> li {
 		display: flex;
 
-		>span.group {
+		> span.group {
 			margin-right: 0.5ch;
 		}
 
-		>ul.collab {
+		> ul.collab {
 			display: flex;
 
-			>li {
+			> li {
 				display: flex;
 				white-space: nowrap;
 
-				&:not(:last-child) {
-					&::after {
-						content: "+";
-						margin: 0 0.5ch;
-					}
+				&:not(:last-child)::after {
+					content: "+";
+					margin: 0 0.5ch;
 				}
 			}
 		}

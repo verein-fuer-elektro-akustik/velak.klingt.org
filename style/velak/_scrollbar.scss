@@ -1,7 +1,3 @@
-@use 'sass:math';
-
-$thick: 1px;
-
 *::-webkit-scrollbar {
 	border: none;
 
@@ -19,17 +15,11 @@ $thick: 1px;
 	display: none !important;
 }
 
-// ::-webkit-scrollbar-track {
-//     //background: var(--bg);
-// }
 ::-webkit-scrollbar-thumb {
-	//border-top: 4px solid var(--fg);
 	background: var(--f_med);
-	//border-left: 1px solid var(--bg);
-	// &:hover {
-	//     // background: var(--acc);
-	// }
-	// &:active {
-	//     // background: var(--acc);
-	// }
+}
+
+html {
+	scrollbar-color: var(--f_med) transparent;
+	scrollbar-width: thin;
 }

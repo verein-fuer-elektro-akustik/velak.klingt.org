@@ -28,16 +28,16 @@
         <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>
 
 
-		<link rel="preload" href="{{ .Site.BaseURL }}font/icons.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="{{ .Site.BaseURL }}font/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="{{ .Site.BaseURL }}font/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="{{ .Site.BaseURL }}font/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="{{ .Site.BaseURL }}font/RobotoMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ "font/icons.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ "font/Inter-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ "font/Inter-Medium.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ "font/Inter-SemiBold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ "font/RobotoMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 
         {{ block "prerender" . }}{{ end }}
 
-        <link rel="stylesheet" href="{{ $root }}style.css">
-        <link rel="manifest" href="{{ $root }}manifest.json">
+        <link rel="stylesheet" href="{{ "style.css" | relURL }}">
+        <link rel="manifest" href="{{ "manifest.json" | relURL }}">
         {{ partial "site/favicons" . }}
 
         {{ with .PrevInSection }}<link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.RelPermalink}}">{{ end }}

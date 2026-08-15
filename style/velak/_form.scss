@@ -1,0 +1,71 @@
+@use 'print';
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form {
+	padding: 1rem 0;
+
+	label {
+		display: none;
+		font-size: 75%;
+	}
+
+	legend {
+		display: none;
+	}
+
+	@include print.not;
+}
+
+label {
+	display: block;
+	text-transform: lowercase;
+}
+
+input,
+select {
+	outline: none;
+	margin: 0 0.5rem 0.5rem 0;
+	padding: 1rem 1.5rem;
+	background: var(--b_med);
+	color: var(--f_med);
+
+	&:focus {
+		background: var(--f_med);
+		color: var(--b_low);
+	}
+
+	&::placeholder {
+		text-transform: lowercase;
+		color: var(--f_med);
+	}
+
+	&:valid {
+		border: 1px solid var(--fg);
+	}
+
+	&[type="submit"] {
+		cursor: pointer;
+
+		&:hover {
+			background: var(--f_high);
+			color: var(--b_low);
+		}
+	}
+}
+
+button {
+	padding: 0.5rem 0.5rem;
+	background: var(--fg);
+	color: var(--bg);
+	cursor: pointer;
+
+	&.disabled {
+		cursor: default;
+	}
+}
