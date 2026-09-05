@@ -6,6 +6,7 @@
 	<h1 class="title">{{- .Title -}}</h1>
 
 	<div class="details">
+		{{ .Scratch.Set "date_format" "Monday 2 January 2006" }}
 		{{ partial "meta/date" . }}
 		{{ .Scratch.Set "show_address" true }}
 		{{ partial "meta/location" . }}
