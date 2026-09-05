@@ -8,4 +8,17 @@ main[data-section="artists"] {
 			}
 		}
 	}
+
+	.link {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.link svg.ic-external-link {
+		width: 0.85em;
+		height: 0.85em;
+		margin-right: 0.75ch;
+		fill: currentColor;
+		flex-shrink: 0;
+	}
 }
