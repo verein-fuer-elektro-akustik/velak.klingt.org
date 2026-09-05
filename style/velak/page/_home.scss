@@ -1,5 +1,3 @@
-@use '../typography';
-
 article.home {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -10,10 +8,6 @@ article.home {
 
 	.events {
 		overflow-x: hidden;
-	}
-
-	.upcoming-label {
-		@include typography.meta(75%);
 	}
 
 	ol.events {
