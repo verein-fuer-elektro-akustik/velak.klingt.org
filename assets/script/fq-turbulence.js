@@ -9,10 +9,12 @@
 		return;
 	}
 
-	let phaseX = Math.random() * Math.PI * 2;
-	let phaseY = Math.random() * Math.PI * 2;
-	let targetPhaseX = phaseX;
-	let targetPhaseY = phaseY;
+	const FREQ_MIN = 0.001;
+	const FREQ_MAX = 0.008;
+	const FREQ_RANGE = FREQ_MAX - FREQ_MIN;
+	const SPEED = 0.000012; // constant per-frame increment, never changes
+
+	let freqY = FREQ_MIN + Math.random() * FREQ_RANGE;
 
 	function onFrame(timestamp) {
 		if (document.hidden) {
@@ -20,28 +22,29 @@
 			return;
 		}
 
-		// Smoothly ease phase shifts if randomized by interaction
-		phaseX += (targetPhaseX - phaseX) * 0.05;
-		phaseY += (targetPhaseY - phaseY) * 0.05;
+		// Constant speed, single direction, wraps at the top back to the
+		// bottom - endless with no direction or speed change.
+		freqY += SPEED;
+		if (freqY > FREQ_MAX) freqY -= FREQ_RANGE;
 
-		const t = timestamp * 0.00035;
-
-		// Harmonic wave superposition for smooth, endless, non-repeating acoustic ripples
-		const freqX = 0.02 + 0.006 * Math.sin(t * 0.7 + phaseX) + 0.002 * Math.cos(t * 1.3);
-		const freqY = 0.0045 + 0.0025 * Math.sin(t * 1.1 + phaseY) + 0.001 * Math.cos(t * 0.5);
-
-		turb.setAttribute("baseFrequency", `${freqX.toFixed(6)} ${freqY.toFixed(6)}`);
+		turb.setAttribute("baseFrequency", `0.02 ${freqY.toFixed(6)}`);
 
 		window.requestAnimationFrame(onFrame);
 	}
 
 	const svg = turb.ownerSVGElement || document.querySelector("svg[name='fq']");
 	if (svg) {
-		svg.style.cursor = "pointer";
 		svg.addEventListener("click", () => {
-			targetPhaseX += (Math.random() - 0.5) * Math.PI * 2;
-			targetPhaseY += (Math.random() - 0.5) * Math.PI * 2;
+			freqY = FREQ_MIN + (((freqY - FREQ_MIN) + Math.random() * FREQ_RANGE) % FREQ_RANGE);
 		});
+		// svg.addEventListener("mousemove", (e) => {
+		// 	const rect = svg.getBoundingClientRect();
+		// 	const nx = (e.clientX - rect.left) / rect.width;
+		// 	freqY = FREQ_MIN + nx * FREQ_RANGE;
+		// });
+		// svg.addEventListener("wheel", (e) => {
+		// 	freqY = FREQ_MIN + (((freqY - FREQ_MIN) + e.deltaY * 0.00002) % FREQ_RANGE + FREQ_RANGE) % FREQ_RANGE;
+		// });
 	}
 
 	window.requestAnimationFrame(onFrame);
