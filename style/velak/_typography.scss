@@ -99,7 +99,7 @@ address {
 blockquote {
 	padding-left: 1em;
 	font-style: italic;
-	border-left: 0.25rem solid var(--fg);
+	border-left: 0.25rem solid var(--f_med);
 }
 
 code,
@@ -249,16 +249,16 @@ table {
 		&,
 		tr,
 		td {
-			border: 1px solid var(--fg);
+			border: 1px solid var(--f_med);
 			padding: 2px;
 		}
 
 		th {
 			font-weight: bold;
 			text-transform: uppercase;
-			background: var(--fg);
-			color: var(--bg);
-			border: 1px solid var(--bg);
+			background: var(--f_med);
+			color: var(--background);
+			border: 1px solid var(--background);
 		}
 
 		td {
