@@ -25,7 +25,6 @@
 			{{ if gt (len $events) 0}}
 			{{ $events = $events.Reverse }}
 
-			<div class="upcoming-label">upcoming events</div>
 			<ol class="events data-list program">
 				{{ range $events }}
 				{{ .Render "li" }}

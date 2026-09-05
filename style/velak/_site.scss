@@ -181,6 +181,8 @@ body {
 		}
 
 		@media screen and (max-width: breakpoint.$tablet) {
+			justify-content: flex-start;
+
 			.footer-right {
 				padding: 2rem 0;
 			}
@@ -252,16 +254,12 @@ dl.tags {
 nav.prev_next {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 1.5em;
 	width: 100%;
 	user-select: none;
 	overflow-wrap: break-word;
 	word-break: break-word;
-
-	@media screen and (min-width: breakpoint.$tablet) {
-		justify-content: flex-start;
-	}
 
 	> a {
 		font-family: var(--font-mono);
