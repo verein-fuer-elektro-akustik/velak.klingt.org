@@ -40,7 +40,7 @@
 	</li>
 	{{ end }}
 	{{ end }}
-	{{ else }}
+	{{ else if .Scratch.Get "show_artists_placeholder" }}
 	{{ range seq 12 }}
 	<li class="empty">/</li>
 	{{ end }}

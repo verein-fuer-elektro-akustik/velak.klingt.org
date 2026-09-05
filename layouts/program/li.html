@@ -8,5 +8,6 @@
 	{{ end }}
 	{{ partial "meta/date" . }}
 	{{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
+	{{ .Scratch.Set "show_artists_placeholder" true }}
 	<div class="artists">{{ partial "list/artists" . }}</div>
 </li>

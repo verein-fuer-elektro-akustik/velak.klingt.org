@@ -14,6 +14,7 @@
         {{ partial "meta/date" . }}
         {{ partial "meta/record" . }}
         {{ partial "meta/label" . }}
+        {{ .Scratch.Set "show_artists_placeholder" true }}
         <div class="artists">{{ partial "list/artists" . }}</div>
     </li>
     {{ end }}

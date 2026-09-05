@@ -10,6 +10,7 @@
 		{{ partial "meta/label" . }}
 		{{ partial "meta/tags" .Params.tags }}
 	</div>
+	{{ .Scratch.Set "show_artists_placeholder" false }}
 	<div class="artists">{{ partial "list/artists" . }}</div>
 	<div class="content">{{- .Content -}}</div>
 	{{ partial "gallery" . }}
