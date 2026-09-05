@@ -1,8 +1,7 @@
 <ul class="artists">
 	{{ with .Params.artists }}
 	{{ range . }}
-	{{/* {{ $id := lower (replace (replace . " " "-" ) "." "-") }} */}}
-	{{ $id := lower (replace (trim . " ") " " "-" ) }}
+	{{ $id := lower (replace (replace (trim . " ") "." "") " " "-") }}
 	{{ $path := print "/artists/" $id }}
 	{{ $page := $.Site.GetPage $path }}
 	 {{ if eq $page nil }} 
@@ -25,12 +24,11 @@
 		<ul class="collab">
 			{{ range $artists }}
 			{{ $artist := trim . " " }}
-			{{ $id := lower (replace $artist " " "-") }}
+			{{ $id := lower (replace (replace $artist "." "") " " "-") }}
 			{{ $path := print "/artists/" $id }}
 			{{ $page := $.Site.GetPage $path }}
 			<li>
 				{{ with $page }}
-				{{/*<a class="artist" href="{{ .RelPermalink }}">{{- $artist -}}</a>*/}}
 				<a class="artist" href="{{ .RelPermalink }}">{{- $page.Title -}}</a>
 				{{ else }}
 				<a class="artist" href="{{ $path }}">{{- $artist -}}</a>

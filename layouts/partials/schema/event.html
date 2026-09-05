@@ -1,26 +1,25 @@
 {{ $url := .Permalink }}
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "MusicEvent",
-    "name": "{{- .Title -}}",
-    "identifier": "{{- .Title -}}",
-    "startDate": "{{ .Date.Format "2006-01-02" }}",
-    "endDate": "{{ .Date.Format "2006-01-02" }}",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+	"@context": "https://schema.org",
+	"@type": "MusicEvent",
+	"name": "{{- .Title -}}",
+	"identifier": "{{- .Title -}}",
+	"startDate": "{{ .Date.Format "2006-01-02" }}",
+	"endDate": "{{ .Date.Format "2006-01-02" }}",
+	"eventStatus": "https://schema.org/EventScheduled",
+	"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
 	"description": "Velak event",
-    "organizer": {
-        "@type": "Organization",
-        "name": "velak",
-        "url": "{{ .Site.Params.contact.web }}"
-    },
-    "url": "{{ $url }}",
+	"organizer": {
+		"@type": "Organization",
+		"name": "velak",
+		"url": "{{ .Site.Params.contact.web }}"
+	},
+	"url": "{{ $url }}",
 
-
-    {{ with .Params.location }}
-    "location": {
-        "@type": "Place",
+	{{ with .Params.location }}
+	"location": {
+		"@type": "Place",
 		{{ with index $.Site.Data.locations . }}
 		"name": "{{- .name -}}",
 		{{ with .address }}
@@ -34,11 +33,11 @@
 		"name": "{{- . -}}",
 		"address": "unknown"
 		{{ end }}
-    },
+	},
 	{{ end }}
 
-    {{ with .Params.tags }}"keywords": {{.}},{{ end }}
-   "performer": [
+	{{ with .Params.tags }}"keywords": {{.}},{{ end }}
+	"performer": [
 	{{ with .Params.artists }}{{ range . }}
 	{
 		"@type": "Person",
@@ -49,11 +48,11 @@
 		"@type": "MusicGroup",
 		"name": "{{ . }}"
 	},{{ end }}{{ end }}
-   ],
-   "image": [
-        {{ with .Resources.GetMatch "cover.jpg" }}
-        "{{ .Permalink }}"
-        {{ end }}
+	],
+	"image": [
+		{{ with .Resources.GetMatch "cover.jpg" }}
+		"{{ .Permalink }}"
+		{{ end }}
 	]
 }
 </script>

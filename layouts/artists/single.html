@@ -54,34 +54,16 @@
 	{{ .Scratch.Set "events" $events }}
 	{{ partial "list/program" . }}
 
-	<!-- COLLABS -->
-	{{/* <div> */}}
-		{{/* {{ range $events_collab }} */}}
-		{{/* {{range .Params.collabs }} */}}
-		{{/* <div> */}}
-			{{/* {{ $artists := split . "+" }} */}}
-			{{/* {{ range $artists }} */}}
-			{{/* {{.}} */}}
-			{{/* {{ if eq . $id }}{{ else }} */}}
-			{{/* {{ end }} */}}
-			{{/* {{ end }} */}}
-			{{/* </div> */}}
-		{{/* {{ end }} */}}
-		{{/**/}}
-		{{/* {{ end }} */}}
-		{{/* </div> */}}
-
-	<!-- RECORDS -->
-	<!--
-    {{ $records := slice }}
-    {{ range where .Site.RegularPages "Section" "records" }}
-        {{ if in .Params.artists $id }}
-            {{ $records = $records | append . }}
-        {{ end }}
-    {{ end }}
-    {{ .Scratch.Set "records" $records }}
-    {{ partial "list/records" . }}
-    -->
+	{{/*
+	{{ $records := slice }}
+	{{ range where .Site.RegularPages "Section" "records" }}
+		{{ if in .Params.artists $id }}
+			{{ $records = $records | append . }}
+		{{ end }}
+	{{ end }}
+	{{ .Scratch.Set "records" $records }}
+	{{ partial "list/records" . }}
+	*/}}
 
 	{{/* {{ partial "gallery/gallery" . }} */}}
 

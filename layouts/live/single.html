@@ -9,6 +9,5 @@
 	}
 </style>
 <script src="{{ (resources.Get "script/hls.js" | resources.Minify).RelPermalink }}"></script>
-{{/* <script src="{{ (resources.Get "script/live.js" | resources.Minify).RelPermalink }}"></script> */}}
-<script src="{{ (resources.Get "script/live.js").RelPermalink }}"></script>
+<script src="{{ (resources.Get "script/live.js" | resources.Minify).RelPermalink }}"></script>
 {{ end }}

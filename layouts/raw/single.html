@@ -20,7 +20,6 @@
             <td><a href="https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/tree/master/content/program/{{ .File.ContentBaseName }}/index.md" class="ic-link"></a></td>
             <td>{{ .Date.Format "2006/01/02" }}</td>
             <td><a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a></td>
-            <!--<td>{{ with .Params.location }}{{ delimit . "," }}{{end}}</td>-->
             <td>
             {{ with .Params.location }}
                 {{ with index $.Site.Data.locations . }}
@@ -42,26 +41,6 @@
         </tr>
         {{ end }}
     </table>
-
-    <!--{{ range $event := where .Site.Pages "Section" "program" }}-->
-    <!--<div>{{ $event.Params.recordings }}</div>-->
-    <!--{{ end }}-->
-
-    <!--{{ range $event := where .Site.Pages "Type" "program" }}-->
-    <!--<table class="raw">-->
-        <!--<tbody>-->
-            <!--<tr>-->
-                <!--<th>{{ $event.Title }}</th>-->
-                <!--<td>{{ $event.Params.date}}</td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td>{{ $event.Params.tags}}</td>-->
-            <!--</tr>-->
-        <!--</tbody>-->
-    <!--</table>-->
-    <!--{{ end }}-->
-
-    <!--<div>{{ .Content }}</div>-->
 
 </article>
 {{ end }}

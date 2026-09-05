@@ -3,9 +3,6 @@
 <ol class="data-list records">
     {{ range $records }}
     <li>
-        <!-- <div class="meta">
-            <i class="ic-album"></i>
-        </div> -->
         <a href="{{ .RelPermalink }}" class="title">{{- .Title -}}</a>
         {{ if .Params.image }}
             {{ with .Resources.GetMatch .Params.image }}
