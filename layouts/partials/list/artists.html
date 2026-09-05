@@ -1,12 +1,13 @@
 <ul class="artists">
+	{{ if or .Params.artists .Params.collabs }}
 	{{ with .Params.artists }}
 	{{ range . }}
 	{{ $id := lower (replace (replace (trim . " ") "." "") " " "-") }}
 	{{ $path := print "/artists/" $id }}
 	{{ $page := $.Site.GetPage $path }}
-	 {{ if eq $page nil }} 
-	 {{ errorf "ARTIST PAGE NOT FOUND %s" $path }} 
-	 {{ end }} 
+	 {{ if eq $page nil }}
+	 {{ errorf "ARTIST PAGE NOT FOUND %s" $path }}
+	 {{ end }}
 	<li>
 		{{ with $page }}
 		<a class="artist" href="{{ .RelPermalink }}">{{- .Title -}}</a>
@@ -37,6 +38,11 @@
 			{{ end }}
 		</ul>
 	</li>
+	{{ end }}
+	{{ end }}
+	{{ else }}
+	{{ range seq 12 }}
+	<li class="empty">/</li>
 	{{ end }}
 	{{ end }}
 </ul>

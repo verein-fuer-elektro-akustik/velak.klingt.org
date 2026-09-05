@@ -25,10 +25,10 @@
 			{{ if gt (len $events) 0}}
 			{{ $events = $events.Reverse }}
 
-			<div>upcoming events</div>
-			<ol class="events">
+			<div class="upcoming-label">upcoming events</div>
+			<ol class="events data-list program">
 				{{ range $events }}
-				{{ .Render "summary" }}
+				{{ .Render "li" }}
 				{{ end }}
 			</ol>
 			<script src="{{ (resources.Get "script/artists-list.js" | resources.Minify).RelPermalink }}"
@@ -44,9 +44,8 @@
 		</div>
 
 		<div class="fq">
-			{{ partial "svg/fq" . }}
-			<script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}"
-				async></script>
+			 {{ partial "svg/fq" . }} 
+			 <script src="{{ (resources.Get "script/fq-turbulence.js" | resources.Minify).RelPermalink }}" async></script> 
 		</div>
 
 		{{/* <div class="audioplayer" data-url="23jahre.klingt.org-teamvelak.mp3"> */}}

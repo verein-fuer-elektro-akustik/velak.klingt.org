@@ -45,6 +45,7 @@ ul.data-list {
 
 		> .artists {
 			width: 100%;
+			min-width: 0;
 			color: var(--f_low);
 			min-height: 100%;
 			overflow-x: hidden;
@@ -69,6 +70,10 @@ ul.data-list {
 					&::after {
 						content: ',';
 						margin-right: 0.25ch;
+					}
+
+					&.empty::after {
+						content: none;
 					}
 				}
 			}

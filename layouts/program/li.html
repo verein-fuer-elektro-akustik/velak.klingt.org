@@ -1,6 +1,11 @@
 <li class="event" id="{{ .File.ContentBaseName }}">
 	<a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
-	{{ .Scratch.Set "date_format" "2006/01/02" }}
+	{{ $tomorrow := .Date.Add (time.ParseDuration "24h00m00s") }}
+	{{ if $tomorrow.After time.Now }}
+		{{ .Scratch.Set "date_format" "Monday 2 January 2006" }}
+	{{ else }}
+		{{ .Scratch.Set "date_format" "2006/01/02" }}
+	{{ end }}
 	{{ partial "meta/date" . }}
 	{{ .Scratch.Set "show_address" false }}{{ partial "meta/location" . }}
 	<div class="artists">{{ partial "list/artists" . }}</div>
