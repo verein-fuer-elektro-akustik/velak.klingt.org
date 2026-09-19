@@ -13,4 +13,5 @@ location: "echoraum"
 tags: [gala]
 photos:
 ---
-Open doors 19:00
+open doors 18:30
+start 19:00
