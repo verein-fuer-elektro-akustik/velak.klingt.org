@@ -6,7 +6,7 @@ artists: [
 ]
 collabs: [
     michaela grill + andi berger,
-    thomas lehn + kjell bjorgeengen,
+    thomas lehn + Kjell Bjørgeengen,
     veronika mayer + conny zenk,
     peter kutin + florian kindlinger
 ]

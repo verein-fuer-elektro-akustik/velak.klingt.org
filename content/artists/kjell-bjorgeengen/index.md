@@ -1,5 +1,5 @@
 ---
-title: "kjell bjorgeengen"
-links: [https://kjellbjorgeengen.com/]
+title: "Kjell Bjørgeengen"
+links: ["https://kjellbjorgeengen.com/"]
 ---
 
