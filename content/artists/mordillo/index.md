@@ -1,6 +1,6 @@
 ---
 title: "mordillo"
-links: ["https://martinamoro.com/, https://gabrielagordillo.net"]
+links: ["https://martinamoro.com/", "https://gabrielagordillo.net"]
 ]
 ---
 
