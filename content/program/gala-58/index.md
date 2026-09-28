@@ -4,7 +4,7 @@ date: 2011-03-22
 artists: [
     alwin weber,
     matthias erian,
-    ayonkoko,
+    ayankoko,
 ]
 collabs: [
     silvia faessler + tim blechmann + conny zenk,
