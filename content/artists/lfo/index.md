@@ -1,5 +1,5 @@
 ---
 title: "lfo"
-links: [http://www.lfo.at/]
+links: ["http://www.lfo.at/"]
 ---
 

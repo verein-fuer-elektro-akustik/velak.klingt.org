@@ -1,4 +1,4 @@
 ---
 title: "magdalena forster"
-links: [https://www.instagram.com/magphorster/]
+links: ["https://www.instagram.com/magphorster/"]
 ---
