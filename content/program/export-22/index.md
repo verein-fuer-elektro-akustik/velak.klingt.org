@@ -15,7 +15,7 @@ collabs: [
 ]
 
 location: "Italy"
-tags: [gala]
+tags: [export]
 
 ---
 
