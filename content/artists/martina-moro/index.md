@@ -1,5 +1,5 @@
 ---
 title: "martina moro"
-links: [https://mamoro.cargo.site/]
+links: ["https://martinamoro.com/"]
 ---
 
