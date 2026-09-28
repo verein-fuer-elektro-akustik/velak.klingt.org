@@ -4,7 +4,7 @@ date: 2026-10-06
 
 artists: [
   fabian lanzmaier,
-  frederik stritter,
+  frederic stritter,
   gabriela gordillo,
   martina moro,
   paul gründorfer,
