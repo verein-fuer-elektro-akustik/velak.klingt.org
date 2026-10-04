@@ -1,7 +1,6 @@
 ---
 title: "ayumu01.2"
 date: 2019-08-31
-location: ", tokyo, japan"
 location: "otooto, tokyo"
 description: ""
 artists: [
