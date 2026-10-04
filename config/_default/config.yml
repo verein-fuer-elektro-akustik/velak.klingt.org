@@ -1,7 +1,7 @@
 baseURL: ""
 title: "velak"
 defaultContentLanguage: "en"
-languageCode: "en-us"
+locale: "en-us"
 
 paginate: 1000
 rssLimit: 1000
@@ -16,7 +16,10 @@ build:
   writeStats: true
 
 imaging:
-  quality: 90
+  jpeg:
+    quality: 90
+  webp:
+    quality: 90
 
 minify:
   minifyOutput: false
@@ -54,3 +57,6 @@ markup:
   highlight:
     # noClasses: true
     style: github-dark
+
+ignoreLogs:
+  - warning-goldmark-raw-html
