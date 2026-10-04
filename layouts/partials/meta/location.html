@@ -3,7 +3,7 @@
 <div class="meta location">
 	{{ with .Params.location }}
 		{{ if $show_icon }}<i class="ic-location_on"></i>{{ end }}
-		{{ with $loc := index $.Site.Data.locations . }}
+		{{ with $loc := index hugo.Data.locations . }}
 			{{ with $loc.url }}
 			<a href="{{- . -}}" data-id="name" rel="external" title="{{- . -}}">{{- $loc.name -}}</a>
 			{{ else }}

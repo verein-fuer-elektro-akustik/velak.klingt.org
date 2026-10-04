@@ -80,13 +80,10 @@
 	{{ $thumb := $img_orig.Resize "400x" }}
 
 	{{ $photo_time := "" }}
-	{{ with $img_orig.Exif }}
-		{{ with .Tags }}
-			{{ with .DateTimeOriginal }}
-				{{ if hasPrefix . "0000:00:00" }}
-				{{ else }}
-					{{ $photo_time = (time .).Format "15:04" }}
-				{{ end }}
+	{{ with $img_orig.Meta }}
+		{{ with .Date }}
+			{{ if not .IsZero }}
+				{{ $photo_time = .Format "15:04" }}
 			{{ end }}
 		{{ end }}
 	{{ end }}

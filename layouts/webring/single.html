@@ -9,7 +9,7 @@
 	{{ end }}
 </ul>
 <ul>
-	{{ range .Site.Data.locations }}
+	{{ range hugo.Data.locations }}
 	{{ with .url }}
 	<li><a href="{{.}}" rel="external">{{ . }}</a></li>
 	{{ end }}
