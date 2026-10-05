@@ -22,7 +22,7 @@
             <td><a href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a></td>
             <td>
             {{ with .Params.location }}
-                {{ with index $.Site.Data.locations . }}
+                {{ with index hugo.Data.locations . }}
                     {{ .name }}
                 {{ else }}
                     <span>{{. | markdownify }}</span><pre class="warning">missing location data</pre>

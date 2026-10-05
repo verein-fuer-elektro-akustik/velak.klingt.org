@@ -7,7 +7,7 @@
             <th>address</th>
             <th>url</th>
         </tr>
-        {{ range .Site.Data.locations }}
+        {{ range hugo.Data.locations }}
         <tr>
             <td>{{ .name }}</td>
             <td>{{ .address }}</td>

@@ -20,7 +20,7 @@
 	{{ with .Params.location }}
 	"location": {
 		"@type": "Place",
-		{{ with index $.Site.Data.locations . }}
+		{{ with index hugo.Data.locations . }}
 		"name": "{{- .name -}}",
 		{{ with .address }}
 		"address": {
