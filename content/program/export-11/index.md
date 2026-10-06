@@ -13,6 +13,7 @@ collabs: [
 ]
 location: "moe"
 tags: [export]
+doors: "19:00"
+start: "20:00"
 ---
-doors: 19.00h / begin: 20.00h (sharp!)  
 entry: 3€

@@ -12,8 +12,8 @@ collabs: [
 location: "gekko"
 tags: [gala]
 photos: Klemens Kohlweis
+doors: "19:30"
+start: "20:30"
 ---
-Open doors 19:30
-Start 20:30
 
 

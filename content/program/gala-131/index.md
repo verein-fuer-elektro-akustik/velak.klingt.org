@@ -10,6 +10,6 @@ collabs: [
 ]
 location: "rosaliagasse 11, 1120 wien"
 tags: [gala]
+doors: "19:00"
+start: "19:30"
 ---
-Open doors 19:00  
-Start 19:30

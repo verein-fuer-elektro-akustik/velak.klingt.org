@@ -12,5 +12,5 @@ collabs: [
 ]
 location: fuga
 tags: [export]
+start: "20:00"
 ---
-begin: 20h

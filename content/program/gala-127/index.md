@@ -11,6 +11,6 @@ collabs: [
 location: "vekks"
 tags: [gala]
 photos: Sara Piñeros
+doors: "19:30"
+start: "20:00"
 ---
-open doors: 19:30  
-start: 20:00

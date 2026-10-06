@@ -9,5 +9,6 @@ artists: [
 ]
 tags: [gala]
 photos: "MAMORO"
+doors: "19:00"
+start: "20:00"
 ---
-doors: 19:00 / begin: 8pm (sharp!)  

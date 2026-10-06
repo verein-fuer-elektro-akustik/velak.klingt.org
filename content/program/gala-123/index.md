@@ -10,7 +10,7 @@ collabs: [
 ]
 location: "lot"
 tags: [gala]
+doors: "20:00"
+start: "20:30"
 ---
-Open doors: 20:00  
-Program start: 20:30
 

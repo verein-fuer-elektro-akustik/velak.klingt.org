@@ -12,6 +12,7 @@ artists: [
 location: "brut"
 tags: [gala]
 photos: "edward chapon"
+doors: "20:00"
+start: "21:00"
 ---
-doors: 8pm / begin: 9pm (sharp!)  
 entry: 3€

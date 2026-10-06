@@ -11,7 +11,8 @@ collabs: [
 ]
 location: garnison
 tags: [export]
+doors: "20:00"
+start: "21:00"
 ---
-doors: 20h / begin: 21h (sharp!)  
 entry: 3€
 

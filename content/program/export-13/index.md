@@ -12,6 +12,8 @@ collabs: [
     jd zazie + billy roisz,
 ]
 tags: [export]
+doors: "20:00"
+start: "20:30"
 ---
 doors: 20.00h concerts: 20.30h (sharp) entry: 3€
 

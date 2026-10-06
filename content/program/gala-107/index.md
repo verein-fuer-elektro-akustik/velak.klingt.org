@@ -12,5 +12,6 @@ collabs: [
 ]
 tags: [gala]
 photos: "Doris Pollhammer"
+doors: "19:30"
+start: "20:30"
 ---
-doors 7:30 concert 8:30 pm

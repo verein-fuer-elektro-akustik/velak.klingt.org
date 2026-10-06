@@ -10,5 +10,6 @@ collabs: [
     doris pollhammer + nina bauer + yuji ishihara
 ]
 tags: [ayumu]
+doors: "19:00"
+start: "19:30"
 ---
-doors 7.00pm / start 19.30pm (sharp!)

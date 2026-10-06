@@ -10,7 +10,7 @@ collabs: []
 location: "chateau_rouge"
 tags: [gala]
 photos: Nemanja Popadic
+doors: "19:00"
+start: "19:30"
 ---
 
-Open doors 19:00  
-Start 19:30

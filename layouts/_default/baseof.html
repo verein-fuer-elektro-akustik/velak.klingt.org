@@ -11,14 +11,26 @@
         <meta name="title" content="{{- .Site.Title -}}">
         <meta name="url" content="{{ .Site.Params.url }}">
         <meta name="designer" content="{{ .Site.Params.developer.name }}">
-        <meta name="description" content="{{ with .Params.description }}{{- . -}}{{ else }}{{- .Site.Params.description -}}{{ end }}">
+        {{ $event_desc := "" }}{{ if eq .Section "program" }}{{ if .IsPage }}{{ $event_desc = partial "meta/event-description" . }}{{ end }}{{ end }}
+        <meta name="description" content="{{ with .Params.description }}{{- . -}}{{ else }}{{ with $event_desc }}{{- . -}}{{ else }}{{- .Site.Params.description -}}{{ end }}{{ end }}">
         {{ $keywords := .Site.Params.keywords }}{{ with .Params.keywords }}{{ $keywords = union $keywords . }}{{ end }}
         <meta name="keywords" content="{{ delimit $keywords "," }}">
         {{ with .Site.Params.publisher }}<meta name="publisher" content="{{- . -}}">{{ end }}
         {{ with .Site.Params.theme_color }}<meta name="theme-color" content="{{- . -}}">{{ end }}
 
+        {{ if and $event_desc (not .Params.description) }}
+        <meta property="og:url" content="{{ .Permalink }}">
+        <meta property="og:site_name" content="{{ .Site.Title }}">
+        <meta property="og:title" content="{{ .Title }}">
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="{{ $event_desc }}">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="{{ .Title }}">
+        <meta name="twitter:description" content="{{ $event_desc }}">
+        {{ else }}
         {{ template "_internal/opengraph.html" . }}
         {{ template "_internal/twitter_cards.html" . }}
+        {{ end }}
         {{ template "_internal/schema.html" . }}
 
         <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}} - {{.}}{{end}}</title>

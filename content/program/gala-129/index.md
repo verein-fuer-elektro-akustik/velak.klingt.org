@@ -12,6 +12,6 @@ collabs: [
 location: "spitzer"
 tags: [gala]
 photos: Sara Piñeros
+doors: "20:00"
+start: "20:30"
 ---
-Open doors 20:00  
-Start 20:30

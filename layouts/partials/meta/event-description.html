@@ -1,0 +1,6 @@
+{{- /* plain-text summary of an event's vital info, used for meta/og descriptions */ -}}
+{{- $lines := slice -}}
+{{- with .Params.doors }}{{ $lines = $lines | append (printf "Open doors: %v" .) }}{{ end -}}
+{{- with .Params.start }}{{ $lines = $lines | append (printf "Program start: %v" .) }}{{ end -}}
+{{- with .Params.location }}{{ with index hugo.Data.locations . }}{{ $lines = $lines | append .name }}{{ end }}{{ end -}}
+{{- delimit $lines "\n" -}}

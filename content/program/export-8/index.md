@@ -13,6 +13,7 @@ collabs: [
 ]
 location: "steinergasse8"
 tags: [export]
+doors: "18:00"
+start: "20:00"
 ---
-doors: 18h / begin: 20h  
 entry: 3eur

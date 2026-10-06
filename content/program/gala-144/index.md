@@ -12,7 +12,7 @@ collabs: [
 location: "fox"
 tags: [gala]
 photos: Danny Nedkova
+doors: "18:30"
+start: "19:15"
 ---
 
-Open doors 18:30
-Start 19:15

@@ -6,7 +6,7 @@ collabs: [Kjell Bjørgeengen + Aimée Theriot + Ingar Zach]
 location: "echoraum"
 tags: [gala]
 photos: Michael Rausch
+doors: "18:30"
+start: "19:00"
 ---
 
-Open doors 18:30
-Start 19:00

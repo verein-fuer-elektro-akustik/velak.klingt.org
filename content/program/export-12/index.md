@@ -9,7 +9,8 @@ artists: [
     paul gründorfer,
 ]
 tags: [export]
+doors: "19:30"
+start: "20:30"
 ---
-doors:19.30h begin: 20.30h (sharp)  
 entry: 3€
 

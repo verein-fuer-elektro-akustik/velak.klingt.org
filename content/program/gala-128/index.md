@@ -11,8 +11,8 @@ collabs: [
 location: "tresor_linz"
 tags: [gala]
 photos: Verena Mayrhofer
+doors: "19:30"
+start: "19:45"
 ---
-open doors: 19:30  
-start: 19:45
 
 

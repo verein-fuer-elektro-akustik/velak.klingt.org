@@ -13,6 +13,6 @@ collabs: [
 location: "klangtheater"
 tags: [gala]
 photos: "Anna Weisser"
+doors: "19:00"
+start: "19:30"
 ---
-Open doors 19:00  
-Start 19:30

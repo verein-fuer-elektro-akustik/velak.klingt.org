@@ -8,9 +8,9 @@ collabs: [
 location: "es49"
 tags: [gala]
 photos: Ronnie Danaher
+doors: "20:00"
+start: "20:30"
 ---
-Open doors 20:00</br>
-Start 20:30
 
 collaboration w/ friends & fun + rat rights:</br>
 Apocalypso Mike</br>

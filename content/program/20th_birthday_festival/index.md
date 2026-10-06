@@ -22,9 +22,10 @@ collabs: [
 ]
 location: zacherlfabrik
 photos: "Bon Alog"
+doors: "15:00"
+start: "16:00"
 ---
 
-open doors 15h  
 concerts 16 - 22h
 
 ### Friday 30th

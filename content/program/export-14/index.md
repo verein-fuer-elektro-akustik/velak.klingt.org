@@ -9,8 +9,8 @@ artists: [
 ]
 tags: [export]
 photos: "Sophie Dvořák"
+start: "21:00"
 ---
-start: 21.00
 
 ### Mikko Savela
 is a guitarist of finnish origin, born and based in Umeå, Sweden. He uses his guitar laying down, more as a percussion instrument than a guitar, by plucking the strings by both hands and hitting metallic objects on the guitar body.

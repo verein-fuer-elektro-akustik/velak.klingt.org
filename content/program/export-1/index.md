@@ -12,7 +12,8 @@ collabs: [
 location: "hut"
 tags: [export]
 photos: "edward chapon"
+doors: "20:00"
+start: "21:00"
 ---
-doors: 20.00h / begin: 21.00h (sharp!)  
 entry: 3€
 

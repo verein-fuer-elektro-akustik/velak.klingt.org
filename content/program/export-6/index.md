@@ -11,6 +11,7 @@ collabs: [
 ]
 location: "das_werk"
 tags: [export]
+doors: "20:00"
+start: "21:00"
 ---
-doors: 8:00pm, begin: 9:00pm _ sharp!  
 eur: 3€

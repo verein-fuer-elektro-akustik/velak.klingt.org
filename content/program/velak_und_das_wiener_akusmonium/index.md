@@ -22,5 +22,5 @@ collabs: [
     Bruno Liberda + Günther Auer,
 ]
 location: "akbild"
+doors: "19:00"
 ---
-open doors 19:00

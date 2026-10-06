@@ -12,6 +12,6 @@ Sajjra Xhrs Galarreta
 location: "echoraum"
 tags: [gala]
 photos:
+doors: "18:30"
+start: "19:00"
 ---
-open doors 18:30
-start 19:00

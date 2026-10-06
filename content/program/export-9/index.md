@@ -13,6 +13,8 @@ collabs: [
 ]
 location: "rue d’arenbergstraat, brussels"
 tags: [export]
+doors: "19:30"
+start: "20:00"
 ---
 doors: 19.30h / films: 20h / live performancees: 22h  
 entry: 5 / 7.5 eur

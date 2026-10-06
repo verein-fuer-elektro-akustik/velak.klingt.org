@@ -11,5 +11,5 @@ collabs: [
 location: "wild im west"
 tags: [gala]
 photos: Danny Nedkova
+start: "18:00"
 ---
-Program start 18:00

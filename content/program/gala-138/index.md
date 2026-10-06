@@ -11,8 +11,8 @@ collabs: [
 location: "westbahnstudios"
 tags: [gala]
 photos: Sabiswabis
+doors: "19:30"
+start: "20:00"
 ---
 supported by WBS Tonräume gGmbH
 
-Open doors 19:30
-Start 20:00

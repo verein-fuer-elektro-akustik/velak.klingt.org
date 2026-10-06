@@ -11,5 +11,5 @@ artists: [
 collabs: [
 ]
 tags: [export]
+doors: "20:00"
 ---
-open doors 20:00 

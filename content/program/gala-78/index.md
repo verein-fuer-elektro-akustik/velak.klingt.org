@@ -10,8 +10,9 @@ artists: [
 location: "brut"
 tags: [gala]
 photos: "edward chapon"
+doors: "19:00"
+start: "20:00"
 ---
-doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
 
 #### skylla

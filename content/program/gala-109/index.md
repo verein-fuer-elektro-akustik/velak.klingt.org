@@ -11,5 +11,6 @@ collabs: [
 ]
 tags: [gala]
 photos: "Nina Bauer"
+doors: "19:00"
+start: "20:00"
 ---
-doors: 19:00 / begin: 8pm (sharp!)  

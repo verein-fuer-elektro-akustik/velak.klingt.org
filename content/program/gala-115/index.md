@@ -13,6 +13,6 @@ collabs: [
 ]
 tags: [gala]
 youtube: [oSQrv411264,KpsZ40Pc6fU]
+doors: "20:00"
 ---
-open doors 20:00
 

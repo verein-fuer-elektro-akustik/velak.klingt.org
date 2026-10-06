@@ -12,7 +12,7 @@ location: "medienwerkstatt"
 tags: [gala]
 photos: Danny Nedkova
 
+doors: "19:00"
+start: "19:30"
 ---
 
-Open doors 19:00
-Start 19:30

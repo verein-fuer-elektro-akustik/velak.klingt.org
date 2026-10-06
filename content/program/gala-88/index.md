@@ -8,8 +8,8 @@ artists: [
 ]
 location: "brut"
 tags: [gala]
+doors: "22:00"
 ---
-doors: 22pm
 entry: 6€
 
 #### Musci

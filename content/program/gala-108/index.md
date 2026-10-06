@@ -14,9 +14,10 @@ collabs: [
 ]
 location: "fluc"
 photos: "Doris Pollhammer & Nina Bauer"
+doors: "18:00"
+start: "18:30"
 ---
 ### velak & ventil
-doors: 18.00pm / start: 18.30pm (sharp!)
 oben velak + unten ventil
 
 <!-- {{< video "IDKLANG-velak_gala.mp4" >}} -->

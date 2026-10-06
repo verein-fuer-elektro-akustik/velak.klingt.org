@@ -9,5 +9,5 @@ artists: [
     krach
 ]
 tags: [gala]
+doors: "20:00"
 ---
-open doors 20:00

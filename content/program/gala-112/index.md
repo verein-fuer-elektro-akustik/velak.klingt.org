@@ -12,6 +12,7 @@ collabs: [
 ]
 tags: [gala]
 photos: "Klemens Kohlweis"
+doors: "19:30"
+start: "20:00"
 ---
-doors: 7.30pm / start: 8.00pm (sharp!)
 

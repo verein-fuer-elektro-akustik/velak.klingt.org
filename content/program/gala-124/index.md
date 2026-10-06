@@ -10,7 +10,7 @@ collabs: [
 ]
 location: "chateau rouge"
 tags: [gala]
+doors: "18:30"
+start: "19:00"
 ---
-Open doors: 18:30  
-Program start: 19:00
 

@@ -17,8 +17,9 @@ location: "brut"
 tags: [gala,special]
 image: ""
 photos: "edward chapon"
+doors: "19:00"
+start: "20:00"
 ---
-doors: 7pm / begin: 8pm (sharp!)  
 entry: 3€
 
 klanginstallationen an beiden tagen ab 20h:
