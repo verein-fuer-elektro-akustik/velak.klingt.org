@@ -1,58 +1,58 @@
-{{ $url := .Permalink }}
-<script type="application/ld+json">
-{
-	"@context": "https://schema.org",
-	"@type": "MusicEvent",
-	"name": "{{- .Title -}}",
-	"identifier": "{{- .Title -}}",
-	"startDate": "{{ .Date.Format "2006-01-02" }}",
-	"endDate": "{{ .Date.Format "2006-01-02" }}",
-	"eventStatus": "https://schema.org/EventScheduled",
-	"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-	"description": "Velak event",
-	"organizer": {
-		"@type": "Organization",
-		"name": "velak",
-		"url": "{{ .Site.Params.contact.web }}"
-	},
-	"url": "{{ $url }}",
+{{- $performers := slice -}}
+{{- range .Params.artists }}{{ $performers = $performers | append (dict "@type" "Person" "name" .) }}{{ end -}}
+{{- range .Params.collabs }}{{ $performers = $performers | append (dict "@type" "MusicGroup" "name" .) }}{{ end -}}
 
-	{{ with .Params.location }}
-	"location": {
-		"@type": "Place",
-		{{ with index hugo.Data.locations . }}
-		"name": "{{- .name -}}",
-		{{ with .address }}
-		"address": {
-			"@type": "PostalAddress",
-			"streetAddress": "{{- . -}}"
-		},
-		{{ end }}
-		{{ with .url }}"url": "{{.}}"{{ end }}
-		{{ else }}
-		"name": "{{- . -}}",
-		"address": "unknown"
-		{{ end }}
-	},
-	{{ end }}
+{{- $event := dict
+	"@context" "https://schema.org"
+	"@type" "MusicEvent"
+	"name" .Title
+	"identifier" .Title
+	"startDate" (.Date.Format "2006-01-02")
+	"endDate" (.Date.Format "2006-01-02")
+	"eventStatus" "https://schema.org/EventScheduled"
+	"eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+	"organizer" (dict "@type" "Organization" "name" "velak" "url" .Site.Params.contact.web)
+	"url" .Permalink
+-}}
 
-	{{ with .Params.tags }}"keywords": {{.}},{{ end }}
-	"performer": [
-	{{ with .Params.artists }}{{ range . }}
-	{
-		"@type": "Person",
-		"name": "{{ . }}"
-	},{{ end }}{{ end }}
-	{{ with .Params.collabs }}{{ range . }}
-	{
-		"@type": "MusicGroup",
-		"name": "{{ . }}"
-	},{{ end }}{{ end }}
-	],
-	"image": [
-		{{ with .Resources.GetMatch "cover.jpg" }}
-		"{{ .Permalink }}"
-		{{ end }}
-	]
-}
-</script>
+{{- /* description: explicit > generated from lineup */ -}}
+{{- $description := .Description -}}
+{{- if not $description -}}
+	{{- $names := slice -}}
+	{{- range first 8 (.Params.artists | default slice) }}{{ $names = $names | append . }}{{ end -}}
+	{{- with $names }}{{ $description = printf "Velak event with %s" (delimit . ", " " and ") }}{{ else }}{{ $description = "Velak event" }}{{ end -}}
+{{- end -}}
+{{- $event = merge $event (dict "description" $description) -}}
+
+{{- /* image: cover.jpg > explicit image param > first image resource > site fallback */ -}}
+{{- $img := .Resources.GetMatch "cover.jpg" -}}
+{{- if not $img }}{{ with .Params.image }}{{ $img = $.Resources.GetMatch . }}{{ end }}{{ end -}}
+{{- if not $img }}{{ $img = index (.Resources.ByType "image") 0 }}{{ end -}}
+{{- if $img -}}
+	{{- $event = merge $event (dict "image" (slice ($img.Fit "1200x1200").Permalink)) -}}
+{{- else -}}
+	{{- $event = merge $event (dict "image" (slice ("assets/sinus.png" | absURL))) -}}
+{{- end -}}
+
+{{- /* offers: only when the event declares admission, e.g. price: 0 or price: 10 */ -}}
+{{- with .Params.price -}}
+	{{- $offer := dict "@type" "Offer" "url" $.Permalink "price" (string .) "priceCurrency" ($.Params.currency | default "EUR") "availability" "https://schema.org/InStock" -}}
+	{{- $event = merge $event (dict "offers" $offer) -}}
+{{- end -}}
+
+{{- with .Params.location -}}
+	{{- $place := dict "@type" "Place" -}}
+	{{- with index hugo.Data.locations . -}}
+		{{- $place = merge $place (dict "name" .name) -}}
+		{{- with .address }}{{ $place = merge $place (dict "address" (dict "@type" "PostalAddress" "streetAddress" .)) }}{{ end -}}
+		{{- with .url }}{{ $place = merge $place (dict "url" .) }}{{ end -}}
+	{{- else -}}
+		{{- $place = merge $place (dict "name" . "address" "unknown") -}}
+	{{- end -}}
+	{{- $event = merge $event (dict "location" $place) -}}
+{{- end -}}
+
+{{- with .Params.tags }}{{ $event = merge $event (dict "keywords" .) }}{{ end -}}
+{{- if $performers }}{{ $event = merge $event (dict "performer" $performers) }}{{ end -}}
+
+<script type="application/ld+json">{{ $event | jsonify (dict "indent" "\t") | safeJS }}</script>
