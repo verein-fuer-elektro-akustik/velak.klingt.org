@@ -1,6 +1,6 @@
 ---
 title: "export#22"
-date: 2026-10-06
+date: 2026-10-15
 artists: [
   fabian lanzmaier,
   frederic stritter,
