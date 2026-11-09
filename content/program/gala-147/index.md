@@ -3,13 +3,12 @@ title: "gala#147"
 date: 2026-11-30
 artists: [
 
-La cuerda y el grito,
-ErikM,
-Sajjra Xhrs Galarreta
-
+Austin Larkin,
+Maryia Kamarova,
+Mathieu Sylvestre
 ]
 
-location: "Liquid Loft"
+location: "liquid loft"
 tags: [gala]
 photos:
 doors: "19:00"
