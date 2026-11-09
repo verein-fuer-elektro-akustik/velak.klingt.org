@@ -120,6 +120,11 @@
 		"name": "Kunsthause Graz",
 		"address": "Lendkai 1, 8020 Graz,  Austria",
 		"url": "https://www.museum-joanneum.at/kunsthaus-graz"
+	},	
+	"liquid loft": {
+		"name": "Liquid Loft",
+		"address": "Laxenburger Straße 28-30, 1100 Wien",
+		"url": "https://liquidloft.at/"
 	},
 	"lot": {
 		"name": "Das LOT",
